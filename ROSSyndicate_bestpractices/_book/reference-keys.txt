@@ -30,3 +30,5 @@ sharing-your-book
 publishing
 pages
 metadata-for-sharing
+flex-your-github-skills-by-updating-our-website
+directions
