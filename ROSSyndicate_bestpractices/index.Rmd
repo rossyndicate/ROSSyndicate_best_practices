@@ -16,7 +16,7 @@ library(tidyverse)
 
 # About
 
-This guide outlines the ROSSyndicate's project management expectations and workflow best practices. This guide assumes you have some familiarity with GitHub and its importance in implementing Radical Open Science.
+This guide outlines the ROSSyndicate's project management expectations and workflow best practices so that we can successfully implement Radical Open Science.
 
 ## Contents
 
