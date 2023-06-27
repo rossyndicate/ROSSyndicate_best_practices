@@ -1,0 +1,9 @@
+# Using AI Integrations
+
+## Using GitHub CoPilot in VSCode + RStudio
+
+## Accessing GitHub CoPilot as a student/teacher/researcher
+
+## Downloading VSCode and installing the GitHub CoPilot extension
+
+## Setting up AutoSave in VSCode + RStudio

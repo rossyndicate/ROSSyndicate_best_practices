@@ -1,0 +1,15 @@
+# Collaborative Coding and Workflow Best Practices
+
+## ROSSyndicate style guide
+
+## Commit history best practices
+
+### Adding a co-author to your commit
+
+## Pull request best practices
+
+## Pull request review best practices
+
+## Types of code review and engaging your internal creative partner
+
+## Additional Reading

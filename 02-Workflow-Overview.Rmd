@@ -1,0 +1,7 @@
+# Workflow Overview
+
+## Starting a new project
+
+## Collaborative Coding
+
+## Addressing merge conflicts
