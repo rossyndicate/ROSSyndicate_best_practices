@@ -1,3 +1,7 @@
+fig:nice-fig
+tab:nice-tab
+eq:binom
+thm:tri
 about
 contents
 a-living-document
@@ -26,3 +30,5 @@ sharing-your-book
 publishing
 pages
 metadata-for-sharing
+flex-your-github-skills-by-updating-our-website
+directions
