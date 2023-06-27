@@ -1,10 +1,3 @@
----
-title: 'GitHub Onboarding: Updating the Website'
-author: "ROSSyindicate"
-date: "`r Sys.Date()`"
-output: html_document
----
-
 # Flex your GitHub skills... by updating our website!
 
 As a member of our lab, we would like you to update our "People" page to include you! Here we will lay out the steps for you to fork our lab website repository, add yourself to our "People" page, and lastly, send a pull request to the ROSSyndicate to make these changes on the official website. This is a great chance for you to employ those best practices that we reviewed in the ROSSyndicate Best Practices Guide [[will need to link later]].
