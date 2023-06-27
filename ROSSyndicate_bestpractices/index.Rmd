@@ -1,0 +1,30 @@
+---
+title: "ROSSynciate Project and Workflow Best Practices"
+author: "ROSSynidcate"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+description: |
+  The ROSSyndicate workflow best practices guide.
+---
+
+```{r}
+library(bookdown)
+library(servr)
+```
+
+# About
+
+This guide outlines the ROSSyndicate's project management expectations and workflow best practices. This guide assumes you have some familiarity with GitHub and its importance in implementing Radical Open Science.
+
+## Contents
+
+This best practices guide serves as an introduction to Git and GitHub, the lab's style and code philosophies, and the tools we use for project management.
+
+## A living document
+
+The workflow best practices document is a living document and all members of the ROSSyndicate are welcome to submit edits to it via pull request.
+
+## Origin
+
+Adapted from the Geospatial Centroid's GitHub Workflow Document, Caitlin Mothes, built out for ROSSyndicate by Katie Willi, B Steele, and Matt Brousil.
