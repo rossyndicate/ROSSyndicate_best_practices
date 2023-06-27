@@ -11,6 +11,7 @@ description: |
 ```{r}
 library(bookdown)
 library(servr)
+library(tidyverse)
 ```
 
 # About
