@@ -8,7 +8,7 @@ description: |
   The ROSSyndicate workflow best practices guide.
 ---
 
-```{r}
+```{r, echo = F}
 library(bookdown)
 library(servr)
 library(tidyverse)
