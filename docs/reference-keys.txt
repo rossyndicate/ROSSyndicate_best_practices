@@ -3,6 +3,7 @@ tab:nice-tab
 eq:binom
 thm:tri
 about
+overarching-codeworkflow-philosphies-of-the-rossyndicate
 contents
 a-living-document
 origin
