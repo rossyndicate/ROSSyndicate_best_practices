@@ -1,6 +1,6 @@
 ---
 title: "ROSSynciate Project and Workflow Best Practices"
-author: "ROSSynidcate"
+author: "ROSSyndicate"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
