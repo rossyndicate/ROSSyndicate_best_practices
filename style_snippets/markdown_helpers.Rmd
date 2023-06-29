@@ -1,0 +1,24 @@
+---
+title: "R Markdown Helpers"
+author: "ROSSyndicate"
+date: "2023-06-29"
+output: html_document
+---
+
+## Automatic text wrapping
+
+Use this code chunk to force consistent text wrapping in your document. Using
+this is recommended so that the markdown document is readable on GitHub with
+out manually adding lines. Best practice is to add this to the bottom of your
+Rmd file and run it before you commit the file. You may have to run it twice,
+it's a little finicky.
+
+Note, this will not wrap text that are prefaced by any special characters (like
+bullets, unless you use the 'insert bullet' function at the top of the Visual
+editor). It also will not wrap text in a code chunk. You have to manually do
+that.
+
+
+```{r, echo = F}
+knitr::wrap_rmd('style_snippets/markdown_helpers.Rmd', width = 80, backup = NULL)
+```
