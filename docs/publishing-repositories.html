@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Section 6 Git Hub Feature Branches | ROSSyndicate Project and Workflow Best Practices</title>
+  <title>Section 8 Publishing Repositories | ROSSyndicate Project and Workflow Best Practices</title>
   <meta name="description" content="The ROSSyndicate workflow best practices guide." />
   <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Section 6 Git Hub Feature Branches | ROSSyndicate Project and Workflow Best Practices" />
+  <meta property="og:title" content="Section 8 Publishing Repositories | ROSSyndicate Project and Workflow Best Practices" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="The ROSSyndicate workflow best practices guide." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Section 6 Git Hub Feature Branches | ROSSyndicate Project and Workflow Best Practices" />
+  <meta name="twitter:title" content="Section 8 Publishing Repositories | ROSSyndicate Project and Workflow Best Practices" />
   
   <meta name="twitter:description" content="The ROSSyndicate workflow best practices guide." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="project-management-and-tracking-with-github-projects.html"/>
-<link rel="next" href="using-ai-integrations.html"/>
+<link rel="prev" href="using-ai-integrations.html"/>
+<link rel="next" href="flex-your-github-skills-by-updating-our-website.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -52,73 +52,8 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
-<link href="libs/vembedr-0.1.5/css/vembedr.css" rel="stylesheet" />
 
 
-<style type="text/css">
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-</style>
 
 <style type="text/css">
   
@@ -198,15 +133,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8" data-path="publishing-repositories.html"><a href="publishing-repositories.html"><i class="fa fa-check"></i><b>8</b> Publishing Repositories</a>
 <ul>
 <li class="chapter" data-level="8.1" data-path="publishing-repositories.html"><a href="publishing-repositories.html#creating-a-zenodo-account"><i class="fa fa-check"></i><b>8.1</b> Creating a Zenodo account</a></li>
-<li class="chapter" data-level="8.2" data-path="publishing-repositories.html"><a href="publishing-repositories.html#linking-a-repository-to-zenodo"><i class="fa fa-check"></i><b>8.2</b> Linking a repository to Zenodo</a></li>
-<li class="chapter" data-level="8.3" data-path="publishing-repositories.html"><a href="publishing-repositories.html#preparing-to-publish"><i class="fa fa-check"></i><b>8.3</b> Preparing to publish</a>
+<li class="chapter" data-level="8.2" data-path="publishing-repositories.html"><a href="publishing-repositories.html#preparing-to-publish"><i class="fa fa-check"></i><b>8.2</b> Preparing to publish</a>
 <ul>
-<li class="chapter" data-level="8.3.1" data-path="publishing-repositories.html"><a href="publishing-repositories.html#author-list"><i class="fa fa-check"></i><b>8.3.1</b> Author list</a></li>
-<li class="chapter" data-level="8.3.2" data-path="publishing-repositories.html"><a href="publishing-repositories.html#description"><i class="fa fa-check"></i><b>8.3.2</b> Description</a></li>
-<li class="chapter" data-level="8.3.3" data-path="publishing-repositories.html"><a href="publishing-repositories.html#version"><i class="fa fa-check"></i><b>8.3.3</b> Version</a></li>
-<li class="chapter" data-level="8.3.4" data-path="publishing-repositories.html"><a href="publishing-repositories.html#keywords"><i class="fa fa-check"></i><b>8.3.4</b> Keywords</a></li>
-<li class="chapter" data-level="8.3.5" data-path="publishing-repositories.html"><a href="publishing-repositories.html#license"><i class="fa fa-check"></i><b>8.3.5</b> License</a></li>
-<li class="chapter" data-level="8.3.6" data-path="publishing-repositories.html"><a href="publishing-repositories.html#funding"><i class="fa fa-check"></i><b>8.3.6</b> Funding</a></li>
+<li class="chapter" data-level="8.2.1" data-path="publishing-repositories.html"><a href="publishing-repositories.html#release-title"><i class="fa fa-check"></i><b>8.2.1</b> Release Title</a></li>
+<li class="chapter" data-level="8.2.2" data-path="publishing-repositories.html"><a href="publishing-repositories.html#author-list"><i class="fa fa-check"></i><b>8.2.2</b> Author list</a></li>
+<li class="chapter" data-level="8.2.3" data-path="publishing-repositories.html"><a href="publishing-repositories.html#description"><i class="fa fa-check"></i><b>8.2.3</b> Description</a></li>
+<li class="chapter" data-level="8.2.4" data-path="publishing-repositories.html"><a href="publishing-repositories.html#version"><i class="fa fa-check"></i><b>8.2.4</b> Version</a></li>
+<li class="chapter" data-level="8.2.5" data-path="publishing-repositories.html"><a href="publishing-repositories.html#keywords"><i class="fa fa-check"></i><b>8.2.5</b> Keywords</a></li>
+<li class="chapter" data-level="8.2.6" data-path="publishing-repositories.html"><a href="publishing-repositories.html#license"><i class="fa fa-check"></i><b>8.2.6</b> License</a></li>
+<li class="chapter" data-level="8.2.7" data-path="publishing-repositories.html"><a href="publishing-repositories.html#funding"><i class="fa fa-check"></i><b>8.2.7</b> Funding</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="publishing-repositories.html"><a href="publishing-repositories.html#linking-a-repository-to-zenodo"><i class="fa fa-check"></i><b>8.3</b> Linking a repository to Zenodo</a></li>
+<li class="chapter" data-level="8.4" data-path="publishing-repositories.html"><a href="publishing-repositories.html#completing-the-metadata-information"><i class="fa fa-check"></i><b>8.4</b> Completing the metadata information</a>
+<ul>
+<li class="chapter" data-level="8.4.1" data-path="publishing-repositories.html"><a href="publishing-repositories.html#add-the-doi-badge-to-your-repository"><i class="fa fa-check"></i><b>8.4.1</b> Add the DOI badge to your repository</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="flex-your-github-skills-by-updating-our-website.html"><a href="flex-your-github-skills-by-updating-our-website.html"><i class="fa fa-check"></i><b>9</b> Flex your GitHub skills… by updating our website!</a>
@@ -233,20 +173,86 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="git-hub-feature-branches" class="section level1 hasAnchor" number="6">
-<h1><span class="header-section-number">Section 6</span> Git Hub Feature Branches<a href="git-hub-feature-branches.html#git-hub-feature-branches" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="when-to-work-in-a-feature-branch" class="section level2 hasAnchor" number="6.1">
-<h2><span class="header-section-number">6.1</span> When to work in a feature branch<a href="git-hub-feature-branches.html#when-to-work-in-a-feature-branch" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="publishing-repositories" class="section level1 hasAnchor" number="8">
+<h1><span class="header-section-number">Section 8</span> Publishing Repositories<a href="publishing-repositories.html#publishing-repositories" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>When delivering code or repositories to our stakeholders or other researchers, it needs to be citable. A citable repository has a stable DOI (digital object identifier) and complete metadata. We use the GitHub integration in Zenodo to publish repositories. When set up correctly, a GitHub ‘release’ will push all code to Zenodo automatically. All future ‘releases’ will be associated with the original DOI as well as a new DOI specific to that release.</p>
+<p>In general, the GitHub -&gt; Zenodo pathway is best for software (code) and not necessarily for data. Data publishing should be completed at EDI, CUAHSI, or FigShare. Derived data is okay in the GitHub -&gt; Zenodo pathway, just remember, this pathway is meant to be for CODE and SOFTWARE, not necessarily for data (though you can publish data to Zenodo).</p>
+<p>As mentioned before, we only publish repositories that have been consistently reviewed internally. Ideally your repository has been reviewed by an external collaborator or by another ROSSyndicate member. Remember, by pushing this repository to Zenodo, you are creating a PERMANENT archive of its contents, for better or worse.</p>
+<div id="creating-a-zenodo-account" class="section level2 hasAnchor" number="8.1">
+<h2><span class="header-section-number">8.1</span> Creating a Zenodo account<a href="publishing-repositories.html#creating-a-zenodo-account" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The easiest way to create a Zenodo account is to do so with your GitHub credentials. You will need to link these two accounts in order to fully take advantage of the GitHub/Zenodo integration.</p>
+<p><img src="images/Screenshot%202023-06-28%20at%2012.42.20%20PM-01.png" width="1000" /></p>
 </div>
-<div id="how-to-create-a-feature-branch" class="section level2 hasAnchor" number="6.2">
-<h2><span class="header-section-number">6.2</span> How to create a feature branch<a href="git-hub-feature-branches.html#how-to-create-a-feature-branch" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="preparing-to-publish" class="section level2 hasAnchor" number="8.2">
+<h2><span class="header-section-number">8.2</span> Preparing to publish<a href="publishing-repositories.html#preparing-to-publish" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In order to have a meaningful repository release, you need to provide some metadata to Zenodo. While there are no requirements for publishing to Zenodo, it is a best practice to include robust metadata alongside your code release. A metadata template can be found in the helpful_docs folder of this repository.</p>
+<p>Once you’ve compiled this information, send it to Katie Willi or Anika Pyle for proofreading.</p>
+<div id="release-title" class="section level3 hasAnchor" number="8.2.1">
+<h3><span class="header-section-number">8.2.1</span> Release Title<a href="publishing-repositories.html#release-title" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>You can use the repository name, but that’s not going to be helpful for anyone except you! Someone reading the Release Title should be able to discern what the repository does. You can explain the ‘how’ in the description.</p>
 </div>
-<div id="keeping-your-branch-updated-with-upstream-changes" class="section level2 hasAnchor" number="6.3">
-<h2><span class="header-section-number">6.3</span> Keeping your branch updated with upstream changes<a href="git-hub-feature-branches.html#keeping-your-branch-updated-with-upstream-changes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="author-list" class="section level3 hasAnchor" number="8.2.2">
+<h3><span class="header-section-number">8.2.2</span> Author list<a href="publishing-repositories.html#author-list" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Prepare your author list by looking at the contributors to the repo. All contributors to the repo should be listed as an author. You will need each author’s full name, institution, and their <a href="https://orcid.org/">ORCID</a>.</p>
 </div>
-<div id="feature-branch-best-practices" class="section level2 hasAnchor" number="6.4">
-<h2><span class="header-section-number">6.4</span> Feature branch best practices<a href="git-hub-feature-branches.html#feature-branch-best-practices" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="description" class="section level3 hasAnchor" number="8.2.3">
+<h3><span class="header-section-number">8.2.3</span> Description<a href="publishing-repositories.html#description" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>This is the big lift in creating the metadata. Consider this similar to the introduction/background and methods section of a scientific paper. In the description of your repository, add information about the following things:</p>
+<ul>
+<li><p>General code description - the ‘how’ of your repository</p></li>
+<li><p>Methodology (summary only) - specifically if there are multiple steps to an analysis it is helpful to provide a methodology. If the repository hosts a very complicated analysis, consider only a condensed version of methods here, but add a markdown document with the complete methodology in your repository.</p></li>
+<li><p>If you are including data:</p>
+<ul>
+<li><p>data lineage (aka, where the data came from)</p></li>
+<li><p>explanation of how the data have been manipulated if they are derived (this is related to methods, so use your best judgement).</p></li>
+</ul></li>
+<li><p>If the analysis is specific to a certain locale, state and describe the locale.</p></li>
+<li><p>Maintenance and maintenance interval. ‘Ongoing’ or ‘completed’. If ‘ongoing’, state the approximate interval that the repository will be updated.</p></li>
+<li><p>If this is an update to a previous release, state the changes from the previous version.</p></li>
+</ul>
+<p>Generally speaking, much of this information should already exist in your repository README or Methods document and cutting/pasting is absolutely okay. This section may be lengthy and that is okay!</p>
+</div>
+<div id="version" class="section level3 hasAnchor" number="8.2.4">
+<h3><span class="header-section-number">8.2.4</span> Version<a href="publishing-repositories.html#version" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>For one-time releases (like preparing a repository for a paper), using a version-number is perfect (i.e. v1, v2, etc). For repositories that are updated frequently, consider using a version-year-number (i.e. v2022-1, v2023-1, v2023-2, etc).</p>
+</div>
+<div id="keywords" class="section level3 hasAnchor" number="8.2.5">
+<h3><span class="header-section-number">8.2.5</span> Keywords<a href="publishing-repositories.html#keywords" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Generally speaking, keywords help others find your code or research. It is not required. Keywords should be meaningful and specific and can include places, methods, etc. It is common to use controlled vocabulary for keywords, like the <a href="https://vocab.lternet.edu/vocab/vocab/index.php">LTER controlled vocabulary for ecology research</a>.</p>
+</div>
+<div id="license" class="section level3 hasAnchor" number="8.2.6">
+<h3><span class="header-section-number">8.2.6</span> License<a href="publishing-repositories.html#license" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>All repositories that are published are considered open access. Because our repository best practices include using an MIT use license, the LICENSE.txt file will override this option.</p>
+</div>
+<div id="funding" class="section level3 hasAnchor" number="8.2.7">
+<h3><span class="header-section-number">8.2.7</span> Funding<a href="publishing-repositories.html#funding" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>If there is applicable funding sources for this repository, you should list them. You will need the funder name and the grant number.</p>
+<p><strong>No other fields are required.</strong></p>
+</div>
+</div>
+<div id="linking-a-repository-to-zenodo" class="section level2 hasAnchor" number="8.3">
+<h2><span class="header-section-number">8.3</span> Linking a repository to Zenodo<a href="publishing-repositories.html#linking-a-repository-to-zenodo" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>To activate the GitHub/Zenodo integration for a given repository, navigate to the GitHub account page by clicking the dropdown menu in the top right of the window.</p>
+<p><img src="images/Screenshot%202023-06-28%20at%2012.53.08%20PM.png" width="200" /></p>
+<p>From here, you simply follow the directions!</p>
+<p><img src="images/Screenshot%202023-06-28%20at%2012.55.38%20PM.png" /></p>
+</div>
+<div id="completing-the-metadata-information" class="section level2 hasAnchor" number="8.4">
+<h2><span class="header-section-number">8.4</span> Completing the metadata information<a href="publishing-repositories.html#completing-the-metadata-information" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>To complete the entry of your metadata information and formalize the publishing of your repository, you’ll need to edit the Zenodo upload. Do this by navigating to the ‘Upload’ section of Zenodo (by clicking ‘Upload’ at the top of the Zenodo site).</p>
+<p>Here, you can click on the released repository:</p>
+<p><img src="images/Screenshot%202023-06-28%20at%202.38.19%20PM.png" /></p>
+<p>And then click the ‘Edit’ button:</p>
+<p><img src="images/Screenshot%202023-06-28%20at%202.39.53%20PM.png" /></p>
+<p>Here, you can enter in all information from your Zenodo metadata document. When you’re ready, press ‘Save’ and then ‘Publish’.</p>
+<div id="add-the-doi-badge-to-your-repository" class="section level3 hasAnchor" number="8.4.1">
+<h3><span class="header-section-number">8.4.1</span> Add the DOI badge to your repository<a href="publishing-repositories.html#add-the-doi-badge-to-your-repository" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Now that you’ve minted a sweet sweet DOI for your repository, you should go ahead and add the DOI badge to your repository’s README file.</p>
+<p>On the right hand side of your Zenodo release landing page (formatted as ’<a href="https://zenodo.org/record/*DOInumber" class="uri">https://zenodo.org/record/*DOInumber</a>*’ on your browser), click on the DOI badge:</p>
+<p><img src="images/Screenshot%202023-06-28%20at%202.43.40%20PM.png" width="200" /></p>
+<p>This will pop up a number of embedding formats. Copy and paste the one for ‘Markdown’. At this point, go to the GitHub repository and add the badge at the top of the primary README file within the GitHub user interface on the web. This addition to the repository does not need to be reviewed.</p>
 
+</div>
 </div>
 </div>
             </section>
@@ -254,8 +260,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="project-management-and-tracking-with-github-projects.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="using-ai-integrations.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="using-ai-integrations.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="flex-your-github-skills-by-updating-our-website.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -286,7 +292,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/05-Git-Feature-Branches.Rmd",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/07-Publishing-Repositories.Rmd",
 "text": "Edit"
 },
 "history": {

@@ -23,7 +23,7 @@
 <meta name="author" content="ROSSyndicate" />
 
 
-<meta name="date" content="2023-06-27" />
+<meta name="date" content="2023-06-28" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -195,9 +195,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.3" data-path="using-ai-integrations.html"><a href="using-ai-integrations.html#downloading-vscode-and-installing-the-github-copilot-extension"><i class="fa fa-check"></i><b>7.3</b> Downloading VSCode and installing the GitHub CoPilot extension</a></li>
 <li class="chapter" data-level="7.4" data-path="using-ai-integrations.html"><a href="using-ai-integrations.html#setting-up-autosave-in-vscode-rstudio"><i class="fa fa-check"></i><b>7.4</b> Setting up AutoSave in VSCode + RStudio</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="flex-your-github-skills-by-updating-our-website.html"><a href="flex-your-github-skills-by-updating-our-website.html"><i class="fa fa-check"></i><b>8</b> Flex your GitHub skills… by updating our website!</a>
+<li class="chapter" data-level="8" data-path="publishing-repositories.html"><a href="publishing-repositories.html"><i class="fa fa-check"></i><b>8</b> Publishing Repositories</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="flex-your-github-skills-by-updating-our-website.html"><a href="flex-your-github-skills-by-updating-our-website.html#directions"><i class="fa fa-check"></i><b>8.1</b> Directions:</a></li>
+<li class="chapter" data-level="8.1" data-path="publishing-repositories.html"><a href="publishing-repositories.html#creating-a-zenodo-account"><i class="fa fa-check"></i><b>8.1</b> Creating a Zenodo account</a></li>
+<li class="chapter" data-level="8.2" data-path="publishing-repositories.html"><a href="publishing-repositories.html#linking-a-repository-to-zenodo"><i class="fa fa-check"></i><b>8.2</b> Linking a repository to Zenodo</a></li>
+<li class="chapter" data-level="8.3" data-path="publishing-repositories.html"><a href="publishing-repositories.html#preparing-to-publish"><i class="fa fa-check"></i><b>8.3</b> Preparing to publish</a>
+<ul>
+<li class="chapter" data-level="8.3.1" data-path="publishing-repositories.html"><a href="publishing-repositories.html#author-list"><i class="fa fa-check"></i><b>8.3.1</b> Author list</a></li>
+<li class="chapter" data-level="8.3.2" data-path="publishing-repositories.html"><a href="publishing-repositories.html#description"><i class="fa fa-check"></i><b>8.3.2</b> Description</a></li>
+<li class="chapter" data-level="8.3.3" data-path="publishing-repositories.html"><a href="publishing-repositories.html#version"><i class="fa fa-check"></i><b>8.3.3</b> Version</a></li>
+<li class="chapter" data-level="8.3.4" data-path="publishing-repositories.html"><a href="publishing-repositories.html#keywords"><i class="fa fa-check"></i><b>8.3.4</b> Keywords</a></li>
+<li class="chapter" data-level="8.3.5" data-path="publishing-repositories.html"><a href="publishing-repositories.html#license"><i class="fa fa-check"></i><b>8.3.5</b> License</a></li>
+<li class="chapter" data-level="8.3.6" data-path="publishing-repositories.html"><a href="publishing-repositories.html#funding"><i class="fa fa-check"></i><b>8.3.6</b> Funding</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="flex-your-github-skills-by-updating-our-website.html"><a href="flex-your-github-skills-by-updating-our-website.html"><i class="fa fa-check"></i><b>9</b> Flex your GitHub skills… by updating our website!</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="flex-your-github-skills-by-updating-our-website.html"><a href="flex-your-github-skills-by-updating-our-website.html#directions"><i class="fa fa-check"></i><b>9.1</b> Directions:</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -222,7 +236,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="header">
 <h1 class="title">ROSSyndicate Project and Workflow Best Practices</h1>
 <p class="author"><em>ROSSyndicate</em></p>
-<p class="date"><em>2023-06-27</em></p>
+<p class="date"><em>2023-06-28</em></p>
 </div>
 <div id="about" class="section level1 hasAnchor" number="1">
 <h1><span class="header-section-number">Section 1</span> About<a href="index.html#about" class="anchor-section" aria-label="Anchor link to header"></a></h1>
@@ -251,6 +265,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">1.4</span> Origin<a href="index.html#origin" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Adapted from the Geospatial Centroid’s GitHub Workflow Document, Caitlin Mothes, built out for ROSSyndicate by Katie Willi, B Steele, and Matt Brousil.</p>
 
+<pre><code>## 
+## Attaching package: &#39;vembedr&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:lubridate&#39;:
+## 
+##     hms</code></pre>
 </div>
 </div>
             </section>
