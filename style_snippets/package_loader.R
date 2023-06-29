@@ -1,6 +1,8 @@
 # Function to check for package installation, then install (if necessary) and load libraries.
 # Adapted from code developed by Caitlin Mothes, PhD.
 
+# See related 'package_installer' for {targets} pipelines
+
 # fill in with packages that need to be loaded:
 packages <- c('tidyverse',
               'sf')
