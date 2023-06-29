@@ -82,11 +82,11 @@ To complete the entry of your metadata information and formalize the publishing 
 
 Here, you can click on the released repository:
 
-![](images/Screenshot 2023-06-28 at 2.38.19 PM.png)
+![](images/Screenshot%202023-06-28%20at%202.38.19%20PM.png)
 
 And then click the 'Edit' button:
 
-![](images/Screenshot 2023-06-28 at 2.39.53 PM.png)
+![](images/Screenshot%202023-06-28%20at%202.39.53%20PM.png)
 
 Here, you can enter in all information from your Zenodo metadata document. When you're ready, press 'Save' and then 'Publish'.
 
@@ -94,8 +94,8 @@ Here, you can enter in all information from your Zenodo metadata document. When 
 
 Now that you've minted a sweet sweet DOI for your repository, you should go ahead and add the DOI badge to your repository's README file.
 
-On the right hand side of your Zenodo release landing page (formatted as 'https://zenodo.org/record/*DOInumber*' on your browser), click on the DOI badge:
+On the right hand side of your Zenodo release landing page (formatted as '<https://zenodo.org/record/*DOInumber>\*' on your browser), click on the DOI badge:
 
-![](images/Screenshot 2023-06-28 at 2.43.40 PM.png){width="200"}
+![](images/Screenshot%202023-06-28%20at%202.43.40%20PM.png){width="200"}
 
 This will pop up a number of embedding formats. Copy and paste the one for 'Markdown'. At this point, go to the GitHub repository and add the badge at the top of the primary README file within the GitHub user interface on the web. This addition to the repository does not need to be reviewed.
