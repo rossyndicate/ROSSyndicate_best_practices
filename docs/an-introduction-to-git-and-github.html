@@ -23,7 +23,7 @@
 <meta name="author" content="ROSSyndicate" />
 
 
-<meta name="date" content="2023-06-28" />
+<meta name="date" content="2023-06-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -198,15 +198,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8" data-path="publishing-repositories.html"><a href="publishing-repositories.html"><i class="fa fa-check"></i><b>8</b> Publishing Repositories</a>
 <ul>
 <li class="chapter" data-level="8.1" data-path="publishing-repositories.html"><a href="publishing-repositories.html#creating-a-zenodo-account"><i class="fa fa-check"></i><b>8.1</b> Creating a Zenodo account</a></li>
-<li class="chapter" data-level="8.2" data-path="publishing-repositories.html"><a href="publishing-repositories.html#linking-a-repository-to-zenodo"><i class="fa fa-check"></i><b>8.2</b> Linking a repository to Zenodo</a></li>
-<li class="chapter" data-level="8.3" data-path="publishing-repositories.html"><a href="publishing-repositories.html#preparing-to-publish"><i class="fa fa-check"></i><b>8.3</b> Preparing to publish</a>
+<li class="chapter" data-level="8.2" data-path="publishing-repositories.html"><a href="publishing-repositories.html#preparing-to-publish"><i class="fa fa-check"></i><b>8.2</b> Preparing to publish</a>
 <ul>
-<li class="chapter" data-level="8.3.1" data-path="publishing-repositories.html"><a href="publishing-repositories.html#author-list"><i class="fa fa-check"></i><b>8.3.1</b> Author list</a></li>
-<li class="chapter" data-level="8.3.2" data-path="publishing-repositories.html"><a href="publishing-repositories.html#description"><i class="fa fa-check"></i><b>8.3.2</b> Description</a></li>
-<li class="chapter" data-level="8.3.3" data-path="publishing-repositories.html"><a href="publishing-repositories.html#version"><i class="fa fa-check"></i><b>8.3.3</b> Version</a></li>
-<li class="chapter" data-level="8.3.4" data-path="publishing-repositories.html"><a href="publishing-repositories.html#keywords"><i class="fa fa-check"></i><b>8.3.4</b> Keywords</a></li>
-<li class="chapter" data-level="8.3.5" data-path="publishing-repositories.html"><a href="publishing-repositories.html#license"><i class="fa fa-check"></i><b>8.3.5</b> License</a></li>
-<li class="chapter" data-level="8.3.6" data-path="publishing-repositories.html"><a href="publishing-repositories.html#funding"><i class="fa fa-check"></i><b>8.3.6</b> Funding</a></li>
+<li class="chapter" data-level="8.2.1" data-path="publishing-repositories.html"><a href="publishing-repositories.html#release-title"><i class="fa fa-check"></i><b>8.2.1</b> Release Title</a></li>
+<li class="chapter" data-level="8.2.2" data-path="publishing-repositories.html"><a href="publishing-repositories.html#author-list"><i class="fa fa-check"></i><b>8.2.2</b> Author list</a></li>
+<li class="chapter" data-level="8.2.3" data-path="publishing-repositories.html"><a href="publishing-repositories.html#description"><i class="fa fa-check"></i><b>8.2.3</b> Description</a></li>
+<li class="chapter" data-level="8.2.4" data-path="publishing-repositories.html"><a href="publishing-repositories.html#version"><i class="fa fa-check"></i><b>8.2.4</b> Version</a></li>
+<li class="chapter" data-level="8.2.5" data-path="publishing-repositories.html"><a href="publishing-repositories.html#keywords"><i class="fa fa-check"></i><b>8.2.5</b> Keywords</a></li>
+<li class="chapter" data-level="8.2.6" data-path="publishing-repositories.html"><a href="publishing-repositories.html#license"><i class="fa fa-check"></i><b>8.2.6</b> License</a></li>
+<li class="chapter" data-level="8.2.7" data-path="publishing-repositories.html"><a href="publishing-repositories.html#funding"><i class="fa fa-check"></i><b>8.2.7</b> Funding</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="publishing-repositories.html"><a href="publishing-repositories.html#linking-a-repository-to-zenodo"><i class="fa fa-check"></i><b>8.3</b> Linking a repository to Zenodo</a></li>
+<li class="chapter" data-level="8.4" data-path="publishing-repositories.html"><a href="publishing-repositories.html#completing-the-metadata-information"><i class="fa fa-check"></i><b>8.4</b> Completing the metadata information</a>
+<ul>
+<li class="chapter" data-level="8.4.1" data-path="publishing-repositories.html"><a href="publishing-repositories.html#add-the-doi-badge-to-your-repository"><i class="fa fa-check"></i><b>8.4.1</b> Add the DOI badge to your repository</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="flex-your-github-skills-by-updating-our-website.html"><a href="flex-your-github-skills-by-updating-our-website.html"><i class="fa fa-check"></i><b>9</b> Flex your GitHub skills… by updating our website!</a>
@@ -235,27 +240,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="an-introduction-to-git-and-github" class="section level1 hasAnchor" number="2">
 <h1><span class="header-section-number">Section 2</span> An Introduction to Git And GitHub<a href="an-introduction-to-git-and-github.html#an-introduction-to-git-and-github" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Git is a version control system that helps manage projects, especially
-projects that involve multiple people. GitHub is a hosting service for
-these Git projects (in GitHub-speak, projects are housed in
-<strong>repositories</strong>). Here, we will outline how to set up Git, create your
-own GitHub account, and connect them to you local R environment to
-easily publish and share the code you develop. A great article on the
-benefits of using Git and GitHub has been written by Jennifer Bryan,
-which you can find <a href="https://happygitwithr.com/big-picture.html">here</a>
-and we highly recommend reading!</p>
-<p>In fact, Jennifer Bryan has developed what we feel is the best guide for
-using Git and GitHub out there, <a href="https://happygitwithr.com/index.html">Happy Git and GitHub for the
-useR</a>. So as not to reinvent the
-wheel, this outline will mostly just direct you to that body of work.</p>
+<p>Git is a version control system that helps manage projects, especially projects
+that involve multiple people. GitHub is a hosting service for these Git
+projects (in GitHub-speak, projects are housed in <strong>repositories</strong>). Here, we
+will outline how to set up Git, create your own GitHub account, and connect
+them to you local R environment to easily publish and share the code you
+develop. A great article on the benefits of using Git and GitHub has been
+written by Jennifer Bryan, which you can find
+<a href="https://happygitwithr.com/big-picture.html">here</a> and we highly recommend
+reading!</p>
+<p>In fact, Jennifer Bryan has developed what we feel is the best guide for using
+Git and GitHub out there, <a href="https://happygitwithr.com/index.html">Happy Git and GitHub for the
+useR</a>. So as not to reinvent the wheel,
+this outline will mostly just direct you to that body of work.</p>
 <div id="setting-up-git-and-github" class="section level2 hasAnchor" number="2.1">
 <h2><span class="header-section-number">2.1</span> Setting up Git and GitHub<a href="an-introduction-to-git-and-github.html#setting-up-git-and-github" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Matt made an excellent YouTube video (also based on Jenny Bryan’s work)
-on how to set up your own GitHub account, install Git, and allow them to
-interact with your personal R environment. It’s also a great primer for
-how Git and GitHub work in R Studio.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="an-introduction-to-git-and-github.html#cb4-1" tabindex="-1"></a><span class="fu">embed_url</span>(<span class="st">&quot;https://www.youtube.com/watch?v=Y4sOTFV3FAM&amp;t=1s&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb4-2"><a href="an-introduction-to-git-and-github.html#cb4-2" tabindex="-1"></a>  <span class="fu">use_align</span>(<span class="st">&quot;center&quot;</span>)</span></code></pre></div>
+<p>Matt made an excellent YouTube video (also based on Jenny Bryan’s work) on how
+to set up your own GitHub account, install Git, and allow them to interact with
+your personal R environment. It’s also a great primer for how Git and GitHub
+work in R Studio.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="an-introduction-to-git-and-github.html#cb1-1" tabindex="-1"></a><span class="fu">embed_url</span>(<span class="st">&quot;https://www.youtube.com/watch?v=Y4sOTFV3FAM&amp;t=1s&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1-2"><a href="an-introduction-to-git-and-github.html#cb1-2" tabindex="-1"></a>  <span class="fu">use_align</span>(<span class="st">&quot;center&quot;</span>)</span></code></pre></div>
 <div class="vembedr" align="center">
 <div>
 <iframe src="https://www.youtube.com/embed/Y4sOTFV3FAM?start=1" width="533" height="300" frameborder="0" allowfullscreen="" data-external="1"></iframe>
@@ -275,37 +280,35 @@ computer. (see <a href="https://happygitwithr.com/hello-git.html" class="uri">ht
 </div>
 <div id="developing-viewing-and-editing-repositories" class="section level2 hasAnchor" number="2.2">
 <h2><span class="header-section-number">2.2</span> Developing, viewing, and editing repositories<a href="an-introduction-to-git-and-github.html#developing-viewing-and-editing-repositories" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>As mentioned in Matt’s video (~7:53), creating a repository is the
-first step when starting a brand-new Git project. Essentially, a
-<strong>repository</strong> is the main folder in which all the files and code
-related to a project live. For any repository on GitHub, there are two
-ways of copying it to your local computer: <strong>cloning</strong> and <strong>forking</strong>.</p>
+<p>As mentioned in Matt’s video (~7:53), creating a repository is the first step
+when starting a brand-new Git project. Essentially, a <strong>repository</strong> is the
+main folder in which all the files and code related to a project live. For any
+repository on GitHub, there are two ways of copying it to your local computer:
+<strong>cloning</strong> and <strong>forking</strong>.</p>
 <div id="cloning" class="section level3 hasAnchor" number="2.2.1">
 <h3><span class="header-section-number">2.2.1</span> Cloning<a href="an-introduction-to-git-and-github.html#cloning" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Cloning a repository maps a local version of that repository to your
-computer, allowing you to sync-up both the local (your computer) and
-remote (what’s on GitHub) versions. This type of copying is useful for
-workflows where you are the only one working on them. If you clone a
-repository that you did not create yourself, you will be unable to make
-changes to the ‘main’ repository hosted on GitHub unless the developer
-has given your account collaborator approval, but it <em>will</em> allow you to
-refresh and update what’s on your local computer if changes have been
-made to what’s on the ‘main’ repository on GitHub.</p>
-<p>However, for a repository that you have created yourself or are a
-collaborator on, cloning allows two-way syncing; you are able to make
-changes to the GitHub repository as well as update what’s on your local
-computer if the GitHub repository changes.</p>
-<p>After editing, adding, or removing pieces of the project, you can
-re-sync those changes by committing and then pushing the project back to
-GitHub. A <strong>commit</strong> essentially packages and saves the changes you
-made; it also allows you to comment on what exactly you changed in the
-repository. Meanwhile, the <strong>push</strong> command sends those changes that
-were packaged by the commmit to GitHub and updates the remote repository
-on GitHub accordingly. Because cloning creates a direct connection
-between the GitHub ‘main’ repository and what you’ve cloned to your
-local computer, you can only push changes to repositories that are
-located in your own GitHub account, or to repositories that the
-developer of the repository has explicitly made you a collaborator on.</p>
+<p>Cloning a repository maps a local version of that repository to your computer,
+allowing you to sync-up both the local (your computer) and remote (what’s on
+GitHub) versions. This type of copying is useful for workflows where you are
+the only one working on them. If you clone a repository that you did not create
+yourself, you will be unable to make changes to the ‘main’ repository hosted on
+GitHub unless the developer has given your account collaborator approval, but
+it <em>will</em> allow you to refresh and update what’s on your local computer if
+changes have been made to what’s on the ‘main’ repository on GitHub.</p>
+<p>However, for a repository that you have created yourself or are a collaborator
+on, cloning allows two-way syncing; you are able to make changes to the GitHub
+repository as well as update what’s on your local computer if the GitHub
+repository changes.</p>
+<p>After editing, adding, or removing pieces of the project, you can re-sync those
+changes by committing and then pushing the project back to GitHub. A <strong>commit</strong>
+essentially packages and saves the changes you made; it also allows you to
+comment on what exactly you changed in the repository. Meanwhile, the <strong>push</strong>
+command sends those changes that were packaged by the commmit to GitHub and
+updates the remote repository on GitHub accordingly. Because cloning creates a
+direct connection between the GitHub ‘main’ repository and what you’ve cloned
+to your local computer, you can only push changes to repositories that are
+located in your own GitHub account, or to repositories that the developer of
+the repository has explicitly made you a collaborator on.</p>
 <div id="how-to-clone-and-update-your-github" class="section level4 hasAnchor" number="2.2.1.1">
 <h4><span class="header-section-number">2.2.1.1</span> <strong>How to clone and update your GitHub</strong>:<a href="an-introduction-to-git-and-github.html#how-to-clone-and-update-your-github" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ol style="list-style-type: decimal">
@@ -323,30 +326,27 @@ developer of the repository has explicitly made you a collaborator on.</p>
 </div>
 <div id="forking" class="section level3 hasAnchor" number="2.2.2">
 <h3><span class="header-section-number">2.2.2</span> Forking<a href="an-introduction-to-git-and-github.html#forking" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Unlike cloning, forking a repository creates a totally separate,
-parallel copy of a repository that is housed within your own personal
-GitHub account. Specifically, if you’ve made changes to the code in a
-forked repository then committed and pushed those changes, it does not
-automatically make those same changes to the ‘main’ repository that it
-was forked from on GitHub. Instead, all changes are saved and stored
-only within the repository hosted within your own GitHub account.</p>
-<p>Forking essentially creates a line of defense for changes in a workflow
-that would otherwise disrupt the workflows of other people working
-within that ‘main’ repository project. For the ‘main’ repository to be
-updated with the changes you made in your forked version, you must
-submit a pull request.</p>
-<p>A <strong>pull request</strong> is an invitation to the owner of the ‘main’
-repository to review the changes you’ve made to the code and potentially
-merge them into their ‘main’ repository. If the owner/reviewer finds
-that the code you’ve developed would be a good addition to the workflow
-and/or that the code has not diverged/disrupted others’ workflows, they
-can approve the pull request, and the ‘main’ repository will be updated
-accordingly.</p>
-<p>Matt and a former grad student, Bryce Pulver, made another excellent
-video that walks through an example collaborative workflow using
-forking:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="an-introduction-to-git-and-github.html#cb5-1" tabindex="-1"></a><span class="fu">embed_url</span>(<span class="st">&quot;https://www.youtube.com/watch?v=a_YY_PIDeq8&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb5-2"><a href="an-introduction-to-git-and-github.html#cb5-2" tabindex="-1"></a>  <span class="fu">use_align</span>(<span class="st">&quot;center&quot;</span>)</span></code></pre></div>
+<p>Unlike cloning, forking a repository creates a totally separate, parallel copy
+of a repository that is housed within your own personal GitHub account.
+Specifically, if you’ve made changes to the code in a forked repository then
+committed and pushed those changes, it does not automatically make those same
+changes to the ‘main’ repository that it was forked from on GitHub. Instead,
+all changes are saved and stored only within the repository hosted within your
+own GitHub account.</p>
+<p>Forking essentially creates a line of defense for changes in a workflow that
+would otherwise disrupt the workflows of other people working within that
+‘main’ repository project. For the ‘main’ repository to be updated with the
+changes you made in your forked version, you must submit a pull request.</p>
+<p>A <strong>pull request</strong> is an invitation to the owner of the ‘main’ repository to
+review the changes you’ve made to the code and potentially merge them into
+their ‘main’ repository. If the owner/reviewer finds that the code you’ve
+developed would be a good addition to the workflow and/or that the code has not
+diverged/disrupted others’ workflows, they can approve the pull request, and
+the ‘main’ repository will be updated accordingly.</p>
+<p>Matt and a former grad student, Bryce Pulver, made another excellent video that
+walks through an example collaborative workflow using forking:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="an-introduction-to-git-and-github.html#cb2-1" tabindex="-1"></a><span class="fu">embed_url</span>(<span class="st">&quot;https://www.youtube.com/watch?v=a_YY_PIDeq8&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb2-2"><a href="an-introduction-to-git-and-github.html#cb2-2" tabindex="-1"></a>  <span class="fu">use_align</span>(<span class="st">&quot;center&quot;</span>)</span></code></pre></div>
 <div class="vembedr" align="center">
 <div>
 <iframe src="https://www.youtube.com/embed/a_YY_PIDeq8" width="533" height="300" frameborder="0" allowfullscreen="" data-external="1"></iframe>
@@ -378,8 +378,8 @@ the main repository and selecting and creating a pull request.
 <div id="additional-resources" class="section level2 hasAnchor" number="2.3">
 <h2><span class="header-section-number">2.3</span> Additional resources<a href="an-introduction-to-git-and-github.html#additional-resources" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Below is a list of additional resources about GitHub and collaborative
-workflows. <br> • GitHub website (<a href="https://docs.github.com/en" class="uri">https://docs.github.com/en</a>) <br> •
-Forked workflows
+workflows. <br> • GitHub website (<a href="https://docs.github.com/en" class="uri">https://docs.github.com/en</a>) <br> • Forked
+workflows
 (<a href="https://www.atlassian.com/git/tutorials/comparing-workflows/forking-workflow" class="uri">https://www.atlassian.com/git/tutorials/comparing-workflows/forking-workflow</a>)
 <br> • Using Git and GitHub for team collaboration
 (<a href="https://medium.com/anne-kerrs-blog/using-git-and-github-for-team-collaboration-e761e7c00281" class="uri">https://medium.com/anne-kerrs-blog/using-git-and-github-for-team-collaboration-e761e7c00281</a>)

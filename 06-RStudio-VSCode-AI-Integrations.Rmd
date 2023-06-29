@@ -7,3 +7,8 @@
 ## Downloading VSCode and installing the GitHub CoPilot extension
 
 ## Setting up AutoSave in VSCode + RStudio
+
+```{r, echo = F}
+knitr::wrap_rmd('06-RStudio-VSCode-AI-Integrations.Rmd', width = 80, backup = NULL)
+#note, this will not wrap text that are prefaced by any special characters (like bullets!)
+```

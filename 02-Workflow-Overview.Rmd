@@ -5,3 +5,8 @@
 ## Collaborative Coding
 
 ## Addressing merge conflicts
+
+```{r, echo = F}
+knitr::wrap_rmd('02-Workflow-Overview.Rmd', width = 80, backup = NULL)
+#note, this will not wrap text that are prefaced by any special characters (like bullets!)
+```

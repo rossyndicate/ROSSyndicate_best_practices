@@ -23,7 +23,7 @@
 <meta name="author" content="ROSSyndicate" />
 
 
-<meta name="date" content="2023-06-28" />
+<meta name="date" content="2023-06-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -175,29 +175,54 @@
             <section class="normal" id="section-">
 <div id="publishing-repositories" class="section level1 hasAnchor" number="8">
 <h1><span class="header-section-number">Section 8</span> Publishing Repositories<a href="publishing-repositories.html#publishing-repositories" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>When delivering code or repositories to our stakeholders or other researchers, it needs to be citable. A citable repository has a stable DOI (digital object identifier) and complete metadata. We use the GitHub integration in Zenodo to publish repositories. When set up correctly, a GitHub ‘release’ will push all code to Zenodo automatically. All future ‘releases’ will be associated with the original DOI as well as a new DOI specific to that release.</p>
-<p>In general, the GitHub -&gt; Zenodo pathway is best for software (code) and not necessarily for data. Data publishing should be completed at EDI, CUAHSI, or FigShare. Derived data is okay in the GitHub -&gt; Zenodo pathway, just remember, this pathway is meant to be for CODE and SOFTWARE, not necessarily for data (though you can publish data to Zenodo).</p>
-<p>As mentioned before, we only publish repositories that have been consistently reviewed internally. Ideally your repository has been reviewed by an external collaborator or by another ROSSyndicate member. Remember, by pushing this repository to Zenodo, you are creating a PERMANENT archive of its contents, for better or worse.</p>
+<p>When delivering code or repositories to our stakeholders or other researchers,
+it needs to be citable. A citable repository has a stable DOI (digital object
+identifier) and complete metadata. We use the GitHub integration in Zenodo to
+publish repositories. When set up correctly, a GitHub ‘release’ will push all
+code to Zenodo automatically. All future ‘releases’ will be associated with the
+original DOI as well as a new DOI specific to that release.</p>
+<p>In general, the GitHub -&gt; Zenodo pathway is best for software (code) and not
+necessarily for data. Data publishing should be completed at EDI, CUAHSI, or
+FigShare. Derived data is okay in the GitHub -&gt; Zenodo pathway, just remember,
+this pathway is meant to be for CODE and SOFTWARE, not necessarily for data
+(though you can publish data to Zenodo).</p>
+<p>As mentioned before, we only publish repositories that have been consistently
+reviewed internally. Ideally your repository has been reviewed by an external
+collaborator or by another ROSSyndicate member. Remember, by pushing this
+repository to Zenodo, you are creating a PERMANENT archive of its contents, for
+better or worse.</p>
 <div id="creating-a-zenodo-account" class="section level2 hasAnchor" number="8.1">
 <h2><span class="header-section-number">8.1</span> Creating a Zenodo account<a href="publishing-repositories.html#creating-a-zenodo-account" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The easiest way to create a Zenodo account is to do so with your GitHub credentials. You will need to link these two accounts in order to fully take advantage of the GitHub/Zenodo integration.</p>
+<p>The easiest way to create a Zenodo account is to do so with your GitHub
+credentials. You will need to link these two accounts in order to fully take
+advantage of the GitHub/Zenodo integration.</p>
 <p><img src="images/Screenshot%202023-06-28%20at%2012.42.20%20PM-01.png" width="1000" /></p>
 </div>
 <div id="preparing-to-publish" class="section level2 hasAnchor" number="8.2">
 <h2><span class="header-section-number">8.2</span> Preparing to publish<a href="publishing-repositories.html#preparing-to-publish" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>In order to have a meaningful repository release, you need to provide some metadata to Zenodo. While there are no requirements for publishing to Zenodo, it is a best practice to include robust metadata alongside your code release. A metadata template can be found in the helpful_docs folder of this repository.</p>
-<p>Once you’ve compiled this information, send it to Katie Willi or Anika Pyle for proofreading.</p>
+<p>In order to have a meaningful repository release, you need to provide some
+metadata to Zenodo. While there are no requirements for publishing to Zenodo,
+it is a best practice to include robust metadata alongside your code release. A
+metadata template can be found in the helpful_docs folder of this repository.</p>
+<p>Once you’ve compiled this information, send it to Katie Willi or Anika Pyle for
+proofreading.</p>
 <div id="release-title" class="section level3 hasAnchor" number="8.2.1">
 <h3><span class="header-section-number">8.2.1</span> Release Title<a href="publishing-repositories.html#release-title" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>You can use the repository name, but that’s not going to be helpful for anyone except you! Someone reading the Release Title should be able to discern what the repository does. You can explain the ‘how’ in the description.</p>
+<p>You can use the repository name, but that’s not going to be helpful for anyone
+except you! Someone reading the Release Title should be able to discern what
+the repository does. You can explain the ‘how’ in the description.</p>
 </div>
 <div id="author-list" class="section level3 hasAnchor" number="8.2.2">
 <h3><span class="header-section-number">8.2.2</span> Author list<a href="publishing-repositories.html#author-list" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Prepare your author list by looking at the contributors to the repo. All contributors to the repo should be listed as an author. You will need each author’s full name, institution, and their <a href="https://orcid.org/">ORCID</a>.</p>
+<p>Prepare your author list by looking at the contributors to the repo. All
+contributors to the repo should be listed as an author. You will need each
+author’s full name, institution, and their <a href="https://orcid.org/">ORCID</a>.</p>
 </div>
 <div id="description" class="section level3 hasAnchor" number="8.2.3">
 <h3><span class="header-section-number">8.2.3</span> Description<a href="publishing-repositories.html#description" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>This is the big lift in creating the metadata. Consider this similar to the introduction/background and methods section of a scientific paper. In the description of your repository, add information about the following things:</p>
+<p>This is the big lift in creating the metadata. Consider this similar to the
+introduction/background and methods section of a scientific paper. In the
+description of your repository, add information about the following things:</p>
 <ul>
 <li><p>General code description - the ‘how’ of your repository</p></li>
 <li><p>Methodology (summary only) - specifically if there are multiple steps to an analysis it is helpful to provide a methodology. If the repository hosts a very complicated analysis, consider only a condensed version of methods here, but add a markdown document with the complete methodology in your repository.</p></li>
@@ -210,47 +235,71 @@
 <li><p>Maintenance and maintenance interval. ‘Ongoing’ or ‘completed’. If ‘ongoing’, state the approximate interval that the repository will be updated.</p></li>
 <li><p>If this is an update to a previous release, state the changes from the previous version.</p></li>
 </ul>
-<p>Generally speaking, much of this information should already exist in your repository README or Methods document and cutting/pasting is absolutely okay. This section may be lengthy and that is okay!</p>
+<p>Generally speaking, much of this information should already exist in your
+repository README or Methods document and cutting/pasting is absolutely okay.
+This section may be lengthy and that is okay!</p>
 </div>
 <div id="version" class="section level3 hasAnchor" number="8.2.4">
 <h3><span class="header-section-number">8.2.4</span> Version<a href="publishing-repositories.html#version" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>For one-time releases (like preparing a repository for a paper), using a version-number is perfect (i.e. v1, v2, etc). For repositories that are updated frequently, consider using a version-year-number (i.e. v2022-1, v2023-1, v2023-2, etc).</p>
+<p>For one-time releases (like preparing a repository for a paper), using a
+version-number is perfect (i.e. v1, v2, etc). For repositories that are updated
+frequently, consider using a version-year-number (i.e. v2022-1, v2023-1,
+v2023-2, etc).</p>
 </div>
 <div id="keywords" class="section level3 hasAnchor" number="8.2.5">
 <h3><span class="header-section-number">8.2.5</span> Keywords<a href="publishing-repositories.html#keywords" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Generally speaking, keywords help others find your code or research. It is not required. Keywords should be meaningful and specific and can include places, methods, etc. It is common to use controlled vocabulary for keywords, like the <a href="https://vocab.lternet.edu/vocab/vocab/index.php">LTER controlled vocabulary for ecology research</a>.</p>
+<p>Generally speaking, keywords help others find your code or research. It is not
+required. Keywords should be meaningful and specific and can include places,
+methods, etc. It is common to use controlled vocabulary for keywords, like the
+<a href="https://vocab.lternet.edu/vocab/vocab/index.php">LTER controlled vocabulary for ecology
+research</a>.</p>
 </div>
 <div id="license" class="section level3 hasAnchor" number="8.2.6">
 <h3><span class="header-section-number">8.2.6</span> License<a href="publishing-repositories.html#license" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>All repositories that are published are considered open access. Because our repository best practices include using an MIT use license, the LICENSE.txt file will override this option.</p>
+<p>All repositories that are published are considered open access. Because our
+repository best practices include using an MIT use license, the LICENSE.txt
+file will override this option.</p>
 </div>
 <div id="funding" class="section level3 hasAnchor" number="8.2.7">
 <h3><span class="header-section-number">8.2.7</span> Funding<a href="publishing-repositories.html#funding" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>If there is applicable funding sources for this repository, you should list them. You will need the funder name and the grant number.</p>
+<p>If there is applicable funding sources for this repository, you should list
+them. You will need the funder name and the grant number.</p>
 <p><strong>No other fields are required.</strong></p>
 </div>
 </div>
 <div id="linking-a-repository-to-zenodo" class="section level2 hasAnchor" number="8.3">
 <h2><span class="header-section-number">8.3</span> Linking a repository to Zenodo<a href="publishing-repositories.html#linking-a-repository-to-zenodo" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>To activate the GitHub/Zenodo integration for a given repository, navigate to the GitHub account page by clicking the dropdown menu in the top right of the window.</p>
+<p>To activate the GitHub/Zenodo integration for a given repository, navigate to
+the GitHub account page by clicking the dropdown menu in the top right of the
+window.</p>
 <p><img src="images/Screenshot%202023-06-28%20at%2012.53.08%20PM.png" width="200" /></p>
 <p>From here, you simply follow the directions!</p>
 <p><img src="images/Screenshot%202023-06-28%20at%2012.55.38%20PM.png" /></p>
 </div>
 <div id="completing-the-metadata-information" class="section level2 hasAnchor" number="8.4">
 <h2><span class="header-section-number">8.4</span> Completing the metadata information<a href="publishing-repositories.html#completing-the-metadata-information" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>To complete the entry of your metadata information and formalize the publishing of your repository, you’ll need to edit the Zenodo upload. Do this by navigating to the ‘Upload’ section of Zenodo (by clicking ‘Upload’ at the top of the Zenodo site).</p>
+<p>To complete the entry of your metadata information and formalize the publishing
+of your repository, you’ll need to edit the Zenodo upload. Do this by
+navigating to the ‘Upload’ section of Zenodo (by clicking ‘Upload’ at the top
+of the Zenodo site).</p>
 <p>Here, you can click on the released repository:</p>
 <p><img src="images/Screenshot%202023-06-28%20at%202.38.19%20PM.png" /></p>
 <p>And then click the ‘Edit’ button:</p>
 <p><img src="images/Screenshot%202023-06-28%20at%202.39.53%20PM.png" /></p>
-<p>Here, you can enter in all information from your Zenodo metadata document. When you’re ready, press ‘Save’ and then ‘Publish’.</p>
+<p>Here, you can enter in all information from your Zenodo metadata document. When
+you’re ready, press ‘Save’ and then ‘Publish’.</p>
 <div id="add-the-doi-badge-to-your-repository" class="section level3 hasAnchor" number="8.4.1">
 <h3><span class="header-section-number">8.4.1</span> Add the DOI badge to your repository<a href="publishing-repositories.html#add-the-doi-badge-to-your-repository" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Now that you’ve minted a sweet sweet DOI for your repository, you should go ahead and add the DOI badge to your repository’s README file.</p>
-<p>On the right hand side of your Zenodo release landing page (formatted as ’<a href="https://zenodo.org/record/*DOInumber" class="uri">https://zenodo.org/record/*DOInumber</a>*’ on your browser), click on the DOI badge:</p>
+<p>Now that you’ve minted a sweet sweet DOI for your repository, you should go
+ahead and add the DOI badge to your repository’s README file.</p>
+<p>On the right hand side of your Zenodo release landing page (formatted as
+‘<a href="https://zenodo.org/record/*DOInumber" class="uri">https://zenodo.org/record/*DOInumber</a>*’ on your browser), click on the DOI
+badge:</p>
 <p><img src="images/Screenshot%202023-06-28%20at%202.43.40%20PM.png" width="200" /></p>
-<p>This will pop up a number of embedding formats. Copy and paste the one for ‘Markdown’. At this point, go to the GitHub repository and add the badge at the top of the primary README file within the GitHub user interface on the web. This addition to the repository does not need to be reviewed.</p>
+<p>This will pop up a number of embedding formats. Copy and paste the one for
+‘Markdown’. At this point, go to the GitHub repository and add the badge at the
+top of the primary README file within the GitHub user interface on the web.
+This addition to the repository does not need to be reviewed.</p>
 
 </div>
 </div>

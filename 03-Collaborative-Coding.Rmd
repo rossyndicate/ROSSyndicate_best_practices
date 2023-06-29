@@ -13,3 +13,8 @@
 ## Types of code review and engaging your internal creative partner
 
 ## Additional Reading
+
+```{r, echo = F}
+knitr::wrap_rmd('03-Collaborative-Coding.Rmd', width = 80, backup = NULL)
+#note, this will not wrap text that are prefaced by any special characters (like bullets!)
+```
