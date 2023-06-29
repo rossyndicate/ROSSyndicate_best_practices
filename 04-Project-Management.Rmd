@@ -3,3 +3,8 @@
 ## Github Project best practices
 
 ## GitHub Project additional reading
+
+```{r, echo = F}
+knitr::wrap_rmd('04-Project-Management.Rmd', width = 80, backup = NULL)
+#note, this will not wrap text that are prefaced by any special characters (like bullets!)
+```

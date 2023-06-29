@@ -7,3 +7,8 @@
 ## Keeping your branch updated with upstream changes
 
 ## Feature branch best practices
+
+```{r, echo = F}
+knitr::wrap_rmd('05-Git-Feature-Branches.Rmd', width = 80, backup = NULL)
+#note, this will not wrap text that are prefaced by any special characters (like bullets!)
+```
