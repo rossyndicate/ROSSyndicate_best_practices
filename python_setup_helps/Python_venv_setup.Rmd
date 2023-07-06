@@ -1,0 +1,45 @@
+---
+title: "Python Virtual Environment Setup"
+author: "ROSSyndicate"
+date: "2023-07-06"
+output: html_document
+---
+
+# Setting up a python virtual environment
+
+If you need python modules (the equivalent of R packages) that are not included in the python base modules, you will need to set up a virtual environment for reproducibility.
+
+In order to do this successfully, you'll need to edit the `pySetup.R` file within this directory so that it suits your needs.
+
+You should not track your virtual environment folder in GitHub. Add the folder extension to your `.gitignore` file and confirm that it is not tracking the folder.
+
+## Python setup code snippet
+
+This snippet checks to see if the 'env' folder exists - this is where the virtual environment is set up, and if it is not, it runs the `pySetup.R` file. If the 'env' folder exists, we use the {reticulate} function `use_condaenv()` to read the virtual environment you already created in the `pySetup.R` script.
+
+```{r}
+library(reticulate)
+
+if (!dir.exists("env")) {
+  source("pySetup.R")
+} else {
+  use_condaenv(file.path(getwd(), "env"))
+}
+```
+
+## Editing the `pySetup.R` file
+
+The things you may have to edit are the lines for the python modules you want to install in your python virtual environment (on line 6):
+
+![](images/Screenshot 2023-07-06 at 10.20.40 AM.png)
+
+And the version of python that you want to use:
+
+![](images/Screenshot 2023-07-06 at 10.22.42 AM.png)
+
+The script defaults to python version 3.8 as it seems to be the most stable for the `earthengine-api` module, but any version can be specified.
+
+```{r, echo = F}
+knitr::wrap_rmd('python_setup_helps/Python_venv_setup.Rmd', width = 80, backup = NULL)
+```
+
