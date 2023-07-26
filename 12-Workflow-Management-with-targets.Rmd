@@ -1,0 +1,49 @@
+---
+editor_options: 
+  markdown: 
+    wrap: 80
+---
+
+# Using the {targets} package to automate your analyses
+
+Data science workflows will often grow beyond a single script and can rapidly become unwieldy when many steps, datasets, and files are involved. This is both a challenge to keep track of (i.e., which scripts to run first, second, etc.) and a challenge to communicate to other users in the world of open science. 
+
+Workflow management software is a solution to this that the ROSSyndicate has embraced. Specifically, we use the [{targets}](https://books.ropensci.org/targets/) R package. {targets} in particular allows you to use R to build out a pipeline (used interchangeably with workflow here) which the software automatically tracks so that it "knows" which steps have been run, which have failed, and which need to be re-run. Your entire analytical pipeline or workflow can be rerun with just the command `tar_make()` and you can visualize the connections between objects and functions in your pipeline with `tar_visnetwork()`.
+
+One exceptional strength of this is the ability of the software to know which downstream steps are affected by a change in the code. This means that you as a human have no need to manually re-run scripts that are outdated by changes in code; {targets} knows which are affected, can tell you, and automatically re-run them. 
+
+Not every analysis is a perfect fit for a {targets} workflow, however. Very small analyses may not be worth the time needed to invest to build out the structure of the pipeline. Workflows that are often re-run with updated datasets or which can perform many parallel iterations are especially good candidates for the {targets} pipeline style.
+
+We won't explain how to use {targets} in detail here, but good resources are readily available. [The {targets} R package user manual](https://books.ropensci.org/targets/) is a great resource written by the author of the {targets} package. Matt Brousil from the ROSSyndicate has also written a short example of building an analysis with the package in [Targets for Ecologists](https://targets-ecology.netlify.app/) and created an [instructional video](https://www.youtube.com/watch?v=UG4xqYcDpxw).
+
+
+## Hot tips and tricks
+
+### Reading external files into {targets} pipelines
+
+When building your {targets} pipeline you may wonder how best to read in data and have the pipeline track the existence of input files. The [{tarchetypes}](https://docs.ropensci.org/tarchetypes/) package provides some handy shortcut functions for this: `tar_file()` and `tar_file_read()`. The first, `tar_file()`, identifies that a pipeline target is a dynamic file based on a path provided to the `command` argument. By contrast, `tar_file_read()` will create two pipeline targets: one tracking the file path provided, and a second reading in the file given the instructions you provide to the `read` argument.
+
+### Sourcing scripts for functions in {targets} pipelines
+
+The `_targets.R` script is an essential piece of a {targets} pipeline. This file is also where functions that define workflow steps ("targets") are sourced from other scripts. {targets} provides a built-in function to do this, `tar_source()`. For example: `tar_source("src/custom_functions.R")`
+
+### Package use in a {targets} pipeline
+
+You might find it unclear how to require certain packages when writing code for a {targets} workflow. The ideal situation is that you use the `tar_option_set()` function near the top of your `_targets.R` script and provide the `packages` argument a character vector of package names that should be loaded for ***every*** target in the workflow. This often might just be `tar_option_set(packages = c("tidyverse"))`. Then, you can change this default for specific targets within the respective targets's `tar_target()` function like this: `tar_target(packages = c("tidyverse", "lubridate"))`. Note that you'll need to still repeat any packages you've already listed in `tar_option_set()` when changing the packages argument in `tar_target()`.
+
+
+## Resources
+
+Below are links to resources to help you learn more about {targets} and implementing workflow management software: 
+
++ [The {targets} R package user manual](https://books.ropensci.org/targets/)
++ [Improving ecological data science with workflow management software](https://doi.org/10.1111/2041-210X.14113)
++ [Targets for Ecologists](https://targets-ecology.netlify.app/)
+
+
+
+
+```{r, echo = F}
+knitr::wrap_rmd('index.Rmd', width = 80, backup = NULL)
+#note, this will not wrap text that are prefaced by any special characters (like bullets!)
+```
