@@ -1,9 +1,4 @@
----
-title: "Python Integrations in RStudio"
-author: "ROSSyndicate"
-date: "2023-07-06"
-output: html_document
----
+# Python Integrations in RStudio
 
 ## Setting up a python virtual environment
 
@@ -26,7 +21,7 @@ virtual environment is set up, and if it is not, it runs the `pySetup.R` file.
 If the 'env' folder exists, we use the {reticulate} function `use_condaenv()`
 to read the virtual environment you already created in the `pySetup.R` script.
 
-```{r}
+```{r, eval=FALSE}
 library(reticulate)
 
 if (!dir.exists("env")) {
