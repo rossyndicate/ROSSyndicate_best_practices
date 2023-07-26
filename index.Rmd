@@ -26,7 +26,7 @@ implement Radical Open Science.
 
 - We value literate, readable code without sacrificing reproducibility. This
 means deploying understandable code and repositories that are accompanied by
-narrative comments and text.We value transparency in our analyses and believe
+narrative comments and text. We value transparency in our analyses and believe
 that well documented repositories and code facilitate that.
 
 - All code and software are licensed with the highly permissive MIT use license.
