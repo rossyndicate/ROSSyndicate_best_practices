@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Page not found | ROSSyndicate Project and Workflow Best Practices</title>
+  <title>Section 9 Python Integrations in RStudio | ROSSyndicate Project and Workflow Best Practices</title>
   <meta name="description" content="The ROSSyndicate workflow best practices guide." />
   <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Page not found | ROSSyndicate Project and Workflow Best Practices" />
+  <meta property="og:title" content="Section 9 Python Integrations in RStudio | ROSSyndicate Project and Workflow Best Practices" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="The ROSSyndicate workflow best practices guide." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Page not found | ROSSyndicate Project and Workflow Best Practices" />
+  <meta name="twitter:title" content="Section 9 Python Integrations in RStudio | ROSSyndicate Project and Workflow Best Practices" />
   
   <meta name="twitter:description" content="The ROSSyndicate workflow best practices guide." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-
+<link rel="prev" href="publishing-repositories.html"/>
+<link rel="next" href="flex-your-github-skills-by-updating-our-website.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -220,18 +220,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.1.1" data-path="python-integrations-in-rstudio.html"><a href="python-integrations-in-rstudio.html#python-setup-code-snippet"><i class="fa fa-check"></i><b>9.1.1</b> Python setup code snippet</a></li>
 <li class="chapter" data-level="9.1.2" data-path="python-integrations-in-rstudio.html"><a href="python-integrations-in-rstudio.html#editing-the-pysetup.r-file"><i class="fa fa-check"></i><b>9.1.2</b> Editing the <code>pySetup.R</code> file</a></li>
 </ul></li>
-</ul></li>
-<li class="chapter" data-level="10" data-path="workflow-management-with-targets.html"><a href="workflow-management-with-targets.html"><i class="fa fa-check"></i><b>10</b> Workflow Management with {targets}</a>
+<li class="chapter" data-level="9.2" data-path="python-integrations-in-rstudio.html"><a href="python-integrations-in-rstudio.html#using-the-targets-package-to-automate-your-analyses"><i class="fa fa-check"></i><b>9.2</b> Using the {targets} package to automate your analyses</a>
 <ul>
-<li class="chapter" data-level="10.1" data-path="workflow-management-with-targets.html"><a href="workflow-management-with-targets.html#using-the-targets-package-to-automate-your-analyses"><i class="fa fa-check"></i><b>10.1</b> Using the {targets} package to automate your analyses</a>
-<ul>
-<li class="chapter" data-level="10.1.1" data-path="workflow-management-with-targets.html"><a href="workflow-management-with-targets.html#hot-tips-and-tricks"><i class="fa fa-check"></i><b>10.1.1</b> Hot tips and tricks</a></li>
-<li class="chapter" data-level="10.1.2" data-path="workflow-management-with-targets.html"><a href="workflow-management-with-targets.html#resources"><i class="fa fa-check"></i><b>10.1.2</b> Resources</a></li>
+<li class="chapter" data-level="9.2.1" data-path="python-integrations-in-rstudio.html"><a href="python-integrations-in-rstudio.html#hot-tips-and-tricks"><i class="fa fa-check"></i><b>9.2.1</b> Hot tips and tricks</a></li>
+<li class="chapter" data-level="9.2.2" data-path="python-integrations-in-rstudio.html"><a href="python-integrations-in-rstudio.html#resources"><i class="fa fa-check"></i><b>9.2.2</b> Resources</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="flex-your-github-skills-by-updating-our-website.html"><a href="flex-your-github-skills-by-updating-our-website.html"><i class="fa fa-check"></i><b>11</b> Flex your GitHub skills… by updating our website!</a>
+<li class="chapter" data-level="10" data-path="flex-your-github-skills-by-updating-our-website.html"><a href="flex-your-github-skills-by-updating-our-website.html"><i class="fa fa-check"></i><b>10</b> Flex your GitHub skills… by updating our website!</a>
 <ul>
-<li class="chapter" data-level="11.1" data-path="flex-your-github-skills-by-updating-our-website.html"><a href="flex-your-github-skills-by-updating-our-website.html#directions"><i class="fa fa-check"></i><b>11.1</b> Directions:</a></li>
+<li class="chapter" data-level="10.1" data-path="flex-your-github-skills-by-updating-our-website.html"><a href="flex-your-github-skills-by-updating-our-website.html#directions"><i class="fa fa-check"></i><b>10.1</b> Directions:</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -253,19 +250,72 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="page-not-found" class="section level1">
-<h1>Page not found</h1>
-<p>The page you requested cannot be found (perhaps it was moved or renamed).</p>
-<p>You may want to try searching to find the page's new location, or use
-the table of contents to find the page you are looking for.</p>
+<div id="python-integrations-in-rstudio" class="section level1 hasAnchor" number="9">
+<h1><span class="header-section-number">Section 9</span> Python Integrations in RStudio<a href="python-integrations-in-rstudio.html#python-integrations-in-rstudio" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="setting-up-a-python-virtual-environment" class="section level2 hasAnchor" number="9.1">
+<h2><span class="header-section-number">9.1</span> Setting up a python virtual environment<a href="python-integrations-in-rstudio.html#setting-up-a-python-virtual-environment" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>If you need python modules (the equivalent of R packages) that are not included
+in the python base modules, you will need to set up a virtual environment for
+reproducibility.</p>
+<p>In order to do this successfully, you’ll need to edit the <code>pySetup.R</code> script so
+that it suits your needs. An example of this script can be found at
+<code>python_setup_helps/pySetup.R</code>.</p>
+<p>Best practices note: you should not track your virtual environment folder in
+GitHub. Add the folder extension to your <code>.gitignore</code> file and confirm that it
+is not tracking the folder.</p>
+<div id="python-setup-code-snippet" class="section level3 hasAnchor" number="9.1.1">
+<h3><span class="header-section-number">9.1.1</span> Python setup code snippet<a href="python-integrations-in-rstudio.html#python-setup-code-snippet" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>This snippet checks to see if the ‘env’ folder exists - this is where the
+virtual environment is set up, and if it is not, it runs the <code>pySetup.R</code> file.
+If the ‘env’ folder exists, we use the {reticulate} function <code>use_condaenv()</code>
+to read the virtual environment you already created in the <code>pySetup.R</code> script.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="python-integrations-in-rstudio.html#cb6-1" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
+<span id="cb6-2"><a href="python-integrations-in-rstudio.html#cb6-2" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="python-integrations-in-rstudio.html#cb6-3" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">dir.exists</span>(<span class="st">&quot;env&quot;</span>)) {</span>
+<span id="cb6-4"><a href="python-integrations-in-rstudio.html#cb6-4" tabindex="-1"></a>  <span class="fu">source</span>(<span class="st">&quot;pySetup.R&quot;</span>)</span>
+<span id="cb6-5"><a href="python-integrations-in-rstudio.html#cb6-5" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb6-6"><a href="python-integrations-in-rstudio.html#cb6-6" tabindex="-1"></a>  <span class="fu">use_condaenv</span>(<span class="fu">file.path</span>(<span class="fu">getwd</span>(), <span class="st">&quot;env&quot;</span>))</span>
+<span id="cb6-7"><a href="python-integrations-in-rstudio.html#cb6-7" tabindex="-1"></a>}</span></code></pre></div>
+</div>
+<div id="editing-the-pysetup.r-file" class="section level3 hasAnchor" number="9.1.2">
+<h3><span class="header-section-number">9.1.2</span> Editing the <code>pySetup.R</code> file<a href="python-integrations-in-rstudio.html#editing-the-pysetup.r-file" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The things you may have to edit are the lines for the python modules you want
+to install in your python virtual environment (on line 6):</p>
+<p><img src="images/Screenshot%202023-07-06%20at%2010.20.40%20AM.png" /></p>
+<p>And the version of python that you want to use:</p>
+<p><img src="images/Screenshot%202023-07-06%20at%2010.22.42%20AM.png" /></p>
+<p>The script defaults to python version 3.8 as it seems to be the most stable for
+the <code>earthengine-api</code> module, but any version can be specified.</p>
+
+</div>
+</div>
+<div id="using-the-targets-package-to-automate-your-analyses" class="section level2 hasAnchor" number="9.2">
+<h2><span class="header-section-number">9.2</span> Using the {targets} package to automate your analyses<a href="python-integrations-in-rstudio.html#using-the-targets-package-to-automate-your-analyses" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="hot-tips-and-tricks" class="section level3 hasAnchor" number="9.2.1">
+<h3><span class="header-section-number">9.2.1</span> Hot tips and tricks<a href="python-integrations-in-rstudio.html#hot-tips-and-tricks" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="reading-external-files-into-targets-pipelines" class="section level4 hasAnchor" number="9.2.1.1">
+<h4><span class="header-section-number">9.2.1.1</span> Reading external files into {targets} pipelines<a href="python-integrations-in-rstudio.html#reading-external-files-into-targets-pipelines" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+</div>
+<div id="sourcing-scripts-for-functions-in-targets-pipelines" class="section level4 hasAnchor" number="9.2.1.2">
+<h4><span class="header-section-number">9.2.1.2</span> Sourcing scripts for functions in {targets} pipelines<a href="python-integrations-in-rstudio.html#sourcing-scripts-for-functions-in-targets-pipelines" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+</div>
+<div id="package-use-in-a-targets-pipeline" class="section level4 hasAnchor" number="9.2.1.3">
+<h4><span class="header-section-number">9.2.1.3</span> Package use in a {targets} pipeline<a href="python-integrations-in-rstudio.html#package-use-in-a-targets-pipeline" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+</div>
+</div>
+<div id="resources" class="section level3 hasAnchor" number="9.2.2">
+<h3><span class="header-section-number">9.2.2</span> Resources<a href="python-integrations-in-rstudio.html#resources" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+
+</div>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-
+<a href="publishing-repositories.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="flex-your-github-skills-by-updating-our-website.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -296,7 +346,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/%s",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/08-Python-in-R.Rmd",
 "text": "Edit"
 },
 "history": {

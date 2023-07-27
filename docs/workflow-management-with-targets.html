@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Page not found | ROSSyndicate Project and Workflow Best Practices</title>
+  <title>Section 10 Workflow Management with {targets} | ROSSyndicate Project and Workflow Best Practices</title>
   <meta name="description" content="The ROSSyndicate workflow best practices guide." />
   <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Page not found | ROSSyndicate Project and Workflow Best Practices" />
+  <meta property="og:title" content="Section 10 Workflow Management with {targets} | ROSSyndicate Project and Workflow Best Practices" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="The ROSSyndicate workflow best practices guide." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Page not found | ROSSyndicate Project and Workflow Best Practices" />
+  <meta name="twitter:title" content="Section 10 Workflow Management with {targets} | ROSSyndicate Project and Workflow Best Practices" />
   
   <meta name="twitter:description" content="The ROSSyndicate workflow best practices guide." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-
+<link rel="prev" href="python-integrations-in-rstudio.html"/>
+<link rel="next" href="flex-your-github-skills-by-updating-our-website.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -253,19 +253,131 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="page-not-found" class="section level1">
-<h1>Page not found</h1>
-<p>The page you requested cannot be found (perhaps it was moved or renamed).</p>
-<p>You may want to try searching to find the page's new location, or use
-the table of contents to find the page you are looking for.</p>
+<div id="workflow-management-with-targets" class="section level1 hasAnchor" number="10">
+<h1><span class="header-section-number">Section 10</span> Workflow Management with {targets}<a href="workflow-management-with-targets.html#workflow-management-with-targets" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="using-the-targets-package-to-automate-your-analyses" class="section level2 hasAnchor" number="10.1">
+<h2><span class="header-section-number">10.1</span> Using the {targets} package to automate your analyses<a href="workflow-management-with-targets.html#using-the-targets-package-to-automate-your-analyses" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Data science workflows will often grow beyond a single script and can rapidly
+become unwieldy when many steps, datasets, and files are involved. This is both
+a challenge to keep track of (i.e., which scripts to run first, second, etc.)
+and a challenge to communicate to other users in the world of open science.</p>
+<p>Workflow management software is a solution to this that the ROSSyndicate has
+embraced. Specifically, we use the
+<a href="https://books.ropensci.org/targets/">{targets}</a> R package. {targets} in
+particular allows you to use R to build out a pipeline (used interchangeably
+with workflow here) which the software automatically tracks so that it “knows”
+which steps have been run, which have failed, and which need to be re-run. Your
+entire analytical pipeline or workflow can be rerun with just the command
+<code>tar_make()</code> and you can visualize the connections between objects and
+functions in your pipeline with <code>tar_visnetwork()</code>.</p>
+<p>One standout strength of this workflow management architecture is that the software “knows” which
+downstream steps are affected by a change in the upstream code or datasets. This means that you as a
+human have no need to manually re-run scripts that are outdated by changes in
+code; {targets} knows which are affected, can tell you, and automatically
+re-run them.</p>
+<p>Not every analysis is a perfect fit for a {targets} workflow, however. Very
+small analyses may not be worth the time needed to invest to build out the
+structure of the pipeline. Workflows that are often re-run with updated
+datasets or which can perform many parallel iterations are especially good
+candidates for the {targets} pipeline style. Because the ROSSyndicate values literate code and {targets} does not work with Markdown or Quarto documents, there are additional steps to creating easilyt understandable and literate code within the {targets} framework.</p>
+<p>We won’t explain how to use {targets} in detail here, but good resources are
+readily available. <a href="https://books.ropensci.org/targets/">The {targets} R package user
+manual</a> is a great resource written by the
+author of the {targets} package. Matt Brousil from the ROSSyndicate has also
+written a short example of building an analysis with the package in <a href="https://targets-ecology.netlify.app/">Targets
+for Ecologists</a> and created an
+<a href="https://www.youtube.com/watch?v=UG4xqYcDpxw">instructional video</a>.</p>
+<div id="hot-tips-and-tricks" class="section level3 hasAnchor" number="10.1.1">
+<h3><span class="header-section-number">10.1.1</span> Hot tips and tricks<a href="workflow-management-with-targets.html#hot-tips-and-tricks" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="sourcing-scripts-for-functions-in-targets-pipelines" class="section level4 hasAnchor" number="10.1.1.1">
+<h4><span class="header-section-number">10.1.1.1</span> Sourcing scripts for functions in {targets} pipelines<a href="workflow-management-with-targets.html#sourcing-scripts-for-functions-in-targets-pipelines" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>The <code>_targets.R</code> script is an essential piece of a {targets} pipeline. This
+file is also where functions that define workflow steps (“targets”) are sourced
+from other scripts. {targets} provides a built-in function to do this,
+<code>tar_source()</code>. For example: <code>tar_source("src/custom_functions.R")</code></p>
+</div>
+<div id="package-use-in-a-targets-pipeline" class="section level4 hasAnchor" number="10.1.1.2">
+<h4><span class="header-section-number">10.1.1.2</span> Package use in a {targets} pipeline<a href="workflow-management-with-targets.html#package-use-in-a-targets-pipeline" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>You might find it unclear how to require certain packages when writing code for
+a {targets} workflow. The ideal situation is that you use the
+<code>tar_option_set()</code> function near the top of your <code>_targets.R</code> script and
+provide the <code>packages</code> argument a character vector of package names that should
+be loaded for <strong><em>every</em></strong> target in the workflow. This often might just be
+<code>tar_option_set(packages = c("tidyverse"))</code>. Then, you can change this default
+for specific targets within the respective targets’s <code>tar_target()</code> function
+like this: <code>tar_target(packages = c("tidyverse", "lubridate"))</code>. Note that
+you’ll need to still repeat any packages you’ve already listed in
+<code>tar_option_set()</code> when changing the packages argument in <code>tar_target()</code>.</p>
+</div>
+<div id="reading-external-files-into-targets-pipelines" class="section level4 hasAnchor" number="10.1.1.3">
+<h4><span class="header-section-number">10.1.1.3</span> Reading external files into {targets} pipelines<a href="workflow-management-with-targets.html#reading-external-files-into-targets-pipelines" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>When building your {targets} pipeline you may wonder how best to read in data
+and have the pipeline track the existence of input files. The
+<a href="https://docs.ropensci.org/tarchetypes/">{tarchetypes}</a> package provides some
+handy shortcut functions for this: <code>tar_file()</code> and <code>tar_file_read()</code>. The
+first, <code>tar_file()</code>, identifies that a pipeline target is a dynamic file based
+on a path provided to the <code>command</code> argument. By contrast, <code>tar_file_read()</code>
+will create two pipeline targets: one tracking the file path provided, and a
+second reading in the file given the instructions you provide to the <code>read</code>
+argument.</p>
+<p>For instance, if you have a .yml file that you want to track for changes, you can use the <code>tar_file()</code> method for tracking. If you have a file (for example a .csv) that is output from a target that you want to use later, your target that creates that .csv would return the <em>filepath</em> of that .csv. You could then use <code>tar_read()</code> to store the data in that .csv as a target and track the file (as your <em>filepath</em>).</p>
+</div>
+<div id="using-the-branching-function-in-targets" class="section level4 hasAnchor" number="10.1.1.4">
+<h4><span class="header-section-number">10.1.1.4</span> Using the ‘branching’ function in {targets}<a href="workflow-management-with-targets.html#using-the-branching-function-in-targets" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>There are times where your workflow will benefit from tracking specific inputs into a target. For instance, in the Landsat acquisition workflow, we repeat a function over every single WRS path-row over the United States. Sometimes this acquisition fails because it takes a <strong>long time</strong> to execute. Deploying branches requires two steps: first, you create a list to iterate (or branch) on - in this case, a list of path-rows; then you map that list over the function that relies on the path-row. Your {targets} list might look something like this:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="workflow-management-with-targets.html#cb6-1" tabindex="-1"></a><span class="fu">list</span>(</span>
+<span id="cb6-2"><a href="workflow-management-with-targets.html#cb6-2" tabindex="-1"></a>  <span class="co"># get WRS tiles - this target returns a list of path-rows</span></span>
+<span id="cb6-3"><a href="workflow-management-with-targets.html#cb6-3" tabindex="-1"></a>  <span class="fu">tar_target</span>(</span>
+<span id="cb6-4"><a href="workflow-management-with-targets.html#cb6-4" tabindex="-1"></a>    <span class="at">name =</span> WRS_tiles,</span>
+<span id="cb6-5"><a href="workflow-management-with-targets.html#cb6-5" tabindex="-1"></a>    <span class="at">command =</span> <span class="fu">get_WRS_tiles</span>(WRS_detection_method, yml_file),</span>
+<span id="cb6-6"><a href="workflow-management-with-targets.html#cb6-6" tabindex="-1"></a>    <span class="at">packages =</span> <span class="fu">c</span>(<span class="st">&quot;readr&quot;</span>, <span class="st">&quot;sf&quot;</span>)</span>
+<span id="cb6-7"><a href="workflow-management-with-targets.html#cb6-7" tabindex="-1"></a>  ),</span>
+<span id="cb6-8"><a href="workflow-management-with-targets.html#cb6-8" tabindex="-1"></a></span>
+<span id="cb6-9"><a href="workflow-management-with-targets.html#cb6-9" tabindex="-1"></a>  <span class="co"># run the landsat pull as function per path-row</span></span>
+<span id="cb6-10"><a href="workflow-management-with-targets.html#cb6-10" tabindex="-1"></a>  <span class="fu">tar_target</span>(</span>
+<span id="cb6-11"><a href="workflow-management-with-targets.html#cb6-11" tabindex="-1"></a>    <span class="at">name =</span> eeRun,</span>
+<span id="cb6-12"><a href="workflow-management-with-targets.html#cb6-12" tabindex="-1"></a>    <span class="at">command =</span> {</span>
+<span id="cb6-13"><a href="workflow-management-with-targets.html#cb6-13" tabindex="-1"></a>      ref_pull_457_DSWE1 </span>
+<span id="cb6-14"><a href="workflow-management-with-targets.html#cb6-14" tabindex="-1"></a>      ref_pull_89_DSWE1</span>
+<span id="cb6-15"><a href="workflow-management-with-targets.html#cb6-15" tabindex="-1"></a>      <span class="fu">run_GEE_per_tile</span>(WRS_tiles)</span>
+<span id="cb6-16"><a href="workflow-management-with-targets.html#cb6-16" tabindex="-1"></a>    },</span>
+<span id="cb6-17"><a href="workflow-management-with-targets.html#cb6-17" tabindex="-1"></a>    <span class="at">pattern =</span> <span class="fu">map</span>(WRS_tiles), <span class="co"># this is where the magic happens!</span></span>
+<span id="cb6-18"><a href="workflow-management-with-targets.html#cb6-18" tabindex="-1"></a>    <span class="at">packages =</span> <span class="st">&quot;reticulate&quot;</span></span>
+<span id="cb6-19"><a href="workflow-management-with-targets.html#cb6-19" tabindex="-1"></a>  )</span>
+<span id="cb6-20"><a href="workflow-management-with-targets.html#cb6-20" tabindex="-1"></a>)</span></code></pre></div>
+</div>
+<div id="using-python-scripts-in-targets" class="section level4 hasAnchor" number="10.1.1.5">
+<h4><span class="header-section-number">10.1.1.5</span> Using python scripts in {targets}<a href="workflow-management-with-targets.html#using-python-scripts-in-targets" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>The {targets} package was designed to work for R workflows only, which means for our mixed-language workflows, we have to get creative. Again, {targets} will not render AND track the output of a .Rmd file, which means all of our precious .Rmd must be translated into .R and .py scripts in order to work in {targets}. We employ the use of <code>source_python()</code> from the {reticulate} package. You can use this in the same way you might use <code>tar_source()</code> to track all of the functions you call in your pipeline. {targets} will track all of the functions in your .py file as individual targets. To run a python script as a target, you have to nest it in an R function. For instance, our <code>run_GEE_per_tile()</code> from above is just this wrapper to:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="workflow-management-with-targets.html#cb7-1" tabindex="-1"></a>run_GEE_per_tile <span class="ot">&lt;-</span> <span class="cf">function</span>(WRS_tile) {</span>
+<span id="cb7-2"><a href="workflow-management-with-targets.html#cb7-2" tabindex="-1"></a>  tile <span class="ot">&lt;-</span> WRS_tile <span class="co"># store the tile from the list</span></span>
+<span id="cb7-3"><a href="workflow-management-with-targets.html#cb7-3" tabindex="-1"></a>  <span class="fu">write_lines</span>(tile, <span class="st">&#39;data_acquisition/out/current_tile.txt&#39;</span>, <span class="at">sep =</span> <span class="st">&#39;&#39;</span>) <span class="co"># save it as a generic file</span></span>
+<span id="cb7-4"><a href="workflow-management-with-targets.html#cb7-4" tabindex="-1"></a>  <span class="fu">source_python</span>(<span class="st">&#39;data_acquisition/src/runGEEperTile.py&#39;</span>) <span class="co"># this script actually *reads* the generic file above as one of the first steps</span></span>
+<span id="cb7-5"><a href="workflow-management-with-targets.html#cb7-5" tabindex="-1"></a>}</span></code></pre></div>
+<p>Note, {targets} does not track any of the functions called in the <code>source_python()</code> line like it does in an .R script - you must list all of the functions that are needed in your script in the <code>command</code> list so that {targets} knows you need those functions to run the code. Additionally, targets does not actively track any output from <code>source_python()</code>, so again, you’ll have to get creative!</p>
+</div>
+</div>
+<div id="resources" class="section level3 hasAnchor" number="10.1.2">
+<h3><span class="header-section-number">10.1.2</span> Resources<a href="workflow-management-with-targets.html#resources" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Below are links to resources to help you learn more about {targets} and
+implementing workflow management software:</p>
+<ul>
+<li><a href="https://books.ropensci.org/targets/">The {targets} R package user manual</a> +
+<a href="https://doi.org/10.1111/2041-210X.14113">Improving ecological data science with workflow management
+software</a> + <a href="https://targets-ecology.netlify.app/">Targets for
+Ecologists</a></li>
+</ul>
+
+</div>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-
+<a href="python-integrations-in-rstudio.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="flex-your-github-skills-by-updating-our-website.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -296,7 +408,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/%s",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/09-Workflow-Management-with-targets.Rmd",
 "text": "Edit"
 },
 "history": {

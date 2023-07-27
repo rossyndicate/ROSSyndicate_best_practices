@@ -52,3 +52,16 @@ completing-the-metadata-information
 add-the-doi-badge-to-your-repository
 flex-your-github-skills-by-updating-our-website
 directions
+setting-up-a-python-virtual-environment
+python-setup-code-snippet
+editing-the-pysetup.r-file
+using-the-targets-package-to-automate-your-analyses
+hot-tips-and-tricks
+reading-external-files-into-targets-pipelines
+sourcing-scripts-for-functions-in-targets-pipelines
+package-use-in-a-targets-pipeline
+resources
+python-integrations-in-rstudio
+workflow-management-with-targets
+using-the-branching-function-in-targets
+using-python-scripts-in-targets
