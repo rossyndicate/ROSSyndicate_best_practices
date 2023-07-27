@@ -29,7 +29,7 @@ structure of the pipeline. Workflows that are often re-run with updated
 datasets or which can perform many parallel iterations are especially good
 candidates for the {targets} pipeline style. Because the ROSSyndicate values
 literate code and {targets} does not work with Markdown or Quarto documents,
-there are additional steps to creating easilyt understandable and literate code
+there are additional steps to creating easily understandable and literate code
 within the {targets} framework.
 
 We won't explain how to use {targets} in detail here, but good resources are
