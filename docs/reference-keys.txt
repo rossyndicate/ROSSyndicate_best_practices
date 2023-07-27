@@ -65,3 +65,4 @@ python-integrations-in-rstudio
 workflow-management-with-targets
 using-the-branching-function-in-targets
 using-python-scripts-in-targets
+rendering-a-bookdown-in-targets-placeholder
