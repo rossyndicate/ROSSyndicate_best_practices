@@ -9,7 +9,7 @@ Tasks:
 1.  From the ROSSyndicate Organization landing page, create a new repository ('repo') with the appropriate naming convention (short/concise, no spaces). Elect to start the repository with a README.md file and a MIT use license file. After you've initialized your repository, go in and edit the third line of the license file to read: *'ROSS - Radical Open Science Syndicate and all contributors'*
 2.  Add collaborators with write/push access by going to repo Settings -\> Manage Access -\> Invite a Collaborator.
 3.  After you have forked the repository to your account, clone the repo to your local machine (see Forking and Cloning ROSSyndicate Repositories).
-4.  Once the repo is stored on your local machine:
+4.  Once the repo is stored on your local machine create the general architecture for your repository.
     -   Create a basic folder structure for your project. Below are some folder types that you may wish to include at the initiation of your project.
         -   data: folder containing data sourced throughout the pipeline. For internal project, this should be a SymLink folder to a OneDrive folder (see 'Data and OneDrive') . For external projects/deliverables (with datasets that do not trigger large-file errors \>100mb), this can be a folder that contains data files that travel with and are tracked by the repository.
 
@@ -53,7 +53,7 @@ Tasks:
 
     This will show you what files have changes, and which are staged for your commit.
 
-    ![](images/git status.png){width="550"}
+    ![](images/git%20status.png){width="550"}
 
 3.  Now, stage the files for your commit.
 
@@ -61,7 +61,7 @@ Tasks:
 
     Check to see that you've staged the correct files for your commit with git status It will look like this:
 
-    ![](images/git add.png){width="550"}
+    ![](images/git%20add.png){width="550"}
 
     If you are happy with the files listed under 'Changes to be committed', make a commit!
 
@@ -77,11 +77,11 @@ Tasks:
 
     -   Confirm that your branch is up-to-date with the upstream repo by clicking on 'Sync fork'
 
-        ![](images/Screenshot 2023-07-27 at 1.36.24 PM.png)
+        ![](images/Screenshot%202023-07-27%20at%201.36.24%20PM.png)
 
     -   Then, click 'Contribute' and 'Open pull request'
 
-        ![](images/Screenshot 2023-07-27 at 1.38.07 PM.png){width="250"}
+        ![](images/Screenshot%202023-07-27%20at%201.38.07%20PM.png){width="250"}
 
 6.  Craft and submit your PR!
 
@@ -89,7 +89,7 @@ Tasks:
 
     -   Check "Allow edits from maintainers" to allow other collaborators to make changes to your pull request and in the right hand side, assign a reviewer (in this case, your internal creative partner or whomever you'd like to engage in this pull request).
 
-        ![](images/request review.png){width="250"}
+        ![](images/request%20review.png){width="250"}
 
     -   Click "Create Pull Request"
 
@@ -97,7 +97,7 @@ Tasks:
 
 ## Addressing merge conflicts
 
-There are multiple ways to deal with merge conflicts. You can address them within the [GitHub conflict editor](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github). Alternatively, you can use the command-line method is [described here](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line), but this method requires some advanced skill and understanding of command line git. If you\'re using VSCode, and have the \'GitHub Pull Requests and Issues\' extension installed, this is a very user-friendly way to deal with conflicts, too.
+There are multiple ways to deal with merge conflicts. You can address them within the [GitHub conflict editor](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github). Alternatively, you can use the command-line method is [described here](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line), but this method requires some advanced skill and understanding of command line git. If you're using VSCode, and have the 'GitHub Pull Requests and Issues' extension installed, this is a very user-friendly way to deal with conflicts, too.
 
 ```{r, echo = F}
 knitr::wrap_rmd('02-Workflow-Overview.Rmd', width = 80, backup = NULL)
