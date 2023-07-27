@@ -65,3 +65,9 @@ python-integrations-in-rstudio
 workflow-management-with-targets
 using-the-branching-function-in-targets
 using-python-scripts-in-targets
+rendering-a-bookdown-in-targets-placeholder
+starting-a-new-repository
+forking-and-cloning-rossyndicate-repositories
+using-the-styler-addin
+fonts-colors-and-.css
+more-on-literate-code
