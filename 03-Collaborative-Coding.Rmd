@@ -1,26 +1,54 @@
 # Collaborative Coding and Workflow Best Practices
 
-Some sections of this document borrows liberally from the additional resources listed at the end of the document.
+Some sections of this document borrows liberally from the additional resources
+listed at the end of the document.
 
 ## ROSSyndicate style guide
 
-ROSSyndicate aims to incorporate the [{tidyverse} style guide](https://style.tidyverse.org/) for our codebase. Be sure to standardize file/variable/function style and naming conventions at the beginning of the project. While this is a somewhat aspirational goal, understanding style guides will help us all become better programmers. In particular, familiarize yourself with the sections under 'Analyses'. *We suggest re-reviewing the {tidyverse} style guide a few times per year just to be reminded of best practices.*
+ROSSyndicate aims to incorporate the [{tidyverse} style
+guide](https://style.tidyverse.org/) for our codebase. Be sure to standardize
+file/variable/function style and naming conventions at the beginning of the
+project. While this is a somewhat aspirational goal, understanding style guides
+will help us all become better programmers. In particular, familiarize yourself
+with the sections under 'Analyses'. *We suggest re-reviewing the {tidyverse}
+style guide a few times per year just to be reminded of best practices.*
 
 ### Using the 'Styler' Addin
 
-To facilitate adoption of the tidyverse style guide, please install the RStudio Addin 'Styler'. To do this, click 'Addins' at the top of the RStudio window, then select 'Set style'. This will prompt you to install the necessary packages and then define the style transformer. The default is {tidyverse}, so all you have to do is press 'OK'. As you work on scripts within your repository, select 'Style active file'. This will modify the file to conform to {tidyverse} style. Be sure to commit these changes. Styler will not tell you what has changed, all you will see is the following message in your console: While using {styler} will not correct all style choices, it will fix spacing, assignments, and tabs automatically.
+To facilitate adoption of the tidyverse style guide, please install the RStudio
+Addin 'Styler'. To do this, click 'Addins' at the top of the RStudio window,
+then select 'Set style'. This will prompt you to install the necessary packages
+and then define the style transformer. The default is {tidyverse}, so all you
+have to do is press 'OK'. As you work on scripts within your repository, select
+'Style active file'. This will modify the file to conform to {tidyverse} style.
+Be sure to commit these changes. Styler will not tell you what has changed, all
+you will see is the following message in your console: While using {styler}
+will not correct all style choices, it will fix spacing, assignments, and tabs
+automatically.
 
 ### Fonts, colors, and .css
 
 [in development!]
 
-In order to reduce any bandwidth necessary and get the most out of your coding deep work time, we suggest using a few hacks:
+In order to reduce any bandwidth necessary and get the most out of your coding
+deep work time, we suggest using a few hacks:
 
 -   Use the style_snippets in this repo
 
 ### More on literate code...
 
-One aspect of literate code relative to style is that we expect code and code output to be readable in [nearly] any format. This means whether you are using the Visual editor in RStudio, you're reading a rendered .html or if you're viewing an Rmd on the web or in the Source editor of R Studio. To accomplish this, we suggest line character length no greater than 80. If you are in an .Rmd file, just add the last code chunk from the `style_snippets/markdown_helpers.Rmd`, save your file, and run the chunk. This will reformat all lines of text so that they are on new lines every 80 characters. If you are in .R or a .md document, use the page-width indicator (the light vertical blue-grey line on the right of your editor box) in the Source editor in RStudio to determine when to create a new line in your text block.
+One aspect of literate code relative to style is that we expect code and code
+output to be readable in [nearly] any format. This means whether you are using
+the Visual editor in RStudio, you're reading a rendered .html or if you're
+viewing an Rmd on the web or in the Source editor of R Studio. To accomplish
+this, we suggest line character length no greater than 80. If you are in an
+.Rmd file, just add the last code chunk from the
+`style_snippets/markdown_helpers.Rmd`, save your file, and run the chunk. This
+will reformat all lines of text so that they are on new lines every 80
+characters. If you are in .R or a .md document, use the page-width indicator
+(the light vertical blue-grey line on the right of your editor box) in the
+Source editor in RStudio to determine when to create a new line in your text
+block.
 
 Here's an example of run-on lines:
 
@@ -46,15 +74,23 @@ And what it *should* look like:
 
 ### Adding a co-author to your commit
 
-We strive to always attribute code as we develop our codebase. If you borrow code from someone else's repository, or if someone has shared a code chunk with you, add them as a co-author on your commit. To add a co-author, you need to know the person's GitHub user name or their name and email (if they are not on GitHub). We suggest making a commit prior to adding any files that originated from another coder or entering your collaborator's code chunk. This way, it is very clear what the co-author's contribution was.
+We strive to always attribute code as we develop our codebase. If you borrow
+code from someone else's repository, or if someone has shared a code chunk with
+you, add them as a co-author on your commit. To add a co-author, you need to
+know the person's GitHub user name or their name and email (if they are not on
+GitHub). We suggest making a commit prior to adding any files that originated
+from another coder or entering your collaborator's code chunk. This way, it is
+very clear what the co-author's contribution was.
 
-So, commit, add the code from your collaborator or another coder, then commit those changes with them listed as a co-author:
+So, commit, add the code from your collaborator or another coder, then commit
+those changes with them listed as a co-author:
 
 > git commit -m 'Adding function from George
 >
 > Co-authored-by: George Friend \<gfriend\@users.github.com\>'
 
-Note that you can use the contributor's GitHub user name (in the example above: 'gfriend')
+Note that you can use the contributor's GitHub user name (in the example above:
+'gfriend')
 
 ## Pull request best practices
 
@@ -144,17 +180,28 @@ Note that you can use the contributor's GitHub user name (in the example above: 
 
 ## Additional Reading
 
-[The Best Way to Do a Code Review on GitHub](https://linearb.io/blog/code-review-on-github/), LinearB
+[The Best Way to Do a Code Review on
+GitHub](https://linearb.io/blog/code-review-on-github/), LinearB
 
-[GitHub Code Review Best Practices](https://blog.mergify.com/github-code-review-best-practices/), Mergify
+[GitHub Code Review Best
+Practices](https://blog.mergify.com/github-code-review-best-practices/),
+Mergify
 
-[[How To] Commit and Code Review on GitHub](https://birkhoffg.github.io/blog/posts/how-to-commit-and-code-review-on-github/), Birkhoff Tech Blog
+[[How To] Commit and Code Review on
+GitHub](https://birkhoffg.github.io/blog/posts/how-to-commit-and-code-review-on-github/),
+Birkhoff Tech Blog
 
-[Pull Request Best Practices](https://leoneperdigao.medium.com/pull-request-best-practices-fa20f7daeb3c), Medium
+[Pull Request Best
+Practices](https://leoneperdigao.medium.com/pull-request-best-practices-fa20f7daeb3c),
+Medium
 
-[The (written) unwritten guide to pull requests](https://www.atlassian.com/blog/git/written-unwritten-guide-pull-requests), Atlassian
+[The (written) unwritten guide to pull
+requests](https://www.atlassian.com/blog/git/written-unwritten-guide-pull-requests),
+Atlassian
 
-[Best Practices for Code Review](https://smartbear.com/learn/code-review/best-practices-for-peer-code-review/), SmartBear
+[Best Practices for Code
+Review](https://smartbear.com/learn/code-review/best-practices-for-peer-code-review/),
+SmartBear
 
 ```{r, echo = F}
 knitr::wrap_rmd('03-Collaborative-Coding.Rmd', width = 80, backup = NULL)
