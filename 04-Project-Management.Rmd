@@ -1,3 +1,9 @@
+---
+editor_options:
+  markdown:
+    wrap: 80
+---
+
 # Project Management and Tracking with GitHub Projects
 
 We use GitHub Projects to track progress and assign tasks to collaborators. A

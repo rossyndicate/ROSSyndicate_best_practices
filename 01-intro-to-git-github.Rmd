@@ -1,7 +1,7 @@
 ---
 editor_options:
   markdown:
-    wrap: 72
+    wrap: 80
 ---
 
 ```{r, echo = F}
