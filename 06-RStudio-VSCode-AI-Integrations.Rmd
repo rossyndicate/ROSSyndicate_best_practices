@@ -22,10 +22,10 @@ following sites:
 ## Using GitHub CoPilot in VSCode + RStudio
 
 VSCode also has an extension for GitHub CoPilot, it will auto complete your
-comments and code in nearly any programming language. By having open both
-VSCode and RStudio and enabling auto-save in both programs, you can hop between
-the two programs and code will update between the two as you switch. Big thanks
-to Sam Struthers for figuring out this integrated workflow.
+comments and code in nearly any programming language. By having open both VSCode
+and RStudio and enabling auto-save in both programs, you can hop between the two
+programs and code will update between the two as you switch. Big thanks to Sam
+Struthers for figuring out this integrated workflow.
 
 ## Accessing GitHub CoPilot as a student/teacher/researcher
 
@@ -40,12 +40,12 @@ the educational portal within 1 business day.
 ## Downloading VSCode and installing the GitHub CoPilot extension
 
 Download VSCode here: <https://code.visualstudio.com/>. Set up the GitHub and
-GitHub CoPilot extensions by adding them via the 'Marketplace'. You can bring
-up the Extensions from the menu bar under 'Code', 'Settings', 'Extensions'.
+GitHub CoPilot extensions by adding them via the 'Marketplace'. You can bring up
+the Extensions from the menu bar under 'Code', 'Settings', 'Extensions'.
 
-You'll want to install and activate 'GitHub Pull Requests and Issues' as well
-as 'GitHub Copilot'. You will be directed to Sign In using your GitHub
-credentials. You may need to elect to 'enable' Copilot.
+You'll want to install and activate 'GitHub Pull Requests and Issues' as well as
+'GitHub Copilot'. You will be directed to Sign In using your GitHub credentials.
+You may need to elect to 'enable' Copilot.
 
 ## Setting up AutoSave in VSCode + RStudio
 
@@ -57,9 +57,9 @@ find the following pane:
 Set up Auto-save by checking the 'Automatically save when editor loses focus'
 and 'Apply'.
 
-In VSCode, select 'Code', 'Settings', then 'Settings' again from the menu bar
-to bring up the Settings tab in your console. Then type in 'auto save' in the
-top search bar, and select 'onFocusChange' for the 'Files: Auto Save' Setting.
+In VSCode, select 'Code', 'Settings', then 'Settings' again from the menu bar to
+bring up the Settings tab in your console. Then type in 'auto save' in the top
+search bar, and select 'onFocusChange' for the 'Files: Auto Save' Setting.
 
 ![](images/vscode%20autosave.png)
 

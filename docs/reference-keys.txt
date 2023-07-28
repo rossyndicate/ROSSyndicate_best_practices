@@ -19,6 +19,7 @@ collaborative-coding
 addressing-merge-conflicts
 collaborative-coding-and-workflow-best-practices
 rossyndicate-style-guide
+some-general-guidelines
 using-the-styler-addin
 fonts-colors-and-.css
 more-on-literate-code

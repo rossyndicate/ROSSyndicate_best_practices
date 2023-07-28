@@ -272,6 +272,18 @@ project. While this is a somewhat aspirational goal, understanding style guides
 will help us all become better programmers. In particular, familiarize yourself
 with the sections under ‘Analyses’. <em>We suggest re-reviewing the {tidyverse}
 style guide a few times per year just to be reminded of best practices.</em></p>
+<div id="some-general-guidelines" class="section level4 hasAnchor" number="4.1.0.1">
+<h4><span class="header-section-number">4.1.0.1</span> Some general guidelines:<a href="collaborative-coding-and-workflow-best-practices.html#some-general-guidelines" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li><p>Use {tidyverse} functions over {base} functions, except in package
+development.</p></li>
+<li><p>Use custom functions over for-loops.</p></li>
+<li><p>If you use the same code chunk three or more times, make it a function and
+use <code>purrr::map()</code> (or any <code>map()</code> sibling).</p></li>
+<li><p>Use the {magrittr} pipe (%&gt;%) over native pipe (|&gt;).</p></li>
+<li><p>Always include comprehensive documentation for your code.</p></li>
+</ul>
+</div>
 <div id="using-the-styler-addin" class="section level3 hasAnchor" number="4.1.1">
 <h3><span class="header-section-number">4.1.1</span> Using the ‘Styler’ Addin<a href="collaborative-coding-and-workflow-best-practices.html#using-the-styler-addin" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>To facilitate adoption of the tidyverse style guide, please install the RStudio
@@ -281,8 +293,8 @@ and then define the style transformer. The default is {tidyverse}, so all you
 have to do is press ‘OK’. As you work on scripts within your repository, select
 ‘Style active file’. This will modify the file to conform to {tidyverse} style.
 Be sure to commit these changes. Styler will not tell you what has changed, all
-you will see is the following message in your console: While using {styler}
-will not correct all style choices, it will fix spacing, assignments, and tabs
+you will see is the following message in your console: While using {styler} will
+not correct all style choices, it will fix spacing, assignments, and tabs
 automatically.</p>
 </div>
 <div id="fonts-colors-and-.css" class="section level3 hasAnchor" number="4.1.2">
@@ -300,8 +312,8 @@ deep work time, we suggest using a few hacks:</p>
 output to be readable in [nearly] any format. This means whether you are using
 the Visual editor in RStudio, you’re reading a rendered .html or if you’re
 viewing an Rmd on the web or in the Source editor of R Studio. To accomplish
-this, we suggest line character length no greater than 80. If you are in an
-.Rmd file, just add the last code chunk from the
+this, we suggest line character length no greater than 80. If you are in an .Rmd
+file, just add the last code chunk from the
 <code>style_snippets/markdown_helpers.Rmd</code>, save your file, and run the chunk. This
 will reformat all lines of text so that they are on new lines every 80
 characters. If you are in .R or a .md document, use the page-width indicator
@@ -317,14 +329,27 @@ block.</p>
 <div id="commit-history-best-practices" class="section level2 hasAnchor" number="4.2">
 <h2><span class="header-section-number">4.2</span> Commit history best practices<a href="collaborative-coding-and-workflow-best-practices.html#commit-history-best-practices" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
-<li><p>Always check your forked repository against the upstream repository before beginning your coding session and certainly before making any changes to the codebase using the terminal command <code>git fetch upstream</code></p>
+<li><p>Always check your forked repository against the upstream repository before
+beginning your coding session and certainly before making any changes to the
+codebase using the terminal command <code>git fetch upstream</code></p>
 <ul>
-<li><p>Think about using your commit history as bullet-point summaries of your future pull request. If you need to go back and make some change in your commit history, you’ll want to have a good idea of where that happened.</p></li>
-<li><p>Commits should apply to a singular file or multiple specifically-selected and related files. In general, this means avoid <code>git add .</code> unless all the changed files are related - like a .Rmd and the rendered .html.</p></li>
-<li><p>Commits should briefly summarize the changes (e.g., ‘work on X’, NOT ‘end of day commit’).</p></li>
-<li><p>Commits should describe WHAT and WHY you’ve made changes/added to your code</p></li>
+<li><p>Think about using your commit history as bullet-point summaries of your
+future pull request. If you need to go back and make some change in your
+commit history, you’ll want to have a good idea of where that happened.</p></li>
+<li><p>Commits should apply to a singular file or multiple
+specifically-selected and related files. In general, this means avoid
+<code>git add .</code> unless all the changed files are related - like a .Rmd and
+the rendered .html.</p></li>
+<li><p>Commits should briefly summarize the changes (e.g., ‘work on X’, NOT
+‘end of day commit’).</p></li>
+<li><p>Commits should describe WHAT and WHY you’ve made changes/added to your
+code</p></li>
 </ul></li>
-<li><p>Always commit your changes to your local repository or branch and push to GitHub at the end of your coding session as backup policy (as in: don’t leave changes untracked when leaving work), ideally this also will result in a pull request to your internal creative partner. It’s always easier to write a pull request when your work is fresh in your mind.</p></li>
+<li><p>Always commit your changes to your local repository or branch and push to
+GitHub at the end of your coding session as backup policy (as in: don’t
+leave changes untracked when leaving work), ideally this also will result in
+a pull request to your internal creative partner. It’s always easier to
+write a pull request when your work is fresh in your mind.</p></li>
 </ul>
 <div id="adding-a-co-author-to-your-commit" class="section level3 hasAnchor" number="4.2.1">
 <h3><span class="header-section-number">4.2.1</span> Adding a co-author to your commit<a href="collaborative-coding-and-workflow-best-practices.html#adding-a-co-author-to-your-commit" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -348,69 +373,133 @@ those changes with them listed as a co-author:</p>
 <div id="pull-request-best-practices" class="section level2 hasAnchor" number="4.3">
 <h2><span class="header-section-number">4.3</span> Pull request best practices<a href="collaborative-coding-and-workflow-best-practices.html#pull-request-best-practices" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
-<li><p>The only time you should merge your own pull request is at the initiation of your repo, as described in ‘Create a New Project’.</p></li>
-<li><p>Pull request should happen frequently, ideally at the end of each work session.</p></li>
+<li><p>The only time you should merge your own pull request is at the initiation of
+your repo, as described in ‘Create a New Project’.</p></li>
+<li><p>Pull request should happen frequently, ideally at the end of each work
+session.</p></li>
 <li><p>Pull requests should be 400 lines of code (LOC) or fewer.</p></li>
 <li><p>Use the title of the pull request to help orient your creative partner.</p></li>
 <li><p>Clearly identify what you need in the pull request review.</p></li>
-<li><p>An example of a good pull request, that closes an issue created in your GitHub Project (we’re assuming issue #7 is ‘targets-ify the repo’), and makes a specific request of the reviewer:</p></li>
+<li><p>An example of a good pull request, that closes an issue created in your
+GitHub Project (we’re assuming issue #7 is ‘targets-ify the repo’), and
+makes a specific request of the reviewer:</p></li>
 </ul>
 <blockquote>
 <p>Title: apply {targets} to workflow</p>
-<p>Primary files for review are the _targets.R files in the main directory and in each subdirectory in the numbered directory step-by-step process. Please check for functionality by cloning and running <code>tar_visnetwork()</code> for each _targets.R file.</p>
+<p>Primary files for review are the _targets.R files in the main directory and
+in each subdirectory in the numbered directory step-by-step process. Please
+check for functionality by cloning and running <code>tar_visnetwork()</code> for each
+_targets.R file.</p>
 <p>Closes #7</p>
 </blockquote>
 <ul>
-<li>If you have a large pull request, i.e. at the beginning of code development that is more than 400 LOC, write a useful description alongside your pull request that introduces the repo’s concepts (&lt;awesome-workflow&gt;) and highlights specific files (XXX, ZZZ) or commits (5e6b825):</li>
+<li>If you have a large pull request, i.e. at the beginning of code development
+that is more than 400 LOC, write a useful description alongside your pull
+request that introduces the repo’s concepts (&lt;awesome-workflow&gt;) and
+highlights specific files (XXX, ZZZ) or commits (5e6b825):</li>
 </ul>
 <blockquote>
-<p>Purpose: initialize development of YYY repo and start buildout of &lt;awesome-workflow&gt;</p>
-<p>Start of YYY repository. Please review diff for XXX and ZZZ files. Otherwise, please do a high-level check of the repository as of the latest commit (5e6b825) for general workflow.</p>
+<p>Purpose: initialize development of YYY repo and start buildout of
+&lt;awesome-workflow&gt;</p>
+<p>Start of YYY repository. Please review diff for XXX and ZZZ files. Otherwise,
+please do a high-level check of the repository as of the latest commit
+(5e6b825) for general workflow.</p>
 </blockquote>
 </div>
 <div id="pull-request-review-best-practices" class="section level2 hasAnchor" number="4.4">
 <h2><span class="header-section-number">4.4</span> Pull request review best practices<a href="collaborative-coding-and-workflow-best-practices.html#pull-request-review-best-practices" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
-<li><p>Activate notifications for pull requests and comments so you know when a pull request has been submitted for your review.</p></li>
-<li><p>If you cannot review the pull request that has been assigned to you before the end of the next work day, contact the person who has made the request via Teams to let them know when you *can* review the PR. The person who has made the review can then assign the PR to another person if the review is time sensitive.</p>
+<li><p>Activate notifications for pull requests and comments so you know when a
+pull request has been submitted for your review.</p></li>
+<li><p>If you cannot review the pull request that has been assigned to you before
+the end of the next work day, contact the person who has made the request
+via Teams to let them know when you *can* review the PR. The person who
+has made the review can then assign the PR to another person if the review
+is time sensitive.</p>
 <ul>
-<li><p>If possible, cease work on this repo until the PR has been reviewed. Every additional <code>git push origin main</code> that you make after you submit a PR and before it is reviewed and merged will be added into the current PR.</p></li>
-<li><p>If you MUST continue work on the repo while the PR is being reviewed, do so in a Feature Branch.</p></li>
+<li><p>If possible, cease work on this repo until the PR has been reviewed.
+Every additional <code>git push origin main</code> that you make after you submit a
+PR and before it is reviewed and merged will be added into the current
+PR.</p></li>
+<li><p>If you MUST continue work on the repo while the PR is being reviewed, do
+so in a Feature Branch.</p></li>
 </ul></li>
-<li><p>If the PR is not clear or does not contain specific asks, DO NOT REVIEW OR MERGE, message the pull request creator on Teams and request them to edit the detail of the PR to reflect the best practices outlined above.</p></li>
-<li><p>“Before you even look at the code [for review], focus on understanding what was changed, why it was changed, and how it was changed.” – <a href="https://leoneperdigao.medium.com/pull-request-best-practices-fa20f7daeb3c">Leone Perdigão, Medium</a></p></li>
-<li><p>Be kind and thoughtful with your comments. We encourage the use of <a href="https://conventionalcomments.org/#Labels">‘conventional comments’ labels found here</a>. This allows you to clearly engage with the developer on the other end of the PR and offer actionable comments.</p></li>
-<li><p>As a reviewer, you should not spend longer than one hour per session in active code review and never review more than 500 LOC per hour (<a href="https://smartbear.com/learn/code-review/best-practices-for-peer-code-review/">SmartBear</a>). Ideally, code review of a PR takes around 30-45 minutes when a project is in active development and follows the best practices outlined above.</p></li>
-<li><p>What to look for in code review (<a href="https://google.github.io/eng-practices/review/">via Google</a>). Note that you do not need to check for all of these during a review of code as some are more applicable at the beginning of codebase development and others are more applicable to review that occurs closer to codebase deployment.</p>
+<li><p>If the PR is not clear or does not contain specific asks, DO NOT REVIEW OR
+MERGE, message the pull request creator on Teams and request them to edit
+the detail of the PR to reflect the best practices outlined above.</p></li>
+<li><p>“Before you even look at the code [for review], focus on understanding what
+was changed, why it was changed, and how it was changed.” – <a href="https://leoneperdigao.medium.com/pull-request-best-practices-fa20f7daeb3c">Leone
+Perdigão,
+Medium</a></p></li>
+<li><p>Be kind and thoughtful with your comments. We encourage the use of
+<a href="https://conventionalcomments.org/#Labels">‘conventional comments’ labels found
+here</a>. This allows you to clearly
+engage with the developer on the other end of the PR and offer actionable
+comments.</p></li>
+<li><p>As a reviewer, you should not spend longer than one hour per session in
+active code review and never review more than 500 LOC per hour
+(<a href="https://smartbear.com/learn/code-review/best-practices-for-peer-code-review/">SmartBear</a>).
+Ideally, code review of a PR takes around 30-45 minutes when a project is in
+active development and follows the best practices outlined above.</p></li>
+<li><p>What to look for in code review (<a href="https://google.github.io/eng-practices/review/">via
+Google</a>). Note that you do
+not need to check for all of these during a review of code as some are more
+applicable at the beginning of codebase development and others are more
+applicable to review that occurs closer to codebase deployment.</p>
 <ul>
 <li><p>Design: Is the code well-designed and appropriate for your system?</p></li>
-<li><p>Functionality: Does the code behave as the author likely intended? Is the way the code behaves good for its users?</p></li>
-<li><p>Complexity: Could the code be made simpler? Would another developer be able to easily understand and use this code when they come across it in the future?</p></li>
-<li><p><em>Tests: Does the code have correct and well-designed automated tests?</em> We do not currently employ tests in our code. We will update information on this as we develop ways to include tests in our codebase.</p></li>
-<li><p>Naming: Did the developer choose clear names for variables, classes, methods, etc.? <em>Do they follow the tidyverse <a href="https://style.tidyverse.org/">style guides</a>?</em></p></li>
+<li><p>Functionality: Does the code behave as the author likely intended? Is
+the way the code behaves good for its users?</p></li>
+<li><p>Complexity: Could the code be made simpler? Would another developer be
+able to easily understand and use this code when they come across it in
+the future?</p></li>
+<li><p><em>Tests: Does the code have correct and well-designed automated tests?</em>
+We do not currently employ tests in our code. We will update information
+on this as we develop ways to include tests in our codebase.</p></li>
+<li><p>Naming: Did the developer choose clear names for variables, classes,
+methods, etc.? <em>Do they follow the tidyverse <a href="https://style.tidyverse.org/">style
+guides</a>?</em></p></li>
 <li><p>Comments: Are the comments clear and useful?</p></li>
-<li><p>Style: Does the code follow our <a href="https://style.tidyverse.org/"><em>style guides</em></a>?</p></li>
-<li><p>Documentation: Did the developer also update relevant documentation? <em>This is especially applicable to the README.md files in your repository and directories.</em></p></li>
+<li><p>Style: Does the code follow our <a href="https://style.tidyverse.org/"><em>style
+guides</em></a>?</p></li>
+<li><p>Documentation: Did the developer also update relevant documentation?
+<em>This is especially applicable to the README.md files in your repository
+and directories.</em></p></li>
 </ul></li>
 </ul>
 </div>
 <div id="types-of-code-review-and-engaging-your-internal-creative-partner" class="section level2 hasAnchor" number="4.5">
 <h2><span class="header-section-number">4.5</span> Types of code review and engaging your internal creative partner<a href="collaborative-coding-and-workflow-best-practices.html#types-of-code-review-and-engaging-your-internal-creative-partner" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
-<li><p>Code review is a skill that is learned and developed. Ideally, each member of the lab is performing some sort of code review on a weekly basis to grow skill in this realm.</p></li>
+<li><p>Code review is a skill that is learned and developed. Ideally, each member
+of the lab is performing some sort of code review on a weekly basis to grow
+skill in this realm.</p></li>
 <li><p>[Some] types of code review:</p>
 <ul>
 <li><p>Peer-to-peer code review</p></li>
-<li><p>30-minute session explaining alpha-level code (code in baby development that might be in a branch or generally offline from the ROSSyndicate organization)</p></li>
+<li><p>30-minute session explaining alpha-level code (code in baby development
+that might be in a branch or generally offline from
+the ROSSyndicate organization)</p></li>
 <li><p>line-by-line code walkthrough meeting</p></li>
 <li><p>30-minute to 1 hour ‘over-the-shoulder’ code observation and review</p></li>
 <li><p>Code review via Pull Request: </p>
 <ul>
-<li><p>‘process review’: This type of review is only suggested for early feature development OR early repository development. Do the decisions and workflow order make sense? Big-picture review only and/or suggestions to reduce processing time welcome.  This type of review is either preceded or followed by a peer-to-peer code walkthrough and explanation.</p></li>
-<li><p>‘general code review’: iCP reviews code changes according to usual pull request review best practices. This will be the most common form of code review via pull request</p></li>
-<li><p>’ready for release: If a project features end-user reproducibility, i.e. Shiny app, published workflow, etc., the iCP should run this code in a fresh environment to make sure it runs properly and that dependencies are satisfied before pushing for public/partner use.</p></li>
+<li><p>‘process review’: This type of review is only suggested for early
+feature development OR early repository development. Do the
+decisions and workflow order make sense? Big-picture review only
+and/or suggestions to reduce processing time welcome.  This type of
+review is either preceded or followed by a peer-to-peer code
+walkthrough and explanation.</p></li>
+<li><p>‘general code review’: iCP reviews code changes according to usual
+pull request review best practices. This will be the most common
+form of code review via pull request</p></li>
+<li><p>’ready for release: If a project features end-user reproducibility,
+i.e. Shiny app, published workflow, etc., the iCP should run this
+code in a fresh environment to make sure it runs properly and that
+dependencies are satisfied before pushing for public/partner use.</p></li>
 </ul></li>
-<li><p><strong>Ideally, code developers are engaging in some kind of code review on a daily to weekly basis</strong></p></li>
+<li><p><strong>Ideally, code developers are engaging in some kind of code review on a
+daily to weekly basis</strong></p></li>
 </ul></li>
 </ul>
 </div>
@@ -419,8 +508,7 @@ those changes with them listed as a co-author:</p>
 <p><a href="https://linearb.io/blog/code-review-on-github/">The Best Way to Do a Code Review on
 GitHub</a>, LinearB</p>
 <p><a href="https://blog.mergify.com/github-code-review-best-practices/">GitHub Code Review Best
-Practices</a>,
-Mergify</p>
+Practices</a>, Mergify</p>
 <p><a href="https://birkhoffg.github.io/blog/posts/how-to-commit-and-code-review-on-github/">[How To] Commit and Code Review on
 GitHub</a>,
 Birkhoff Tech Blog</p>
