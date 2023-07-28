@@ -54,7 +54,7 @@ find the following pane:
 
 ![](images/r%20autosave.png)
 
-Set up Auto-save and 'Apply'.
+Set up Auto-save by checking the 'Automatically save when editor loses focus' and 'Apply'.
 
 In VSCode, select 'Code', 'Settings', then 'Settings' again from the menu bar to
 bring up the Settings tab in your console. Then type in 'auto save' in the top
