@@ -1,3 +1,9 @@
+---
+editor_options:
+  markdown:
+    wrap: 80
+---
+
 # Python Integrations in RStudio
 
 ## Setting up a python virtual environment

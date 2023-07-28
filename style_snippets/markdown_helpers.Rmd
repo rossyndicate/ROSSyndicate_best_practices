@@ -3,20 +3,32 @@ title: "R Markdown Helpers"
 author: "ROSSyndicate"
 date: "2023-06-29"
 output: html_document
+editor_options:
+  markdown:
+    wrap: 80
 ---
 
 ## Automatic text wrapping
 
-Use this code chunk to force consistent text wrapping in your document. Using
+Use the code chunk at the bottom of this script to force consistent text wrapping in your document. Using
 this is recommended so that the markdown document is readable on GitHub with
 out manually adding lines. Best practice is to add this to the bottom of your
-Rmd file and run it before you commit the file. You may have to run it twice,
+Rmd file and run it before you commit the file. Make sure you've saved your file, and you still may have to run it twice,
 it's a little finicky.
 
 Note, this will not wrap text that are prefaced by any special characters (like
 bullets, unless you use the 'insert bullet' function at the top of the Visual
 editor). It also will not wrap text in a code chunk. You have to manually do
 that.
+
+It is also helpful to add the following to the yml at the top of your Rmd 
+file so that when you switch between the visual and source editor, RStudio 
+doesn't forget the formatting completed by the code chunk. 
+
+>editor_options:
+>  markdown:
+>    wrap: 80
+
 
 
 ```{r, echo = F}

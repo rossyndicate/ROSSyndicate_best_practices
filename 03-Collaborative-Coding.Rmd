@@ -1,3 +1,9 @@
+---
+editor_options:
+  markdown:
+    wrap: 80
+---
+
 # Collaborative Coding and Workflow Best Practices
 
 Some sections of this document borrows liberally from the additional resources

@@ -1,8 +1,36 @@
+---
+editor_options:
+  markdown:
+    wrap: 80
+---
+
 # Project Management and Tracking with GitHub Projects
+
+We use GitHub Projects to track progress and assign tasks to collaborators. A
+project is a user interface that integrates with your issues and pull requests
+on GitHub to help you plan and manage your work effectively. For Matt R, this
+will be where he can go to see quickly where a project is at on its
+deliverables, so it is important to keep it up to date. Projects have immense
+flexibility and can be tailored to fit the needs of any project.
 
 ## Github Project best practices
 
+-   Frame the Project tasks around the statement of work/objectives of the project.
+
+-   Take advantage of tags to easily filter and peruse different types of tasks.
+
+-   Break down large tasks into GitHub issues that can [ideally] be completed in a single pull request.
+
+See also [GitHub's
+document](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/best-practices-for-projects)
+of best practices.
+
 ## GitHub Project additional reading
+
+GitHub Projects:
+<https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects>
+
+Example *Project*: <https://github.com/orgs/ROSSyndicate/projects/4>
 
 ```{r, echo = F}
 knitr::wrap_rmd('04-Project-Management.Rmd', width = 80, backup = NULL)

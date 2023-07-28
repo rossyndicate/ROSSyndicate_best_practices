@@ -1,12 +1,63 @@
+---
+editor_options:
+  markdown:
+    wrap: 80
+---
+
 # Git Hub Feature Branches
 
 ## When to work in a feature branch
 
+Working in feature branches is similar to working in a forked repository,
+except you have two parallel workflows with varying commit history in the same
+[forked] repository. It is essential, if you are using branches, that you are
+working on a very specific issue or feature (hence the name) that is
+independent of others' work on the repo -- or even your other branches!
+__IMPORTANT: Try not to leave your branches unmerged for long periods of time
+if other folks are working in the same repository to help alleviate merge
+conflicts.__
+
+Working in a feature branch is also a way to continue working on a codebase as
+other code is in review.
+
 ## How to create a feature branch
 
-## Keeping your branch updated with upstream changes
+Make sure the forked main ('origin main') is updated with upstream changes and
+all of your current work has been committed to the main branch, then start a
+new branch:
+
+> git checkout -b new-branch-name
+
+Branch starts with a copy of the branch you were on. You can now make edits in
+this branch and add/commit as usual. If you switch back to the main branch
+using `git checkout main`, all of your commit history will revert to that on
+the main branch (aka, it will look like all of your work disappeared).
+
+You can either push your branch up to your origin remote (your forked repo)
+using:
+
+> git push -u origin new-branch-name
+
+Or you can go back to your main branch and merge your edits from the feature
+branch:
+
+> git checkout main git merge new-branch-name
+
+You can also submit a pull request from your feature branch the same way you
+would if you were making a pull request from your main branch. Just make sure
+you have selected the proper branch from your forked repo.
+
+![](images/Screenshot%202023-07-28%20at%209.51.52%20AM.png){width="250"}
+
+In general, we only have a single branch ('main') in use at our primary
+ROSSyndicate repository.
 
 ## Feature branch best practices
+
+-   Keep your fork up to date regularly!! COMMUNICATE.
+
+-   Each team member works on separate files/features (no overlap, feature
+    collaboration can take place in the pull requests).
 
 ```{r, echo = F}
 knitr::wrap_rmd('05-Git-Feature-Branches.Rmd', width = 80, backup = NULL)
