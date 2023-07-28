@@ -8,7 +8,7 @@ editor_options:
 
 We use GitHub Projects to track progress and assign tasks to collaborators. A
 project is a user interface that integrates with your issues and pull requests
-on GitHub to help you plan and manage your work effectively. For Matt T, this
+on GitHub to help you plan and manage your work effectively. For Matt R, this
 will be where he can go to see quickly where a project is at on its
 deliverables, so it is important to keep it up to date. Projects have immense
 flexibility and can be tailored to fit the needs of any project.
