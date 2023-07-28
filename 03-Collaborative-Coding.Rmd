@@ -19,6 +19,20 @@ will help us all become better programmers. In particular, familiarize yourself
 with the sections under 'Analyses'. *We suggest re-reviewing the {tidyverse}
 style guide a few times per year just to be reminded of best practices.*
 
+#### Some general guidelines:
+
+-   Use {tidyverse} functions over {base} functions, except in package
+    development.
+
+-   Use custom functions over for-loops.
+
+-   If you use the same code chunk three or more times, make it a function and
+    use `purrr::map()` (or any `map()` sibling).
+
+-   Use the {magrittr} pipe (%\>%) over native pipe (\|\>).
+
+-   Always include comprehensive documentation for your code.
+
 ### Using the 'Styler' Addin
 
 To facilitate adoption of the tidyverse style guide, please install the RStudio
@@ -28,8 +42,8 @@ and then define the style transformer. The default is {tidyverse}, so all you
 have to do is press 'OK'. As you work on scripts within your repository, select
 'Style active file'. This will modify the file to conform to {tidyverse} style.
 Be sure to commit these changes. Styler will not tell you what has changed, all
-you will see is the following message in your console: While using {styler}
-will not correct all style choices, it will fix spacing, assignments, and tabs
+you will see is the following message in your console: While using {styler} will
+not correct all style choices, it will fix spacing, assignments, and tabs
 automatically.
 
 ### Fonts, colors, and .css
@@ -47,8 +61,8 @@ One aspect of literate code relative to style is that we expect code and code
 output to be readable in [nearly] any format. This means whether you are using
 the Visual editor in RStudio, you're reading a rendered .html or if you're
 viewing an Rmd on the web or in the Source editor of R Studio. To accomplish
-this, we suggest line character length no greater than 80. If you are in an
-.Rmd file, just add the last code chunk from the
+this, we suggest line character length no greater than 80. If you are in an .Rmd
+file, just add the last code chunk from the
 `style_snippets/markdown_helpers.Rmd`, save your file, and run the chunk. This
 will reformat all lines of text so that they are on new lines every 80
 characters. If you are in .R or a .md document, use the page-width indicator
@@ -66,17 +80,30 @@ And what it *should* look like:
 
 ## Commit history best practices
 
--   Always check your forked repository against the upstream repository before beginning your coding session and certainly before making any changes to the codebase using the terminal command `git fetch upstream`
+-   Always check your forked repository against the upstream repository before
+    beginning your coding session and certainly before making any changes to the
+    codebase using the terminal command `git fetch upstream`
 
-    -   Think about using your commit history as bullet-point summaries of your future pull request. If you need to go back and make some change in your commit history, you'll want to have a good idea of where that happened.
+    -   Think about using your commit history as bullet-point summaries of your
+        future pull request. If you need to go back and make some change in your
+        commit history, you'll want to have a good idea of where that happened.
 
-    -   Commits should apply to a singular file or multiple specifically-selected and related files. In general, this means avoid `git add .` unless all the changed files are related - like a .Rmd and the rendered .html.
+    -   Commits should apply to a singular file or multiple
+        specifically-selected and related files. In general, this means avoid
+        `git add .` unless all the changed files are related - like a .Rmd and
+        the rendered .html.
 
-    -   Commits should briefly summarize the changes (e.g., 'work on X', NOT 'end of day commit').
+    -   Commits should briefly summarize the changes (e.g., 'work on X', NOT
+        'end of day commit').
 
-    -   Commits should describe WHAT and WHY you've made changes/added to your code
+    -   Commits should describe WHAT and WHY you've made changes/added to your
+        code
 
--   Always commit your changes to your local repository or branch and push to GitHub at the end of your coding session as backup policy (as in: don't leave changes untracked when leaving work), ideally this also will result in a pull request to your internal creative partner. It's always easier to write a pull request when your work is fresh in your mind.
+-   Always commit your changes to your local repository or branch and push to
+    GitHub at the end of your coding session as backup policy (as in: don't
+    leave changes untracked when leaving work), ideally this also will result in
+    a pull request to your internal creative partner. It's always easier to
+    write a pull request when your work is fresh in your mind.
 
 ### Adding a co-author to your commit
 
@@ -100,9 +127,11 @@ Note that you can use the contributor's GitHub user name (in the example above:
 
 ## Pull request best practices
 
--   The only time you should merge your own pull request is at the initiation of your repo, as described in 'Create a New Project'.
+-   The only time you should merge your own pull request is at the initiation of
+    your repo, as described in 'Create a New Project'.
 
--   Pull request should happen frequently, ideally at the end of each work session.
+-   Pull request should happen frequently, ideally at the end of each work
+    session.
 
 -   Pull requests should be 400 lines of code (LOC) or fewer.
 
@@ -110,65 +139,116 @@ Note that you can use the contributor's GitHub user name (in the example above:
 
 -   Clearly identify what you need in the pull request review.
 
--   An example of a good pull request, that closes an issue created in your GitHub Project (we're assuming issue #7 is 'targets-ify the repo'), and makes a specific request of the reviewer:
+-   An example of a good pull request, that closes an issue created in your
+    GitHub Project (we're assuming issue #7 is 'targets-ify the repo'), and
+    makes a specific request of the reviewer:
 
 > Title: apply {targets} to workflow
 >
-> Primary files for review are the \_targets.R files in the main directory and in each subdirectory in the numbered directory step-by-step process. Please check for functionality by cloning and running `tar_visnetwork()` for each \_targets.R file.
+> Primary files for review are the \_targets.R files in the main directory and
+> in each subdirectory in the numbered directory step-by-step process. Please
+> check for functionality by cloning and running `tar_visnetwork()` for each
+> \_targets.R file.
 >
 > Closes #7
 
--   If you have a large pull request, i.e. at the beginning of code development that is more than 400 LOC, write a useful description alongside your pull request that introduces the repo's concepts (\<awesome-workflow\>) and highlights specific files (XXX, ZZZ) or commits (5e6b825):
+-   If you have a large pull request, i.e. at the beginning of code development
+    that is more than 400 LOC, write a useful description alongside your pull
+    request that introduces the repo's concepts (\<awesome-workflow\>) and
+    highlights specific files (XXX, ZZZ) or commits (5e6b825):
 
-> Purpose: initialize development of YYY repo and start buildout of \<awesome-workflow\>
+> Purpose: initialize development of YYY repo and start buildout of
+> \<awesome-workflow\>
 >
-> Start of YYY repository. Please review diff for XXX and ZZZ files. Otherwise, please do a high-level check of the repository as of the latest commit (5e6b825) for general workflow.
+> Start of YYY repository. Please review diff for XXX and ZZZ files. Otherwise,
+> please do a high-level check of the repository as of the latest commit
+> (5e6b825) for general workflow.
 
 ## Pull request review best practices
 
--   Activate notifications for pull requests and comments so you know when a pull request has been submitted for your review.
+-   Activate notifications for pull requests and comments so you know when a
+    pull request has been submitted for your review.
 
--   If you cannot review the pull request that has been assigned to you before the end of the next work day, contact the person who has made the request via Teams to let them know when you \*can\* review the PR. The person who has made the review can then assign the PR to another person if the review is time sensitive.
+-   If you cannot review the pull request that has been assigned to you before
+    the end of the next work day, contact the person who has made the request
+    via Teams to let them know when you \*can\* review the PR. The person who
+    has made the review can then assign the PR to another person if the review
+    is time sensitive.
 
-    -   If possible, cease work on this repo until the PR has been reviewed. Every additional `git push origin main` that you make after you submit a PR and before it is reviewed and merged will be added into the current PR.
+    -   If possible, cease work on this repo until the PR has been reviewed.
+        Every additional `git push origin main` that you make after you submit a
+        PR and before it is reviewed and merged will be added into the current
+        PR.
 
-    -   If you MUST continue work on the repo while the PR is being reviewed, do so in a Feature Branch.
+    -   If you MUST continue work on the repo while the PR is being reviewed, do
+        so in a Feature Branch.
 
--   If the PR is not clear or does not contain specific asks, DO NOT REVIEW OR MERGE, message the pull request creator on Teams and request them to edit the detail of the PR to reflect the best practices outlined above.
+-   If the PR is not clear or does not contain specific asks, DO NOT REVIEW OR
+    MERGE, message the pull request creator on Teams and request them to edit
+    the detail of the PR to reflect the best practices outlined above.
 
--   "Before you even look at the code [for review], focus on understanding what was changed, why it was changed, and how it was changed." -- [Leone Perdigão, Medium](https://leoneperdigao.medium.com/pull-request-best-practices-fa20f7daeb3c)
+-   "Before you even look at the code [for review], focus on understanding what
+    was changed, why it was changed, and how it was changed." -- [Leone
+    Perdigão,
+    Medium](https://leoneperdigao.medium.com/pull-request-best-practices-fa20f7daeb3c)
 
--   Be kind and thoughtful with your comments. We encourage the use of ['conventional comments' labels found here](https://conventionalcomments.org/#Labels). This allows you to clearly engage with the developer on the other end of the PR and offer actionable comments.
+-   Be kind and thoughtful with your comments. We encourage the use of
+    ['conventional comments' labels found
+    here](https://conventionalcomments.org/#Labels). This allows you to clearly
+    engage with the developer on the other end of the PR and offer actionable
+    comments.
 
--   As a reviewer, you should not spend longer than one hour per session in active code review and never review more than 500 LOC per hour ([SmartBear](https://smartbear.com/learn/code-review/best-practices-for-peer-code-review/)). Ideally, code review of a PR takes around 30-45 minutes when a project is in active development and follows the best practices outlined above.
+-   As a reviewer, you should not spend longer than one hour per session in
+    active code review and never review more than 500 LOC per hour
+    ([SmartBear](https://smartbear.com/learn/code-review/best-practices-for-peer-code-review/)).
+    Ideally, code review of a PR takes around 30-45 minutes when a project is in
+    active development and follows the best practices outlined above.
 
--   What to look for in code review ([via Google](https://google.github.io/eng-practices/review/)). Note that you do not need to check for all of these during a review of code as some are more applicable at the beginning of codebase development and others are more applicable to review that occurs closer to codebase deployment.
+-   What to look for in code review ([via
+    Google](https://google.github.io/eng-practices/review/)). Note that you do
+    not need to check for all of these during a review of code as some are more
+    applicable at the beginning of codebase development and others are more
+    applicable to review that occurs closer to codebase deployment.
 
     -   Design: Is the code well-designed and appropriate for your system?
 
-    -   Functionality: Does the code behave as the author likely intended? Is the way the code behaves good for its users?
+    -   Functionality: Does the code behave as the author likely intended? Is
+        the way the code behaves good for its users?
 
-    -   Complexity: Could the code be made simpler? Would another developer be able to easily understand and use this code when they come across it in the future?
+    -   Complexity: Could the code be made simpler? Would another developer be
+        able to easily understand and use this code when they come across it in
+        the future?
 
-    -   *Tests: Does the code have correct and well-designed automated tests?* We do not currently employ tests in our code. We will update information on this as we develop ways to include tests in our codebase.
+    -   *Tests: Does the code have correct and well-designed automated tests?*
+        We do not currently employ tests in our code. We will update information
+        on this as we develop ways to include tests in our codebase.
 
-    -   Naming: Did the developer choose clear names for variables, classes, methods, etc.? *Do they follow the tidyverse [style guides](https://style.tidyverse.org/)?*
+    -   Naming: Did the developer choose clear names for variables, classes,
+        methods, etc.? *Do they follow the tidyverse [style
+        guides](https://style.tidyverse.org/)?*
 
     -   Comments: Are the comments clear and useful?
 
-    -   Style: Does the code follow our [*style guides*](https://style.tidyverse.org/)?
+    -   Style: Does the code follow our [*style
+        guides*](https://style.tidyverse.org/)?
 
-    -   Documentation: Did the developer also update relevant documentation? *This is especially applicable to the README.md files in your repository and directories.*
+    -   Documentation: Did the developer also update relevant documentation?
+        *This is especially applicable to the README.md files in your repository
+        and directories.*
 
 ## Types of code review and engaging your internal creative partner
 
--   Code review is a skill that is learned and developed. Ideally, each member of the lab is performing some sort of code review on a weekly basis to grow skill in this realm.
+-   Code review is a skill that is learned and developed. Ideally, each member
+    of the lab is performing some sort of code review on a weekly basis to grow
+    skill in this realm.
 
 -   [Some] types of code review:
 
     -   Peer-to-peer code review
 
-    -   30-minute session explaining alpha-level code (code in baby development that might be in a branch or generally offline from the ROSSyndicate organization)
+    -   30-minute session explaining alpha-level code (code in baby development
+        that might be in a branch or generally offline from
+        the ROSSyndicate organization)
 
     -   line-by-line code walkthrough meeting
 
@@ -176,13 +256,24 @@ Note that you can use the contributor's GitHub user name (in the example above:
 
     -   Code review via Pull Request: 
 
-        -   'process review': This type of review is only suggested for early feature development OR early repository development. Do the decisions and workflow order make sense? Big-picture review only and/or suggestions to reduce processing time welcome.  This type of review is either preceded or followed by a peer-to-peer code walkthrough and explanation.
+        -   'process review': This type of review is only suggested for early
+            feature development OR early repository development. Do the
+            decisions and workflow order make sense? Big-picture review only
+            and/or suggestions to reduce processing time welcome.  This type of
+            review is either preceded or followed by a peer-to-peer code
+            walkthrough and explanation.
 
-        -   'general code review': iCP reviews code changes according to usual pull request review best practices. This will be the most common form of code review via pull request
+        -   'general code review': iCP reviews code changes according to usual
+            pull request review best practices. This will be the most common
+            form of code review via pull request
 
-        -   'ready for release: If a project features end-user reproducibility, i.e. Shiny app, published workflow, etc., the iCP should run this code in a fresh environment to make sure it runs properly and that dependencies are satisfied before pushing for public/partner use.
+        -   'ready for release: If a project features end-user reproducibility,
+            i.e. Shiny app, published workflow, etc., the iCP should run this
+            code in a fresh environment to make sure it runs properly and that
+            dependencies are satisfied before pushing for public/partner use.
 
-    -   **Ideally, code developers are engaging in some kind of code review on a daily to weekly basis**
+    -   **Ideally, code developers are engaging in some kind of code review on a
+        daily to weekly basis**
 
 ## Additional Reading
 
@@ -190,8 +281,7 @@ Note that you can use the contributor's GitHub user name (in the example above:
 GitHub](https://linearb.io/blog/code-review-on-github/), LinearB
 
 [GitHub Code Review Best
-Practices](https://blog.mergify.com/github-code-review-best-practices/),
-Mergify
+Practices](https://blog.mergify.com/github-code-review-best-practices/), Mergify
 
 [[How To] Commit and Code Review on
 GitHub](https://birkhoffg.github.io/blog/posts/how-to-commit-and-code-review-on-github/),
