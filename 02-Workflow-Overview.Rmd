@@ -17,41 +17,40 @@ you.
 Elect to start the repository with a README.md file and a MIT use license file.
 After you've initialized your repository, go in and edit the third line of the
 license file to read: *'ROSS - Radical Open Science Syndicate and all
-contributors'* 
+contributors'*
 
-2.  Add collaborators with write/push access by going to repo
-Settings -\> Manage Access -\> Invite a Collaborator. 
+2.  Add collaborators with write/push access by going to repo Settings -\>
+Manage Access -\> Invite a Collaborator.
 
-3.  After you have forked
-the repository to your account, clone the repo to your local machine (see
-Forking and Cloning ROSSyndicate Repositories). 
+3.  After you have forked the repository to your account, clone the repo to
+your local machine (see Forking and Cloning ROSSyndicate Repositories).
 
-4.  Once the repo is stored on
-your local machine create the general architecture for your repository.
+4.  Once the repo is stored on your local machine create the general
+architecture for your repository.
 
-    -   Create a basic folder structure for your project. Below are some folder 
+    -   Create a basic folder structure for your project. Below are some folder
     types that you may wish to include at the initiation of your project.
-        -   data: folder containing data sourced throughout the pipeline. For 
-        internal project, this should be a SymLink folder to a OneDrive folder 
-        (see 'Data and OneDrive') . For external projects/deliverables (with 
-        datasets that do not trigger large-file errors \>100mb), this can be a 
-        folder that contains data files that travel with and are tracked by the 
+        -   data: folder containing data sourced throughout the pipeline. For
+        internal project, this should be a SymLink folder to a OneDrive folder
+        (see 'Data and OneDrive') . For external projects/deliverables (with
+        datasets that do not trigger large-file errors \>100mb), this can be a
+        folder that contains data files that travel with and are tracked by the
         repository.
 
-        -   src: folder containing scripts for the analysis completed in the 
+        -   src: folder containing scripts for the analysis completed in the
         repository.
 
-        -   out/output: folder that contains and tracks output of your pipeline. 
-        This could include figures, summary data, etc. Your out/output folder 
+        -   out/output: folder that contains and tracks output of your pipeline.
+        This could include figures, summary data, etc. Your out/output folder
         could also live within the data folder, depending on the size of your project output.
-    -   Populate the README.md with some basic information, including the primary 
-    contact for the repo, and what the repo is all about. Also include the 
-    following use license blurb: 
+    -   Populate the README.md with some basic information, including the primary
+    contact for the repo, and what the repo is all about. Also include the
+    following use license blurb:
     *'This repository is covered by the MIT use license. We request that all downstream uses of this work be available to the public when possible.'*
-    -   Populate the *.gitignore* to ignore any folders or files that should not 
+    -   Populate the *.gitignore* to ignore any folders or files that should not
     be tracked.
     -   Create an R project associated with the repository directory.
-    -   Commit and push these changes to your forked repository, then create a 
+    -   Commit and push these changes to your forked repository, then create a
     pull request to your creative partner (see 'Collaboration workflow overview').
 
 ## Forking and Cloning ROSSyndicate Repositories
@@ -67,15 +66,15 @@ request to incorporate your changes to the primary repository.
 3.  Clone your forked repo to your local machine using the terminal in R or a
 command-line interpreter.
 
-    -   Make sure you have navigated to the directory where you would like the 
-    cloned repository to be stored. See this 
-    [tutorial on command-line basics](https://www.davidbaumgold.com/tutorials/command-line/) 
-    so you know how to navigate at the terminal. Most folks in the lab create a 
-    'GitHub' directory within our Documents folder, but we don't have any required 
+    -   Make sure you have navigated to the directory where you would like the
+    cloned repository to be stored. See this
+    [tutorial on command-line basics](https://www.davidbaumgold.com/tutorials/command-line/)
+    so you know how to navigate at the terminal. Most folks in the lab create a
+    'GitHub' directory within our Documents folder, but we don't have any required
     location for where you store your local repository.
 
-    -   Then, clone your repo! You can acquire the `ssh_address` from your forked 
-    repository on the GitHub website. If I were cloning the repo below, I would 
+    -   Then, clone your repo! You can acquire the `ssh_address` from your forked
+    repository on the GitHub website. If I were cloning the repo below, I would
     replace `ssh_address` with `git@github.com:steeleb/ROSSyndicate_best_practices`
 
         > git clone ssh_address
@@ -100,7 +99,7 @@ terminal with the following commands:
 
     > git status
 
-    This will show you what files have changes, and which are staged for your 
+    This will show you what files have changes, and which are staged for your
     commit.
 
     ![](images/git%20status.png){width="550"}
@@ -109,12 +108,12 @@ terminal with the following commands:
 
     > git add filename.ext filename2.ext
 
-    Check to see that you've staged the correct files for your commit with git 
+    Check to see that you've staged the correct files for your commit with git
     status It will look like this:
 
     ![](images/git%20add.png){width="550"}
 
-    If you are happy with the files listed under 'Changes to be committed', 
+    If you are happy with the files listed under 'Changes to be committed',
     make a commit!
 
     > git commit -m "insert commit message here"
@@ -139,15 +138,15 @@ practices' below for details.
 
 6.  Craft and submit your PR!
 
-    -   Add a title and description of your pull request, making sure your PR 
-    conforms to the 'Pull Request best practices' recommendations. Pull request 
-    descriptions and comments are written in Markdown, so take advantage of 
-    embedding images, emojis, text blocks, etc. You can also associate specific 
+    -   Add a title and description of your pull request, making sure your PR
+    conforms to the 'Pull Request best practices' recommendations. Pull request
+    descriptions and comments are written in Markdown, so take advantage of
+    embedding images, emojis, text blocks, etc. You can also associate specific
     commits and issues with markdown text using the hash '\#'.
 
-    -   Check "Allow edits from maintainers" to allow other collaborators to make 
-    changes to your pull request and in the right hand side, assign a reviewer 
-    (in this case, your internal creative partner or whomever you'd like to 
+    -   Check "Allow edits from maintainers" to allow other collaborators to make
+    changes to your pull request and in the right hand side, assign a reviewer
+    (in this case, your internal creative partner or whomever you'd like to
     engage in this pull request).
 
         ![](images/request%20review.png){width="250"}

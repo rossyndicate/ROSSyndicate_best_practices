@@ -52,8 +52,73 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<link href="libs/vembedr-0.1.5/css/vembedr.css" rel="stylesheet" />
 
 
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 <style type="text/css">
   
@@ -198,28 +263,28 @@
 <h1><span class="header-section-number">Section 6</span> Git Hub Feature Branches<a href="git-hub-feature-branches.html#git-hub-feature-branches" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div id="when-to-work-in-a-feature-branch" class="section level2 hasAnchor" number="6.1">
 <h2><span class="header-section-number">6.1</span> When to work in a feature branch<a href="git-hub-feature-branches.html#when-to-work-in-a-feature-branch" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Working in feature branches is similar to working in a forked repository, except
-you have to parallel workflows with varying commit history in the same [forked]
-repository. It is essential, if you are using branches, that you are working on
-a very specific issue or feature (hence the name) that is independent of others’
-work on the repo – or even your other branches! Try not to leave your branches
-unmerged for long periods of time if other folks are working in the same
-repository to help alleviate merge conflicts.</p>
+<p>Working in feature branches is similar to working in a forked repository,
+except you have two parallel workflows with varying commit history in the same
+[forked] repository. It is essential, if you are using branches, that you are
+working on a very specific issue or feature (hence the name) that is
+independent of others’ work on the repo – or even your other branches! <strong>IMPORTANT: Try not
+to leave your branches unmerged for long periods of time if other folks are
+working in the same repository to help alleviate merge conflicts.</strong></p>
 <p>Working in a feature branch is also a way to continue working on a codebase as
 other code is in review.</p>
 </div>
 <div id="how-to-create-a-feature-branch" class="section level2 hasAnchor" number="6.2">
 <h2><span class="header-section-number">6.2</span> How to create a feature branch<a href="git-hub-feature-branches.html#how-to-create-a-feature-branch" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Make sure the forked main (‘origin main’) is updated with upstream changes and
-all of your current work has been committed to the main branch, then start a new
-branch:</p>
+all of your current work has been committed to the main branch, then start a
+new branch:</p>
 <blockquote>
 <p>git checkout -b new-branch-name</p>
 </blockquote>
 <p>Branch starts with a copy of the branch you were on. You can now make edits in
-this branch and add/commit as usual. If you switch back to the main branch using
-<code>git checkout main</code>, all of your commit history will revert to that on the main
-branch (aka, it will look like all of your work disapeared).</p>
+this branch and add/commit as usual. If you switch back to the main branch
+using <code>git checkout main</code>, all of your commit history will revert to that on
+the main branch (aka, it will look like all of your work disappeared).</p>
 <p>You can either push your branch up to your origin remote (your forked repo)
 using:</p>
 <blockquote>

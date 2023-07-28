@@ -12,9 +12,10 @@ Working in feature branches is similar to working in a forked repository,
 except you have two parallel workflows with varying commit history in the same
 [forked] repository. It is essential, if you are using branches, that you are
 working on a very specific issue or feature (hence the name) that is
-independent of others' work on the repo -- or even your other branches! __IMPORTANT: Try not
-to leave your branches unmerged for long periods of time if other folks are
-working in the same repository to help alleviate merge conflicts.__
+independent of others' work on the repo -- or even your other branches!
+__IMPORTANT: Try not to leave your branches unmerged for long periods of time
+if other folks are working in the same repository to help alleviate merge
+conflicts.__
 
 Working in a feature branch is also a way to continue working on a codebase as
 other code is in review.
