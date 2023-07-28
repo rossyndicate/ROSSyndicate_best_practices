@@ -1,3 +1,9 @@
+---
+editor_options:
+  markdown:
+    wrap: 80
+---
+
 # Using AI Integrations
 
 ## Using GitHub CoPilot in VSCode + RStudio
