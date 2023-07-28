@@ -1,3 +1,9 @@
+---
+editor_options:
+  markdown:
+    wrap: 80
+---
+
 # Workflow Management with {targets}
 
 ## Using the {targets} package to automate your analyses
