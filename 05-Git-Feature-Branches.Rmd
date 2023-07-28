@@ -30,7 +30,7 @@ new branch:
 Branch starts with a copy of the branch you were on. You can now make edits in
 this branch and add/commit as usual. If you switch back to the main branch
 using `git checkout main`, all of your commit history will revert to that on
-the main branch (aka, it will look like all of your work disapeared).
+the main branch (aka, it will look like all of your work disappeared).
 
 You can either push your branch up to your origin remote (your forked repo)
 using:
