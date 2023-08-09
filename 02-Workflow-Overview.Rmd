@@ -13,45 +13,48 @@ you.
 ## Starting a new repository
 
 1.  From the ROSSyndicate Organization landing page, create a new repository
-('repo') with the appropriate naming convention (short/concise, no spaces).
-Elect to start the repository with a README.md file and a MIT use license file.
-After you've initialized your repository, go in and edit the third line of the
-license file to read: *'ROSS - Radical Open Science Syndicate and all
-contributors'*
+    ('repo') with the appropriate naming convention (short/concise, no spaces).
+    Elect to start the repository with a README.md file and a MIT use license
+    file. After you've initialized your repository, go in and edit the third
+    line of the license file to read: *'ROSS - Radical Open Science Syndicate
+    and all contributors'*
 
 2.  Add collaborators with write/push access by going to repo Settings -\>
-Manage Access -\> Invite a Collaborator.
+    Manage Access -\> Invite a Collaborator.
 
-3.  After you have forked the repository to your account, clone the repo to
-your local machine (see Forking and Cloning ROSSyndicate Repositories).
+3.  After you have forked the repository to your account, clone the repo to your
+    local machine (see Forking and Cloning ROSSyndicate Repositories).
 
 4.  Once the repo is stored on your local machine create the general
-architecture for your repository.
+    architecture for your repository.
 
     -   Create a basic folder structure for your project. Below are some folder
-    types that you may wish to include at the initiation of your project.
+        types that you may wish to include at the initiation of your project.
         -   data: folder containing data sourced throughout the pipeline. For
-        internal project, this should be a SymLink folder to a OneDrive folder
-        (see 'Data and OneDrive') . For external projects/deliverables (with
-        datasets that do not trigger large-file errors \>100mb), this can be a
-        folder that contains data files that travel with and are tracked by the
-        repository.
+            internal project, this should be a SymLink folder to a OneDrive
+            folder (see 'Data and OneDrive') . For external
+            projects/deliverables (with datasets that do not trigger large-file
+            errors \>100mb), this can be a folder that contains data files that
+            travel with and are tracked by the repository.
 
         -   src: folder containing scripts for the analysis completed in the
-        repository.
+            repository.
 
         -   out/output: folder that contains and tracks output of your pipeline.
-        This could include figures, summary data, etc. Your out/output folder
-        could also live within the data folder, depending on the size of your project output.
-    -   Populate the README.md with some basic information, including the primary
-    contact for the repo, and what the repo is all about. Also include the
-    following use license blurb:
-    *'This repository is covered by the MIT use license. We request that all downstream uses of this work be available to the public when possible.'*
+            This could include figures, summary data, etc. Your out/output
+            folder could also live within the data folder, depending on the size
+            of your project output.
+    -   Populate the README.md with some basic information, including the
+        primary contact for the repo, and what the repo is all about. Also
+        include the following use license blurb: *'This repository is covered by
+        the MIT use license. We request that all downstream uses of this work be
+        available to the public when possible.'*
     -   Populate the *.gitignore* to ignore any folders or files that should not
-    be tracked.
+        be tracked.
     -   Create an R project associated with the repository directory.
     -   Commit and push these changes to your forked repository, then create a
-    pull request to your creative partner (see 'Collaboration workflow overview').
+        pull request to your creative partner (see 'Collaboration workflow
+        overview').
 
 ## Forking and Cloning ROSSyndicate Repositories
 
@@ -60,22 +63,23 @@ architecture for your repository.
     ![](images/Screenshot%202023-07-27%20at%2012.10.16%20PM.png)
 
 2.  Follow the prompts to create a forked repository on your personal GitHub
-account, which is where you will make changes and edits prior to making a pull
-request to incorporate your changes to the primary repository.
+    account, which is where you will make changes and edits prior to making a
+    pull request to incorporate your changes to the primary repository.
 
 3.  Clone your forked repo to your local machine using the terminal in R or a
-command-line interpreter.
+    command-line interpreter.
 
     -   Make sure you have navigated to the directory where you would like the
-    cloned repository to be stored. See this
-    [tutorial on command-line basics](https://www.davidbaumgold.com/tutorials/command-line/)
-    so you know how to navigate at the terminal. Most folks in the lab create a
-    'GitHub' directory within our Documents folder, but we don't have any required
-    location for where you store your local repository.
+        cloned repository to be stored. See this [tutorial on command-line
+        basics](https://www.davidbaumgold.com/tutorials/command-line/) so you
+        know how to navigate at the terminal. Most folks in the lab create a
+        'GitHub' directory within our Documents folder, but we don't have any
+        required location for where you store your local repository.
 
-    -   Then, clone your repo! You can acquire the `ssh_address` from your forked
-    repository on the GitHub website. If I were cloning the repo below, I would
-    replace `ssh_address` with `git@github.com:steeleb/ROSSyndicate_best_practices`
+    -   Then, clone your repo! You can acquire the `ssh_address` from your
+        forked repository on the GitHub website. If I were cloning the repo
+        below, I would replace `ssh_address` with
+        `git@github.com:steeleb/ROSSyndicate_best_practices`
 
         > git clone ssh_address
 
@@ -83,19 +87,18 @@ command-line interpreter.
 
 ## Collaborative Coding
 
-(Note, the workflow for this is slightly different if you are working in
-feature branches. Please see that section if you are working in feature
-branches.)
+(Note, the workflow for this is slightly different if you are working in feature
+branches. Please see that section if you are working in feature branches.)
 
 1.  Always start your day by fetching upstream changes from the primary
-repository by typing the following in the terminal. This is part of the way we
-avoid merge conflicts down the road.
+    repository by typing the following in the terminal. This is part of the way
+    we avoid merge conflicts down the road.
 
     > git fetch upstream
 
 2.  Work on your local repo, commit, edit, commit, edit, commit. See 'Commit
-history best practices' for advice on great commits. Commits are made in your
-terminal with the following commands:
+    history best practices' for advice on great commits. Commits are made in
+    your terminal with the following commands:
 
     > git status
 
@@ -113,8 +116,8 @@ terminal with the following commands:
 
     ![](images/git%20add.png){width="550"}
 
-    If you are happy with the files listed under 'Changes to be committed',
-    make a commit!
+    If you are happy with the files listed under 'Changes to be committed', make
+    a commit!
 
     > git commit -m "insert commit message here"
 
@@ -123,12 +126,13 @@ terminal with the following commands:
     > git push origin main
 
 5.  Submit a pull request to your internal creative partner or engage other
-members of your project team through a pull request. See 'Pull Request best
-practices' below for details.
+    members of your project team through a pull request. See 'Pull Request best
+    practices' below for details.
 
     -   Navigate to your forked repository
 
-    -   Confirm that your branch is up-to-date with the upstream repo by clicking on 'Sync fork'
+    -   Confirm that your branch is up-to-date with the upstream repo by
+        clicking on 'Sync fork'
 
         ![](images/Screenshot%202023-07-27%20at%201.36.24%20PM.png)
 
@@ -139,24 +143,26 @@ practices' below for details.
 6.  Craft and submit your PR!
 
     -   Add a title and description of your pull request, making sure your PR
-    conforms to the 'Pull Request best practices' recommendations. Pull request
-    descriptions and comments are written in Markdown, so take advantage of
-    embedding images, emojis, text blocks, etc. You can also associate specific
-    commits and issues with markdown text using the hash '\#'.
+        conforms to the 'Pull Request best practices' recommendations. Pull
+        request descriptions and comments are written in Markdown, so take
+        advantage of embedding images, emojis, text blocks, etc. You can also
+        associate specific commits and issues with markdown text using the hash
+        '\#'.
 
-    -   Check "Allow edits from maintainers" to allow other collaborators to make
-    changes to your pull request and in the right hand side, assign a reviewer
-    (in this case, your internal creative partner or whomever you'd like to
-    engage in this pull request).
+    -   Check "Allow edits from maintainers" to allow other collaborators to
+        make changes to your pull request and in the right hand side, assign a
+        reviewer (in this case, your internal creative partner or whomever you'd
+        like to engage in this pull request).
 
         ![](images/request%20review.png){width="250"}
 
     -   Click "Create Pull Request"
 
 7.  Internal creative partner (or engaged individuals) reviews the pull request
-according to 'Pull Request Review best practices' following the process
-outlined in GitHub's How to Review Pull Requests. If no changes are required,
-the reviewer will merge the branch.
+    according to 'Pull Request Review best practices' following the process
+    outlined in GitHub's How to Review Pull Requests. If no changes are
+    required, the reviewer will merge the branch, but if any comments have been
+    made on the pull request, leave the merging to the PR author.
 
 ## Addressing merge conflicts
 
