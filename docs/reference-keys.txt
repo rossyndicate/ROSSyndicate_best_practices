@@ -70,3 +70,9 @@ rendering-a-bookdown-in-targets-placeholder
 resources
 flex-your-github-skills-by-updating-our-website
 directions
+code-documentation-best-practices
+repository-documentation
+code-documentation
+function-documentation
+roxygen-style-documentation
+docstring-documentation

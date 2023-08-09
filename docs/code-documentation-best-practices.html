@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Page not found | ROSSyndicate Project and Workflow Best Practices</title>
+  <title>Section 11 Code Documentation Best Practices | ROSSyndicate Project and Workflow Best Practices</title>
   <meta name="description" content="The ROSSyndicate workflow best practices guide." />
   <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Page not found | ROSSyndicate Project and Workflow Best Practices" />
+  <meta property="og:title" content="Section 11 Code Documentation Best Practices | ROSSyndicate Project and Workflow Best Practices" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="The ROSSyndicate workflow best practices guide." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Page not found | ROSSyndicate Project and Workflow Best Practices" />
+  <meta name="twitter:title" content="Section 11 Code Documentation Best Practices | ROSSyndicate Project and Workflow Best Practices" />
   
   <meta name="twitter:description" content="The ROSSyndicate workflow best practices guide." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-
+<link rel="prev" href="workflow-management-with-targets.html"/>
+<link rel="next" href="flex-your-github-skills-by-updating-our-website.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -268,19 +268,135 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="page-not-found" class="section level1">
-<h1>Page not found</h1>
-<p>The page you requested cannot be found (perhaps it was moved or renamed).</p>
-<p>You may want to try searching to find the page's new location, or use
-the table of contents to find the page you are looking for.</p>
+<div id="code-documentation-best-practices" class="section level1 hasAnchor" number="11">
+<h1><span class="header-section-number">Section 11</span> Code Documentation Best Practices<a href="code-documentation-best-practices.html#code-documentation-best-practices" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Repository, code, and function documentation are all integral parts of making
+code understandable to those reviewing your code and other end users.</p>
+<div id="repository-documentation" class="section level2 hasAnchor" number="11.1">
+<h2><span class="header-section-number">11.1</span> Repository documentation<a href="code-documentation-best-practices.html#repository-documentation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>When you create a repository, you create a README.md file, but what goes in
+there?! Here are a few basics that you can use to populate this README file so
+that others know what your repo does and who to ask questions about it!</p>
+<ul>
+<li><p>A few sentences about what the repo does.</p>
+<ul>
+<li><p>Include where the data originate (data provenance) and indicate whether
+or not it uses a symlink folder.</p></li>
+<li><p>If there is an end product (say, a Shiny app), state what that is - and
+if it is deployed, link it to the README.</p></li>
+</ul></li>
+<li><p>A primary contact for the repo. If you include your email, spell out dot and
+at so that you don’t get spammed.</p></li>
+<li><p>A brief overview of the repo architecture. An onlooker might not know what
+‘src’ is, so and overview for a repo that has a <code>src</code> and <code>data</code> folder
+might look like this:</p>
+<blockquote>
+<p><strong>Folder Descriptions:</strong></p>
+<ul>
+<li><p><code>src</code>: this folder contains all scripts for this repo</p></li>
+<li><p><code>data</code>: this folder is untracked in git, and must be set up using a
+symlink for the code to function. Contact XXX for the link to the
+folder.</p></li>
+</ul>
+</blockquote></li>
+</ul>
+</div>
+<div id="code-documentation" class="section level2 hasAnchor" number="11.2">
+<h2><span class="header-section-number">11.2</span> Code Documentation<a href="code-documentation-best-practices.html#code-documentation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Code documentation takes two primary forms when you are working in an .Rmd,
+.Qmd, or .ipynb:</p>
+<ul>
+<li><p>Text outside of code chunks that gives an overview of the script (which may
+appear at the top of a script as a chunk that might be called ‘Purpose’ or
+‘Overview’). In general, any person should be able to read the text (or
+headers!) that are outside of the code chunks and know what the script does
+without ever looking at the code chunks themselves.</p></li>
+<li><p>Commented text inside the code chunks that gives explicit/in depth
+descriptions about what you are doing. This is information that might be
+specific to the workflow, but may not be necessary to understand the
+function of a chunk - like:</p>
+<blockquote>
+<p>#using a for-loop here instead of a funciton because… blah blah</p>
+</blockquote></li>
+</ul>
+<p>Code documentation in .R and .py files is limited to commented text only. If
+there is a workflow that uses .R and .py files (like, a targets workflow), it is
+expected that the code is commented AND there is a bookdown or markdown-type
+file that is rendered alongside the workflow that describes it.</p>
+</div>
+<div id="function-documentation" class="section level2 hasAnchor" number="11.3">
+<h2><span class="header-section-number">11.3</span> Function Documentation<a href="code-documentation-best-practices.html#function-documentation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Functions should be documented using formal roxygen-style tags (for R scripts)
+and docstring-style tags (for Python). This is particularly important for
+{targets} workflows, but should become common place in any non-literate code we
+create. This type of documentation is not required for functions that are in a
+linear workflow, like those in a literate script (.Rmd, .Qmd, .ipynb).</p>
+<div id="roxygen-style-documentation" class="section level3 hasAnchor" number="11.3.1">
+<h3><span class="header-section-number">11.3.1</span> Roxygen-style documentation<a href="code-documentation-best-practices.html#roxygen-style-documentation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Roxygen is a formal way of describing a function. It is often used in package
+development as a way to populate the <code>--help</code> command for a function. We use the
+style of Roxygen to add documentation to our code. Here is an example of using
+Roxygen style to add documentation:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="code-documentation-best-practices.html#cb1-1" tabindex="-1"></a><span class="co">#&#39; Function to check for and install (but not load) packages. </span></span>
+<span id="cb1-2"><a href="code-documentation-best-practices.html#cb1-2" tabindex="-1"></a><span class="co">#&#39; This is likely to be used for most {targets} pipelines. </span></span>
+<span id="cb1-3"><a href="code-documentation-best-practices.html#cb1-3" tabindex="-1"></a><span class="co">#&#39; </span></span>
+<span id="cb1-4"><a href="code-documentation-best-practices.html#cb1-4" tabindex="-1"></a><span class="co">#&#39; @param x a package name, in quotations</span></span>
+<span id="cb1-5"><a href="code-documentation-best-practices.html#cb1-5" tabindex="-1"></a><span class="co">#&#39; @returns text string to indicate whether a package was</span></span>
+<span id="cb1-6"><a href="code-documentation-best-practices.html#cb1-6" tabindex="-1"></a><span class="co">#&#39; installed, or if it was already installed.</span></span>
+<span id="cb1-7"><a href="code-documentation-best-practices.html#cb1-7" tabindex="-1"></a><span class="co">#&#39; </span></span>
+<span id="cb1-8"><a href="code-documentation-best-practices.html#cb1-8" tabindex="-1"></a><span class="co">#&#39; @seealso [package_loader()]</span></span>
+<span id="cb1-9"><a href="code-documentation-best-practices.html#cb1-9" tabindex="-1"></a><span class="co">#&#39; </span></span>
+<span id="cb1-10"><a href="code-documentation-best-practices.html#cb1-10" tabindex="-1"></a><span class="co">#&#39; </span></span>
+<span id="cb1-11"><a href="code-documentation-best-practices.html#cb1-11" tabindex="-1"></a>package_installer <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb1-12"><a href="code-documentation-best-practices.html#cb1-12" tabindex="-1"></a>  <span class="cf">if</span> (x <span class="sc">%in%</span> <span class="fu">installed.packages</span>()) {</span>
+<span id="cb1-13"><a href="code-documentation-best-practices.html#cb1-13" tabindex="-1"></a>    <span class="fu">print</span>(<span class="fu">paste0</span>(<span class="st">&#39;{&#39;</span>, x ,<span class="st">&#39;} package is already installed.&#39;</span>))</span>
+<span id="cb1-14"><a href="code-documentation-best-practices.html#cb1-14" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb1-15"><a href="code-documentation-best-practices.html#cb1-15" tabindex="-1"></a>    <span class="fu">install.packages</span>(x)</span>
+<span id="cb1-16"><a href="code-documentation-best-practices.html#cb1-16" tabindex="-1"></a>    <span class="fu">print</span>(<span class="fu">paste0</span>(<span class="st">&#39;{&#39;</span>, x ,<span class="st">&#39;} package has been installed.&#39;</span>))</span>
+<span id="cb1-17"><a href="code-documentation-best-practices.html#cb1-17" tabindex="-1"></a>  }</span>
+<span id="cb1-18"><a href="code-documentation-best-practices.html#cb1-18" tabindex="-1"></a>}</span></code></pre></div>
+<p>Read more about <a href="https://cran.r-project.org/web/packages/roxygen2/vignettes/roxygen2.html">Roxygen documentation
+here</a>.</p>
+</div>
+<div id="docstring-documentation" class="section level3 hasAnchor" number="11.3.2">
+<h3><span class="header-section-number">11.3.2</span> docstring Documentation<a href="code-documentation-best-practices.html#docstring-documentation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Docstring is a simple, no-frills way to add documentation to Python scripts.
+While there are many other documentation methods that are more similar to
+Roxygen, this is the one that is the most straightforward for our purposes.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="code-documentation-best-practices.html#cb2-1" tabindex="-1"></a><span class="kw">def</span> csv_to_eeFeat(df, proj):</span>
+<span id="cb2-2"><a href="code-documentation-best-practices.html#cb2-2" tabindex="-1"></a>  <span class="co">&quot;&quot;&quot;Function to create an eeFeature from location info</span></span>
+<span id="cb2-3"><a href="code-documentation-best-practices.html#cb2-3" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="code-documentation-best-practices.html#cb2-4" tabindex="-1"></a><span class="co">  Args:</span></span>
+<span id="cb2-5"><a href="code-documentation-best-practices.html#cb2-5" tabindex="-1"></a><span class="co">      df: point locations .csv file with Latitude and Longitude</span></span>
+<span id="cb2-6"><a href="code-documentation-best-practices.html#cb2-6" tabindex="-1"></a><span class="co">      proj: CRS projection of the points</span></span>
+<span id="cb2-7"><a href="code-documentation-best-practices.html#cb2-7" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="code-documentation-best-practices.html#cb2-8" tabindex="-1"></a><span class="co">  Returns:</span></span>
+<span id="cb2-9"><a href="code-documentation-best-practices.html#cb2-9" tabindex="-1"></a><span class="co">      ee.FeatureCollection of the points </span></span>
+<span id="cb2-10"><a href="code-documentation-best-practices.html#cb2-10" tabindex="-1"></a><span class="co">  &quot;&quot;&quot;</span></span>
+<span id="cb2-11"><a href="code-documentation-best-practices.html#cb2-11" tabindex="-1"></a>  features<span class="op">=</span>[]</span>
+<span id="cb2-12"><a href="code-documentation-best-practices.html#cb2-12" tabindex="-1"></a>  <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(df.shape[<span class="dv">0</span>]):</span>
+<span id="cb2-13"><a href="code-documentation-best-practices.html#cb2-13" tabindex="-1"></a>    x,y <span class="op">=</span> df.Longitude[i],df.Latitude[i]</span>
+<span id="cb2-14"><a href="code-documentation-best-practices.html#cb2-14" tabindex="-1"></a>    latlong <span class="op">=</span>[x,y]</span>
+<span id="cb2-15"><a href="code-documentation-best-practices.html#cb2-15" tabindex="-1"></a>    loc_properties <span class="op">=</span> {<span class="st">&#39;system:index&#39;</span>:<span class="bu">str</span>(df.<span class="bu">id</span>[i]), <span class="st">&#39;id&#39;</span>:<span class="bu">str</span>(df.<span class="bu">id</span>[i])}</span>
+<span id="cb2-16"><a href="code-documentation-best-practices.html#cb2-16" tabindex="-1"></a>    g<span class="op">=</span>ee.Geometry.Point(latlong, proj) </span>
+<span id="cb2-17"><a href="code-documentation-best-practices.html#cb2-17" tabindex="-1"></a>    feature <span class="op">=</span> ee.Feature(g, loc_properties)</span>
+<span id="cb2-18"><a href="code-documentation-best-practices.html#cb2-18" tabindex="-1"></a>    features.append(feature)</span>
+<span id="cb2-19"><a href="code-documentation-best-practices.html#cb2-19" tabindex="-1"></a>  ee_object <span class="op">=</span> ee.FeatureCollection(features)</span>
+<span id="cb2-20"><a href="code-documentation-best-practices.html#cb2-20" tabindex="-1"></a>  <span class="cf">return</span> ee_object</span></code></pre></div>
+<p>Docstring documentation is particularily easy to create in VS Code editor using
+the extension ‘autoDocstring’. This will automatically populate the ‘Args’ and
+‘Returns’ fields including the ‘Args’ variable names.</p>
+
+</div>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-
+<a href="workflow-management-with-targets.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="flex-your-github-skills-by-updating-our-website.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -311,7 +427,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/%s",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/10-Documentation-Best-Practices.Rmd",
 "text": "Edit"
 },
 "history": {

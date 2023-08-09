@@ -1,0 +1,134 @@
+---
+editor_options: 
+  markdown: 
+    wrap: 80
+---
+
+# Code Documentation Best Practices
+
+Repository, code, and function documentation are all integral parts of making
+code understandable to those reviewing your code and other end users.
+
+## Repository documentation
+
+When you create a repository, you create a README.md file, but what goes in
+there?! Here are a few basics that you can use to populate this README file so
+that others know what your repo does and who to ask questions about it!
+
+-   A few sentences about what the repo does.
+
+    -   Include where the data originate (data provenance) and indicate whether
+        or not it uses a symlink folder.
+
+    -   If there is an end product (say, a Shiny app), state what that is - and
+        if it is deployed, link it to the README.
+
+-   A primary contact for the repo. If you include your email, spell out dot and
+    at so that you don't get spammed.
+
+-   A brief overview of the repo architecture. An onlooker might not know what
+    'src' is, so and overview for a repo that has a `src` and `data` folder
+    might look like this:
+
+    > **Folder Descriptions:**
+    >
+    > -   `src`: this folder contains all scripts for this repo
+    >
+    > -   `data`: this folder is untracked in git, and must be set up using a
+    >     symlink for the code to function. Contact XXX for the link to the
+    >     folder.
+
+## Code Documentation
+
+Code documentation takes two primary forms when you are working in an .Rmd,
+.Qmd, or .ipynb:
+
+-   Text outside of code chunks that gives an overview of the script (which may
+    appear at the top of a script as a chunk that might be called 'Purpose' or
+    'Overview'). In general, any person should be able to read the text (or
+    headers!) that are outside of the code chunks and know what the script does
+    without ever looking at the code chunks themselves.
+
+-   Commented text inside the code chunks that gives explicit/in depth
+    descriptions about what you are doing. This is information that might be
+    specific to the workflow, but may not be necessary to understand the
+    function of a chunk - like:
+
+    > #using a for-loop here instead of a funciton because... blah blah
+
+Code documentation in .R and .py files is limited to commented text only. If
+there is a workflow that uses .R and .py files (like, a targets workflow), it is
+expected that the code is commented AND there is a bookdown or markdown-type
+file that is rendered alongside the workflow that describes it.
+
+## Function Documentation
+
+Functions should be documented using formal roxygen-style tags (for R scripts)
+and docstring-style tags (for Python). This is particularly important for
+{targets} workflows, but should become common place in any non-literate code we
+create. This type of documentation is not required for functions that are in a
+linear workflow, like those in a literate script (.Rmd, .Qmd, .ipynb).
+
+### Roxygen-style documentation
+
+Roxygen is a formal way of describing a function. It is often used in package
+development as a way to populate the `--help` command for a function. We use the
+style of Roxygen to add documentation to our code. Here is an example of using
+Roxygen style to add documentation:
+
+```{r, eval = F}
+#' Function to check for and install (but not load) packages. 
+#' This is likely to be used for most {targets} pipelines. 
+#' 
+#' @param x a package name, in quotations
+#' @returns text string to indicate whether a package was
+#' installed, or if it was already installed.
+#' 
+#' @seealso [package_loader()]
+#' 
+#' 
+package_installer <- function(x) {
+  if (x %in% installed.packages()) {
+    print(paste0('{', x ,'} package is already installed.'))
+  } else {
+    install.packages(x)
+    print(paste0('{', x ,'} package has been installed.'))
+  }
+}
+```
+
+Read more about [Roxygen documentation
+here](https://cran.r-project.org/web/packages/roxygen2/vignettes/roxygen2.html).
+
+### docstring Documentation
+
+Docstring is a simple, no-frills way to add documentation to Python scripts.
+While there are many other documentation methods that are more similar to
+Roxygen, this is the one that is the most straightforward for our purposes.
+
+```{python, eval = F}
+def csv_to_eeFeat(df, proj):
+  """Function to create an eeFeature from location info
+
+  Args:
+      df: point locations .csv file with Latitude and Longitude
+      proj: CRS projection of the points
+
+  Returns:
+      ee.FeatureCollection of the points 
+  """
+  features=[]
+  for i in range(df.shape[0]):
+    x,y = df.Longitude[i],df.Latitude[i]
+    latlong =[x,y]
+    loc_properties = {'system:index':str(df.id[i]), 'id':str(df.id[i])}
+    g=ee.Geometry.Point(latlong, proj) 
+    feature = ee.Feature(g, loc_properties)
+    features.append(feature)
+  ee_object = ee.FeatureCollection(features)
+  return ee_object
+```
+
+Docstring documentation is particularily easy to create in VS Code editor using
+the extension 'autoDocstring'. This will automatically populate the 'Args' and
+'Returns' fields including the 'Args' variable names.
