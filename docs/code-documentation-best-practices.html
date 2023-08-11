@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Section 3 Workflow Overview | ROSSyndicate Project and Workflow Best Practices</title>
+  <title>Section 11 Code Documentation Best Practices | ROSSyndicate Project and Workflow Best Practices</title>
   <meta name="description" content="The ROSSyndicate workflow best practices guide." />
   <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Section 3 Workflow Overview | ROSSyndicate Project and Workflow Best Practices" />
+  <meta property="og:title" content="Section 11 Code Documentation Best Practices | ROSSyndicate Project and Workflow Best Practices" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="The ROSSyndicate workflow best practices guide." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Section 3 Workflow Overview | ROSSyndicate Project and Workflow Best Practices" />
+  <meta name="twitter:title" content="Section 11 Code Documentation Best Practices | ROSSyndicate Project and Workflow Best Practices" />
   
   <meta name="twitter:description" content="The ROSSyndicate workflow best practices guide." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="an-introduction-to-git-and-github.html"/>
-<link rel="next" href="collaborative-coding-and-workflow-best-practices.html"/>
+<link rel="prev" href="workflow-management-with-targets.html"/>
+<link rel="next" href="flex-your-github-skills-by-updating-our-website.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -54,6 +54,70 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 <style type="text/css">
   
@@ -204,166 +268,126 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="workflow-overview" class="section level1 hasAnchor" number="3">
-<h1><span class="header-section-number">Section 3</span> Workflow Overview<a href="workflow-overview.html#workflow-overview" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>If you are not already a member of the <a href="https://github.com/rossyndicate">ROSSyndicate GitHub
-Organization</a>, please Teams Katie Willi to add
-you.</p>
-<div id="starting-a-new-repository" class="section level2 hasAnchor" number="3.1">
-<h2><span class="header-section-number">3.1</span> Starting a new repository<a href="workflow-overview.html#starting-a-new-repository" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<ol style="list-style-type: decimal">
-<li><p>From the ROSSyndicate Organization landing page, create a new repository
-(‘repo’) with the appropriate naming convention (short/concise, no spaces).
-Elect to start the repository with a README.md file and a MIT use license
-file. After you’ve initialized your repository, go in and edit the third
-line of the license file to read: <em>‘ROSS - Radical Open Science Syndicate
-and all contributors’</em></p></li>
-<li><p>Add collaborators with write/push access by going to repo Settings -&gt;
-Manage Access -&gt; Invite a Collaborator.</p></li>
-<li><p>After you have forked the repository to your account, clone the repo to your
-local machine (see Forking and Cloning ROSSyndicate Repositories).</p></li>
-<li><p>Once the repo is stored on your local machine create the general
-architecture for your repository.</p>
+<div id="code-documentation-best-practices" class="section level1 hasAnchor" number="11">
+<h1><span class="header-section-number">Section 11</span> Code Documentation Best Practices<a href="code-documentation-best-practices.html#code-documentation-best-practices" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Repository, code, and function documentation are all integral parts of making
+code understandable to those reviewing your code and other end users.</p>
+<div id="repository-documentation" class="section level2 hasAnchor" number="11.1">
+<h2><span class="header-section-number">11.1</span> Repository documentation<a href="code-documentation-best-practices.html#repository-documentation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>When you create a repository, you create a README.md file, but what goes in
+there?! Here are a few basics that you can use to populate this README file so
+that others know what your repo does and who to ask questions about it!</p>
 <ul>
-<li>Create a basic folder structure for your project. Below are some folder
-types that you may wish to include at the initiation of your project.
+<li><p>A few sentences about what the repo does.</p>
 <ul>
-<li><p>data: folder containing data sourced throughout the pipeline. For
-internal project, this should be a SymLink folder to a OneDrive
-folder (see ‘Data and OneDrive’) . For external
-projects/deliverables (with datasets that do not trigger large-file
-errors &gt;100mb), this can be a folder that contains data files that
-travel with and are tracked by the repository.</p></li>
-<li><p>src: folder containing scripts for the analysis completed in the
-repository.</p></li>
-<li><p>out/output: folder that contains and tracks output of your pipeline.
-This could include figures, summary data, etc. Your out/output
-folder could also live within the data folder, depending on the size
-of your project output.</p></li>
+<li><p>Include where the data originate (data provenance) and indicate whether
+or not it uses a symlink folder.</p></li>
+<li><p>If there is an end product (say, a Shiny app), state what that is - and
+if it is deployed, link it to the README.</p></li>
 </ul></li>
-<li>Populate the README.md with some basic information, including the
-primary contact for the repo, and what the repo is all about. Also
-include the following use license blurb: <em>‘This repository is covered by
-the MIT use license. We request that all downstream uses of this work be
-available to the public when possible.’</em></li>
-<li>Populate the <em>.gitignore</em> to ignore any folders or files that should not
-be tracked.</li>
-<li>Create an R project associated with the repository directory.</li>
-<li>Commit and push these changes to your forked repository, then create a
-pull request to your creative partner (see ‘Collaboration workflow
-overview’).</li>
-</ul></li>
-</ol>
-</div>
-<div id="forking-and-cloning-rossyndicate-repositories" class="section level2 hasAnchor" number="3.2">
-<h2><span class="header-section-number">3.2</span> Forking and Cloning ROSSyndicate Repositories<a href="workflow-overview.html#forking-and-cloning-rossyndicate-repositories" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<ol style="list-style-type: decimal">
-<li><p>Go to the ROSSyndicate repo for the project and click “Fork”.</p>
-<p><img src="images/Screenshot%202023-07-27%20at%2012.10.16%20PM.png" /></p></li>
-<li><p>Follow the prompts to create a forked repository on your personal GitHub
-account, which is where you will make changes and edits prior to making a
-pull request to incorporate your changes to the primary repository.</p></li>
-<li><p>Clone your forked repo to your local machine using the terminal in R or a
-command-line interpreter.</p>
-<ul>
-<li><p>Make sure you have navigated to the directory where you would like the
-cloned repository to be stored. See this <a href="https://www.davidbaumgold.com/tutorials/command-line/">tutorial on command-line
-basics</a> so you
-know how to navigate at the terminal. Most folks in the lab create a
-‘GitHub’ directory within our Documents folder, but we don’t have any
-required location for where you store your local repository.</p></li>
-<li><p>Then, clone your repo! You can acquire the <code>ssh_address</code> from your
-forked repository on the GitHub website. If I were cloning the repo
-below, I would replace <code>ssh_address</code> with
-<code>git@github.com:steeleb/ROSSyndicate_best_practices</code></p>
+<li><p>A primary contact for the repo. If you include your email, spell out dot and
+at so that you don’t get spammed.</p></li>
+<li><p>A brief overview of the repo architecture. An onlooker might not know what
+‘src’ is, so and overview for a repo that has a <code>src</code> and <code>data</code> folder
+might look like this:</p>
 <blockquote>
-<p>git clone ssh_address</p>
-</blockquote>
-<p><img src="images/Screenshot%202023-07-27%20at%2012.47.26%20PM.png" /></p></li>
-</ul></li>
-</ol>
-</div>
-<div id="collaborative-coding" class="section level2 hasAnchor" number="3.3">
-<h2><span class="header-section-number">3.3</span> Collaborative Coding<a href="workflow-overview.html#collaborative-coding" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>(Note, the workflow for this is slightly different if you are working in feature
-branches. Please see that section if you are working in feature branches.)</p>
-<ol style="list-style-type: decimal">
-<li><p>Always start your day by fetching upstream changes from the primary
-repository by typing the following in the terminal. This is part of the way
-we avoid merge conflicts down the road.</p>
-<blockquote>
-<p>git fetch upstream</p>
+<p><strong>Folder Descriptions:</strong></p>
+<ul>
+<li><p><code>src</code>: this folder contains all scripts for this repo</p></li>
+<li><p><code>data</code>: this folder is untracked in git, and must be set up using a
+symlink for the code to function. Contact XXX for the link to the
+folder.</p></li>
+</ul>
 </blockquote></li>
-<li><p>Work on your local repo, commit, edit, commit, edit, commit. See ‘Commit
-history best practices’ for advice on great commits. Commits are made in
-your terminal with the following commands:</p>
-<blockquote>
-<p>git status</p>
-</blockquote>
-<p>This will show you what files have changes, and which are staged for your
-commit.</p>
-<p><img src="images/git%20status.png" width="550" /></p></li>
-<li><p>Now, stage the files for your commit.</p>
-<blockquote>
-<p>git add filename.ext filename2.ext</p>
-</blockquote>
-<p>Check to see that you’ve staged the correct files for your commit with git
-status It will look like this:</p>
-<p><img src="images/git%20add.png" width="550" /></p>
-<p>If you are happy with the files listed under ‘Changes to be committed’, make
-a commit!</p>
-<blockquote>
-<p>git commit -m “insert commit message here”</p>
-</blockquote></li>
-<li><p>Push your commit history to your forked repository</p>
-<blockquote>
-<p>git push origin main</p>
-</blockquote></li>
-<li><p>Submit a pull request to your internal creative partner or engage other
-members of your project team through a pull request. See ‘Pull Request best
-practices’ below for details.</p>
-<ul>
-<li><p>Navigate to your forked repository</p></li>
-<li><p>Confirm that your branch is up-to-date with the upstream repo by
-clicking on ‘Sync fork’</p>
-<p><img src="images/Screenshot%202023-07-27%20at%201.36.24%20PM.png" /></p></li>
-<li><p>Then, click ‘Contribute’ and ‘Open pull request’</p>
-<p><img src="images/Screenshot%202023-07-27%20at%201.38.07%20PM.png" width="250" /></p></li>
-</ul></li>
-<li><p>Craft and submit your PR!</p>
-<ul>
-<li><p>Add a title and description of your pull request, making sure your PR
-conforms to the ‘Pull Request best practices’ recommendations. Pull
-request descriptions and comments are written in Markdown, so take
-advantage of embedding images, emojis, text blocks, etc. You can also
-associate specific commits and issues with markdown text using the hash
-‘#’.</p></li>
-<li><p>Check “Allow edits from maintainers” to allow other collaborators to
-make changes to your pull request and in the right hand side, assign a
-reviewer (in this case, your internal creative partner or whomever you’d
-like to engage in this pull request).</p>
-<p><img src="images/request%20review.png" width="250" /></p></li>
-<li><p>Click “Create Pull Request”</p></li>
-</ul></li>
-<li><p>Internal creative partner (or engaged individuals) reviews the pull request
-according to ‘Pull Request Review best practices’ following the process
-outlined in GitHub’s How to Review Pull Requests. If no changes are
-required, the reviewer will merge the branch, but if any comments have been
-made on the pull request, leave the merging to the PR author.</p></li>
-</ol>
+</ul>
 </div>
-<div id="addressing-merge-conflicts" class="section level2 hasAnchor" number="3.4">
-<h2><span class="header-section-number">3.4</span> Addressing merge conflicts<a href="workflow-overview.html#addressing-merge-conflicts" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>There are multiple ways to deal with merge conflicts. You can address them
-within the <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github">GitHub conflict
-editor</a>.
-Alternatively, you can use the command-line method is <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line">described
-here</a>,
-but this method requires some advanced skill and understanding of command line
-git. If you’re using VSCode, and have the ‘GitHub Pull Requests and Issues’
-extension installed, this is a very user-friendly way to deal with conflicts,
-too.</p>
+<div id="code-documentation" class="section level2 hasAnchor" number="11.2">
+<h2><span class="header-section-number">11.2</span> Code Documentation<a href="code-documentation-best-practices.html#code-documentation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Code documentation takes two primary forms when you are working in an .Rmd,
+.Qmd, or .ipynb:</p>
+<ul>
+<li><p>Text outside of code chunks that gives an overview of the script (which may
+appear at the top of a script as a chunk that might be called ‘Purpose’ or
+‘Overview’). In general, any person should be able to read the text (or
+headers!) that are outside of the code chunks and know what the script does
+without ever looking at the code chunks themselves.</p></li>
+<li><p>Commented text inside the code chunks that gives explicit/in depth
+descriptions about what you are doing. This is information that might be
+specific to the workflow, but may not be necessary to understand the
+function of a chunk - like:</p>
+<blockquote>
+<p>#using a for-loop here instead of a funciton because… blah blah</p>
+</blockquote></li>
+</ul>
+<p>Code documentation in .R and .py files is limited to commented text only. If
+there is a workflow that uses .R and .py files (like, a targets workflow), it is
+expected that the code is commented AND there is a bookdown or markdown-type
+file that is rendered alongside the workflow that describes it.</p>
+</div>
+<div id="function-documentation" class="section level2 hasAnchor" number="11.3">
+<h2><span class="header-section-number">11.3</span> Function Documentation<a href="code-documentation-best-practices.html#function-documentation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Functions should be documented using formal roxygen-style tags (for R scripts)
+and docstring-style tags (for Python). This is particularly important for
+{targets} workflows, but should become common place in any non-literate code we
+create. This type of documentation is not required for functions that are in a
+linear workflow, like those in a literate script (.Rmd, .Qmd, .ipynb).</p>
+<div id="roxygen-style-documentation" class="section level3 hasAnchor" number="11.3.1">
+<h3><span class="header-section-number">11.3.1</span> Roxygen-style documentation<a href="code-documentation-best-practices.html#roxygen-style-documentation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Roxygen is a formal way of describing a function. It is often used in package
+development as a way to populate the <code>--help</code> command for a function. We use the
+style of Roxygen to add documentation to our code. Here is an example of using
+Roxygen style to add documentation:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="code-documentation-best-practices.html#cb1-1" tabindex="-1"></a><span class="co">#&#39; Function to check for and install (but not load) packages. </span></span>
+<span id="cb1-2"><a href="code-documentation-best-practices.html#cb1-2" tabindex="-1"></a><span class="co">#&#39; This is likely to be used for most {targets} pipelines. </span></span>
+<span id="cb1-3"><a href="code-documentation-best-practices.html#cb1-3" tabindex="-1"></a><span class="co">#&#39; </span></span>
+<span id="cb1-4"><a href="code-documentation-best-practices.html#cb1-4" tabindex="-1"></a><span class="co">#&#39; @param x a package name, in quotations</span></span>
+<span id="cb1-5"><a href="code-documentation-best-practices.html#cb1-5" tabindex="-1"></a><span class="co">#&#39; @returns text string to indicate whether a package was</span></span>
+<span id="cb1-6"><a href="code-documentation-best-practices.html#cb1-6" tabindex="-1"></a><span class="co">#&#39; installed, or if it was already installed.</span></span>
+<span id="cb1-7"><a href="code-documentation-best-practices.html#cb1-7" tabindex="-1"></a><span class="co">#&#39; </span></span>
+<span id="cb1-8"><a href="code-documentation-best-practices.html#cb1-8" tabindex="-1"></a><span class="co">#&#39; @seealso [package_loader()]</span></span>
+<span id="cb1-9"><a href="code-documentation-best-practices.html#cb1-9" tabindex="-1"></a><span class="co">#&#39; </span></span>
+<span id="cb1-10"><a href="code-documentation-best-practices.html#cb1-10" tabindex="-1"></a><span class="co">#&#39; </span></span>
+<span id="cb1-11"><a href="code-documentation-best-practices.html#cb1-11" tabindex="-1"></a>package_installer <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb1-12"><a href="code-documentation-best-practices.html#cb1-12" tabindex="-1"></a>  <span class="cf">if</span> (x <span class="sc">%in%</span> <span class="fu">installed.packages</span>()) {</span>
+<span id="cb1-13"><a href="code-documentation-best-practices.html#cb1-13" tabindex="-1"></a>    <span class="fu">print</span>(<span class="fu">paste0</span>(<span class="st">&#39;{&#39;</span>, x ,<span class="st">&#39;} package is already installed.&#39;</span>))</span>
+<span id="cb1-14"><a href="code-documentation-best-practices.html#cb1-14" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb1-15"><a href="code-documentation-best-practices.html#cb1-15" tabindex="-1"></a>    <span class="fu">install.packages</span>(x)</span>
+<span id="cb1-16"><a href="code-documentation-best-practices.html#cb1-16" tabindex="-1"></a>    <span class="fu">print</span>(<span class="fu">paste0</span>(<span class="st">&#39;{&#39;</span>, x ,<span class="st">&#39;} package has been installed.&#39;</span>))</span>
+<span id="cb1-17"><a href="code-documentation-best-practices.html#cb1-17" tabindex="-1"></a>  }</span>
+<span id="cb1-18"><a href="code-documentation-best-practices.html#cb1-18" tabindex="-1"></a>}</span></code></pre></div>
+<p>Read more about <a href="https://cran.r-project.org/web/packages/roxygen2/vignettes/roxygen2.html">Roxygen documentation
+here</a>.</p>
+</div>
+<div id="docstring-documentation" class="section level3 hasAnchor" number="11.3.2">
+<h3><span class="header-section-number">11.3.2</span> docstring Documentation<a href="code-documentation-best-practices.html#docstring-documentation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Docstring is a simple, no-frills way to add documentation to Python scripts.
+While there are many other documentation methods that are more similar to
+Roxygen, this is the one that is the most straightforward for our purposes.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="code-documentation-best-practices.html#cb2-1" tabindex="-1"></a><span class="kw">def</span> csv_to_eeFeat(df, proj):</span>
+<span id="cb2-2"><a href="code-documentation-best-practices.html#cb2-2" tabindex="-1"></a>  <span class="co">&quot;&quot;&quot;Function to create an eeFeature from location info</span></span>
+<span id="cb2-3"><a href="code-documentation-best-practices.html#cb2-3" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="code-documentation-best-practices.html#cb2-4" tabindex="-1"></a><span class="co">  Args:</span></span>
+<span id="cb2-5"><a href="code-documentation-best-practices.html#cb2-5" tabindex="-1"></a><span class="co">      df: point locations .csv file with Latitude and Longitude</span></span>
+<span id="cb2-6"><a href="code-documentation-best-practices.html#cb2-6" tabindex="-1"></a><span class="co">      proj: CRS projection of the points</span></span>
+<span id="cb2-7"><a href="code-documentation-best-practices.html#cb2-7" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="code-documentation-best-practices.html#cb2-8" tabindex="-1"></a><span class="co">  Returns:</span></span>
+<span id="cb2-9"><a href="code-documentation-best-practices.html#cb2-9" tabindex="-1"></a><span class="co">      ee.FeatureCollection of the points </span></span>
+<span id="cb2-10"><a href="code-documentation-best-practices.html#cb2-10" tabindex="-1"></a><span class="co">  &quot;&quot;&quot;</span></span>
+<span id="cb2-11"><a href="code-documentation-best-practices.html#cb2-11" tabindex="-1"></a>  features<span class="op">=</span>[]</span>
+<span id="cb2-12"><a href="code-documentation-best-practices.html#cb2-12" tabindex="-1"></a>  <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(df.shape[<span class="dv">0</span>]):</span>
+<span id="cb2-13"><a href="code-documentation-best-practices.html#cb2-13" tabindex="-1"></a>    x,y <span class="op">=</span> df.Longitude[i],df.Latitude[i]</span>
+<span id="cb2-14"><a href="code-documentation-best-practices.html#cb2-14" tabindex="-1"></a>    latlong <span class="op">=</span>[x,y]</span>
+<span id="cb2-15"><a href="code-documentation-best-practices.html#cb2-15" tabindex="-1"></a>    loc_properties <span class="op">=</span> {<span class="st">&#39;system:index&#39;</span>:<span class="bu">str</span>(df.<span class="bu">id</span>[i]), <span class="st">&#39;id&#39;</span>:<span class="bu">str</span>(df.<span class="bu">id</span>[i])}</span>
+<span id="cb2-16"><a href="code-documentation-best-practices.html#cb2-16" tabindex="-1"></a>    g<span class="op">=</span>ee.Geometry.Point(latlong, proj) </span>
+<span id="cb2-17"><a href="code-documentation-best-practices.html#cb2-17" tabindex="-1"></a>    feature <span class="op">=</span> ee.Feature(g, loc_properties)</span>
+<span id="cb2-18"><a href="code-documentation-best-practices.html#cb2-18" tabindex="-1"></a>    features.append(feature)</span>
+<span id="cb2-19"><a href="code-documentation-best-practices.html#cb2-19" tabindex="-1"></a>  ee_object <span class="op">=</span> ee.FeatureCollection(features)</span>
+<span id="cb2-20"><a href="code-documentation-best-practices.html#cb2-20" tabindex="-1"></a>  <span class="cf">return</span> ee_object</span></code></pre></div>
+<p>Docstring documentation is particularily easy to create in VS Code editor using
+the extension ‘autoDocstring’. This will automatically populate the ‘Args’ and
+‘Returns’ fields including the ‘Args’ variable names.</p>
 
+</div>
 </div>
 </div>
             </section>
@@ -371,8 +395,8 @@ too.</p>
           </div>
         </div>
       </div>
-<a href="an-introduction-to-git-and-github.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="collaborative-coding-and-workflow-best-practices.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="workflow-management-with-targets.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="flex-your-github-skills-by-updating-our-website.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -403,7 +427,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/02-Workflow-Overview.Rmd",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/10-Documentation-Best-Practices.Rmd",
 "text": "Edit"
 },
 "history": {
