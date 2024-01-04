@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Section 2 An Introduction to Git And GitHub | ROSSyndicate Project and Workflow Best Practices</title>
+  <title>Section 8 Archiving Data and Code | ROSSyndicate Project and Workflow Best Practices</title>
   <meta name="description" content="The ROSSyndicate workflow best practices guide." />
   <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Section 2 An Introduction to Git And GitHub | ROSSyndicate Project and Workflow Best Practices" />
+  <meta property="og:title" content="Section 8 Archiving Data and Code | ROSSyndicate Project and Workflow Best Practices" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="The ROSSyndicate workflow best practices guide." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Section 2 An Introduction to Git And GitHub | ROSSyndicate Project and Workflow Best Practices" />
+  <meta name="twitter:title" content="Section 8 Archiving Data and Code | ROSSyndicate Project and Workflow Best Practices" />
   
   <meta name="twitter:description" content="The ROSSyndicate workflow best practices guide." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="workflow-overview.html"/>
+<link rel="prev" href="using-ai-integrations.html"/>
+<link rel="next" href="python-integrations-in-rstudio.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -262,154 +262,179 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="an-introduction-to-git-and-github" class="section level1 hasAnchor" number="2">
-<h1><span class="header-section-number">Section 2</span> An Introduction to Git And GitHub<a href="an-introduction-to-git-and-github.html#an-introduction-to-git-and-github" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Git is a version control system that helps manage projects, especially projects
-that involve multiple people. GitHub is a hosting service for these Git
-projects (in GitHub-speak, projects are housed in <strong>repositories</strong>). Here, we
-will outline how to set up Git, create your own GitHub account, and connect
-them to you local R environment to easily publish and share the code you
-develop. A great article on the benefits of using Git and GitHub has been
-written by Jennifer Bryan, which you can find
-<a href="https://happygitwithr.com/big-picture.html">here</a> and we highly recommend
-reading!</p>
-<p>In fact, Jennifer Bryan has developed what we feel is the best guide for using
-Git and GitHub out there, <a href="https://happygitwithr.com/index.html">Happy Git and GitHub for the
-useR</a>. So as not to reinvent the wheel,
-this outline will mostly just direct you to that body of work.</p>
-<div id="setting-up-git-and-github" class="section level2 hasAnchor" number="2.1">
-<h2><span class="header-section-number">2.1</span> Setting up Git and GitHub<a href="an-introduction-to-git-and-github.html#setting-up-git-and-github" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Matt made an excellent YouTube video (also based on Jenny Bryan’s work) on how
-to set up your own GitHub account, install Git, and allow them to interact with
-your personal R environment. It’s also a great primer for how Git and GitHub
-work in R Studio.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="an-introduction-to-git-and-github.html#cb4-1" tabindex="-1"></a><span class="fu">embed_url</span>(<span class="st">&quot;https://www.youtube.com/watch?v=Y4sOTFV3FAM&amp;t=1s&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb4-2"><a href="an-introduction-to-git-and-github.html#cb4-2" tabindex="-1"></a>  <span class="fu">use_align</span>(<span class="st">&quot;center&quot;</span>)</span></code></pre></div>
-<div class="vembedr" align="center">
-<div>
-<iframe src="https://www.youtube.com/embed/Y4sOTFV3FAM?start=1" width="533" height="300" frameborder="0" allowfullscreen="" data-external="1"></iframe>
+<div id="archiving-data-and-code" class="section level1 hasAnchor" number="8">
+<h1><span class="header-section-number">Section 8</span> Archiving Data and Code<a href="archiving-data-and-code.html#archiving-data-and-code" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>We archive data and code through a number of pathways. Archiving our code and
+data make downstream analyses reproducible, is a great way to share data, and
+also provide the ability for citation through a stable DOI. Generally speaking,
+it’s good practice to get a DOI for any data before sharing it, as this helps
+with data provenance, additionally, most journals now require that all code and
+data are archived using a DOI. The flowchart below will guide you in the
+preferred method of archiving.</p>
+<p><img src="images/data_code_archiving.png" /></p>
+<div id="choosing-a-data-repository" class="section level2 hasAnchor" number="8.1">
+<h2><span class="header-section-number">8.1</span> Choosing a data repository<a href="archiving-data-and-code.html#choosing-a-data-repository" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The decision of which data repository to use is less straight forward. There are
+benefits and tradeoffs to each. The <a href="https://portal.edirepository.org/nis/home.jsp">Environmental Data Initiative
+(EDI)</a> requires a significant
+amount of metadata in the form of an EML (ecological metadata language) file
+that describes the data and is the best for .csv files, however, this metadata
+makes the data more usable by downstream users.
+<a href="https://www.hydroshare.org/landingPage/">HydroShare</a> features a less rigid
+metadata requirements, and is better suited for rasterized data and non-.csv
+file types. <a href="https://figshare.com/">FigShare</a> requires no metadata and because
+of that there are numerous data products with no metadata that are stored on
+FigShare.</p>
+<p>Generally speaking, all data that is published from this lab should have
+thorough metadata regardless of the metadata requirements of the data repository
+chosen. For one-time uploads to EDI, you can use the
+<a href="https://ezeml.edirepository.org/eml/auth/login">ezEML</a> interface of EDI to
+create and format your EML. If you plan to create many data packages, make an
+EDI account so that you can upload yourself. If you have a dataset that will be
+updated frequently, use of the R package
+<a href="https://ediorg.github.io/EMLassemblyline/articles/overview.html">{EMLassemblyline}</a>
+is useful. If creating metadata for other data repositories, review the <a href="https://github.com/EDIorg/MetadataTemplates/blob/master/EDI_metadata_template.docx">content
+of the
+EML</a>
+and include as much of that information in your metadata as possible.</p>
+</div>
+<div id="publishing-code-to-zenodo" class="section level2 hasAnchor" number="8.2">
+<h2><span class="header-section-number">8.2</span> Publishing code to Zenodo<a href="archiving-data-and-code.html#publishing-code-to-zenodo" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>When delivering code or repositories to our stakeholders or other researchers,
+it needs to be citable. A citable repository has a stable DOI (digital object
+identifier) and complete metadata. We use the GitHub integration in Zenodo to
+publish repositories. When set up correctly, a GitHub ‘release’ will push all
+code to Zenodo automatically. All future ‘releases’ will be associated with the
+original DOI as well as a new DOI specific to that release.</p>
+<p>In general, the GitHub -&gt; Zenodo pathway is best for software (code) and not
+necessarily for data. Data publishing should be completed at EDI, CUAHSI, or
+FigShare. Derived data is okay in the GitHub -&gt; Zenodo pathway, just remember,
+this pathway is meant to be for CODE and SOFTWARE, not necessarily for data
+(though you can publish data to Zenodo).</p>
+<p>As mentioned before, we only publish repositories that have been consistently
+reviewed internally. Ideally your repository has been reviewed by an external
+collaborator or by another ROSSyndicate member. Remember, by pushing this
+repository to Zenodo, you are creating a PERMANENT archive of its contents, for
+better or worse.</p>
+<div id="creating-a-zenodo-account" class="section level3 hasAnchor" number="8.2.1">
+<h3><span class="header-section-number">8.2.1</span> Creating a Zenodo account<a href="archiving-data-and-code.html#creating-a-zenodo-account" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The easiest way to create a Zenodo account is to do so with your GitHub
+credentials. You will need to link these two accounts in order to fully take
+advantage of the GitHub/Zenodo integration.</p>
+<p><img src="images/zenodo_landing_signup.png" width="1000" /></p>
+</div>
+<div id="preparing-to-publish" class="section level3 hasAnchor" number="8.2.2">
+<h3><span class="header-section-number">8.2.2</span> Preparing to publish<a href="archiving-data-and-code.html#preparing-to-publish" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In order to have a meaningful repository release, you need to provide some
+metadata to Zenodo. While there are no requirements for publishing to Zenodo, it
+is a best practice to include robust metadata alongside your code release. A
+metadata template can be found in the helpful_docs folder of this repository.</p>
+<p>Once you’ve compiled this information, send it to Katie Willi or Anika Pyle for
+proofreading.</p>
+<div id="release-title" class="section level4 hasAnchor" number="8.2.2.1">
+<h4><span class="header-section-number">8.2.2.1</span> Release Title<a href="archiving-data-and-code.html#release-title" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>You can use the repository name, but that’s not going to be helpful for anyone
+except you! Someone reading the Release Title should be able to discern what the
+repository does. You can explain the ‘how’ in the description.</p>
+</div>
+<div id="author-list" class="section level4 hasAnchor" number="8.2.2.2">
+<h4><span class="header-section-number">8.2.2.2</span> Author list<a href="archiving-data-and-code.html#author-list" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Prepare your author list by looking at the contributors to the repo. All
+contributors to the repo should be listed as an author. You will need each
+author’s full name, institution, and their <a href="https://orcid.org/">ORCID</a>.</p>
+</div>
+<div id="description" class="section level4 hasAnchor" number="8.2.2.3">
+<h4><span class="header-section-number">8.2.2.3</span> Description<a href="archiving-data-and-code.html#description" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>This is the big lift in creating the metadata. Consider this similar to the
+introduction/background and methods section of a scientific paper. In the
+description of your repository, add information about the following things:</p>
+<ul>
+<li><p>General code description - the ‘how’ of your repository</p></li>
+<li><p>Methodology (summary only) - specifically if there are multiple steps to an
+analysis it is helpful to provide a methodology. If the repository hosts a
+very complicated analysis, consider only a condensed version of methods
+here, but add a markdown document with the complete methodology in your
+repository.</p></li>
+<li><p>If you are including data:</p>
+<ul>
+<li><p>data lineage (aka, where the data came from)</p></li>
+<li><p>explanation of how the data have been manipulated if they are derived
+(this is related to methods, so use your best judgement).</p></li>
+</ul></li>
+<li><p>If the analysis is specific to a certain locale, state and describe the
+locale.</p></li>
+<li><p>Maintenance and maintenance interval. ‘Ongoing’ or ‘completed’. If
+‘ongoing’, state the approximate interval that the repository will be
+updated.</p></li>
+<li><p>If this is an update to a previous release, state the changes from the
+previous version.</p></li>
+</ul>
+<p>Generally speaking, much of this information should already exist in your
+repository README or Methods document and cutting/pasting is absolutely okay.
+This section may be lengthy and that is okay!</p>
+</div>
+<div id="version" class="section level4 hasAnchor" number="8.2.2.4">
+<h4><span class="header-section-number">8.2.2.4</span> Version<a href="archiving-data-and-code.html#version" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>For one-time releases (like preparing a repository for a paper), using a
+version-number is perfect (i.e. v1, v2, etc). For repositories that are updated
+frequently, consider using a version-year-number (i.e. v2022-1, v2023-1,
+v2023-2, etc).</p>
+</div>
+<div id="keywords" class="section level4 hasAnchor" number="8.2.2.5">
+<h4><span class="header-section-number">8.2.2.5</span> Keywords<a href="archiving-data-and-code.html#keywords" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Generally speaking, keywords help others find your code or research. It is not
+required. Keywords should be meaningful and specific and can include places,
+methods, etc. It is common to use controlled vocabulary for keywords, like the
+<a href="https://vocab.lternet.edu/vocab/vocab/index.php">LTER controlled vocabulary for ecology
+research</a>.</p>
+</div>
+<div id="license" class="section level4 hasAnchor" number="8.2.2.6">
+<h4><span class="header-section-number">8.2.2.6</span> License<a href="archiving-data-and-code.html#license" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>All repositories that are published are considered open access. Because our
+repository best practices include using an MIT use license, the LICENSE.txt file
+will override this option.</p>
+</div>
+<div id="funding" class="section level4 hasAnchor" number="8.2.2.7">
+<h4><span class="header-section-number">8.2.2.7</span> Funding<a href="archiving-data-and-code.html#funding" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>If there is applicable funding sources for this repository, you should list
+them. You will need the funder name and the grant number.</p>
+<p><strong>No other fields are required.</strong></p>
 </div>
 </div>
-<div id="key-takeaways" class="section level4 hasAnchor" number="2.1.0.1">
-<h4><span class="header-section-number">2.1.0.1</span> <strong>Key takeaways:</strong><a href="an-introduction-to-git-and-github.html#key-takeaways" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<ol style="list-style-type: decimal">
-<li>Create a GitHub account. (see
-<a href="https://happygitwithr.com/github-acct.html" class="uri">https://happygitwithr.com/github-acct.html</a>) <br></li>
-<li>Install Git on you local computer. (see
-<a href="https://happygitwithr.com/install-git.html" class="uri">https://happygitwithr.com/install-git.html</a>) <br></li>
-<li>In the R Studio Terminal, connect your GitHub account to your local
-computer. (see <a href="https://happygitwithr.com/hello-git.html" class="uri">https://happygitwithr.com/hello-git.html</a>)</li>
-</ol>
+<div id="linking-a-repository-to-zenodo" class="section level3 hasAnchor" number="8.2.3">
+<h3><span class="header-section-number">8.2.3</span> Linking a repository to Zenodo<a href="archiving-data-and-code.html#linking-a-repository-to-zenodo" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>To activate the GitHub/Zenodo integration for a given repository, navigate to
+the GitHub account page by clicking the dropdown menu in the top right of the
+window.</p>
+<p><img src="images/zenodo_github_link.png" width="200" /></p>
+<p>From here, you simply follow the directions!</p>
+<p><img src="images/zenodo_github_getstarted.png" /></p>
 </div>
+<div id="completing-the-metadata-information" class="section level3 hasAnchor" number="8.2.4">
+<h3><span class="header-section-number">8.2.4</span> Completing the metadata information<a href="archiving-data-and-code.html#completing-the-metadata-information" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>To complete the entry of your metadata information and formalize the publishing
+of your repository, you’ll need to edit the Zenodo upload. Do this by clicking
+on “My Dashboard”.</p>
+<p>Here, you can click on the released repository:</p>
+<p><img src="images/zenodo_my_uploads.png" /></p>
+<p>And then click the ‘Edit’ button for the associated upload. Here, you can enter
+in all information from your Zenodo metadata document. When you’re ready, press
+‘Save’ and then ‘Publish’.</p>
 </div>
-<div id="developing-viewing-and-editing-repositories" class="section level2 hasAnchor" number="2.2">
-<h2><span class="header-section-number">2.2</span> Developing, viewing, and editing repositories<a href="an-introduction-to-git-and-github.html#developing-viewing-and-editing-repositories" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>As mentioned in Matt’s video (~7:53), creating a repository is the first step
-when starting a brand-new Git project. Essentially, a <strong>repository</strong> is the
-main folder in which all the files and code related to a project live. For any
-repository on GitHub, there are two ways of copying it to your local computer:
-<strong>cloning</strong> and <strong>forking</strong>.</p>
-<div id="cloning" class="section level3 hasAnchor" number="2.2.1">
-<h3><span class="header-section-number">2.2.1</span> Cloning<a href="an-introduction-to-git-and-github.html#cloning" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Cloning a repository maps a local version of that repository to your computer,
-allowing you to sync-up both the local (your computer) and remote (what’s on
-GitHub) versions. This type of copying is useful for workflows where you are
-the only one working on them. If you clone a repository that you did not create
-yourself, you will be unable to make changes to the ‘main’ repository hosted on
-GitHub unless the developer has given your account collaborator approval, but
-it <em>will</em> allow you to refresh and update what’s on your local computer if
-changes have been made to what’s on the ‘main’ repository on GitHub.</p>
-<p>However, for a repository that you have created yourself or are a collaborator
-on, cloning allows two-way syncing; you are able to make changes to the GitHub
-repository as well as update what’s on your local computer if the GitHub
-repository changes.</p>
-<p>After editing, adding, or removing pieces of the project, you can re-sync those
-changes by committing and then pushing the project back to GitHub. A <strong>commit</strong>
-essentially packages and saves the changes you made; it also allows you to
-comment on what exactly you changed in the repository. Meanwhile, the <strong>push</strong>
-command sends those changes that were packaged by the commmit to GitHub and
-updates the remote repository on GitHub accordingly. Because cloning creates a
-direct connection between the GitHub ‘main’ repository and what you’ve cloned
-to your local computer, you can only push changes to repositories that are
-located in your own GitHub account, or to repositories that the developer of
-the repository has explicitly made you a collaborator on.</p>
-<div id="how-to-clone-and-update-your-github" class="section level4 hasAnchor" number="2.2.1.1">
-<h4><span class="header-section-number">2.2.1.1</span> <strong>How to clone and update your GitHub</strong>:<a href="an-introduction-to-git-and-github.html#how-to-clone-and-update-your-github" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<ol style="list-style-type: decimal">
-<li>Create a repository on GitHub.
-(<a href="https://happygitwithr.com/new-github-first.html#make-a-repo-on-github-2" class="uri">https://happygitwithr.com/new-github-first.html#make-a-repo-on-github-2</a>)
-<br></li>
-<li>Clone the repository to your computer. (see
-<a href="https://happygitwithr.com/rstudio-git-github.html#clone-the-test-github-repository-to-your-computer-via-rstudio" class="uri">https://happygitwithr.com/rstudio-git-github.html#clone-the-test-github-repository-to-your-computer-via-rstudio</a>)
-<br></li>
-<li>After changes have been made, commit and push them to your GitHub.
-(see
-<a href="https://happygitwithr.com/rstudio-git-github.html#make-local-changes-save-commit" class="uri">https://happygitwithr.com/rstudio-git-github.html#make-local-changes-save-commit</a>)</li>
-</ol>
-</div>
-</div>
-<div id="forking" class="section level3 hasAnchor" number="2.2.2">
-<h3><span class="header-section-number">2.2.2</span> Forking<a href="an-introduction-to-git-and-github.html#forking" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Unlike cloning, forking a repository creates a totally separate, parallel copy
-of a repository that is housed within your own personal GitHub account.
-Specifically, if you’ve made changes to the code in a forked repository then
-committed and pushed those changes, it does not automatically make those same
-changes to the ‘main’ repository that it was forked from on GitHub. Instead,
-all changes are saved and stored only within the repository hosted within your
-own GitHub account.</p>
-<p>Forking essentially creates a line of defense for changes in a workflow that
-would otherwise disrupt the workflows of other people working within that
-‘main’ repository project. For the ‘main’ repository to be updated with the
-changes you made in your forked version, you must submit a pull request.</p>
-<p>A <strong>pull request</strong> is an invitation to the owner of the ‘main’ repository to
-review the changes you’ve made to the code and potentially merge them into
-their ‘main’ repository. If the owner/reviewer finds that the code you’ve
-developed would be a good addition to the workflow and/or that the code has not
-diverged/disrupted others’ workflows, they can approve the pull request, and
-the ‘main’ repository will be updated accordingly.</p>
-<p>Matt and a former grad student, Bryce Pulver, made another excellent video that
-walks through an example collaborative workflow using forking:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="an-introduction-to-git-and-github.html#cb5-1" tabindex="-1"></a><span class="fu">embed_url</span>(<span class="st">&quot;https://www.youtube.com/watch?v=a_YY_PIDeq8&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb5-2"><a href="an-introduction-to-git-and-github.html#cb5-2" tabindex="-1"></a>  <span class="fu">use_align</span>(<span class="st">&quot;center&quot;</span>)</span></code></pre></div>
-<div class="vembedr" align="center">
-<div>
-<iframe src="https://www.youtube.com/embed/a_YY_PIDeq8" width="533" height="300" frameborder="0" allowfullscreen="" data-external="1"></iframe>
-</div>
-</div>
-<div id="how-to-fork-and-submit-a-pull-request" class="section level4 hasAnchor" number="2.2.2.1">
-<h4><span class="header-section-number">2.2.2.1</span> <strong>How to fork and submit a pull request</strong><a href="an-introduction-to-git-and-github.html#how-to-fork-and-submit-a-pull-request" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<ol style="list-style-type: decimal">
-<li>Fork the repository on GitHub, then clone the forked repository to
-your local environment. (see
-<a href="https://happygitwithr.com/fork-and-clone.html#fork-and-clone-without-usethis" class="uri">https://happygitwithr.com/fork-and-clone.html#fork-and-clone-without-usethis</a>)
-<br></li>
-<li>Create a direct connection with the main repository to keep your
-personal repository up-to-date. (see
-<a href="https://happygitwithr.com/fork-and-clone.html#fork-and-clone-finish" class="uri">https://happygitwithr.com/fork-and-clone.html#fork-and-clone-finish</a>)
-<br></li>
-<li>After changes have been made to the repository on your local
-computer, commit and push them to the forked repository on your
-personal GitHub. (see
-<a href="https://happygitwithr.com/rstudio-git-github.html#make-local-changes-save-commit" class="uri">https://happygitwithr.com/rstudio-git-github.html#make-local-changes-save-commit</a>,
-or Bryce at ~25:45) <br></li>
-<li>Go to GitHub in your web browser. Submit a pull request by going to
-the main repository and selecting and creating a pull request.
-(Bryce does this at ~31:40)</li>
-</ol>
-</div>
-</div>
-</div>
-<div id="additional-resources" class="section level2 hasAnchor" number="2.3">
-<h2><span class="header-section-number">2.3</span> Additional resources<a href="an-introduction-to-git-and-github.html#additional-resources" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Below is a list of additional resources about GitHub and collaborative
-workflows. <br> • GitHub website (<a href="https://docs.github.com/en" class="uri">https://docs.github.com/en</a>) <br> • Forked
-workflows
-(<a href="https://www.atlassian.com/git/tutorials/comparing-workflows/forking-workflow" class="uri">https://www.atlassian.com/git/tutorials/comparing-workflows/forking-workflow</a>)
-<br> • Using Git and GitHub for team collaboration
-(<a href="https://medium.com/anne-kerrs-blog/using-git-and-github-for-team-collaboration-e761e7c00281" class="uri">https://medium.com/anne-kerrs-blog/using-git-and-github-for-team-collaboration-e761e7c00281</a>)
-<br> • Starting a new group project on GitHub
-(<a href="https://www.digitalcrafts.com/blog/learn-how-start-new-group-project-github" class="uri">https://www.digitalcrafts.com/blog/learn-how-start-new-group-project-github</a>)</p>
+<div id="add-the-doi-badge-to-your-repository" class="section level3 hasAnchor" number="8.2.5">
+<h3><span class="header-section-number">8.2.5</span> Add the DOI badge to your repository<a href="archiving-data-and-code.html#add-the-doi-badge-to-your-repository" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Now that you’ve minted a sweet sweet DOI for your repository, you should go
+ahead and add the DOI badge to your repository’s README file.</p>
+<p>On the right hand side of your Zenodo release landing page (formatted as
+‘<a href="https://zenodo.org/record/*DOInumber" class="uri">https://zenodo.org/record/*DOInumber</a>*’ on your browser), click on the DOI
+badge:</p>
+<p><img src="images/zenodo_doi_badge.png" /></p>
+<p>This will pop up a number of embedding formats. Copy and paste the one for
+‘Markdown’. At this point, go to the GitHub repository and add the badge at the
+top of the primary README file within the GitHub user interface on the web. This
+addition to the repository does not need to be reviewed.</p>
 
+</div>
 </div>
 </div>
             </section>
@@ -417,8 +442,8 @@ workflows
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="workflow-overview.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="using-ai-integrations.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="python-integrations-in-rstudio.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -449,7 +474,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/01-intro-to-git-github.Rmd",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/07-Publishing-Repositories.Rmd",
 "text": "Edit"
 },
 "history": {

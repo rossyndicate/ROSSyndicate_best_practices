@@ -41,7 +41,9 @@ using-github-copilot-in-vscode-rstudio
 accessing-github-copilot-as-a-studentteacherresearcher
 downloading-vscode-and-installing-the-github-copilot-extension
 setting-up-autosave-in-vscode-rstudio
-publishing-repositories
+archiving-data-and-code
+choosing-a-data-repository
+publishing-code-to-zenodo
 creating-a-zenodo-account
 preparing-to-publish
 release-title
@@ -68,11 +70,11 @@ using-the-branching-function-in-targets
 using-python-scripts-in-targets
 rendering-a-bookdown-in-targets-placeholder
 resources
-flex-your-github-skills-by-updating-our-website
-directions
 code-documentation-best-practices
 repository-documentation
 code-documentation
 function-documentation
 roxygen-style-documentation
 docstring-documentation
+flex-your-github-skills-by-updating-our-website
+directions
