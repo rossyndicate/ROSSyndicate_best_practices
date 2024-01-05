@@ -23,7 +23,7 @@
 <meta name="author" content="ROSSyndicate" />
 
 
-<meta name="date" content="2024-01-04" />
+<meta name="date" content="2024-01-05" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -156,7 +156,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.2.1" data-path="an-introduction-to-git-and-github.html"><a href="an-introduction-to-git-and-github.html#cloning"><i class="fa fa-check"></i><b>2.2.1</b> Cloning</a></li>
 <li class="chapter" data-level="2.2.2" data-path="an-introduction-to-git-and-github.html"><a href="an-introduction-to-git-and-github.html#forking"><i class="fa fa-check"></i><b>2.2.2</b> Forking</a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="an-introduction-to-git-and-github.html"><a href="an-introduction-to-git-and-github.html#additional-resources"><i class="fa fa-check"></i><b>2.3</b> Additional resources</a></li>
+<li class="chapter" data-level="2.3" data-path="an-introduction-to-git-and-github.html"><a href="an-introduction-to-git-and-github.html#making-changes-to-repository-visibility"><i class="fa fa-check"></i><b>2.3</b> Making changes to repository visibility</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="an-introduction-to-git-and-github.html"><a href="an-introduction-to-git-and-github.html#reconnecting-severed-repositories"><i class="fa fa-check"></i><b>2.3.1</b> Reconnecting severed repositories</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="an-introduction-to-git-and-github.html"><a href="an-introduction-to-git-and-github.html#additional-resources"><i class="fa fa-check"></i><b>2.4</b> Additional resources</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="workflow-overview.html"><a href="workflow-overview.html"><i class="fa fa-check"></i><b>3</b> Workflow Overview</a>
 <ul>
@@ -211,6 +215,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.2.4" data-path="archiving-data-and-code.html"><a href="archiving-data-and-code.html#completing-the-metadata-information"><i class="fa fa-check"></i><b>8.2.4</b> Completing the metadata information</a></li>
 <li class="chapter" data-level="8.2.5" data-path="archiving-data-and-code.html"><a href="archiving-data-and-code.html#add-the-doi-badge-to-your-repository"><i class="fa fa-check"></i><b>8.2.5</b> Add the DOI badge to your repository</a></li>
 </ul></li>
+<li class="chapter" data-level="8.3" data-path="archiving-data-and-code.html"><a href="archiving-data-and-code.html#philosophical-and-ethical-considerations"><i class="fa fa-check"></i><b>8.3</b> Philosophical and Ethical Considerations</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="python-integrations-in-rstudio.html"><a href="python-integrations-in-rstudio.html"><i class="fa fa-check"></i><b>9</b> Python Integrations in RStudio</a>
 <ul>
@@ -277,10 +282,10 @@ following sites:</p>
 <div id="using-github-copilot-in-vscode-rstudio" class="section level2 hasAnchor" number="7.1">
 <h2><span class="header-section-number">7.1</span> Using GitHub CoPilot in VSCode + RStudio<a href="using-ai-integrations.html#using-github-copilot-in-vscode-rstudio" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>VSCode also has an extension for GitHub CoPilot, it will auto complete your
-comments and code in nearly any programming language. By having open both VSCode
-and RStudio and enabling auto-save in both programs, you can hop between the two
-programs and code will update between the two as you switch. Big thanks to Sam
-Struthers for figuring out this integrated workflow.</p>
+comments and code in nearly any programming language. By having open both
+VSCode and RStudio and enabling auto-save in both programs, you can hop between
+the two programs and code will update between the two as you switch. Big thanks
+to Sam Struthers for figuring out this integrated workflow.</p>
 </div>
 <div id="accessing-github-copilot-as-a-studentteacherresearcher" class="section level2 hasAnchor" number="7.2">
 <h2><span class="header-section-number">7.2</span> Accessing GitHub CoPilot as a student/teacher/researcher<a href="using-ai-integrations.html#accessing-github-copilot-as-a-studentteacherresearcher" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -295,11 +300,11 @@ the educational portal within 1 business day.</p>
 <div id="downloading-vscode-and-installing-the-github-copilot-extension" class="section level2 hasAnchor" number="7.3">
 <h2><span class="header-section-number">7.3</span> Downloading VSCode and installing the GitHub CoPilot extension<a href="using-ai-integrations.html#downloading-vscode-and-installing-the-github-copilot-extension" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Download VSCode here: <a href="https://code.visualstudio.com/" class="uri">https://code.visualstudio.com/</a>. Set up the GitHub and
-GitHub CoPilot extensions by adding them via the ‘Marketplace’. You can bring up
-the Extensions from the menu bar under ‘Code’, ‘Settings’, ‘Extensions’.</p>
-<p>You’ll want to install and activate ‘GitHub Pull Requests and Issues’ as well as
-‘GitHub Copilot’. You will be directed to Sign In using your GitHub credentials.
-You may need to elect to ‘enable’ Copilot.</p>
+GitHub CoPilot extensions by adding them via the ‘Marketplace’. You can bring
+up the Extensions from the menu bar under ‘Code’, ‘Settings’, ‘Extensions’.</p>
+<p>You’ll want to install and activate ‘GitHub Pull Requests and Issues’ as well
+as ‘GitHub Copilot’. You will be directed to Sign In using your GitHub
+credentials. You may need to elect to ‘enable’ Copilot.</p>
 </div>
 <div id="setting-up-autosave-in-vscode-rstudio" class="section level2 hasAnchor" number="7.4">
 <h2><span class="header-section-number">7.4</span> Setting up AutoSave in VSCode + RStudio<a href="using-ai-integrations.html#setting-up-autosave-in-vscode-rstudio" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -308,9 +313,9 @@ find the following pane:</p>
 <p><img src="images/r%20autosave.png" /></p>
 <p>Set up Auto-save by checking the ‘Automatically save when editor loses focus’
 and ‘Apply’.</p>
-<p>In VSCode, select ‘Code’, ‘Settings’, then ‘Settings’ again from the menu bar to
-bring up the Settings tab in your console. Then type in ‘auto save’ in the top
-search bar, and select ‘onFocusChange’ for the ‘Files: Auto Save’ Setting.</p>
+<p>In VSCode, select ‘Code’, ‘Settings’, then ‘Settings’ again from the menu bar
+to bring up the Settings tab in your console. Then type in ‘auto save’ in the
+top search bar, and select ‘onFocusChange’ for the ‘Files: Auto Save’ Setting.</p>
 <p><img src="images/vscode%20autosave.png" /></p>
 <p>Now you can switch between programs, using VSCode and CoPilot to draft code and
 comment chunks, then further editing/running in RStudio.</p>

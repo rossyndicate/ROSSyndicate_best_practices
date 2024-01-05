@@ -2,6 +2,7 @@
 editor_options:
   markdown:
     wrap: 80
+bibliography: references.bib
 ---
 
 # Archiving Data and Code
@@ -199,7 +200,31 @@ This will pop up a number of embedding formats. Copy and paste the one for
 top of the primary README file within the GitHub user interface on the web. This
 addition to the repository does not need to be reviewed.
 
+## Philosophical and Ethical Considerations
+
+As a general philosophy we acknowledge that there is bias in every data set and
+in the decisions we make along the way as we code. These biases may be
+geographical (data are only from one location), contextual (data are only from a
+single source), or implicit (data have been altered for a specific purpose). As
+you prepare your data and metadata, it is important to think about the biases we
+contribute to a given dataset.
+
+To familarize yourself with bias that we introduce into our data and analyses,
+here are some resources:
+
+-   "Biases in lake water quality sampling and implications for macroscale
+    research" [@stanley2019]
+
+-   [Review the questions in this
+    datasheet](https://github.com/dmhuehol/Datasheets-for-Earth-Science-Datasets/blob/main/blank_EarthScienceDatasheet.pdf)
+    created by our colleagues in the Atmospheric Sciences department when
+    creating metadata and general documentation
+
+-   A deep dive into bias in AI/ML: "Why we need to focus on developing ethical,
+    responsible, and trustworthy artificial intelligence approaches for
+    environmental science" [@mcgovern2022]
+
 ```{r, echo = F}
-knitr::wrap_rmd('07-Publishing-Repositories.Rmd', width = 80, backup = NULL)
+knitr::wrap_rmd('07-Publishing-Data-Code.Rmd', width = 80, backup = NULL)
 #note, this will not wrap text that are prefaced by any special characters (like bullets!)
 ```

@@ -23,7 +23,7 @@
 <meta name="author" content="ROSSyndicate" />
 
 
-<meta name="date" content="2024-01-04" />
+<meta name="date" content="2024-01-05" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -156,7 +156,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.2.1" data-path="an-introduction-to-git-and-github.html"><a href="an-introduction-to-git-and-github.html#cloning"><i class="fa fa-check"></i><b>2.2.1</b> Cloning</a></li>
 <li class="chapter" data-level="2.2.2" data-path="an-introduction-to-git-and-github.html"><a href="an-introduction-to-git-and-github.html#forking"><i class="fa fa-check"></i><b>2.2.2</b> Forking</a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="an-introduction-to-git-and-github.html"><a href="an-introduction-to-git-and-github.html#additional-resources"><i class="fa fa-check"></i><b>2.3</b> Additional resources</a></li>
+<li class="chapter" data-level="2.3" data-path="an-introduction-to-git-and-github.html"><a href="an-introduction-to-git-and-github.html#making-changes-to-repository-visibility"><i class="fa fa-check"></i><b>2.3</b> Making changes to repository visibility</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="an-introduction-to-git-and-github.html"><a href="an-introduction-to-git-and-github.html#reconnecting-severed-repositories"><i class="fa fa-check"></i><b>2.3.1</b> Reconnecting severed repositories</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="an-introduction-to-git-and-github.html"><a href="an-introduction-to-git-and-github.html#additional-resources"><i class="fa fa-check"></i><b>2.4</b> Additional resources</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="workflow-overview.html"><a href="workflow-overview.html"><i class="fa fa-check"></i><b>3</b> Workflow Overview</a>
 <ul>
@@ -211,6 +215,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.2.4" data-path="archiving-data-and-code.html"><a href="archiving-data-and-code.html#completing-the-metadata-information"><i class="fa fa-check"></i><b>8.2.4</b> Completing the metadata information</a></li>
 <li class="chapter" data-level="8.2.5" data-path="archiving-data-and-code.html"><a href="archiving-data-and-code.html#add-the-doi-badge-to-your-repository"><i class="fa fa-check"></i><b>8.2.5</b> Add the DOI badge to your repository</a></li>
 </ul></li>
+<li class="chapter" data-level="8.3" data-path="archiving-data-and-code.html"><a href="archiving-data-and-code.html#philosophical-and-ethical-considerations"><i class="fa fa-check"></i><b>8.3</b> Philosophical and Ethical Considerations</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="python-integrations-in-rstudio.html"><a href="python-integrations-in-rstudio.html"><i class="fa fa-check"></i><b>9</b> Python Integrations in RStudio</a>
 <ul>
@@ -296,8 +301,8 @@ and then define the style transformer. The default is {tidyverse}, so all you
 have to do is press ‘OK’. As you work on scripts within your repository, select
 ‘Style active file’. This will modify the file to conform to {tidyverse} style.
 Be sure to commit these changes. Styler will not tell you what has changed, all
-you will see is the following message in your console: While using {styler} will
-not correct all style choices, it will fix spacing, assignments, and tabs
+you will see is the following message in your console: While using {styler}
+will not correct all style choices, it will fix spacing, assignments, and tabs
 automatically.</p>
 </div>
 <div id="fonts-colors-and-.css" class="section level3 hasAnchor" number="4.1.2">
@@ -315,8 +320,8 @@ deep work time, we suggest using a few hacks:</p>
 output to be readable in [nearly] any format. This means whether you are using
 the Visual editor in RStudio, you’re reading a rendered .html or if you’re
 viewing an Rmd on the web or in the Source editor of R Studio. To accomplish
-this, we suggest line character length no greater than 80. If you are in an .Rmd
-file, just add the last code chunk from the
+this, we suggest line character length no greater than 80. If you are in an
+.Rmd file, just add the last code chunk from the
 <code>style_snippets/markdown_helpers.Rmd</code>, save your file, and run the chunk. This
 will reformat all lines of text so that they are on new lines every 80
 characters. If you are in .R or a .md document, use the page-width indicator
@@ -511,7 +516,8 @@ daily to weekly basis</strong></p></li>
 <p><a href="https://linearb.io/blog/code-review-on-github/">The Best Way to Do a Code Review on
 GitHub</a>, LinearB</p>
 <p><a href="https://blog.mergify.com/github-code-review-best-practices/">GitHub Code Review Best
-Practices</a>, Mergify</p>
+Practices</a>,
+Mergify</p>
 <p><a href="https://birkhoffg.github.io/blog/posts/how-to-commit-and-code-review-on-github/">[How To] Commit and Code Review on
 GitHub</a>,
 Birkhoff Tech Blog</p>

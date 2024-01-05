@@ -11,6 +11,8 @@ cloning
 how-to-clone-and-update-your-github
 forking
 how-to-fork-and-submit-a-pull-request
+making-changes-to-repository-visibility
+reconnecting-severed-repositories
 additional-resources
 workflow-overview
 starting-a-new-repository
@@ -56,6 +58,7 @@ funding
 linking-a-repository-to-zenodo
 completing-the-metadata-information
 add-the-doi-badge-to-your-repository
+philosophical-and-ethical-considerations
 python-integrations-in-rstudio
 setting-up-a-python-virtual-environment
 python-setup-code-snippet

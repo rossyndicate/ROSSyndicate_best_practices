@@ -23,7 +23,7 @@
 <meta name="author" content="ROSSyndicate" />
 
 
-<meta name="date" content="2024-01-04" />
+<meta name="date" content="2024-01-05" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -156,7 +156,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.2.1" data-path="an-introduction-to-git-and-github.html"><a href="an-introduction-to-git-and-github.html#cloning"><i class="fa fa-check"></i><b>2.2.1</b> Cloning</a></li>
 <li class="chapter" data-level="2.2.2" data-path="an-introduction-to-git-and-github.html"><a href="an-introduction-to-git-and-github.html#forking"><i class="fa fa-check"></i><b>2.2.2</b> Forking</a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="an-introduction-to-git-and-github.html"><a href="an-introduction-to-git-and-github.html#additional-resources"><i class="fa fa-check"></i><b>2.3</b> Additional resources</a></li>
+<li class="chapter" data-level="2.3" data-path="an-introduction-to-git-and-github.html"><a href="an-introduction-to-git-and-github.html#making-changes-to-repository-visibility"><i class="fa fa-check"></i><b>2.3</b> Making changes to repository visibility</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="an-introduction-to-git-and-github.html"><a href="an-introduction-to-git-and-github.html#reconnecting-severed-repositories"><i class="fa fa-check"></i><b>2.3.1</b> Reconnecting severed repositories</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="an-introduction-to-git-and-github.html"><a href="an-introduction-to-git-and-github.html#additional-resources"><i class="fa fa-check"></i><b>2.4</b> Additional resources</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="workflow-overview.html"><a href="workflow-overview.html"><i class="fa fa-check"></i><b>3</b> Workflow Overview</a>
 <ul>
@@ -211,6 +215,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.2.4" data-path="archiving-data-and-code.html"><a href="archiving-data-and-code.html#completing-the-metadata-information"><i class="fa fa-check"></i><b>8.2.4</b> Completing the metadata information</a></li>
 <li class="chapter" data-level="8.2.5" data-path="archiving-data-and-code.html"><a href="archiving-data-and-code.html#add-the-doi-badge-to-your-repository"><i class="fa fa-check"></i><b>8.2.5</b> Add the DOI badge to your repository</a></li>
 </ul></li>
+<li class="chapter" data-level="8.3" data-path="archiving-data-and-code.html"><a href="archiving-data-and-code.html#philosophical-and-ethical-considerations"><i class="fa fa-check"></i><b>8.3</b> Philosophical and Ethical Considerations</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="python-integrations-in-rstudio.html"><a href="python-integrations-in-rstudio.html"><i class="fa fa-check"></i><b>9</b> Python Integrations in RStudio</a>
 <ul>
@@ -278,7 +283,8 @@ line of the license file to read: <em>‘ROSS - Radical Open Science Syndicate
 and all contributors’</em></p></li>
 <li><p>Add collaborators with write/push access by going to repo Settings -&gt;
 Manage Access -&gt; Invite a Collaborator.</p></li>
-<li><p>After you have forked the repository to your account, clone the repo to your
+<li><p>After you have forked the repository to your account, clone the repo to
+your
 local machine (see Forking and Cloning ROSSyndicate Repositories).</p></li>
 <li><p>Once the repo is stored on your local machine create the general
 architecture for your repository.</p>
@@ -343,8 +349,9 @@ below, I would replace <code>ssh_address</code> with
 </div>
 <div id="collaborative-coding" class="section level2 hasAnchor" number="3.3">
 <h2><span class="header-section-number">3.3</span> Collaborative Coding<a href="workflow-overview.html#collaborative-coding" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>(Note, the workflow for this is slightly different if you are working in feature
-branches. Please see that section if you are working in feature branches.)</p>
+<p>(Note, the workflow for this is slightly different if you are working in
+feature branches. Please see that section if you are working in feature
+branches.)</p>
 <ol style="list-style-type: decimal">
 <li><p>Always start your day by fetching upstream changes from the primary
 repository by typing the following in the terminal. This is part of the way
