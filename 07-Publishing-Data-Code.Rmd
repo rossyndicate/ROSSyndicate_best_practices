@@ -19,8 +19,8 @@ preferred method of archiving.
 
 ## Choosing a data repository
 
-The decision of which data repository to use is less straight forward. There are
-benefits and tradeoffs to each. The [Environmental Data Initiative
+The decision of which data repository to use is less straight forward. There
+are benefits and tradeoffs to each. The [Environmental Data Initiative
 (EDI)](https://portal.edirepository.org/nis/home.jsp) requires a significant
 amount of metadata in the form of an EML (ecological metadata language) file
 that describes the data and is the best for .csv files, however, this metadata
@@ -32,15 +32,15 @@ of that there are numerous data products with no metadata that are stored on
 FigShare.
 
 Generally speaking, all data that is published from this lab should have
-thorough metadata regardless of the metadata requirements of the data repository
-chosen. For one-time uploads to EDI, you can use the
+thorough metadata regardless of the metadata requirements of the data
+repository chosen. For one-time uploads to EDI, you can use the
 [ezEML](https://ezeml.edirepository.org/eml/auth/login) interface of EDI to
 create and format your EML. If you plan to create many data packages, make an
 EDI account so that you can upload yourself. If you have a dataset that will be
 updated frequently, use of the R package
 [{EMLassemblyline}](https://ediorg.github.io/EMLassemblyline/articles/overview.html)
-is useful. If creating metadata for other data repositories, review the [content
-of the
+is useful. If creating metadata for other data repositories, review the
+[content of the
 EML](https://github.com/EDIorg/MetadataTemplates/blob/master/EDI_metadata_template.docx)
 and include as much of that information in your metadata as possible.
 
@@ -76,26 +76,26 @@ advantage of the GitHub/Zenodo integration.
 ### Preparing to publish
 
 In order to have a meaningful repository release, you need to provide some
-metadata to Zenodo. While there are no requirements for publishing to Zenodo, it
-is a best practice to include robust metadata alongside your code release. A
+metadata to Zenodo. While there are no requirements for publishing to Zenodo,
+it is a best practice to include robust metadata alongside your code release. A
 metadata template can be found in the helpful_docs folder of this repository.
 
 Once you've compiled this information, send it to Katie Willi or Anika Pyle for
 proofreading.
 
-#### Release Title
+**Release Title**
 
 You can use the repository name, but that's not going to be helpful for anyone
-except you! Someone reading the Release Title should be able to discern what the
-repository does. You can explain the 'how' in the description.
+except you! Someone reading the Release Title should be able to discern what
+the repository does. You can explain the 'how' in the description.
 
-#### Author list
+**Author list**
 
 Prepare your author list by looking at the contributors to the repo. All
 contributors to the repo should be listed as an author. You will need each
 author's full name, institution, and their [ORCID](https://orcid.org/).
 
-#### Description
+**Description**
 
 This is the big lift in creating the metadata. Consider this similar to the
 introduction/background and methods section of a scientific paper. In the
@@ -130,14 +130,14 @@ Generally speaking, much of this information should already exist in your
 repository README or Methods document and cutting/pasting is absolutely okay.
 This section may be lengthy and that is okay!
 
-#### Version
+**Version**
 
 For one-time releases (like preparing a repository for a paper), using a
 version-number is perfect (i.e. v1, v2, etc). For repositories that are updated
 frequently, consider using a version-year-number (i.e. v2022-1, v2023-1,
 v2023-2, etc).
 
-#### Keywords
+**Keywords**
 
 Generally speaking, keywords help others find your code or research. It is not
 required. Keywords should be meaningful and specific and can include places,
@@ -145,13 +145,13 @@ methods, etc. It is common to use controlled vocabulary for keywords, like the
 [LTER controlled vocabulary for ecology
 research](https://vocab.lternet.edu/vocab/vocab/index.php).
 
-#### License
+**License**
 
 All repositories that are published are considered open access. Because our
-repository best practices include using an MIT use license, the LICENSE.txt file
-will override this option.
+repository best practices include using an MIT use license, the LICENSE.txt
+file will override this option.
 
-#### Funding
+**Funding**
 
 If there is applicable funding sources for this repository, you should list
 them. You will need the funder name and the grant number.
@@ -197,17 +197,17 @@ badge:
 
 This will pop up a number of embedding formats. Copy and paste the one for
 'Markdown'. At this point, go to the GitHub repository and add the badge at the
-top of the primary README file within the GitHub user interface on the web. This
-addition to the repository does not need to be reviewed.
+top of the primary README file within the GitHub user interface on the web.
+This addition to the repository does not need to be reviewed.
 
 ## Philosophical and Ethical Considerations
 
 As a general philosophy we acknowledge that there is bias in every data set and
 in the decisions we make along the way as we code. These biases may be
-geographical (data are only from one location), contextual (data are only from a
-single source), or implicit (data have been altered for a specific purpose). As
-you prepare your data and metadata, it is important to think about the biases we
-contribute to a given dataset.
+geographical (data are only from one location), contextual (data are only from
+a single source), or implicit (data have been altered for a specific purpose).
+As you prepare your data and metadata, it is important to think about the
+biases we contribute to a given dataset.
 
 To familarize yourself with bias that we introduce into our data and analyses,
 here are some resources:

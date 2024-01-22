@@ -19,7 +19,7 @@ will help us all become better programmers. In particular, familiarize yourself
 with the sections under 'Analyses'. *We suggest re-reviewing the {tidyverse}
 style guide a few times per year just to be reminded of best practices.*
 
-#### Some general guidelines:
+**Some general guidelines:**
 
 -   Use {tidyverse} functions over {base} functions, except in package
     development.
