@@ -38,7 +38,7 @@ embed_url("https://www.youtube.com/watch?v=Y4sOTFV3FAM&t=1s") %>%
   use_align("center")
 ```
 
-#### **Key takeaways:**
+**Key takeaways:**
 
 1) Create a GitHub account. (see
     <https://happygitwithr.com/github-acct.html>) <br>
@@ -82,7 +82,7 @@ to your local computer, you can only push changes to repositories that are
 located in your own GitHub account, or to repositories that the developer of
 the repository has explicitly made you a collaborator on.
 
-#### **How to clone and update your GitHub**:
+**How to clone and update your GitHub**:
 
 1) Create a repository on GitHub.
     (<https://happygitwithr.com/new-github-first.html#make-a-repo-on-github-2>)
@@ -124,7 +124,7 @@ embed_url("https://www.youtube.com/watch?v=a_YY_PIDeq8") %>%
   use_align("center")
 ```
 
-#### **How to fork and submit a pull request**
+**How to fork and submit a pull request**
 
 1) Fork the repository on GitHub, then clone the forked repository to
     your local environment. (see

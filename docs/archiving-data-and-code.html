@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Section 7 Using AI Integrations | ROSSyndicate Project and Workflow Best Practices</title>
+  <title>Section 8 Archiving Data and Code | ROSSyndicate Project and Workflow Best Practices</title>
   <meta name="description" content="The ROSSyndicate workflow best practices guide." />
   <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Section 7 Using AI Integrations | ROSSyndicate Project and Workflow Best Practices" />
+  <meta property="og:title" content="Section 8 Archiving Data and Code | ROSSyndicate Project and Workflow Best Practices" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="The ROSSyndicate workflow best practices guide." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Section 7 Using AI Integrations | ROSSyndicate Project and Workflow Best Practices" />
+  <meta name="twitter:title" content="Section 8 Archiving Data and Code | ROSSyndicate Project and Workflow Best Practices" />
   
   <meta name="twitter:description" content="The ROSSyndicate workflow best practices guide." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="git-hub-feature-branches.html"/>
-<link rel="next" href="archiving-data-and-code.html"/>
+<link rel="prev" href="using-ai-integrations.html"/>
+<link rel="next" href="python-integrations-in-rstudio.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -271,58 +271,186 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="using-ai-integrations" class="section level1 hasAnchor" number="7">
-<h1><span class="header-section-number">Section 7</span> Using AI Integrations<a href="using-ai-integrations.html#using-ai-integrations" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>In the ROSSyndicate, we are actively trying to use some of the large language
-models to make our jobs easier/more efficient. Below is one of the most
-sustainable ways to integrate the CoPilot LLM into your workflow.</p>
-<p>We encourage all members of the lab to sign up for (and use!) any of the
-following sites:</p>
+<div id="archiving-data-and-code" class="section level1 hasAnchor" number="8">
+<h1><span class="header-section-number">Section 8</span> Archiving Data and Code<a href="archiving-data-and-code.html#archiving-data-and-code" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>We archive data and code through a number of pathways. Archiving our code and
+data make downstream analyses reproducible, is a great way to share data, and
+also provide the ability for citation through a stable DOI. Generally speaking,
+it’s good practice to get a DOI for any data before sharing it, as this helps
+with data provenance, additionally, most journals now require that all code and
+data are archived using a DOI. The flowchart below will guide you in the
+preferred method of archiving.</p>
+<p><img src="images/Data_Code_Archiving.png" /></p>
+<div id="choosing-a-data-repository" class="section level2 hasAnchor" number="8.1">
+<h2><span class="header-section-number">8.1</span> Choosing a data repository<a href="archiving-data-and-code.html#choosing-a-data-repository" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The decision of which data repository to use is less straight forward. There are
+benefits and tradeoffs to each. The <a href="https://portal.edirepository.org/nis/home.jsp">Environmental Data Initiative
+(EDI)</a> requires a significant
+amount of metadata in the form of an EML (ecological metadata language) file
+that describes the data and is the best for .csv files, however, this metadata
+makes the data more usable by downstream users.
+<a href="https://www.hydroshare.org/landingPage/">HydroShare</a> features a less rigid
+metadata requirements, and is better suited for rasterized data and non-.csv
+file types. <a href="https://figshare.com/">FigShare</a> requires no metadata and because
+of that there are numerous data products with no metadata that are stored on
+FigShare.</p>
+<p>Generally speaking, all data that is published from this lab should have
+thorough metadata regardless of the metadata requirements of the data repository
+chosen. For one-time uploads to EDI, you can use the
+<a href="https://ezeml.edirepository.org/eml/auth/login">ezEML</a> interface of EDI to
+create and format your EML. If you plan to create many data packages, make an
+EDI account so that you can upload yourself. If you have a dataset that will be
+updated frequently, use of the R package
+<a href="https://ediorg.github.io/EMLassemblyline/articles/overview.html">{EMLassemblyline}</a>
+is useful. If creating metadata for other data repositories, review the <a href="https://github.com/EDIorg/MetadataTemplates/blob/master/EDI_metadata_template.docx">content
+of the
+EML</a>
+and include as much of that information in your metadata as possible.</p>
+</div>
+<div id="publishing-code-to-zenodo" class="section level2 hasAnchor" number="8.2">
+<h2><span class="header-section-number">8.2</span> Publishing code to Zenodo<a href="archiving-data-and-code.html#publishing-code-to-zenodo" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>When delivering code or repositories to our stakeholders or other researchers,
+it needs to be citable. A citable repository has a stable DOI (digital object
+identifier) and complete metadata. We use the GitHub integration in Zenodo to
+publish repositories. When set up correctly, a GitHub ‘release’ will push all
+code to Zenodo automatically. All future ‘releases’ will be associated with the
+original DOI as well as a new DOI specific to that release.</p>
+<p>In general, the GitHub -&gt; Zenodo pathway is best for software (code) and not
+necessarily for data. Data publishing should be completed at EDI, CUAHSI, or
+FigShare. Derived data is okay in the GitHub -&gt; Zenodo pathway, just remember,
+this pathway is meant to be for CODE and SOFTWARE, not necessarily for data
+(though you can publish data to Zenodo).</p>
+<p>As mentioned before, we only publish repositories that have been consistently
+reviewed internally. Ideally your repository has been reviewed by an external
+collaborator or by another ROSSyndicate member. Remember, by pushing this
+repository to Zenodo, you are creating a PERMANENT archive of its contents, for
+better or worse.</p>
+<div id="creating-a-zenodo-account" class="section level3 hasAnchor" number="8.2.1">
+<h3><span class="header-section-number">8.2.1</span> Creating a Zenodo account<a href="archiving-data-and-code.html#creating-a-zenodo-account" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The easiest way to create a Zenodo account is to do so with your GitHub
+credentials. You will need to link these two accounts in order to fully take
+advantage of the GitHub/Zenodo integration.</p>
+<p><img src="images/zenodo_landing_signup.png" width="1000" /></p>
+</div>
+<div id="preparing-to-publish" class="section level3 hasAnchor" number="8.2.2">
+<h3><span class="header-section-number">8.2.2</span> Preparing to publish<a href="archiving-data-and-code.html#preparing-to-publish" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In order to have a meaningful repository release, you need to provide some
+metadata to Zenodo. While there are no requirements for publishing to Zenodo, it
+is a best practice to include robust metadata alongside your code release. A
+metadata template can be found in the helpful_docs folder of this repository.</p>
+<p>Once you’ve compiled this information, send it to Katie Willi or Anika Pyle for
+proofreading.</p>
+<p><strong>Release Title</strong></p>
+<p>You can use the repository name, but that’s not going to be helpful for anyone
+except you! Someone reading the Release Title should be able to discern what the
+repository does. You can explain the ‘how’ in the description.</p>
+<p><strong>Author list</strong></p>
+<p>Prepare your author list by looking at the contributors to the repo. All
+contributors to the repo should be listed as an author. You will need each
+author’s full name, institution, and their <a href="https://orcid.org/">ORCID</a>.</p>
+<p><strong>Description</strong></p>
+<p>This is the big lift in creating the metadata. Consider this similar to the
+introduction/background and methods section of a scientific paper. In the
+description of your repository, add information about the following things:</p>
 <ul>
-<li><p><a href="https://chat.openai.com/">ChatGPT</a></p></li>
-<li><p>GitHub CoPilot</p></li>
-<li><p><a href="https://www.perplexity.ai/">Perplexity AI</a></p></li>
+<li><p>General code description - the ‘how’ of your repository</p></li>
+<li><p>Methodology (summary only) - specifically if there are multiple steps to an
+analysis it is helpful to provide a methodology. If the repository hosts a
+very complicated analysis, consider only a condensed version of methods
+here, but add a markdown document with the complete methodology in your
+repository.</p></li>
+<li><p>If you are including data:</p>
+<ul>
+<li><p>data lineage (aka, where the data came from)</p></li>
+<li><p>explanation of how the data have been manipulated if they are derived
+(this is related to methods, so use your best judgement).</p></li>
+</ul></li>
+<li><p>If the analysis is specific to a certain locale, state and describe the
+locale.</p></li>
+<li><p>Maintenance and maintenance interval. ‘Ongoing’ or ‘completed’. If
+‘ongoing’, state the approximate interval that the repository will be
+updated.</p></li>
+<li><p>If this is an update to a previous release, state the changes from the
+previous version.</p></li>
 </ul>
-<div id="using-github-copilot-in-vscode-rstudio" class="section level2 hasAnchor" number="7.1">
-<h2><span class="header-section-number">7.1</span> Using GitHub CoPilot in VSCode + RStudio<a href="using-ai-integrations.html#using-github-copilot-in-vscode-rstudio" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>VSCode also has an extension for GitHub CoPilot, it will auto complete your
-comments and code in nearly any programming language. By having open both
-VSCode and RStudio and enabling auto-save in both programs, you can hop between
-the two programs and code will update between the two as you switch. Big thanks
-to Sam Struthers for figuring out this integrated workflow.</p>
+<p>Generally speaking, much of this information should already exist in your
+repository README or Methods document and cutting/pasting is absolutely okay.
+This section may be lengthy and that is okay!</p>
+<p><strong>Version</strong></p>
+<p>For one-time releases (like preparing a repository for a paper), using a
+version-number is perfect (i.e. v1, v2, etc). For repositories that are updated
+frequently, consider using a version-year-number (i.e. v2022-1, v2023-1,
+v2023-2, etc).</p>
+<p><strong>Keywords</strong></p>
+<p>Generally speaking, keywords help others find your code or research. It is not
+required. Keywords should be meaningful and specific and can include places,
+methods, etc. It is common to use controlled vocabulary for keywords, like the
+<a href="https://vocab.lternet.edu/vocab/vocab/index.php">LTER controlled vocabulary for ecology
+research</a>.</p>
+<p><strong>License</strong></p>
+<p>All repositories that are published are considered open access. Because our
+repository best practices include using an MIT use license, the LICENSE.txt file
+will override this option.</p>
+<p><strong>Funding</strong></p>
+<p>If there is applicable funding sources for this repository, you should list
+them. You will need the funder name and the grant number.</p>
+<p><strong>No other fields are required.</strong></p>
 </div>
-<div id="accessing-github-copilot-as-a-studentteacherresearcher" class="section level2 hasAnchor" number="7.2">
-<h2><span class="header-section-number">7.2</span> Accessing GitHub CoPilot as a student/teacher/researcher<a href="using-ai-integrations.html#accessing-github-copilot-as-a-studentteacherresearcher" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Access to GitHub CoPilot is currently free to students/teachers/researchers.
-Follow the instructions here to submit an application to gain access to the
-program: <a href="https://education.github.com/discount_requests/pack_application" class="uri">https://education.github.com/discount_requests/pack_application</a>. A
-screenshot of your ‘employee information’ from the <a href="https://aar.is.colostate.edu/service/hrprod">human resources
-portal</a> will be sufficient
-information to verify your employment. GitHub usually will give you access to
-the educational portal within 1 business day.</p>
+<div id="linking-a-repository-to-zenodo" class="section level3 hasAnchor" number="8.2.3">
+<h3><span class="header-section-number">8.2.3</span> Linking a repository to Zenodo<a href="archiving-data-and-code.html#linking-a-repository-to-zenodo" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>To activate the GitHub/Zenodo integration for a given repository, navigate to
+the GitHub account page by clicking the dropdown menu in the top right of the
+window.</p>
+<p><img src="images/zenodo_github_link.png" width="200" /></p>
+<p>From here, you simply follow the directions!</p>
+<p><img src="images/zenodo_github_getstarted.png" /></p>
 </div>
-<div id="downloading-vscode-and-installing-the-github-copilot-extension" class="section level2 hasAnchor" number="7.3">
-<h2><span class="header-section-number">7.3</span> Downloading VSCode and installing the GitHub CoPilot extension<a href="using-ai-integrations.html#downloading-vscode-and-installing-the-github-copilot-extension" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Download VSCode here: <a href="https://code.visualstudio.com/" class="uri">https://code.visualstudio.com/</a>. Set up the GitHub and
-GitHub CoPilot extensions by adding them via the ‘Marketplace’. You can bring
-up the Extensions from the menu bar under ‘Code’, ‘Settings’, ‘Extensions’.</p>
-<p>You’ll want to install and activate ‘GitHub Pull Requests and Issues’ as well
-as ‘GitHub Copilot’. You will be directed to Sign In using your GitHub
-credentials. You may need to elect to ‘enable’ Copilot.</p>
+<div id="completing-the-metadata-information" class="section level3 hasAnchor" number="8.2.4">
+<h3><span class="header-section-number">8.2.4</span> Completing the metadata information<a href="archiving-data-and-code.html#completing-the-metadata-information" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>To complete the entry of your metadata information and formalize the publishing
+of your repository, you’ll need to edit the Zenodo upload. Do this by clicking
+on “My Dashboard”.</p>
+<p>Here, you can click on the released repository:</p>
+<p><img src="images/zenodo_my_uploads.png" /></p>
+<p>And then click the ‘Edit’ button for the associated upload. Here, you can enter
+in all information from your Zenodo metadata document. When you’re ready, press
+‘Save’ and then ‘Publish’.</p>
 </div>
-<div id="setting-up-autosave-in-vscode-rstudio" class="section level2 hasAnchor" number="7.4">
-<h2><span class="header-section-number">7.4</span> Setting up AutoSave in VSCode + RStudio<a href="using-ai-integrations.html#setting-up-autosave-in-vscode-rstudio" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>In RStudio, open the Preferences pane from the menu bar under ‘RStudio’, then
-find the following pane:</p>
-<p><img src="images/r%20autosave.png" /></p>
-<p>Set up Auto-save by checking the ‘Automatically save when editor loses focus’
-and ‘Apply’.</p>
-<p>In VSCode, select ‘Code’, ‘Settings’, then ‘Settings’ again from the menu bar
-to bring up the Settings tab in your console. Then type in ‘auto save’ in the
-top search bar, and select ‘onFocusChange’ for the ‘Files: Auto Save’ Setting.</p>
-<p><img src="images/vscode%20autosave.png" /></p>
-<p>Now you can switch between programs, using VSCode and CoPilot to draft code and
-comment chunks, then further editing/running in RStudio.</p>
+<div id="add-the-doi-badge-to-your-repository" class="section level3 hasAnchor" number="8.2.5">
+<h3><span class="header-section-number">8.2.5</span> Add the DOI badge to your repository<a href="archiving-data-and-code.html#add-the-doi-badge-to-your-repository" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Now that you’ve minted a sweet sweet DOI for your repository, you should go
+ahead and add the DOI badge to your repository’s README file.</p>
+<p>On the right hand side of your Zenodo release landing page (formatted as
+‘<a href="https://zenodo.org/record/*DOInumber" class="uri">https://zenodo.org/record/*DOInumber</a>*’ on your browser), click on the DOI
+badge:</p>
+<p><img src="images/zenodo_doi_badge.png" /></p>
+<p>This will pop up a number of embedding formats. Copy and paste the one for
+‘Markdown’. At this point, go to the GitHub repository and add the badge at the
+top of the primary README file within the GitHub user interface on the web. This
+addition to the repository does not need to be reviewed.</p>
+</div>
+</div>
+<div id="philosophical-and-ethical-considerations" class="section level2 hasAnchor" number="8.3">
+<h2><span class="header-section-number">8.3</span> Philosophical and Ethical Considerations<a href="archiving-data-and-code.html#philosophical-and-ethical-considerations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>As a general philosophy we acknowledge that there is bias in every data set and
+in the decisions we make along the way as we code. These biases may be
+geographical (data are only from one location), contextual (data are only from a
+single source), or implicit (data have been altered for a specific purpose). As
+you prepare your data and metadata, it is important to think about the biases we
+contribute to a given dataset.</p>
+<p>To familarize yourself with bias that we introduce into our data and analyses,
+here are some resources:</p>
+<ul>
+<li><p>“Biases in lake water quality sampling and implications for macroscale
+research” <span class="citation">[@stanley2019]</span></p></li>
+<li><p><a href="https://github.com/dmhuehol/Datasheets-for-Earth-Science-Datasets/blob/main/blank_EarthScienceDatasheet.pdf">Review the questions in this
+datasheet</a>
+created by our colleagues in the Atmospheric Sciences department when
+creating metadata and general documentation</p></li>
+<li><p>A deep dive into bias in AI/ML: “Why we need to focus on developing ethical,
+responsible, and trustworthy artificial intelligence approaches for
+environmental science” <span class="citation">[@mcgovern2022]</span></p></li>
+</ul>
 
 </div>
 </div>
@@ -331,8 +459,8 @@ comment chunks, then further editing/running in RStudio.</p>
           </div>
         </div>
       </div>
-<a href="git-hub-feature-branches.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="archiving-data-and-code.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="using-ai-integrations.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="python-integrations-in-rstudio.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -363,7 +491,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/06-RStudio-VSCode-AI-Integrations.Rmd",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/07-Publishing-Data-Code.Rmd",
 "text": "Edit"
 },
 "history": {

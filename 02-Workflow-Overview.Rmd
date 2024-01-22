@@ -22,7 +22,8 @@ you.
 2.  Add collaborators with write/push access by going to repo Settings -\>
     Manage Access -\> Invite a Collaborator.
 
-3.  After you have forked the repository to your account, clone the repo to your
+3.  After you have forked the repository to your account, clone the repo to
+your
     local machine (see Forking and Cloning ROSSyndicate Repositories).
 
 4.  Once the repo is stored on your local machine create the general
@@ -87,8 +88,9 @@ you.
 
 ## Collaborative Coding
 
-(Note, the workflow for this is slightly different if you are working in feature
-branches. Please see that section if you are working in feature branches.)
+(Note, the workflow for this is slightly different if you are working in
+feature branches. Please see that section if you are working in feature
+branches.)
 
 1.  Always start your day by fetching upstream changes from the primary
     repository by typing the following in the terminal. This is part of the way

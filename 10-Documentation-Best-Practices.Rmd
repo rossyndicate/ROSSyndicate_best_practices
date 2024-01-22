@@ -132,3 +132,32 @@ def csv_to_eeFeat(df, proj):
 Docstring documentation is particularily easy to create in VS Code editor using
 the extension 'autoDocstring'. This will automatically populate the 'Args' and
 'Returns' fields including the 'Args' variable names.
+
+## Bookdown Documentation
+
+We will often use {bookdown} to document large projects, especially when using 
+{targets}. {bookdown} is a package that allows you to create a book-like 
+document and deploy as a github.io website, if desired. You can also render to
+.pdfs. 
+
+### General style guidance
+
+Keep your repository tidy by putting your bookdown .Rmd files, index.Rmd, and 
+associated .yml files into their own directory called "bookdown". The output
+directory should be set to "docs" in the _bookdown.yml file. See this example of
+.yml content:
+
+```
+delete_merged_file: true
+output_dir: "../docs"
+language:
+  ui:
+    chapter_name: "Section "
+```
+
+Note that the `output_dir` is set in reference to where the bookdown is being
+rendered (in the "bookdown/" directory).
+
+Keep your headers to 3 subheadings ("###') or fewer. 
+
+
