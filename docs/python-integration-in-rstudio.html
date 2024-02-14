@@ -125,7 +125,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 </style>
 
-<link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 
 <body>
@@ -138,9 +137,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">ROSSyndicate Workflow Best Practices</a></li>
-
-<li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#overarching-codeworkflow-philosophies-of-the-rossyndicate"><i class="fa fa-check"></i><b>1.1</b> Overarching code/workflow philosophies of the ROSSyndicate</a></li>
@@ -251,9 +247,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="12.1" data-path="flex-your-github-skills-by-updating-our-website.html"><a href="flex-your-github-skills-by-updating-our-website.html#directions"><i class="fa fa-check"></i><b>12.1</b> Directions:</a></li>
 </ul></li>
-<li class="divider"></li>
-<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-
 </ul>
 
       </nav>
@@ -290,13 +283,13 @@ is not tracking the folder.</p>
 virtual environment is set up, and if it is not, it runs the <code>pySetup.R</code> file.
 If the ‘env’ folder exists, we use the {reticulate} function <code>use_condaenv()</code>
 to read the virtual environment you already created in the <code>pySetup.R</code> script.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="python-integration-in-rstudio.html#cb6-1" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
-<span id="cb6-2"><a href="python-integration-in-rstudio.html#cb6-2" tabindex="-1"></a></span>
-<span id="cb6-3"><a href="python-integration-in-rstudio.html#cb6-3" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">dir.exists</span>(<span class="st">&quot;env&quot;</span>)) {</span>
-<span id="cb6-4"><a href="python-integration-in-rstudio.html#cb6-4" tabindex="-1"></a>  <span class="fu">source</span>(<span class="st">&quot;pySetup.R&quot;</span>)</span>
-<span id="cb6-5"><a href="python-integration-in-rstudio.html#cb6-5" tabindex="-1"></a>} <span class="cf">else</span> {</span>
-<span id="cb6-6"><a href="python-integration-in-rstudio.html#cb6-6" tabindex="-1"></a>  <span class="fu">use_condaenv</span>(<span class="fu">file.path</span>(<span class="fu">getwd</span>(), <span class="st">&quot;env&quot;</span>))</span>
-<span id="cb6-7"><a href="python-integration-in-rstudio.html#cb6-7" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="python-integration-in-rstudio.html#cb4-1" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
+<span id="cb4-2"><a href="python-integration-in-rstudio.html#cb4-2" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="python-integration-in-rstudio.html#cb4-3" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">dir.exists</span>(<span class="st">&quot;env&quot;</span>)) {</span>
+<span id="cb4-4"><a href="python-integration-in-rstudio.html#cb4-4" tabindex="-1"></a>  <span class="fu">source</span>(<span class="st">&quot;pySetup.R&quot;</span>)</span>
+<span id="cb4-5"><a href="python-integration-in-rstudio.html#cb4-5" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb4-6"><a href="python-integration-in-rstudio.html#cb4-6" tabindex="-1"></a>  <span class="fu">use_condaenv</span>(<span class="fu">file.path</span>(<span class="fu">getwd</span>(), <span class="st">&quot;env&quot;</span>))</span>
+<span id="cb4-7"><a href="python-integration-in-rstudio.html#cb4-7" tabindex="-1"></a>}</span></code></pre></div>
 </div>
 <div id="editing-the-pysetup.r-file" class="section level3 hasAnchor" number="9.1.2">
 <h3><span class="header-section-number">9.1.2</span> Editing the <code>pySetup.R</code> file<a href="python-integration-in-rstudio.html#editing-the-pysetup.r-file" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -346,8 +339,8 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/08-Python-in-R.Rmd",
-"text": "Edit"
+"link": null,
+"text": null
 },
 "history": {
 "link": null,
@@ -357,7 +350,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["_main.pdf", "_main.epub"],
+"download": null,
 "search": {
 "engine": "fuse",
 "options": null

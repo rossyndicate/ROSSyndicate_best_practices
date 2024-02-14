@@ -3,10 +3,9 @@ title: "ROSSyndicate Project and Workflow Best Practices"
 author: "ROSSyndicate"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
+output: bookdown::gitbook
 documentclass: book
-description: |
-  The ROSSyndicate workflow best practices guide.
-output: html_document
+description: "The ROSSyndicate workflow best practices guide."
 editor_options:
   markdown:
     wrap: 72
@@ -21,9 +20,9 @@ library(tidyverse)
 
 # About
 
-This guide outlines the [ROSSyndicate's](https://rossyndicate.com/)
-project management expectations and workflow best practices so that we
-can successfully implement Radical Open Science.
+This guide outlines the [ROSSyndicate's](https://rossyndicate.com/) project
+management expectations and workflow best practices so that we can successfully
+implement Radical Open Science.
 
 ## Overarching code/workflow philosophies of the ROSSyndicate
 
@@ -70,21 +69,18 @@ can successfully implement Radical Open Science.
 
 ## Contents
 
-This best practices guide serves as an introduction to Git and GitHub,
-the lab's style and code philosophies, and the tools we use for project
-management.
+This best practices guide serves as an introduction to Git and GitHub, the
+lab's style and code philosophies, and the tools we use for project management.
 
 ## A living document
 
-The workflow best practices document is a living document and all
-members of the ROSSyndicate are welcome to submit edits to it via pull
-request.
+The workflow best practices document is a living document and all members of
+the ROSSyndicate are welcome to submit edits to it via pull request.
 
 ## Origin
 
 Adapted from the Geospatial Centroid's GitHub Workflow Document, Caitlin
-Mothes, built out for ROSSyndicate by Katie Willi, B Steele, and Matt
-Brousil.
+Mothes, built out for ROSSyndicate by Katie Willi, B Steele, and Matt Brousil.
 
 ```{r, echo = F}
 knitr::wrap_rmd('index.Rmd', width = 80, backup = NULL)
