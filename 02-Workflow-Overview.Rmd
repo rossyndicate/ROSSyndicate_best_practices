@@ -94,7 +94,7 @@ your
     -   Then, clone your repo! You can acquire the `ssh_address` from your
         forked repository on the GitHub website. If I were cloning the repo
         below, I would replace `ssh_address` with
-        `git@github.com:steeleb/ROSSyndicate_best_practices.`
+        `git@github.com:steeleb/ROSSyndicate_best_practices`.
 
         > git clone ssh_address
 
