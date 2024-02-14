@@ -125,6 +125,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 </style>
 
+<link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 
 <body>
@@ -137,6 +138,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
+<li><a href="./">ROSSyndicate Workflow Best Practices</a></li>
+
+<li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#overarching-codeworkflow-philosophies-of-the-rossyndicate"><i class="fa fa-check"></i><b>1.1</b> Overarching code/workflow philosophies of the ROSSyndicate</a></li>
@@ -247,6 +251,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="12.1" data-path="flex-your-github-skills-by-updating-our-website.html"><a href="flex-your-github-skills-by-updating-our-website.html#directions"><i class="fa fa-check"></i><b>12.1</b> Directions:</a></li>
 </ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
 </ul>
 
       </nav>
@@ -280,8 +287,7 @@ line of the license file to read: <em>‘ROSS - Radical Open Science Syndicate
 and all contributors’</em></p></li>
 <li><p>Add collaborators with write/push access by going to repo Settings -&gt;
 Manage Access -&gt; Invite a Collaborator.</p></li>
-<li><p>After you have forked the repository to your account, clone the repo to
-your
+<li><p>After you have forked the repository to your account, clone the repo to your
 local machine (see Forking and Cloning ROSSyndicate Repositories).</p></li>
 <li><p>Once the repo is stored on your local machine create the general
 architecture for your repository.</p>
@@ -352,9 +358,8 @@ below, I would replace <code>ssh_address</code> with
 </div>
 <div id="collaborative-coding" class="section level2 hasAnchor" number="3.3">
 <h2><span class="header-section-number">3.3</span> Collaborative Coding<a href="workflow-overview.html#collaborative-coding" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>(Note, the workflow for this is slightly different if you are working in
-feature branches. Please see that section if you are working in feature
-branches.)</p>
+<p>(Note, the workflow for this is slightly different if you are working in feature
+branches. Please see that section if you are working in feature branches.)</p>
 <ol style="list-style-type: decimal">
 <li><p>Always start your day by fetching upstream changes from the primary
 repository by typing the following in the terminal. This is part of the way
@@ -473,8 +478,8 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": null,
-"text": null
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/02-Workflow-Overview.Rmd",
+"text": "Edit"
 },
 "history": {
 "link": null,
@@ -484,7 +489,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": null,
+"download": ["_main.pdf", "_main.epub"],
 "search": {
 "engine": "fuse",
 "options": null

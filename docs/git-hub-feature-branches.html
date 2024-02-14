@@ -125,6 +125,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 </style>
 
+<link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 
 <body>
@@ -137,6 +138,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
+<li><a href="./">ROSSyndicate Workflow Best Practices</a></li>
+
+<li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#overarching-codeworkflow-philosophies-of-the-rossyndicate"><i class="fa fa-check"></i><b>1.1</b> Overarching code/workflow philosophies of the ROSSyndicate</a></li>
@@ -247,6 +251,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="12.1" data-path="flex-your-github-skills-by-updating-our-website.html"><a href="flex-your-github-skills-by-updating-our-website.html#directions"><i class="fa fa-check"></i><b>12.1</b> Directions:</a></li>
 </ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
 </ul>
 
       </nav>
@@ -268,29 +275,28 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">Section 6</span> Git Hub Feature Branches<a href="git-hub-feature-branches.html#git-hub-feature-branches" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div id="when-to-work-in-a-feature-branch" class="section level2 hasAnchor" number="6.1">
 <h2><span class="header-section-number">6.1</span> When to work in a feature branch<a href="git-hub-feature-branches.html#when-to-work-in-a-feature-branch" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Working in feature branches is similar to working in a forked repository,
-except you have two parallel workflows with varying commit history in the same
-[forked] repository. It is essential, if you are using branches, that you are
-working on a very specific issue or feature (hence the name) that is
-independent of others’ work on the repo – or even your other branches!
-<strong>IMPORTANT: Try not to leave your branches unmerged for long periods of time
-if other folks are working in the same repository to help alleviate merge
-conflicts.</strong></p>
+<p>Working in feature branches is similar to working in a forked repository, except
+you have two parallel workflows with varying commit history in the same [forked]
+repository. It is essential, if you are using branches, that you are working on
+a very specific issue or feature (hence the name) that is independent of others’
+work on the repo – or even your other branches! <strong>IMPORTANT: Try not to leave
+your branches unmerged for long periods of time if other folks are working in
+the same repository to help alleviate merge conflicts.</strong></p>
 <p>Working in a feature branch is also a way to continue working on a codebase as
 other code is in review.</p>
 </div>
 <div id="how-to-create-a-feature-branch" class="section level2 hasAnchor" number="6.2">
 <h2><span class="header-section-number">6.2</span> How to create a feature branch<a href="git-hub-feature-branches.html#how-to-create-a-feature-branch" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Make sure the forked main (‘origin main’) is updated with upstream changes and
-all of your current work has been committed to the main branch, then start a
-new branch:</p>
+all of your current work has been committed to the main branch, then start a new
+branch:</p>
 <blockquote>
 <p>git checkout -b new-branch-name</p>
 </blockquote>
 <p>Branch starts with a copy of the branch you were on. You can now make edits in
-this branch and add/commit as usual. If you switch back to the main branch
-using <code>git checkout main</code>, all of your commit history will revert to that on
-the main branch (aka, it will look like all of your work disappeared).</p>
+this branch and add/commit as usual. If you switch back to the main branch using
+<code>git checkout main</code>, all of your commit history will revert to that on the main
+branch (aka, it will look like all of your work disappeared).</p>
 <p>You can either push your branch up to your origin remote (your forked repo)
 using:</p>
 <blockquote>
@@ -355,8 +361,8 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": null,
-"text": null
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/05-Git-Feature-Branches.Rmd",
+"text": "Edit"
 },
 "history": {
 "link": null,
@@ -366,7 +372,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": null,
+"download": ["_main.pdf", "_main.epub"],
 "search": {
 "engine": "fuse",
 "options": null

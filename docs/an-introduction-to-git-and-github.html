@@ -125,6 +125,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 </style>
 
+<link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 
 <body>
@@ -137,6 +138,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
+<li><a href="./">ROSSyndicate Workflow Best Practices</a></li>
+
+<li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#overarching-codeworkflow-philosophies-of-the-rossyndicate"><i class="fa fa-check"></i><b>1.1</b> Overarching code/workflow philosophies of the ROSSyndicate</a></li>
@@ -247,6 +251,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="12.1" data-path="flex-your-github-skills-by-updating-our-website.html"><a href="flex-your-github-skills-by-updating-our-website.html#directions"><i class="fa fa-check"></i><b>12.1</b> Directions:</a></li>
 </ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
 </ul>
 
       </nav>
@@ -267,12 +274,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="an-introduction-to-git-and-github" class="section level1 hasAnchor" number="2">
 <h1><span class="header-section-number">Section 2</span> An Introduction to Git And GitHub<a href="an-introduction-to-git-and-github.html#an-introduction-to-git-and-github" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Git is a version control system that helps manage projects, especially projects
-that involve multiple people. GitHub is a hosting service for these Git
-projects (in GitHub-speak, projects are housed in <strong>repositories</strong>). Here, we
-will outline how to set up Git, create your own GitHub account, and connect
-them to you local R environment to easily publish and share the code you
-develop. A great article on the benefits of using Git and GitHub has been
-written by Jennifer Bryan, which you can find
+that involve multiple people. GitHub is a hosting service for these Git projects
+(in GitHub-speak, projects are housed in <strong>repositories</strong>). Here, we will
+outline how to set up Git, create your own GitHub account, and connect them to
+you local R environment to easily publish and share the code you develop. A
+great article on the benefits of using Git and GitHub has been written by
+Jennifer Bryan, which you can find
 <a href="https://happygitwithr.com/big-picture.html">here</a> and we highly recommend
 reading!</p>
 <p>In fact, Jennifer Bryan has developed what we feel is the best guide for using
@@ -305,20 +312,20 @@ computer. (see <a href="https://happygitwithr.com/hello-git.html" class="uri">ht
 <div id="developing-viewing-and-editing-repositories" class="section level2 hasAnchor" number="2.2">
 <h2><span class="header-section-number">2.2</span> Developing, viewing, and editing repositories<a href="an-introduction-to-git-and-github.html#developing-viewing-and-editing-repositories" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>As mentioned in Matt’s video (~7:53), creating a repository is the first step
-when starting a brand-new Git project. Essentially, a <strong>repository</strong> is the
-main folder in which all the files and code related to a project live. For any
+when starting a brand-new Git project. Essentially, a <strong>repository</strong> is the main
+folder in which all the files and code related to a project live. For any
 repository on GitHub, there are two ways of copying it to your local computer:
 <strong>cloning</strong> and <strong>forking</strong>.</p>
 <div id="cloning" class="section level3 hasAnchor" number="2.2.1">
 <h3><span class="header-section-number">2.2.1</span> Cloning<a href="an-introduction-to-git-and-github.html#cloning" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Cloning a repository maps a local version of that repository to your computer,
 allowing you to sync both the local (your computer) and remote (what’s on
-GitHub) versions. This type of copying is useful for workflows where you are
-the only one working on them. If you clone a repository that you did not create
+GitHub) versions. This type of copying is useful for workflows where you are the
+only one working on them. If you clone a repository that you did not create
 yourself, you will be unable to make changes to the ‘main’ repository hosted on
-GitHub unless the developer has given your account collaborator approval, but
-it <em>will</em> allow you to refresh and update what’s on your local computer if
-changes have been made to what’s on the ‘main’ repository on GitHub.</p>
+GitHub unless the developer has given your account collaborator approval, but it
+<em>will</em> allow you to refresh and update what’s on your local computer if changes
+have been made to what’s on the ‘main’ repository on GitHub.</p>
 <p>However, for a repository that you have created yourself or are a collaborator
 on, cloning allows two-way syncing; you are able to make changes to the GitHub
 repository as well as update what’s on your local computer if the GitHub
@@ -329,10 +336,10 @@ essentially packages and saves the changes you made; it also allows you to
 comment on what exactly you changed in the repository. Meanwhile, the <strong>push</strong>
 command sends those changes that were packaged by the commmit to GitHub and
 updates the remote repository on GitHub accordingly. Because cloning creates a
-direct connection between the GitHub ‘main’ repository and what you’ve cloned
-to your local computer, you can only push changes to repositories that are
-located in your own GitHub account, or to repositories that the developer of
-the repository has explicitly made you a collaborator on.</p>
+direct connection between the GitHub ‘main’ repository and what you’ve cloned to
+your local computer, you can only push changes to repositories that are located
+in your own GitHub account, or to repositories that the developer of the
+repository has explicitly made you a collaborator on.</p>
 <p><strong>How to clone and update your GitHub</strong>:</p>
 <ol style="list-style-type: decimal">
 <li>Create a repository on GitHub.
@@ -351,19 +358,19 @@ the repository has explicitly made you a collaborator on.</p>
 of a repository that is housed within your own personal GitHub account.
 Specifically, if you’ve made changes to the code in a forked repository then
 committed and pushed those changes, it does not automatically make those same
-changes to the ‘main’ repository that it was forked from on GitHub. Instead,
-all changes are saved and stored only within the repository hosted within your
-own GitHub account.</p>
+changes to the ‘main’ repository that it was forked from on GitHub. Instead, all
+changes are saved and stored only within the repository hosted within your own
+GitHub account.</p>
 <p>Forking essentially creates a line of defense for changes in a workflow that
-would otherwise disrupt the workflows of other people working within that
-‘main’ repository project. For the ‘main’ repository to be updated with the
-changes you made in your forked version, you must submit a pull request.</p>
+would otherwise disrupt the workflows of other people working within that ‘main’
+repository project. For the ‘main’ repository to be updated with the changes you
+made in your forked version, you must submit a pull request.</p>
 <p>A <strong>pull request</strong> is an invitation to the owner of the ‘main’ repository to
-review the changes you’ve made to the code and potentially merge them into
-their ‘main’ repository. If the owner/reviewer finds that the code you’ve
-developed would be a good addition to the workflow and/or that the code has not
-diverged/disrupted others’ workflows, they can approve the pull request, and
-the ‘main’ repository will be updated accordingly.</p>
+review the changes you’ve made to the code and potentially merge them into their
+‘main’ repository. If the owner/reviewer finds that the code you’ve developed
+would be a good addition to the workflow and/or that the code has not
+diverged/disrupted others’ workflows, they can approve the pull request, and the
+‘main’ repository will be updated accordingly.</p>
 <p>Matt and a former grad student, Bryce Pulver, made another excellent video that
 walks through an example collaborative workflow using forking:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="an-introduction-to-git-and-github.html#cb2-1" tabindex="-1"></a><span class="fu">embed_url</span>(<span class="st">&quot;https://www.youtube.com/watch?v=a_YY_PIDeq8&quot;</span>) <span class="sc">%&gt;%</span></span>
@@ -397,8 +404,8 @@ repository and selecting and creating a pull request. (Bryce does this at
 <p>When you create a new repository you can choose whether you’d like its
 visibility to be public or private. Within the lab our default expectation is
 public, in order to make our work open and reproducible. However, in certain
-circumstances repositories will be need to be private or visibility will need
-to change during the lifecycle of a project.</p>
+circumstances repositories will be need to be private or visibility will need to
+change during the lifecycle of a project.</p>
 <p>Before you make a change to the visibility of a repository, it’s important to
 make sure that all of your forks are up to date and to warn any of your
 collaborators that you are going to make this change. Changing visibility
@@ -476,8 +483,8 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": null,
-"text": null
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/01-intro-to-git-github.Rmd",
+"text": "Edit"
 },
 "history": {
 "link": null,
@@ -487,7 +494,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": null,
+"download": ["_main.pdf", "_main.epub"],
 "search": {
 "engine": "fuse",
 "options": null

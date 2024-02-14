@@ -125,6 +125,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 </style>
 
+<link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 
 <body>
@@ -137,6 +138,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
+<li><a href="./">ROSSyndicate Workflow Best Practices</a></li>
+
+<li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#overarching-codeworkflow-philosophies-of-the-rossyndicate"><i class="fa fa-check"></i><b>1.1</b> Overarching code/workflow philosophies of the ROSSyndicate</a></li>
@@ -247,6 +251,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="12.1" data-path="flex-your-github-skills-by-updating-our-website.html"><a href="flex-your-github-skills-by-updating-our-website.html#directions"><i class="fa fa-check"></i><b>12.1</b> Directions:</a></li>
 </ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
 </ul>
 
       </nav>
@@ -296,8 +303,8 @@ and then define the style transformer. The default is {tidyverse}, so all you
 have to do is press ‘OK’. As you work on scripts within your repository, select
 ‘Style active file’. This will modify the file to conform to {tidyverse} style.
 Be sure to commit these changes. Styler will not tell you what has changed, all
-you will see is the following message in your console: While using {styler}
-will not correct all style choices, it will fix spacing, assignments, and tabs
+you will see is the following message in your console: While using {styler} will
+not correct all style choices, it will fix spacing, assignments, and tabs
 automatically.</p>
 </div>
 <div id="fonts-colors-and-.css" class="section level3 hasAnchor" number="4.1.2">
@@ -315,8 +322,8 @@ deep work time, we suggest using a few hacks:</p>
 output to be readable in [nearly] any format. This means whether you are using
 the Visual editor in RStudio, you’re reading a rendered .html or if you’re
 viewing an .Rmd on the web or in the Source editor of R Studio. To accomplish
-this, we suggest line character length no greater than 80. If you are in an
-.Rmd file, just add the last code chunk from the
+this, we suggest line character length no greater than 80. If you are in an .Rmd
+file, just add the last code chunk from the
 <code>style_snippets/markdown_helpers.Rmd</code>, save your file, and run the chunk. This
 will reformat all lines of text so that they are on new lines every 80
 characters. If you are in .R or a .md document, use the page-width indicator
@@ -511,8 +518,7 @@ daily to weekly basis</strong></p></li>
 <p><a href="https://linearb.io/blog/code-review-on-github/">The Best Way to Do a Code Review on
 GitHub</a>, LinearB</p>
 <p><a href="https://blog.mergify.com/github-code-review-best-practices/">GitHub Code Review Best
-Practices</a>,
-Mergify</p>
+Practices</a>, Mergify</p>
 <p><a href="https://birkhoffg.github.io/blog/posts/how-to-commit-and-code-review-on-github/">[How To] Commit and Code Review on
 GitHub</a>,
 Birkhoff Tech Blog</p>
@@ -565,8 +571,8 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": null,
-"text": null
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/03-Collaborative-Coding.Rmd",
+"text": "Edit"
 },
 "history": {
 "link": null,
@@ -576,7 +582,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": null,
+"download": ["_main.pdf", "_main.epub"],
 "search": {
 "engine": "fuse",
 "options": null
