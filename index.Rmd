@@ -7,6 +7,9 @@ documentclass: book
 description: |
   The ROSSyndicate workflow best practices guide.
 output: html_document
+editor_options: 
+  markdown: 
+    wrap: 72
 ---
 
 ```{r, echo = F}
@@ -18,63 +21,70 @@ library(tidyverse)
 
 # About
 
-This guide outlines the [ROSSyndicate's](https://rossyndicate.com/) project
-management expectations and workflow best practices so that we can successfully
-implement Radical Open Science.
+This guide outlines the [ROSSyndicate's](https://rossyndicate.com/)
+project management expectations and workflow best practices so that we
+can successfully implement Radical Open Science.
 
-## Overarching code/workflow philosphies of the ROSSyndicate
+## Overarching code/workflow philosophies of the ROSSyndicate
 
-- We value literate, readable code without sacrificing reproducibility. This
-means deploying understandable code and repositories that are accompanied by
-narrative comments and text. We value transparency in our analyses and believe
-that well documented repositories and code facilitate that.
+-   We value literate, readable code without sacrificing
+    reproducibility. This means deploying understandable code and
+    repositories that are accompanied by narrative comments and text. We
+    value transparency in our analyses and believe that well documented
+    repositories and code facilitate that.
 
-- All code and software are licensed with the highly permissive MIT use license.
-While we believe that all code and software should be public, we acknowledge
-that other researchers and users may wish to keep products derived from our
-code private. We intentionally avoid the GNU-GPL family of licenses that are
-"viral" by nature, forcing all downstream repositories to also be fully open.
-We do so because we acknowledge their are vulnerable populations that may want
-to keep their code private for reasons we may not understand. We hope that this
-encourages use of our code, and ultimately, creates an environment of sharing
-with and empowering each other.
+-   All code and software are licensed with the highly permissive MIT
+    use license. While we believe that all code and software should be
+    public, we acknowledge that other researchers and users may wish to
+    keep products derived from our code private. We intentionally avoid
+    the GNU-GPL family of licenses that are "viral" by nature, forcing
+    all downstream repositories to also be fully open. We do so because
+    we acknowledge their are vulnerable populations that may want to
+    keep their code private for reasons we may not understand. We hope
+    that this encourages use of our code, and ultimately, creates an
+    environment of sharing with and empowering each other.
 
+-   GitHub contributions follow the 'fork' methodology that is common in
+    open science repositories (as opposed to the 'branch' method).
 
-- GitHub contributions follow the 'fork' methodology that is common in open
-science repositories (as opposed to the 'branch' method).
+-   All GitHub contributions are reviewed before being incorporated into
+    the lab organization repository, except upon initial repository set
+    up. These reviews are completed internally through pull requests. We
+    value 'bite-sized' pull requests that usually only contain 500 lines
+    of code.
 
-- All GitHub contributions are reviewed before being incorporated into the lab
-organization repository, except upon initial repository set up.  These reviews
-are completed internally through pull requests. We value 'bite-sized' pull
-requests that usually only contain 500 lines of code.
+-   No code is formally published unless it has been consistently and
+    intentionally reviewed. We make an effort to include external review
+    of our repositories prior to formal publishing.
 
-- No code is formally published unless it has been consistently and intentionally
-reviewed. We make an effort to include external review of our repositories
-prior to formal publishing.
+-   We follow [the {tidyverse} style
+    guide](https://style.tidyverse.org/). We use the {styler} Addin in
+    RStudio to assist in linting our code.
 
-- We follow [the {tidyverse} style guide](https://style.tidyverse.org/). We use
-the {styler} Addin in RStudio to assist in linting our code.
-
-- We strive use a set of common styles specific to the look and feel of rendered
-documents, which include: color palettes, ggthemes, and style.css files. These
-are meant to reduce the amount of time that researchers in this lab spend on
-relatively inconsequential decisions. Ideally the use of these aesthetics also
-creates a common look and feel of all deliverables from the ROSSyndicate.
+-   We strive use a set of common styles specific to the look and feel
+    of rendered documents, which include: color palettes, ggthemes, and
+    style.css files. These are meant to reduce the amount of time that
+    researchers in this lab spend on relatively inconsequential
+    decisions. Ideally the use of these aesthetics also creates a common
+    look and feel of all deliverables from the ROSSyndicate.
 
 ## Contents
 
-This best practices guide serves as an introduction to Git and GitHub, the
-lab's style and code philosophies, and the tools we use for project management.
+This best practices guide serves as an introduction to Git and GitHub,
+the lab's style and code philosophies, and the tools we use for project
+management.
 
 ## A living document
 
-The workflow best practices document is a living document and all members of
-the ROSSyndicate are welcome to submit edits to it via pull request.
+The workflow best practices document is a living document and all
+members of the ROSSyndicate are welcome to submit edits to it via pull
+request.
 
 ## Origin
 
 Adapted from the Geospatial Centroid's GitHub Workflow Document, Caitlin
-Mothes, built out for ROSSyndicate by Katie Willi, B Steele, and Matt Brousil.
+Mothes, built out for ROSSyndicate by Katie Willi, B Steele, and Matt
+Brousil.
 
 ```{r, echo = F}
 knitr::wrap_rmd('index.Rmd', width = 80, backup = NULL)

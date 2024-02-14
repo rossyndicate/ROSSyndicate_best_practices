@@ -15,11 +15,13 @@ flexibility and can be tailored to fit the needs of any project.
 
 ## Github Project best practices
 
--   Frame the Project tasks around the statement of work/objectives of the project.
+-   Frame the Project tasks around the statement of work/objectives of the
+    project.
 
 -   Take advantage of tags to easily filter and peruse different types of tasks.
 
--   Break down large tasks into GitHub issues that can [ideally] be completed in a single pull request.
+-   Break down large tasks into GitHub issues that can [ideally] be completed in
+    a single pull request.
 
 See also [GitHub's
 document](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/best-practices-for-projects)
