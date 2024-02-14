@@ -6,12 +6,67 @@ editor_options:
 
 # Using AI Integrations
 
-In the ROSSyndicate, we are actively trying to use some of the large language
-models to make our jobs easier/more efficient. Below is one of the most
-sustainable ways to integrate the CoPilot LLM into your workflow.
+The following section is a modification of a Twitter thread written by Santiago
+Valdarrama (@Santiago).
 
-We encourage all members of the lab to sign up for (and use!) any of the
-following sites:
+In the ROSSyndicate, we are actively trying to use some of the large language
+models to make our jobs easier/more efficient. AI models can be valuable tools
+in code development if used effectively. These models can understand and
+generate human-like text, offering assistance in writing and suggesting code
+snippets. However, it's important to note that while they enhance productivity,
+AI models are currently not a replacement for coding; they should act only as
+supportive aids. Never take the response of an AI model at face value. AI models
+are flawed and make mistakes often. Even so, they have the potential of saving
+you substantial time and can give you a massive boost. With that, here is a list
+of ways in which AI models can be effectively used to help you on your coding
+journey.
+
+**Explaining code.** AI model explanations can be very detailed. Dropping
+convoluted or confusing code into an AI model (plus a request to explain it) can
+be much quicker than trying to figure out code on your own.
+
+**Improving existing code.** Asking an AI model to improve existing code by
+dropping it into the chat-bot plus describing what you want it to accomplish
+will often result in a response that includes working (or, at least close to
+working), modified code.
+
+**Rewriting code with a different style.** For example, it can be great for
+re-writing code written in base R into {tidyverse}-style code. AI models will
+not only give you the updated code, they will also explain the reason for the
+changes they make.
+
+**Simplifying code.** Asking AI models to simplify complex code can result in a
+much more compact version of the original code. The output will also provide an
+explanation for the changes, as well as whether the simpler version is as
+efficient as the original code.
+
+**Debugging.** If you are having a hard time finding the source of an error in
+your code, AI models are a great solution. Just provide it the code, and it will
+often find it and fix it for you.
+
+**Workflow development.** Use AI models to kick off the structure of anything
+new you want to write.
+
+**Writing test cases.** When writing functions, you can use AI models to
+generate test cases for you to use in testing whether a function is working the
+way you want it to.
+
+**Exploring alternatives.** Asking an AI model what the most efficient way to
+perform a coding action might teach you new ways of writing more efficient and
+sophisticated code.
+
+**Translating code.** Anytime you want to translate some code from one language
+to another, ask an AI model to help you.
+
+**Writing documentation.** Ask an AI model to write the documentation for a
+piece of code, and it usually does a pretty great job. It will often even
+include usage examples as part of the documentation.
+
+**Integrating AI into your workflows:**
+
+Below is one of the most sustainable ways to integrate the CoPilot LLM into your
+workflow. We encourage all members of the lab to sign up for (and use!) any of
+the following sites:
 
 -   [ChatGPT](https://chat.openai.com/)
 
@@ -22,10 +77,10 @@ following sites:
 ## Using GitHub CoPilot in VSCode + RStudio
 
 VSCode also has an extension for GitHub CoPilot, it will auto complete your
-comments and code in nearly any programming language. By having open both
-VSCode and RStudio and enabling auto-save in both programs, you can hop between
-the two programs and code will update between the two as you switch. Big thanks
-to Sam Struthers for figuring out this integrated workflow.
+comments and code in nearly any programming language. By having open both VSCode
+and RStudio and enabling auto-save in both programs, you can hop between the two
+programs and code will update between the two as you switch. Big thanks to Sam
+Struthers for figuring out this integrated workflow.
 
 ## Accessing GitHub CoPilot as a student/teacher/researcher
 
@@ -40,12 +95,12 @@ the educational portal within 1 business day.
 ## Downloading VSCode and installing the GitHub CoPilot extension
 
 Download VSCode here: <https://code.visualstudio.com/>. Set up the GitHub and
-GitHub CoPilot extensions by adding them via the 'Marketplace'. You can bring
-up the Extensions from the menu bar under 'Code', 'Settings', 'Extensions'.
+GitHub CoPilot extensions by adding them via the 'Marketplace'. You can bring up
+the Extensions from the menu bar under 'Code', 'Settings', 'Extensions'.
 
-You'll want to install and activate 'GitHub Pull Requests and Issues' as well
-as 'GitHub Copilot'. You will be directed to Sign In using your GitHub
-credentials. You may need to elect to 'enable' Copilot.
+You'll want to install and activate 'GitHub Pull Requests and Issues' as well as
+'GitHub Copilot'. You will be directed to Sign In using your GitHub credentials.
+You may need to elect to 'enable' Copilot.
 
 ## Setting up AutoSave in VSCode + RStudio
 
@@ -57,9 +112,9 @@ find the following pane:
 Set up Auto-save by checking the 'Automatically save when editor loses focus'
 and 'Apply'.
 
-In VSCode, select 'Code', 'Settings', then 'Settings' again from the menu bar
-to bring up the Settings tab in your console. Then type in 'auto save' in the
-top search bar, and select 'onFocusChange' for the 'Files: Auto Save' Setting.
+In VSCode, select 'Code', 'Settings', then 'Settings' again from the menu bar to
+bring up the Settings tab in your console. Then type in 'auto save' in the top
+search bar, and select 'onFocusChange' for the 'Files: Auto Save' Setting.
 
 ![](images/vscode%20autosave.png)
 
