@@ -82,7 +82,7 @@ And what it *should* look like:
 
 -   Always check your forked repository against the upstream repository before
     beginning your coding session and certainly before making any changes to the
-    code base using the terminal command `git fetch upstream` .
+    code base using the terminal command `git fetch upstream`.
 
     -   Think about using your commit history as bullet-point summaries of your
         future pull request. If you need to go back and make some change in your
