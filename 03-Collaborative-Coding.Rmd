@@ -6,7 +6,7 @@ editor_options:
 
 # Collaborative Coding and Workflow Best Practices
 
-Some sections of this document borrows liberally from the additional resources
+Some sections of this document borrow liberally from the additional resources
 listed at the end of the document.
 
 ## ROSSyndicate style guide
@@ -60,7 +60,7 @@ deep work time, we suggest using a few hacks:
 One aspect of literate code relative to style is that we expect code and code
 output to be readable in [nearly] any format. This means whether you are using
 the Visual editor in RStudio, you're reading a rendered .html or if you're
-viewing an Rmd on the web or in the Source editor of R Studio. To accomplish
+viewing an .Rmd on the web or in the Source editor of R Studio. To accomplish
 this, we suggest line character length no greater than 80. If you are in an
 .Rmd file, just add the last code chunk from the
 `style_snippets/markdown_helpers.Rmd`, save your file, and run the chunk. This
@@ -82,7 +82,7 @@ And what it *should* look like:
 
 -   Always check your forked repository against the upstream repository before
     beginning your coding session and certainly before making any changes to the
-    codebase using the terminal command `git fetch upstream`
+    code base using the terminal command `git fetch upstream`.
 
     -   Think about using your commit history as bullet-point summaries of your
         future pull request. If you need to go back and make some change in your
@@ -97,17 +97,17 @@ And what it *should* look like:
         'end of day commit').
 
     -   Commits should describe WHAT and WHY you've made changes/added to your
-        code
+        code.
 
 -   Always commit your changes to your local repository or branch and push to
-    GitHub at the end of your coding session as backup policy (as in: don't
-    leave changes untracked when leaving work), ideally this also will result in
-    a pull request to your internal creative partner. It's always easier to
-    write a pull request when your work is fresh in your mind.
+    GitHub at the end of your coding session as backup policy (i.e., don't leave
+    changes un-tracked when leaving work), ideally this also will result in a
+    pull request to your internal creative partner. It's always easier to write
+    a pull request when your work is fresh in your mind.
 
 ### Adding a co-author to your commit
 
-We strive to always attribute code as we develop our codebase. If you borrow
+We strive to always attribute code as we develop our code-base. If you borrow
 code from someone else's repository, or if someone has shared a code chunk with
 you, add them as a co-author on your commit. To add a co-author, you need to
 know the person's GitHub user name or their name and email (if they are not on

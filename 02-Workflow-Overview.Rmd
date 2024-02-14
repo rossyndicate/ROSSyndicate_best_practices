@@ -8,14 +8,14 @@ editor_options:
 
 If you are not already a member of the [ROSSyndicate GitHub
 Organization](https://github.com/rossyndicate), please Teams Katie Willi to add
-you.
+you!
 
 ## Starting a new repository
 
 1.  From the ROSSyndicate Organization landing page, create a new repository
     ('repo') with the appropriate naming convention (short/concise, no spaces).
-    Elect to start the repository with a README.md file and a MIT use license
-    file. After you've initialized your repository, go in and edit the third
+    Elect to start the repository with a README.md file and a **MIT use license
+    file**. After you've initialized your repository, go in and edit the third
     line of the license file to read: *'ROSS - Radical Open Science Syndicate
     and all contributors'*
 
@@ -31,6 +31,7 @@ your
 
     -   Create a basic folder structure for your project. Below are some folder
         types that you may wish to include at the initiation of your project.
+
         -   data: folder containing data sourced throughout the pipeline. For
             internal project, this should be a SymLink folder to a OneDrive
             folder (see 'Data and OneDrive') . For external
@@ -45,14 +46,27 @@ your
             This could include figures, summary data, etc. Your out/output
             folder could also live within the data folder, depending on the size
             of your project output.
+
     -   Populate the README.md with some basic information, including the
         primary contact for the repo, and what the repo is all about. Also
-        include the following use license blurb: *'This repository is covered by
-        the MIT use license. We request that all downstream uses of this work be
-        available to the public when possible.'*
+        include the following use license blurb: *'**This repository is covered
+        by the MIT use license. We request that all downstream uses of this work
+        be available to the public when possible.**'*
+
     -   Populate the *.gitignore* to ignore any folders or files that should not
-        be tracked.
+        be tracked. At a minimum, add these to all *.gitignore '*s:
+
+        ```{r, eval = FALSE}
+        .Rproj.user
+        .Rhistory
+        .RData
+        .Ruserdata
+        .DS_Store
+        **/.DS_Store
+        ```
+
     -   Create an R project associated with the repository directory.
+
     -   Commit and push these changes to your forked repository, then create a
         pull request to your creative partner (see 'Collaboration workflow
         overview').
@@ -80,7 +94,7 @@ your
     -   Then, clone your repo! You can acquire the `ssh_address` from your
         forked repository on the GitHub website. If I were cloning the repo
         below, I would replace `ssh_address` with
-        `git@github.com:steeleb/ROSSyndicate_best_practices`
+        `git@github.com:steeleb/ROSSyndicate_best_practices`.
 
         > git clone ssh_address
 
@@ -123,7 +137,7 @@ branches.)
 
     > git commit -m "insert commit message here"
 
-4.  Push your commit history to your forked repository
+4.  Push your commit history to your forked repository.
 
     > git push origin main
 
@@ -131,14 +145,14 @@ branches.)
     members of your project team through a pull request. See 'Pull Request best
     practices' below for details.
 
-    -   Navigate to your forked repository
+    -   Navigate to your forked repository.
 
     -   Confirm that your branch is up-to-date with the upstream repo by
-        clicking on 'Sync fork'
+        clicking on 'Sync fork'.
 
         ![](images/Screenshot%202023-07-27%20at%201.36.24%20PM.png)
 
-    -   Then, click 'Contribute' and 'Open pull request'
+    -   Then, click 'Contribute' and 'Open pull request'.
 
         ![](images/Screenshot%202023-07-27%20at%201.38.07%20PM.png){width="250"}
 
@@ -158,13 +172,15 @@ branches.)
 
         ![](images/request%20review.png){width="250"}
 
-    -   Click "Create Pull Request"
+    -   Click "Create Pull Request".
 
 7.  Internal creative partner (or engaged individuals) reviews the pull request
     according to 'Pull Request Review best practices' following the process
-    outlined in GitHub's How to Review Pull Requests. If no changes are
-    required, the reviewer will merge the branch, but if any comments have been
-    made on the pull request, leave the merging to the PR author.
+    outlined in GitHub's [How to Review Pull
+    Requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews).
+    If no changes are required, the reviewer will merge the branch, but if any
+    comments have been made on the pull request, leave the merging to the PR
+    author.
 
 ## Addressing merge conflicts
 

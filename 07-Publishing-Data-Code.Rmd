@@ -20,7 +20,7 @@ preferred method of archiving.
 ## Choosing a data repository
 
 The decision of which data repository to use is less straight forward. There
-are benefits and tradeoffs to each. The [Environmental Data Initiative
+are benefits and trade-offs to each. The [Environmental Data Initiative
 (EDI)](https://portal.edirepository.org/nis/home.jsp) requires a significant
 amount of metadata in the form of an EML (ecological metadata language) file
 that describes the data and is the best for .csv files, however, this metadata
@@ -209,7 +209,7 @@ a single source), or implicit (data have been altered for a specific purpose).
 As you prepare your data and metadata, it is important to think about the
 biases we contribute to a given dataset.
 
-To familarize yourself with bias that we introduce into our data and analyses,
+To familiarize yourself with bias that we introduce into our data and analyses,
 here are some resources:
 
 -   "Biases in lake water quality sampling and implications for macroscale

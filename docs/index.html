@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>ROSSyndicate Project and Workflow Best Practices</title>
   <meta name="description" content="The ROSSyndicate workflow best practices guide." />
-  <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
   <meta property="og:title" content="ROSSyndicate Project and Workflow Best Practices" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="ROSSyndicate" />
 
 
-<meta name="date" content="2024-01-22" />
+<meta name="date" content="2024-02-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -143,7 +143,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#overarching-codeworkflow-philosphies-of-the-rossyndicate"><i class="fa fa-check"></i><b>1.1</b> Overarching code/workflow philosphies of the ROSSyndicate</a></li>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#overarching-codeworkflow-philosophies-of-the-rossyndicate"><i class="fa fa-check"></i><b>1.1</b> Overarching code/workflow philosophies of the ROSSyndicate</a></li>
 <li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#contents"><i class="fa fa-check"></i><b>1.2</b> Contents</a></li>
 <li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#a-living-document"><i class="fa fa-check"></i><b>1.3</b> A living document</a></li>
 <li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#origin"><i class="fa fa-check"></i><b>1.4</b> Origin</a></li>
@@ -217,12 +217,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="8.3" data-path="archiving-data-and-code.html"><a href="archiving-data-and-code.html#philosophical-and-ethical-considerations"><i class="fa fa-check"></i><b>8.3</b> Philosophical and Ethical Considerations</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="python-integrations-in-rstudio.html"><a href="python-integrations-in-rstudio.html"><i class="fa fa-check"></i><b>9</b> Python Integrations in RStudio</a>
+<li class="chapter" data-level="9" data-path="python-integration-in-rstudio.html"><a href="python-integration-in-rstudio.html"><i class="fa fa-check"></i><b>9</b> Python Integration in RStudio</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="python-integrations-in-rstudio.html"><a href="python-integrations-in-rstudio.html#setting-up-a-python-virtual-environment"><i class="fa fa-check"></i><b>9.1</b> Setting up a python virtual environment</a>
+<li class="chapter" data-level="9.1" data-path="python-integration-in-rstudio.html"><a href="python-integration-in-rstudio.html#setting-up-a-python-virtual-environment"><i class="fa fa-check"></i><b>9.1</b> Setting up a python virtual environment</a>
 <ul>
-<li class="chapter" data-level="9.1.1" data-path="python-integrations-in-rstudio.html"><a href="python-integrations-in-rstudio.html#python-setup-code-snippet"><i class="fa fa-check"></i><b>9.1.1</b> Python setup code snippet</a></li>
-<li class="chapter" data-level="9.1.2" data-path="python-integrations-in-rstudio.html"><a href="python-integrations-in-rstudio.html#editing-the-pysetup.r-file"><i class="fa fa-check"></i><b>9.1.2</b> Editing the <code>pySetup.R</code> file</a></li>
+<li class="chapter" data-level="9.1.1" data-path="python-integration-in-rstudio.html"><a href="python-integration-in-rstudio.html#python-setup-code-snippet"><i class="fa fa-check"></i><b>9.1.1</b> Python setup code snippet</a></li>
+<li class="chapter" data-level="9.1.2" data-path="python-integration-in-rstudio.html"><a href="python-integration-in-rstudio.html#editing-the-pysetup.r-file"><i class="fa fa-check"></i><b>9.1.2</b> Editing the <code>pySetup.R</code> file</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="workflow-management-with-targets.html"><a href="workflow-management-with-targets.html"><i class="fa fa-check"></i><b>10</b> Workflow Management with {targets}</a>
@@ -274,67 +274,70 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="header">
 <h1 class="title">ROSSyndicate Project and Workflow Best Practices</h1>
 <p class="author"><em>ROSSyndicate</em></p>
-<p class="date"><em>2024-01-22</em></p>
+<p class="date"><em>2024-02-14</em></p>
 </div>
 <div id="about" class="section level1 hasAnchor" number="1">
 <h1><span class="header-section-number">Section 1</span> About<a href="index.html#about" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>This guide outlines the <a href="https://rossyndicate.com/">ROSSyndicate’s</a> project
-management expectations and workflow best practices so that we can successfully
-implement Radical Open Science.</p>
-<div id="overarching-codeworkflow-philosphies-of-the-rossyndicate" class="section level2 hasAnchor" number="1.1">
-<h2><span class="header-section-number">1.1</span> Overarching code/workflow philosphies of the ROSSyndicate<a href="index.html#overarching-codeworkflow-philosphies-of-the-rossyndicate" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This guide outlines the <a href="https://rossyndicate.com/">ROSSyndicate’s</a>
+project management expectations and workflow best practices so that we
+can successfully implement Radical Open Science.</p>
+<div id="overarching-codeworkflow-philosophies-of-the-rossyndicate" class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> Overarching code/workflow philosophies of the ROSSyndicate<a href="index.html#overarching-codeworkflow-philosophies-of-the-rossyndicate" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
-<li><p>We value literate, readable code without sacrificing reproducibility. This
-means deploying understandable code and repositories that are accompanied by
-narrative comments and text. We value transparency in our analyses and believe
-that well documented repositories and code facilitate that.</p></li>
-<li><p>All code and software are licensed with the highly permissive MIT use license.
-While we believe that all code and software should be public, we acknowledge
-that other researchers and users may wish to keep products derived from our
-code private. We intentionally avoid the GNU-GPL family of licenses that are
-“viral” by nature, forcing all downstream repositories to also be fully open.
-We do so because we acknowledge their are vulnerable populations that may want
-to keep their code private for reasons we may not understand. We hope that this
-encourages use of our code, and ultimately, creates an environment of sharing
-with and empowering each other.</p></li>
-<li><p>GitHub contributions follow the ‘fork’ methodology that is common in open
-science repositories (as opposed to the ‘branch’ method).</p></li>
-<li><p>All GitHub contributions are reviewed before being incorporated into the lab
-organization repository, except upon initial repository set up. These reviews
-are completed internally through pull requests. We value ‘bite-sized’ pull
-requests that usually only contain 500 lines of code.</p></li>
-<li><p>No code is formally published unless it has been consistently and intentionally
-reviewed. We make an effort to include external review of our repositories
-prior to formal publishing.</p></li>
-<li><p>We follow <a href="https://style.tidyverse.org/">the {tidyverse} style guide</a>. We use
-the {styler} Addin in RStudio to assist in linting our code.</p></li>
-<li><p>We strive use a set of common styles specific to the look and feel of rendered
-documents, which include: color palettes, ggthemes, and style.css files. These
-are meant to reduce the amount of time that researchers in this lab spend on
-relatively inconsequential decisions. Ideally the use of these aesthetics also
-creates a common look and feel of all deliverables from the ROSSyndicate.</p></li>
+<li><p>We value literate, readable code without sacrificing
+reproducibility. This means deploying understandable code and
+repositories that are accompanied by narrative comments and text. We
+value transparency in our analyses and believe that well documented
+repositories and code facilitate that.</p></li>
+<li><p>All code and software are licensed with the highly permissive MIT
+use license. While we believe that all code and software should be
+public, we acknowledge that other researchers and users may wish to
+keep products derived from our code private. We intentionally avoid
+the GNU-GPL family of licenses that are “viral” by nature, forcing
+all downstream repositories to also be fully open. We do so because
+we acknowledge their are vulnerable populations that may want to
+keep their code private for reasons we may not understand. We hope
+that this encourages use of our code, and ultimately, creates an
+environment of sharing with and empowering each other.</p></li>
+<li><p>GitHub contributions follow the ‘fork’ methodology that is common in
+open science repositories (as opposed to the ‘branch’ method).</p></li>
+<li><p>All GitHub contributions are reviewed before being incorporated into
+the lab organization repository, except upon initial repository set
+up. These reviews are completed internally through pull requests. We
+value ‘bite-sized’ pull requests that usually only contain 500 lines
+of code.</p></li>
+<li><p>No code is formally published unless it has been consistently and
+intentionally reviewed. We make an effort to include external review
+of our repositories prior to formal publishing.</p></li>
+<li><p>We follow <a href="https://style.tidyverse.org/">the {tidyverse} style
+guide</a>. We use the {styler} Addin in
+RStudio to assist in linting our code.</p></li>
+<li><p>We strive use a set of common styles specific to the look and feel
+of rendered documents, which include: color palettes, ggthemes, and
+style.css files. These are meant to reduce the amount of time that
+researchers in this lab spend on relatively inconsequential
+decisions. Ideally the use of these aesthetics also creates a common
+look and feel of all deliverables from the ROSSyndicate.</p></li>
 </ul>
 </div>
 <div id="contents" class="section level2 hasAnchor" number="1.2">
 <h2><span class="header-section-number">1.2</span> Contents<a href="index.html#contents" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>This best practices guide serves as an introduction to Git and GitHub, the
-lab’s style and code philosophies, and the tools we use for project management.</p>
+<p>This best practices guide serves as an introduction to Git and GitHub,
+the lab’s style and code philosophies, and the tools we use for project
+management.</p>
 </div>
 <div id="a-living-document" class="section level2 hasAnchor" number="1.3">
 <h2><span class="header-section-number">1.3</span> A living document<a href="index.html#a-living-document" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The workflow best practices document is a living document and all members of
-the ROSSyndicate are welcome to submit edits to it via pull request.</p>
+<p>The workflow best practices document is a living document and all
+members of the ROSSyndicate are welcome to submit edits to it via pull
+request.</p>
 </div>
 <div id="origin" class="section level2 hasAnchor" number="1.4">
 <h2><span class="header-section-number">1.4</span> Origin<a href="index.html#origin" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Adapted from the Geospatial Centroid’s GitHub Workflow Document, Caitlin
-Mothes, built out for ROSSyndicate by Katie Willi, B Steele, and Matt Brousil.</p>
+Mothes, built out for ROSSyndicate by Katie Willi, B Steele, and Matt
+Brousil.</p>
 
-<pre><code>## 
-## Attaching package: &#39;vembedr&#39;</code></pre>
-<pre><code>## The following object is masked from &#39;package:lubridate&#39;:
-## 
-##     hms</code></pre>
 </div>
 </div>
             </section>

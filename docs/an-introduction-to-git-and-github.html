@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Section 2 An Introduction to Git And GitHub | ROSSyndicate Project and Workflow Best Practices</title>
   <meta name="description" content="The ROSSyndicate workflow best practices guide." />
-  <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Section 2 An Introduction to Git And GitHub | ROSSyndicate Project and Workflow Best Practices" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="ROSSyndicate" />
 
 
-<meta name="date" content="2024-01-22" />
+<meta name="date" content="2024-02-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -143,7 +143,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#overarching-codeworkflow-philosphies-of-the-rossyndicate"><i class="fa fa-check"></i><b>1.1</b> Overarching code/workflow philosphies of the ROSSyndicate</a></li>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#overarching-codeworkflow-philosophies-of-the-rossyndicate"><i class="fa fa-check"></i><b>1.1</b> Overarching code/workflow philosophies of the ROSSyndicate</a></li>
 <li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#contents"><i class="fa fa-check"></i><b>1.2</b> Contents</a></li>
 <li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#a-living-document"><i class="fa fa-check"></i><b>1.3</b> A living document</a></li>
 <li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#origin"><i class="fa fa-check"></i><b>1.4</b> Origin</a></li>
@@ -217,12 +217,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="8.3" data-path="archiving-data-and-code.html"><a href="archiving-data-and-code.html#philosophical-and-ethical-considerations"><i class="fa fa-check"></i><b>8.3</b> Philosophical and Ethical Considerations</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="python-integrations-in-rstudio.html"><a href="python-integrations-in-rstudio.html"><i class="fa fa-check"></i><b>9</b> Python Integrations in RStudio</a>
+<li class="chapter" data-level="9" data-path="python-integration-in-rstudio.html"><a href="python-integration-in-rstudio.html"><i class="fa fa-check"></i><b>9</b> Python Integration in RStudio</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="python-integrations-in-rstudio.html"><a href="python-integrations-in-rstudio.html#setting-up-a-python-virtual-environment"><i class="fa fa-check"></i><b>9.1</b> Setting up a python virtual environment</a>
+<li class="chapter" data-level="9.1" data-path="python-integration-in-rstudio.html"><a href="python-integration-in-rstudio.html#setting-up-a-python-virtual-environment"><i class="fa fa-check"></i><b>9.1</b> Setting up a python virtual environment</a>
 <ul>
-<li class="chapter" data-level="9.1.1" data-path="python-integrations-in-rstudio.html"><a href="python-integrations-in-rstudio.html#python-setup-code-snippet"><i class="fa fa-check"></i><b>9.1.1</b> Python setup code snippet</a></li>
-<li class="chapter" data-level="9.1.2" data-path="python-integrations-in-rstudio.html"><a href="python-integrations-in-rstudio.html#editing-the-pysetup.r-file"><i class="fa fa-check"></i><b>9.1.2</b> Editing the <code>pySetup.R</code> file</a></li>
+<li class="chapter" data-level="9.1.1" data-path="python-integration-in-rstudio.html"><a href="python-integration-in-rstudio.html#python-setup-code-snippet"><i class="fa fa-check"></i><b>9.1.1</b> Python setup code snippet</a></li>
+<li class="chapter" data-level="9.1.2" data-path="python-integration-in-rstudio.html"><a href="python-integration-in-rstudio.html#editing-the-pysetup.r-file"><i class="fa fa-check"></i><b>9.1.2</b> Editing the <code>pySetup.R</code> file</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="workflow-management-with-targets.html"><a href="workflow-management-with-targets.html"><i class="fa fa-check"></i><b>10</b> Workflow Management with {targets}</a>
@@ -274,12 +274,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="an-introduction-to-git-and-github" class="section level1 hasAnchor" number="2">
 <h1><span class="header-section-number">Section 2</span> An Introduction to Git And GitHub<a href="an-introduction-to-git-and-github.html#an-introduction-to-git-and-github" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Git is a version control system that helps manage projects, especially projects
-that involve multiple people. GitHub is a hosting service for these Git
-projects (in GitHub-speak, projects are housed in <strong>repositories</strong>). Here, we
-will outline how to set up Git, create your own GitHub account, and connect
-them to you local R environment to easily publish and share the code you
-develop. A great article on the benefits of using Git and GitHub has been
-written by Jennifer Bryan, which you can find
+that involve multiple people. GitHub is a hosting service for these Git projects
+(in GitHub-speak, projects are housed in <strong>repositories</strong>). Here, we will
+outline how to set up Git, create your own GitHub account, and connect them to
+you local R environment to easily publish and share the code you develop. A
+great article on the benefits of using Git and GitHub has been written by
+Jennifer Bryan, which you can find
 <a href="https://happygitwithr.com/big-picture.html">here</a> and we highly recommend
 reading!</p>
 <p>In fact, Jennifer Bryan has developed what we feel is the best guide for using
@@ -292,8 +292,8 @@ this outline will mostly just direct you to that body of work.</p>
 to set up your own GitHub account, install Git, and allow them to interact with
 your personal R environment. It’s also a great primer for how Git and GitHub
 work in R Studio.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="an-introduction-to-git-and-github.html#cb4-1" tabindex="-1"></a><span class="fu">embed_url</span>(<span class="st">&quot;https://www.youtube.com/watch?v=Y4sOTFV3FAM&amp;t=1s&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb4-2"><a href="an-introduction-to-git-and-github.html#cb4-2" tabindex="-1"></a>  <span class="fu">use_align</span>(<span class="st">&quot;center&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="an-introduction-to-git-and-github.html#cb1-1" tabindex="-1"></a><span class="fu">embed_url</span>(<span class="st">&quot;https://www.youtube.com/watch?v=Y4sOTFV3FAM&amp;t=1s&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1-2"><a href="an-introduction-to-git-and-github.html#cb1-2" tabindex="-1"></a>  <span class="fu">use_align</span>(<span class="st">&quot;center&quot;</span>)</span></code></pre></div>
 <div class="vembedr" align="center">
 <div>
 <iframe src="https://www.youtube.com/embed/Y4sOTFV3FAM?start=1" width="533" height="300" frameborder="0" allowfullscreen="" data-external="1"></iframe>
@@ -301,8 +301,8 @@ work in R Studio.</p>
 </div>
 <p><strong>Key takeaways:</strong></p>
 <ol style="list-style-type: decimal">
-<li>Create a GitHub account. (see
-<a href="https://happygitwithr.com/github-acct.html" class="uri">https://happygitwithr.com/github-acct.html</a>) <br></li>
+<li>Create a GitHub account. (see <a href="https://happygitwithr.com/github-acct.html" class="uri">https://happygitwithr.com/github-acct.html</a>)
+<br></li>
 <li>Install Git on you local computer. (see
 <a href="https://happygitwithr.com/install-git.html" class="uri">https://happygitwithr.com/install-git.html</a>) <br></li>
 <li>In the R Studio Terminal, connect your GitHub account to your local
@@ -312,20 +312,20 @@ computer. (see <a href="https://happygitwithr.com/hello-git.html" class="uri">ht
 <div id="developing-viewing-and-editing-repositories" class="section level2 hasAnchor" number="2.2">
 <h2><span class="header-section-number">2.2</span> Developing, viewing, and editing repositories<a href="an-introduction-to-git-and-github.html#developing-viewing-and-editing-repositories" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>As mentioned in Matt’s video (~7:53), creating a repository is the first step
-when starting a brand-new Git project. Essentially, a <strong>repository</strong> is the
-main folder in which all the files and code related to a project live. For any
+when starting a brand-new Git project. Essentially, a <strong>repository</strong> is the main
+folder in which all the files and code related to a project live. For any
 repository on GitHub, there are two ways of copying it to your local computer:
 <strong>cloning</strong> and <strong>forking</strong>.</p>
 <div id="cloning" class="section level3 hasAnchor" number="2.2.1">
 <h3><span class="header-section-number">2.2.1</span> Cloning<a href="an-introduction-to-git-and-github.html#cloning" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Cloning a repository maps a local version of that repository to your computer,
-allowing you to sync-up both the local (your computer) and remote (what’s on
-GitHub) versions. This type of copying is useful for workflows where you are
-the only one working on them. If you clone a repository that you did not create
+allowing you to sync both the local (your computer) and remote (what’s on
+GitHub) versions. This type of copying is useful for workflows where you are the
+only one working on them. If you clone a repository that you did not create
 yourself, you will be unable to make changes to the ‘main’ repository hosted on
-GitHub unless the developer has given your account collaborator approval, but
-it <em>will</em> allow you to refresh and update what’s on your local computer if
-changes have been made to what’s on the ‘main’ repository on GitHub.</p>
+GitHub unless the developer has given your account collaborator approval, but it
+<em>will</em> allow you to refresh and update what’s on your local computer if changes
+have been made to what’s on the ‘main’ repository on GitHub.</p>
 <p>However, for a repository that you have created yourself or are a collaborator
 on, cloning allows two-way syncing; you are able to make changes to the GitHub
 repository as well as update what’s on your local computer if the GitHub
@@ -336,10 +336,10 @@ essentially packages and saves the changes you made; it also allows you to
 comment on what exactly you changed in the repository. Meanwhile, the <strong>push</strong>
 command sends those changes that were packaged by the commmit to GitHub and
 updates the remote repository on GitHub accordingly. Because cloning creates a
-direct connection between the GitHub ‘main’ repository and what you’ve cloned
-to your local computer, you can only push changes to repositories that are
-located in your own GitHub account, or to repositories that the developer of
-the repository has explicitly made you a collaborator on.</p>
+direct connection between the GitHub ‘main’ repository and what you’ve cloned to
+your local computer, you can only push changes to repositories that are located
+in your own GitHub account, or to repositories that the developer of the
+repository has explicitly made you a collaborator on.</p>
 <p><strong>How to clone and update your GitHub</strong>:</p>
 <ol style="list-style-type: decimal">
 <li>Create a repository on GitHub.
@@ -348,8 +348,7 @@ the repository has explicitly made you a collaborator on.</p>
 <li>Clone the repository to your computer. (see
 <a href="https://happygitwithr.com/rstudio-git-github.html#clone-the-test-github-repository-to-your-computer-via-rstudio" class="uri">https://happygitwithr.com/rstudio-git-github.html#clone-the-test-github-repository-to-your-computer-via-rstudio</a>)
 <br></li>
-<li>After changes have been made, commit and push them to your GitHub.
-(see
+<li>After changes have been made, commit and push them to your GitHub. (see
 <a href="https://happygitwithr.com/rstudio-git-github.html#make-local-changes-save-commit" class="uri">https://happygitwithr.com/rstudio-git-github.html#make-local-changes-save-commit</a>)</li>
 </ol>
 </div>
@@ -359,23 +358,23 @@ the repository has explicitly made you a collaborator on.</p>
 of a repository that is housed within your own personal GitHub account.
 Specifically, if you’ve made changes to the code in a forked repository then
 committed and pushed those changes, it does not automatically make those same
-changes to the ‘main’ repository that it was forked from on GitHub. Instead,
-all changes are saved and stored only within the repository hosted within your
-own GitHub account.</p>
+changes to the ‘main’ repository that it was forked from on GitHub. Instead, all
+changes are saved and stored only within the repository hosted within your own
+GitHub account.</p>
 <p>Forking essentially creates a line of defense for changes in a workflow that
-would otherwise disrupt the workflows of other people working within that
-‘main’ repository project. For the ‘main’ repository to be updated with the
-changes you made in your forked version, you must submit a pull request.</p>
+would otherwise disrupt the workflows of other people working within that ‘main’
+repository project. For the ‘main’ repository to be updated with the changes you
+made in your forked version, you must submit a pull request.</p>
 <p>A <strong>pull request</strong> is an invitation to the owner of the ‘main’ repository to
-review the changes you’ve made to the code and potentially merge them into
-their ‘main’ repository. If the owner/reviewer finds that the code you’ve
-developed would be a good addition to the workflow and/or that the code has not
-diverged/disrupted others’ workflows, they can approve the pull request, and
-the ‘main’ repository will be updated accordingly.</p>
+review the changes you’ve made to the code and potentially merge them into their
+‘main’ repository. If the owner/reviewer finds that the code you’ve developed
+would be a good addition to the workflow and/or that the code has not
+diverged/disrupted others’ workflows, they can approve the pull request, and the
+‘main’ repository will be updated accordingly.</p>
 <p>Matt and a former grad student, Bryce Pulver, made another excellent video that
 walks through an example collaborative workflow using forking:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="an-introduction-to-git-and-github.html#cb5-1" tabindex="-1"></a><span class="fu">embed_url</span>(<span class="st">&quot;https://www.youtube.com/watch?v=a_YY_PIDeq8&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb5-2"><a href="an-introduction-to-git-and-github.html#cb5-2" tabindex="-1"></a>  <span class="fu">use_align</span>(<span class="st">&quot;center&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="an-introduction-to-git-and-github.html#cb2-1" tabindex="-1"></a><span class="fu">embed_url</span>(<span class="st">&quot;https://www.youtube.com/watch?v=a_YY_PIDeq8&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb2-2"><a href="an-introduction-to-git-and-github.html#cb2-2" tabindex="-1"></a>  <span class="fu">use_align</span>(<span class="st">&quot;center&quot;</span>)</span></code></pre></div>
 <div class="vembedr" align="center">
 <div>
 <iframe src="https://www.youtube.com/embed/a_YY_PIDeq8" width="533" height="300" frameborder="0" allowfullscreen="" data-external="1"></iframe>
@@ -383,22 +382,20 @@ walks through an example collaborative workflow using forking:</p>
 </div>
 <p><strong>How to fork and submit a pull request</strong></p>
 <ol style="list-style-type: decimal">
-<li>Fork the repository on GitHub, then clone the forked repository to
-your local environment. (see
+<li>Fork the repository on GitHub, then clone the forked repository to your
+local environment. (see
 <a href="https://happygitwithr.com/fork-and-clone.html#fork-and-clone-without-usethis" class="uri">https://happygitwithr.com/fork-and-clone.html#fork-and-clone-without-usethis</a>)
 <br></li>
-<li>Create a direct connection with the main repository to keep your
-personal repository up-to-date. (see
-<a href="https://happygitwithr.com/fork-and-clone.html#fork-and-clone-finish" class="uri">https://happygitwithr.com/fork-and-clone.html#fork-and-clone-finish</a>)
-<br></li>
-<li>After changes have been made to the repository on your local
-computer, commit and push them to the forked repository on your
-personal GitHub. (see
+<li>Create a direct connection with the main repository to keep your personal
+repository up-to-date. (see
+<a href="https://happygitwithr.com/fork-and-clone.html#fork-and-clone-finish" class="uri">https://happygitwithr.com/fork-and-clone.html#fork-and-clone-finish</a>) <br></li>
+<li>After changes have been made to the repository on your local computer,
+commit and push them to the forked repository on your personal GitHub. (see
 <a href="https://happygitwithr.com/rstudio-git-github.html#make-local-changes-save-commit" class="uri">https://happygitwithr.com/rstudio-git-github.html#make-local-changes-save-commit</a>,
 or Bryce at ~25:45) <br></li>
-<li>Go to GitHub in your web browser. Submit a pull request by going to
-the main repository and selecting and creating a pull request.
-(Bryce does this at ~31:40)</li>
+<li>Go to GitHub in your web browser. Submit a pull request by going to the main
+repository and selecting and creating a pull request. (Bryce does this at
+~31:40)</li>
 </ol>
 </div>
 </div>
@@ -407,8 +404,8 @@ the main repository and selecting and creating a pull request.
 <p>When you create a new repository you can choose whether you’d like its
 visibility to be public or private. Within the lab our default expectation is
 public, in order to make our work open and reproducible. However, in certain
-circumstances repositories will be need to be private or visibility will need
-to change during the lifecycle of a project.</p>
+circumstances repositories will be need to be private or visibility will need to
+change during the lifecycle of a project.</p>
 <p>Before you make a change to the visibility of a repository, it’s important to
 make sure that all of your forks are up to date and to warn any of your
 collaborators that you are going to make this change. Changing visibility
@@ -420,14 +417,15 @@ important to prepare for.</p>
 repository is severed:</p>
 <ol style="list-style-type: decimal">
 <li><p><strong>Rename your fork.</strong> This will enable you to have this (old) fork exist at
-the same time as a new fork in step 2</p></li>
-<li><p><strong>Create a second fork of the repository</strong></p></li>
-<li><p><strong>Remove all files from the new fork</strong></p></li>
+the same time as a new fork in step 2.</p></li>
+<li><p><strong>Create a second fork of the repository.</strong></p></li>
+<li><p><strong>Remove all files from the new fork.</strong></p></li>
 <li><p><strong>Clone your existing fork locally using this command in the command
-prompt:</strong> <code>git clone --bare https://your_original_fork_url</code></p></li>
-<li><p><strong>Move into the newly created folder from step 4</strong> using <code>cd your_original_fork_folder</code></p></li>
+prompt:</strong> <code>git clone --bare https://your_original_fork_url.</code></p></li>
+<li><p><strong>Move into the newly created folder from step 4</strong> using
+<code>cd your_original_fork_folder.</code></p></li>
 <li><p><strong>Run the following command.</strong> It will push the branch and commit history
-into the new fork: <code>git push --mirror https://new_fork_url</code></p></li>
+into the new fork: <code>git push --mirror https://new_fork_url.</code></p></li>
 </ol>
 <p><em>Instructions adapted from <a href="https://dev.to/ismailpe/duplicating-a-github-repo-with-history-3223">this
 post</a> and
@@ -437,13 +435,14 @@ input from B Steele.</em></p>
 <div id="additional-resources" class="section level2 hasAnchor" number="2.4">
 <h2><span class="header-section-number">2.4</span> Additional resources<a href="an-introduction-to-git-and-github.html#additional-resources" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Below is a list of additional resources about GitHub and collaborative
-workflows. <br> • GitHub website (<a href="https://docs.github.com/en" class="uri">https://docs.github.com/en</a>) <br> • Forked
-workflows
-(<a href="https://www.atlassian.com/git/tutorials/comparing-workflows/forking-workflow" class="uri">https://www.atlassian.com/git/tutorials/comparing-workflows/forking-workflow</a>)
-<br> • Using Git and GitHub for team collaboration
-(<a href="https://medium.com/anne-kerrs-blog/using-git-and-github-for-team-collaboration-e761e7c00281" class="uri">https://medium.com/anne-kerrs-blog/using-git-and-github-for-team-collaboration-e761e7c00281</a>)
-<br> • Starting a new group project on GitHub
-(<a href="https://www.digitalcrafts.com/blog/learn-how-start-new-group-project-github" class="uri">https://www.digitalcrafts.com/blog/learn-how-start-new-group-project-github</a>)</p>
+workflows.</p>
+<p>• GitHub website (<a href="https://docs.github.com/en" class="uri">https://docs.github.com/en</a>).</p>
+<p>• Forked workflows
+(<a href="https://www.atlassian.com/git/tutorials/comparing-workflows/forking-workflow" class="uri">https://www.atlassian.com/git/tutorials/comparing-workflows/forking-workflow</a>).</p>
+<p>• Using Git and GitHub for team collaboration
+(<a href="https://medium.com/anne-kerrs-blog/using-git-and-github-for-team-collaboration-e761e7c00281" class="uri">https://medium.com/anne-kerrs-blog/using-git-and-github-for-team-collaboration-e761e7c00281</a>).</p>
+<p>• Starting a new group project on GitHub
+(<a href="https://www.digitalcrafts.com/blog/learn-how-start-new-group-project-github" class="uri">https://www.digitalcrafts.com/blog/learn-how-start-new-group-project-github</a>).</p>
 
 </div>
 </div>

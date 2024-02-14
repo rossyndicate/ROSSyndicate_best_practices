@@ -10,12 +10,12 @@ As a member of our lab, we would like you to update our "People" page to include
 you! Here we will lay out the steps for you to fork our lab website repository,
 add yourself to our "People" page, and lastly, send a pull request to the
 ROSSyndicate to make these changes on the official website. This is a great
-chance for you to employ those best practices that we reviewed in the
-ROSSyndicate Best Practices Guide [[will need to link later]].
+chance for you to employ those best practices learned in this document.
 
 ## Directions:
 
-• Fork the [lab's website repository](https://github.com/ROSSyndicate/lab_website).
+• Fork the [lab's website
+repository](https://github.com/ROSSyndicate/lab_website).
 
 • Once in your own R environment, create a copy of Matt's bio folder (found in
 **content/authors/**); rename to your first name.

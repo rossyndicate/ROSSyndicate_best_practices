@@ -40,8 +40,8 @@ embed_url("https://www.youtube.com/watch?v=Y4sOTFV3FAM&t=1s") %>%
 
 **Key takeaways:**
 
-1) Create a GitHub account. (see
-    <https://happygitwithr.com/github-acct.html>) <br>
+1) Create a GitHub account. (see <https://happygitwithr.com/github-acct.html>)
+    <br>
 2) Install Git on you local computer. (see
     <https://happygitwithr.com/install-git.html>) <br>
 3) In the R Studio Terminal, connect your GitHub account to your local
@@ -58,7 +58,7 @@ repository on GitHub, there are two ways of copying it to your local computer:
 ### Cloning
 
 Cloning a repository maps a local version of that repository to your computer,
-allowing you to sync-up both the local (your computer) and remote (what's on
+allowing you to sync both the local (your computer) and remote (what's on
 GitHub) versions. This type of copying is useful for workflows where you are
 the only one working on them. If you clone a repository that you did not create
 yourself, you will be unable to make changes to the 'main' repository hosted on
@@ -90,8 +90,7 @@ the repository has explicitly made you a collaborator on.
 2) Clone the repository to your computer. (see
     <https://happygitwithr.com/rstudio-git-github.html#clone-the-test-github-repository-to-your-computer-via-rstudio>)
     <br>
-3) After changes have been made, commit and push them to your GitHub.
-    (see
+3) After changes have been made, commit and push them to your GitHub. (see
     <https://happygitwithr.com/rstudio-git-github.html#make-local-changes-save-commit>)
 
 ### Forking
@@ -126,22 +125,20 @@ embed_url("https://www.youtube.com/watch?v=a_YY_PIDeq8") %>%
 
 **How to fork and submit a pull request**
 
-1) Fork the repository on GitHub, then clone the forked repository to
-    your local environment. (see
+1) Fork the repository on GitHub, then clone the forked repository to your
+    local environment. (see
     <https://happygitwithr.com/fork-and-clone.html#fork-and-clone-without-usethis>)
     <br>
-2) Create a direct connection with the main repository to keep your
-    personal repository up-to-date. (see
-    <https://happygitwithr.com/fork-and-clone.html#fork-and-clone-finish>)
-    <br>
-3) After changes have been made to the repository on your local
-    computer, commit and push them to the forked repository on your
-    personal GitHub. (see
+2) Create a direct connection with the main repository to keep your personal
+    repository up-to-date. (see
+    <https://happygitwithr.com/fork-and-clone.html#fork-and-clone-finish>) <br>
+3) After changes have been made to the repository on your local computer,
+    commit and push them to the forked repository on your personal GitHub. (see
     <https://happygitwithr.com/rstudio-git-github.html#make-local-changes-save-commit>,
     or Bryce at \~25:45) <br>
-4) Go to GitHub in your web browser. Submit a pull request by going to
-    the main repository and selecting and creating a pull request.
-    (Bryce does this at \~31:40)
+4) Go to GitHub in your web browser. Submit a pull request by going to the main
+    repository and selecting and creating a pull request. (Bryce does this at
+    \~31:40)
 
 ## Making changes to repository visibility
 
@@ -162,21 +159,21 @@ important to prepare for.
 You can follow these steps if the connection between your fork and the upstream
 repository is severed:
 
-1. **Rename your fork.** This will enable you to have this (old) fork exist at
-the same time as a new fork in step 2
+1.  **Rename your fork.** This will enable you to have this (old) fork exist at
+    the same time as a new fork in step 2.
 
-2. **Create a second fork of the repository**
+2.  **Create a second fork of the repository.**
 
-3. **Remove all files from the new fork**
+3.  **Remove all files from the new fork.**
 
-4. **Clone your existing fork locally using this command in the command
-prompt:** `git clone --bare https://your_original_fork_url`
+4.  **Clone your existing fork locally using this command in the command
+    prompt:** `git clone --bare https://your_original_fork_url.`
 
-5. **Move into the newly created folder from step 4** using `cd
-your_original_fork_folder`
+5.  **Move into the newly created folder from step 4** using
+    `cd your_original_fork_folder.`
 
-6. **Run the following command.** It will push the branch and commit history
-into the new fork: `git push --mirror https://new_fork_url`
+6.  **Run the following command.** It will push the branch and commit history
+    into the new fork: `git push --mirror https://new_fork_url.`
 
 *Instructions adapted from [this
 post](https://dev.to/ismailpe/duplicating-a-github-repo-with-history-3223) and
@@ -185,13 +182,18 @@ input from B Steele.*
 ## Additional resources
 
 Below is a list of additional resources about GitHub and collaborative
-workflows. <br> • GitHub website (<https://docs.github.com/en>) <br> • Forked
-workflows
-(<https://www.atlassian.com/git/tutorials/comparing-workflows/forking-workflow>)
-<br> • Using Git and GitHub for team collaboration
-(<https://medium.com/anne-kerrs-blog/using-git-and-github-for-team-collaboration-e761e7c00281>)
-<br> • Starting a new group project on GitHub
-(<https://www.digitalcrafts.com/blog/learn-how-start-new-group-project-github>)
+workflows.
+
+• GitHub website (<https://docs.github.com/en>).
+
+• Forked workflows
+(<https://www.atlassian.com/git/tutorials/comparing-workflows/forking-workflow>).
+
+• Using Git and GitHub for team collaboration
+(<https://medium.com/anne-kerrs-blog/using-git-and-github-for-team-collaboration-e761e7c00281>).
+
+• Starting a new group project on GitHub
+(<https://www.digitalcrafts.com/blog/learn-how-start-new-group-project-github>).
 
 ```{r, echo = F}
 knitr::wrap_rmd('01-intro-to-git-github.Rmd', width = 80, backup = NULL)

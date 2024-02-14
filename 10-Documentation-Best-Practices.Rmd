@@ -23,11 +23,11 @@ that others know what your repo does and who to ask questions about it!
     -   If there is an end product (say, a Shiny app), state what that is - and
         if it is deployed, link it to the README.
 
--   A primary contact for the repo. If you include your email, spell out dot and
-    at so that you don't get spammed.
+-   A primary contact for the repo. If you include your email, spell out "dot"
+    and "at" so that you don't get spammed.
 
 -   A brief overview of the repo architecture. An onlooker might not know what
-    'src' is, so and overview for a repo that has a `src` and `data` folder
+    `src` is, so and overview for a repo that has a `src` and `data` folder
     might look like this:
 
     > **Folder Descriptions:**
@@ -135,19 +135,19 @@ the extension 'autoDocstring'. This will automatically populate the 'Args' and
 
 ## Bookdown Documentation
 
-We will often use {bookdown} to document large projects, especially when using 
-{targets}. {bookdown} is a package that allows you to create a book-like 
+We will often use {bookdown} to document large projects, especially when using
+{targets}. {bookdown} is a package that allows you to create a book-like
 document and deploy as a github.io website, if desired. You can also render to
-.pdfs. 
+.pdfs.
 
 ### General style guidance
 
-Keep your repository tidy by putting your bookdown .Rmd files, index.Rmd, and 
+Keep your repository tidy by putting your bookdown .Rmd files, index.Rmd, and
 associated .yml files into their own directory called "bookdown". The output
-directory should be set to "docs" in the _bookdown.yml file. See this example of
-.yml content:
+directory should be set to "docs" in the \_bookdown.yml file. See this example
+of .yml content:
 
-```
+```         
 delete_merged_file: true
 output_dir: "../docs"
 language:
@@ -158,6 +158,4 @@ language:
 Note that the `output_dir` is set in reference to where the bookdown is being
 rendered (in the "bookdown/" directory).
 
-Keep your headers to 3 subheadings ("###') or fewer. 
-
-
+Keep your headers to 3 subheadings ("\###') or fewer.

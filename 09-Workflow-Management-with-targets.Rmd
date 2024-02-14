@@ -154,14 +154,17 @@ functions that are needed in your script in the `command` list so that
 does not actively track any output from `source_python()`, so again, you'll
 have to get creative!
 
-**Rendering a Bookdown in {targets} ** *[placeholder]*
+**Rendering a Bookdown in {targets}** *[placeholder]*
 
 ### Resources
 
 Below are links to resources to help you learn more about {targets} and
 implementing workflow management software:
 
--   [The {targets} R package user manual](https://books.ropensci.org/targets/) + [Improving ecological data science with workflow management software](https://doi.org/10.1111/2041-210X.14113) + [Targets for Ecologists](https://targets-ecology.netlify.app/)
+-   [The {targets} R package user manual](https://books.ropensci.org/targets/) +
+    [Improving ecological data science with workflow management
+    software](https://doi.org/10.1111/2041-210X.14113) + [Targets for
+    Ecologists](https://targets-ecology.netlify.app/)
 
 ```{r, echo = F}
 knitr::wrap_rmd('09-Workflow-Management-with-targets.Rmd', width = 80, backup = NULL)
