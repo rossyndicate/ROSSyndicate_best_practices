@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Section 3 Workflow Overview | ROSSyndicate Project and Workflow Best Practices</title>
   <meta name="description" content="The ROSSyndicate workflow best practices guide." />
-  <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Section 3 Workflow Overview | ROSSyndicate Project and Workflow Best Practices" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="ROSSyndicate" />
 
 
-<meta name="date" content="2024-01-22" />
+<meta name="date" content="2024-02-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -143,7 +143,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#overarching-codeworkflow-philosphies-of-the-rossyndicate"><i class="fa fa-check"></i><b>1.1</b> Overarching code/workflow philosphies of the ROSSyndicate</a></li>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#overarching-codeworkflow-philosophies-of-the-rossyndicate"><i class="fa fa-check"></i><b>1.1</b> Overarching code/workflow philosophies of the ROSSyndicate</a></li>
 <li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#contents"><i class="fa fa-check"></i><b>1.2</b> Contents</a></li>
 <li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#a-living-document"><i class="fa fa-check"></i><b>1.3</b> A living document</a></li>
 <li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#origin"><i class="fa fa-check"></i><b>1.4</b> Origin</a></li>
@@ -217,12 +217,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="8.3" data-path="archiving-data-and-code.html"><a href="archiving-data-and-code.html#philosophical-and-ethical-considerations"><i class="fa fa-check"></i><b>8.3</b> Philosophical and Ethical Considerations</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="python-integrations-in-rstudio.html"><a href="python-integrations-in-rstudio.html"><i class="fa fa-check"></i><b>9</b> Python Integrations in RStudio</a>
+<li class="chapter" data-level="9" data-path="python-integration-in-rstudio.html"><a href="python-integration-in-rstudio.html"><i class="fa fa-check"></i><b>9</b> Python Integration in RStudio</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="python-integrations-in-rstudio.html"><a href="python-integrations-in-rstudio.html#setting-up-a-python-virtual-environment"><i class="fa fa-check"></i><b>9.1</b> Setting up a python virtual environment</a>
+<li class="chapter" data-level="9.1" data-path="python-integration-in-rstudio.html"><a href="python-integration-in-rstudio.html#setting-up-a-python-virtual-environment"><i class="fa fa-check"></i><b>9.1</b> Setting up a python virtual environment</a>
 <ul>
-<li class="chapter" data-level="9.1.1" data-path="python-integrations-in-rstudio.html"><a href="python-integrations-in-rstudio.html#python-setup-code-snippet"><i class="fa fa-check"></i><b>9.1.1</b> Python setup code snippet</a></li>
-<li class="chapter" data-level="9.1.2" data-path="python-integrations-in-rstudio.html"><a href="python-integrations-in-rstudio.html#editing-the-pysetup.r-file"><i class="fa fa-check"></i><b>9.1.2</b> Editing the <code>pySetup.R</code> file</a></li>
+<li class="chapter" data-level="9.1.1" data-path="python-integration-in-rstudio.html"><a href="python-integration-in-rstudio.html#python-setup-code-snippet"><i class="fa fa-check"></i><b>9.1.1</b> Python setup code snippet</a></li>
+<li class="chapter" data-level="9.1.2" data-path="python-integration-in-rstudio.html"><a href="python-integration-in-rstudio.html#editing-the-pysetup.r-file"><i class="fa fa-check"></i><b>9.1.2</b> Editing the <code>pySetup.R</code> file</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="workflow-management-with-targets.html"><a href="workflow-management-with-targets.html"><i class="fa fa-check"></i><b>10</b> Workflow Management with {targets}</a>
@@ -275,25 +275,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">Section 3</span> Workflow Overview<a href="workflow-overview.html#workflow-overview" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>If you are not already a member of the <a href="https://github.com/rossyndicate">ROSSyndicate GitHub
 Organization</a>, please Teams Katie Willi to add
-you.</p>
+you!</p>
 <div id="starting-a-new-repository" class="section level2 hasAnchor" number="3.1">
 <h2><span class="header-section-number">3.1</span> Starting a new repository<a href="workflow-overview.html#starting-a-new-repository" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ol style="list-style-type: decimal">
 <li><p>From the ROSSyndicate Organization landing page, create a new repository
 (‘repo’) with the appropriate naming convention (short/concise, no spaces).
-Elect to start the repository with a README.md file and a MIT use license
-file. After you’ve initialized your repository, go in and edit the third
+Elect to start the repository with a README.md file and a <strong>MIT use license
+file</strong>. After you’ve initialized your repository, go in and edit the third
 line of the license file to read: <em>‘ROSS - Radical Open Science Syndicate
 and all contributors’</em></p></li>
 <li><p>Add collaborators with write/push access by going to repo Settings -&gt;
 Manage Access -&gt; Invite a Collaborator.</p></li>
-<li><p>After you have forked the repository to your account, clone the repo to your
+<li><p>After you have forked the repository to your account, clone the repo to
+your
 local machine (see Forking and Cloning ROSSyndicate Repositories).</p></li>
 <li><p>Once the repo is stored on your local machine create the general
 architecture for your repository.</p>
 <ul>
-<li>Create a basic folder structure for your project. Below are some folder
-types that you may wish to include at the initiation of your project.
+<li><p>Create a basic folder structure for your project. Below are some folder
+types that you may wish to include at the initiation of your project.</p>
 <ul>
 <li><p>data: folder containing data sourced throughout the pipeline. For
 internal project, this should be a SymLink folder to a OneDrive
@@ -308,17 +309,23 @@ This could include figures, summary data, etc. Your out/output
 folder could also live within the data folder, depending on the size
 of your project output.</p></li>
 </ul></li>
-<li>Populate the README.md with some basic information, including the
+<li><p>Populate the README.md with some basic information, including the
 primary contact for the repo, and what the repo is all about. Also
-include the following use license blurb: <em>‘This repository is covered by
-the MIT use license. We request that all downstream uses of this work be
-available to the public when possible.’</em></li>
-<li>Populate the <em>.gitignore</em> to ignore any folders or files that should not
-be tracked.</li>
-<li>Create an R project associated with the repository directory.</li>
-<li>Commit and push these changes to your forked repository, then create a
+include the following use license blurb: <em>‘<strong>This repository is covered
+by the MIT use license. We request that all downstream uses of this work
+be available to the public when possible.</strong>’</em></p></li>
+<li><p>Populate the <em>.gitignore</em> to ignore any folders or files that should not
+be tracked. At a minimum, add these to all <em>.gitignore ’</em>s:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="workflow-overview.html#cb5-1" tabindex="-1"></a>.Rproj.user</span>
+<span id="cb5-2"><a href="workflow-overview.html#cb5-2" tabindex="-1"></a>.Rhistory</span>
+<span id="cb5-3"><a href="workflow-overview.html#cb5-3" tabindex="-1"></a>.RData</span>
+<span id="cb5-4"><a href="workflow-overview.html#cb5-4" tabindex="-1"></a>.Ruserdata</span>
+<span id="cb5-5"><a href="workflow-overview.html#cb5-5" tabindex="-1"></a>.DS_Store</span>
+<span id="cb5-6"><a href="workflow-overview.html#cb5-6" tabindex="-1"></a><span class="sc">**</span><span class="er">/</span>.DS_Store</span></code></pre></div></li>
+<li><p>Create an R project associated with the repository directory.</p></li>
+<li><p>Commit and push these changes to your forked repository, then create a
 pull request to your creative partner (see ‘Collaboration workflow
-overview’).</li>
+overview’).</p></li>
 </ul></li>
 </ol>
 </div>
@@ -342,7 +349,7 @@ required location for where you store your local repository.</p></li>
 <li><p>Then, clone your repo! You can acquire the <code>ssh_address</code> from your
 forked repository on the GitHub website. If I were cloning the repo
 below, I would replace <code>ssh_address</code> with
-<code>git@github.com:steeleb/ROSSyndicate_best_practices</code></p>
+<code>git@github.com:steeleb/ROSSyndicate_best_practices.</code></p>
 <blockquote>
 <p>git clone ssh_address</p>
 </blockquote>
@@ -352,8 +359,9 @@ below, I would replace <code>ssh_address</code> with
 </div>
 <div id="collaborative-coding" class="section level2 hasAnchor" number="3.3">
 <h2><span class="header-section-number">3.3</span> Collaborative Coding<a href="workflow-overview.html#collaborative-coding" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>(Note, the workflow for this is slightly different if you are working in feature
-branches. Please see that section if you are working in feature branches.)</p>
+<p>(Note, the workflow for this is slightly different if you are working in
+feature branches. Please see that section if you are working in feature
+branches.)</p>
 <ol style="list-style-type: decimal">
 <li><p>Always start your day by fetching upstream changes from the primary
 repository by typing the following in the terminal. This is part of the way
@@ -382,7 +390,7 @@ a commit!</p>
 <blockquote>
 <p>git commit -m “insert commit message here”</p>
 </blockquote></li>
-<li><p>Push your commit history to your forked repository</p>
+<li><p>Push your commit history to your forked repository.</p>
 <blockquote>
 <p>git push origin main</p>
 </blockquote></li>
@@ -390,11 +398,11 @@ a commit!</p>
 members of your project team through a pull request. See ‘Pull Request best
 practices’ below for details.</p>
 <ul>
-<li><p>Navigate to your forked repository</p></li>
+<li><p>Navigate to your forked repository.</p></li>
 <li><p>Confirm that your branch is up-to-date with the upstream repo by
-clicking on ‘Sync fork’</p>
+clicking on ‘Sync fork’.</p>
 <p><img src="images/Screenshot%202023-07-27%20at%201.36.24%20PM.png" /></p></li>
-<li><p>Then, click ‘Contribute’ and ‘Open pull request’</p>
+<li><p>Then, click ‘Contribute’ and ‘Open pull request’.</p>
 <p><img src="images/Screenshot%202023-07-27%20at%201.38.07%20PM.png" width="250" /></p></li>
 </ul></li>
 <li><p>Craft and submit your PR!</p>
@@ -410,13 +418,15 @@ make changes to your pull request and in the right hand side, assign a
 reviewer (in this case, your internal creative partner or whomever you’d
 like to engage in this pull request).</p>
 <p><img src="images/request%20review.png" width="250" /></p></li>
-<li><p>Click “Create Pull Request”</p></li>
+<li><p>Click “Create Pull Request”.</p></li>
 </ul></li>
 <li><p>Internal creative partner (or engaged individuals) reviews the pull request
 according to ‘Pull Request Review best practices’ following the process
-outlined in GitHub’s How to Review Pull Requests. If no changes are
-required, the reviewer will merge the branch, but if any comments have been
-made on the pull request, leave the merging to the PR author.</p></li>
+outlined in GitHub’s <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews">How to Review Pull
+Requests</a>.
+If no changes are required, the reviewer will merge the branch, but if any
+comments have been made on the pull request, leave the merging to the PR
+author.</p></li>
 </ol>
 </div>
 <div id="addressing-merge-conflicts" class="section level2 hasAnchor" number="3.4">

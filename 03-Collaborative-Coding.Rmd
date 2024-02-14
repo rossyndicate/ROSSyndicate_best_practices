@@ -42,8 +42,8 @@ and then define the style transformer. The default is {tidyverse}, so all you
 have to do is press 'OK'. As you work on scripts within your repository, select
 'Style active file'. This will modify the file to conform to {tidyverse} style.
 Be sure to commit these changes. Styler will not tell you what has changed, all
-you will see is the following message in your console: While using {styler} will
-not correct all style choices, it will fix spacing, assignments, and tabs
+you will see is the following message in your console: While using {styler}
+will not correct all style choices, it will fix spacing, assignments, and tabs
 automatically.
 
 ### Fonts, colors, and .css
@@ -61,8 +61,8 @@ One aspect of literate code relative to style is that we expect code and code
 output to be readable in [nearly] any format. This means whether you are using
 the Visual editor in RStudio, you're reading a rendered .html or if you're
 viewing an .Rmd on the web or in the Source editor of R Studio. To accomplish
-this, we suggest line character length no greater than 80. If you are in an .Rmd
-file, just add the last code chunk from the
+this, we suggest line character length no greater than 80. If you are in an
+.Rmd file, just add the last code chunk from the
 `style_snippets/markdown_helpers.Rmd`, save your file, and run the chunk. This
 will reformat all lines of text so that they are on new lines every 80
 characters. If you are in .R or a .md document, use the page-width indicator
@@ -281,7 +281,8 @@ Note that you can use the contributor's GitHub user name (in the example above:
 GitHub](https://linearb.io/blog/code-review-on-github/), LinearB
 
 [GitHub Code Review Best
-Practices](https://blog.mergify.com/github-code-review-best-practices/), Mergify
+Practices](https://blog.mergify.com/github-code-review-best-practices/),
+Mergify
 
 [[How To] Commit and Code Review on
 GitHub](https://birkhoffg.github.io/blog/posts/how-to-commit-and-code-review-on-github/),

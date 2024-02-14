@@ -8,13 +8,14 @@ editor_options:
 
 ## When to work in a feature branch
 
-Working in feature branches is similar to working in a forked repository, except
-you have two parallel workflows with varying commit history in the same [forked]
-repository. It is essential, if you are using branches, that you are working on
-a very specific issue or feature (hence the name) that is independent of others'
-work on the repo -- or even your other branches! **IMPORTANT: Try not to leave
-your branches unmerged for long periods of time if other folks are working in
-the same repository to help alleviate merge conflicts.**
+Working in feature branches is similar to working in a forked repository,
+except you have two parallel workflows with varying commit history in the same
+[forked] repository. It is essential, if you are using branches, that you are
+working on a very specific issue or feature (hence the name) that is
+independent of others' work on the repo -- or even your other branches!
+**IMPORTANT: Try not to leave your branches unmerged for long periods of time
+if other folks are working in the same repository to help alleviate merge
+conflicts.**
 
 Working in a feature branch is also a way to continue working on a codebase as
 other code is in review.
@@ -22,15 +23,15 @@ other code is in review.
 ## How to create a feature branch
 
 Make sure the forked main ('origin main') is updated with upstream changes and
-all of your current work has been committed to the main branch, then start a new
-branch:
+all of your current work has been committed to the main branch, then start a
+new branch:
 
 > git checkout -b new-branch-name
 
 Branch starts with a copy of the branch you were on. You can now make edits in
-this branch and add/commit as usual. If you switch back to the main branch using
-`git checkout main`, all of your commit history will revert to that on the main
-branch (aka, it will look like all of your work disappeared).
+this branch and add/commit as usual. If you switch back to the main branch
+using `git checkout main`, all of your commit history will revert to that on
+the main branch (aka, it will look like all of your work disappeared).
 
 You can either push your branch up to your origin remote (your forked repo)
 using:

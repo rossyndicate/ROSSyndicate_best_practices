@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Section 11 Code Documentation Best Practices | ROSSyndicate Project and Workflow Best Practices</title>
   <meta name="description" content="The ROSSyndicate workflow best practices guide." />
-  <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Section 11 Code Documentation Best Practices | ROSSyndicate Project and Workflow Best Practices" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="ROSSyndicate" />
 
 
-<meta name="date" content="2024-01-22" />
+<meta name="date" content="2024-02-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -143,7 +143,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#overarching-codeworkflow-philosphies-of-the-rossyndicate"><i class="fa fa-check"></i><b>1.1</b> Overarching code/workflow philosphies of the ROSSyndicate</a></li>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#overarching-codeworkflow-philosophies-of-the-rossyndicate"><i class="fa fa-check"></i><b>1.1</b> Overarching code/workflow philosophies of the ROSSyndicate</a></li>
 <li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#contents"><i class="fa fa-check"></i><b>1.2</b> Contents</a></li>
 <li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#a-living-document"><i class="fa fa-check"></i><b>1.3</b> A living document</a></li>
 <li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#origin"><i class="fa fa-check"></i><b>1.4</b> Origin</a></li>
@@ -217,12 +217,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="8.3" data-path="archiving-data-and-code.html"><a href="archiving-data-and-code.html#philosophical-and-ethical-considerations"><i class="fa fa-check"></i><b>8.3</b> Philosophical and Ethical Considerations</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="python-integrations-in-rstudio.html"><a href="python-integrations-in-rstudio.html"><i class="fa fa-check"></i><b>9</b> Python Integrations in RStudio</a>
+<li class="chapter" data-level="9" data-path="python-integration-in-rstudio.html"><a href="python-integration-in-rstudio.html"><i class="fa fa-check"></i><b>9</b> Python Integration in RStudio</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="python-integrations-in-rstudio.html"><a href="python-integrations-in-rstudio.html#setting-up-a-python-virtual-environment"><i class="fa fa-check"></i><b>9.1</b> Setting up a python virtual environment</a>
+<li class="chapter" data-level="9.1" data-path="python-integration-in-rstudio.html"><a href="python-integration-in-rstudio.html#setting-up-a-python-virtual-environment"><i class="fa fa-check"></i><b>9.1</b> Setting up a python virtual environment</a>
 <ul>
-<li class="chapter" data-level="9.1.1" data-path="python-integrations-in-rstudio.html"><a href="python-integrations-in-rstudio.html#python-setup-code-snippet"><i class="fa fa-check"></i><b>9.1.1</b> Python setup code snippet</a></li>
-<li class="chapter" data-level="9.1.2" data-path="python-integrations-in-rstudio.html"><a href="python-integrations-in-rstudio.html#editing-the-pysetup.r-file"><i class="fa fa-check"></i><b>9.1.2</b> Editing the <code>pySetup.R</code> file</a></li>
+<li class="chapter" data-level="9.1.1" data-path="python-integration-in-rstudio.html"><a href="python-integration-in-rstudio.html#python-setup-code-snippet"><i class="fa fa-check"></i><b>9.1.1</b> Python setup code snippet</a></li>
+<li class="chapter" data-level="9.1.2" data-path="python-integration-in-rstudio.html"><a href="python-integration-in-rstudio.html#editing-the-pysetup.r-file"><i class="fa fa-check"></i><b>9.1.2</b> Editing the <code>pySetup.R</code> file</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="workflow-management-with-targets.html"><a href="workflow-management-with-targets.html"><i class="fa fa-check"></i><b>10</b> Workflow Management with {targets}</a>
@@ -288,10 +288,10 @@ or not it uses a symlink folder.</p></li>
 <li><p>If there is an end product (say, a Shiny app), state what that is - and
 if it is deployed, link it to the README.</p></li>
 </ul></li>
-<li><p>A primary contact for the repo. If you include your email, spell out dot and
-at so that you don’t get spammed.</p></li>
+<li><p>A primary contact for the repo. If you include your email, spell out “dot”
+and “at” so that you don’t get spammed.</p></li>
 <li><p>A brief overview of the repo architecture. An onlooker might not know what
-‘src’ is, so and overview for a repo that has a <code>src</code> and <code>data</code> folder
+<code>src</code> is, so and overview for a repo that has a <code>src</code> and <code>data</code> folder
 might look like this:</p>
 <blockquote>
 <p><strong>Folder Descriptions:</strong></p>
@@ -401,8 +401,8 @@ document and deploy as a github.io website, if desired. You can also render to
 <h3><span class="header-section-number">11.4.1</span> General style guidance<a href="code-documentation-best-practices.html#general-style-guidance" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Keep your repository tidy by putting your bookdown .Rmd files, index.Rmd, and
 associated .yml files into their own directory called “bookdown”. The output
-directory should be set to “docs” in the _bookdown.yml file. See this example of
-.yml content:</p>
+directory should be set to “docs” in the _bookdown.yml file. See this example
+of .yml content:</p>
 <pre><code>delete_merged_file: true
 output_dir: &quot;../docs&quot;
 language:

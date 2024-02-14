@@ -1,5 +1,5 @@
 about
-overarching-codeworkflow-philosphies-of-the-rossyndicate
+overarching-codeworkflow-philosophies-of-the-rossyndicate
 contents
 a-living-document
 origin
@@ -48,7 +48,7 @@ linking-a-repository-to-zenodo
 completing-the-metadata-information
 add-the-doi-badge-to-your-repository
 philosophical-and-ethical-considerations
-python-integrations-in-rstudio
+python-integration-in-rstudio
 setting-up-a-python-virtual-environment
 python-setup-code-snippet
 editing-the-pysetup.r-file

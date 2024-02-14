@@ -7,12 +7,12 @@ documentclass: book
 description: |
   The ROSSyndicate workflow best practices guide.
 output: html_document
-editor_options: 
-  markdown: 
+editor_options:
+  markdown:
     wrap: 72
 ---
 
-```{r, echo = F}
+```{r, echo = F, message = FALSE, warning = FALSE}
 library(formatR)
 library(bookdown)
 library(servr)
