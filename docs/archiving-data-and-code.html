@@ -23,7 +23,11 @@
 <meta name="author" content="ROSSyndicate" />
 
 
+<<<<<<< HEAD
 <meta name="date" content="2024-02-14" />
+=======
+<meta name="date" content="2024-02-29" />
+>>>>>>> cabefe5 (add symlink and ssh instructions)
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -164,8 +168,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="3" data-path="workflow-overview.html"><a href="workflow-overview.html"><i class="fa fa-check"></i><b>3</b> Workflow Overview</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="workflow-overview.html"><a href="workflow-overview.html#starting-a-new-repository"><i class="fa fa-check"></i><b>3.1</b> Starting a new repository</a></li>
-<li class="chapter" data-level="3.2" data-path="workflow-overview.html"><a href="workflow-overview.html#forking-and-cloning-rossyndicate-repositories"><i class="fa fa-check"></i><b>3.2</b> Forking and Cloning ROSSyndicate Repositories</a></li>
+<li class="chapter" data-level="3.1" data-path="workflow-overview.html"><a href="workflow-overview.html#starting-a-new-repository"><i class="fa fa-check"></i><b>3.1</b> Starting a new repository</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="workflow-overview.html"><a href="workflow-overview.html#creating-a-symlink-folder"><i class="fa fa-check"></i><b>3.1.1</b> Creating a SymLink Folder</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="workflow-overview.html"><a href="workflow-overview.html#forking-and-cloning-rossyndicate-repositories"><i class="fa fa-check"></i><b>3.2</b> Forking and Cloning ROSSyndicate Repositories</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="workflow-overview.html"><a href="workflow-overview.html#setting-up-ssh-across-github-and-your-machine"><i class="fa fa-check"></i><b>3.2.1</b> Setting up SSH across GitHub and your machine</a></li>
+</ul></li>
 <li class="chapter" data-level="3.3" data-path="workflow-overview.html"><a href="workflow-overview.html#collaborative-coding"><i class="fa fa-check"></i><b>3.3</b> Collaborative Coding</a></li>
 <li class="chapter" data-level="3.4" data-path="workflow-overview.html"><a href="workflow-overview.html#addressing-merge-conflicts"><i class="fa fa-check"></i><b>3.4</b> Addressing merge conflicts</a></li>
 </ul></li>
@@ -283,8 +293,13 @@ preferred method of archiving.</p>
 <p><img src="images/data_code_archiving.png" /></p>
 <div id="choosing-a-data-repository" class="section level2 hasAnchor" number="8.1">
 <h2><span class="header-section-number">8.1</span> Choosing a data repository<a href="archiving-data-and-code.html#choosing-a-data-repository" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<<<<<<< HEAD
 <p>The decision of which data repository to use is less straight forward. There are
 benefits and trade-offs to each. The <a href="https://portal.edirepository.org/nis/home.jsp">Environmental Data Initiative
+=======
+<p>The decision of which data repository to use is less straight forward. There
+are benefits and tradeoffs to each. The <a href="https://portal.edirepository.org/nis/home.jsp">Environmental Data Initiative
+>>>>>>> cabefe5 (add symlink and ssh instructions)
 (EDI)</a> requires a significant
 amount of metadata in the form of an EML (ecological metadata language) file
 that describes the data and is the best for .csv files, however, this metadata
@@ -295,15 +310,15 @@ file types. <a href="https://figshare.com/">FigShare</a> requires no metadata an
 of that there are numerous data products with no metadata that are stored on
 FigShare.</p>
 <p>Generally speaking, all data that is published from this lab should have
-thorough metadata regardless of the metadata requirements of the data repository
-chosen. For one-time uploads to EDI, you can use the
+thorough metadata regardless of the metadata requirements of the data
+repository chosen. For one-time uploads to EDI, you can use the
 <a href="https://ezeml.edirepository.org/eml/auth/login">ezEML</a> interface of EDI to
 create and format your EML. If you plan to create many data packages, make an
 EDI account so that you can upload yourself. If you have a dataset that will be
 updated frequently, use of the R package
 <a href="https://ediorg.github.io/EMLassemblyline/articles/overview.html">{EMLassemblyline}</a>
-is useful. If creating metadata for other data repositories, review the <a href="https://github.com/EDIorg/MetadataTemplates/blob/master/EDI_metadata_template.docx">content
-of the
+is useful. If creating metadata for other data repositories, review the
+<a href="https://github.com/EDIorg/MetadataTemplates/blob/master/EDI_metadata_template.docx">content of the
 EML</a>
 and include as much of that information in your metadata as possible.</p>
 </div>
@@ -335,15 +350,15 @@ advantage of the GitHub/Zenodo integration.</p>
 <div id="preparing-to-publish" class="section level3 hasAnchor" number="8.2.2">
 <h3><span class="header-section-number">8.2.2</span> Preparing to publish<a href="archiving-data-and-code.html#preparing-to-publish" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>In order to have a meaningful repository release, you need to provide some
-metadata to Zenodo. While there are no requirements for publishing to Zenodo, it
-is a best practice to include robust metadata alongside your code release. A
+metadata to Zenodo. While there are no requirements for publishing to Zenodo,
+it is a best practice to include robust metadata alongside your code release. A
 metadata template can be found in the helpful_docs folder of this repository.</p>
 <p>Once you’ve compiled this information, send it to Katie Willi or Anika Pyle for
 proofreading.</p>
 <p><strong>Release Title</strong></p>
 <p>You can use the repository name, but that’s not going to be helpful for anyone
-except you! Someone reading the Release Title should be able to discern what the
-repository does. You can explain the ‘how’ in the description.</p>
+except you! Someone reading the Release Title should be able to discern what
+the repository does. You can explain the ‘how’ in the description.</p>
 <p><strong>Author list</strong></p>
 <p>Prepare your author list by looking at the contributors to the repo. All
 contributors to the repo should be listed as an author. You will need each
@@ -389,8 +404,8 @@ methods, etc. It is common to use controlled vocabulary for keywords, like the
 research</a>.</p>
 <p><strong>License</strong></p>
 <p>All repositories that are published are considered open access. Because our
-repository best practices include using an MIT use license, the LICENSE.txt file
-will override this option.</p>
+repository best practices include using an MIT use license, the LICENSE.txt
+file will override this option.</p>
 <p><strong>Funding</strong></p>
 <p>If there is applicable funding sources for this repository, you should list
 them. You will need the funder name and the grant number.</p>
@@ -426,19 +441,27 @@ badge:</p>
 <p><img src="images/zenodo_doi_badge.png" /></p>
 <p>This will pop up a number of embedding formats. Copy and paste the one for
 ‘Markdown’. At this point, go to the GitHub repository and add the badge at the
-top of the primary README file within the GitHub user interface on the web. This
-addition to the repository does not need to be reviewed.</p>
+top of the primary README file within the GitHub user interface on the web.
+This addition to the repository does not need to be reviewed.</p>
 </div>
 </div>
 <div id="philosophical-and-ethical-considerations" class="section level2 hasAnchor" number="8.3">
 <h2><span class="header-section-number">8.3</span> Philosophical and Ethical Considerations<a href="archiving-data-and-code.html#philosophical-and-ethical-considerations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>As a general philosophy we acknowledge that there is bias in every data set and
 in the decisions we make along the way as we code. These biases may be
+<<<<<<< HEAD
 geographical (data are only from one location), contextual (data are only from a
 single source), or implicit (data have been altered for a specific purpose). As
 you prepare your data and metadata, it is important to think about the biases we
 contribute to a given dataset.</p>
 <p>To familiarize yourself with bias that we introduce into our data and analyses,
+=======
+geographical (data are only from one location), contextual (data are only from
+a single source), or implicit (data have been altered for a specific purpose).
+As you prepare your data and metadata, it is important to think about the
+biases we contribute to a given dataset.</p>
+<p>To familarize yourself with bias that we introduce into our data and analyses,
+>>>>>>> cabefe5 (add symlink and ssh instructions)
 here are some resources:</p>
 <ul>
 <li><p>“Biases in lake water quality sampling and implications for macroscale

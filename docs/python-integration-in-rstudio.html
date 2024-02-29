@@ -23,7 +23,11 @@
 <meta name="author" content="ROSSyndicate" />
 
 
+<<<<<<< HEAD:docs/python-integration-in-rstudio.html
 <meta name="date" content="2024-02-14" />
+=======
+<meta name="date" content="2024-02-29" />
+>>>>>>> cabefe5 (add symlink and ssh instructions):docs/python-integrations-in-rstudio.html
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -164,8 +168,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="3" data-path="workflow-overview.html"><a href="workflow-overview.html"><i class="fa fa-check"></i><b>3</b> Workflow Overview</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="workflow-overview.html"><a href="workflow-overview.html#starting-a-new-repository"><i class="fa fa-check"></i><b>3.1</b> Starting a new repository</a></li>
-<li class="chapter" data-level="3.2" data-path="workflow-overview.html"><a href="workflow-overview.html#forking-and-cloning-rossyndicate-repositories"><i class="fa fa-check"></i><b>3.2</b> Forking and Cloning ROSSyndicate Repositories</a></li>
+<li class="chapter" data-level="3.1" data-path="workflow-overview.html"><a href="workflow-overview.html#starting-a-new-repository"><i class="fa fa-check"></i><b>3.1</b> Starting a new repository</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="workflow-overview.html"><a href="workflow-overview.html#creating-a-symlink-folder"><i class="fa fa-check"></i><b>3.1.1</b> Creating a SymLink Folder</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="workflow-overview.html"><a href="workflow-overview.html#forking-and-cloning-rossyndicate-repositories"><i class="fa fa-check"></i><b>3.2</b> Forking and Cloning ROSSyndicate Repositories</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="workflow-overview.html"><a href="workflow-overview.html#setting-up-ssh-across-github-and-your-machine"><i class="fa fa-check"></i><b>3.2.1</b> Setting up SSH across GitHub and your machine</a></li>
+</ul></li>
 <li class="chapter" data-level="3.3" data-path="workflow-overview.html"><a href="workflow-overview.html#collaborative-coding"><i class="fa fa-check"></i><b>3.3</b> Collaborative Coding</a></li>
 <li class="chapter" data-level="3.4" data-path="workflow-overview.html"><a href="workflow-overview.html#addressing-merge-conflicts"><i class="fa fa-check"></i><b>3.4</b> Addressing merge conflicts</a></li>
 </ul></li>
@@ -288,6 +298,7 @@ is not tracking the folder.</p>
 <h3><span class="header-section-number">9.1.1</span> Python setup code snippet<a href="python-integration-in-rstudio.html#python-setup-code-snippet" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>This snippet checks to see if the ‘env’ folder exists - this is where the
 virtual environment is set up, and if it is not, it runs the <code>pySetup.R</code> file.
+<<<<<<< HEAD:docs/python-integration-in-rstudio.html
 If the ‘env’ folder exists, we use the {reticulate} function <code>use_condaenv()</code> to
 read the virtual environment you already created in the <code>pySetup.R</code> script.</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="python-integration-in-rstudio.html#cb4-1" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
@@ -302,6 +313,22 @@ read the virtual environment you already created in the <code>pySetup.R</code> s
 <h3><span class="header-section-number">9.1.2</span> Editing the <code>pySetup.R</code> file<a href="python-integration-in-rstudio.html#editing-the-pysetup.r-file" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The things you may have to edit are the lines for the python modules you want to
 install in your python virtual environment (on line 6), and the version of
+=======
+If the ‘env’ folder exists, we use the {reticulate} function <code>use_condaenv()</code>
+to read the virtual environment you already created in the <code>pySetup.R</code> script.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="python-integrations-in-rstudio.html#cb4-1" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
+<span id="cb4-2"><a href="python-integrations-in-rstudio.html#cb4-2" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="python-integrations-in-rstudio.html#cb4-3" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">dir.exists</span>(<span class="st">&quot;env&quot;</span>)) {</span>
+<span id="cb4-4"><a href="python-integrations-in-rstudio.html#cb4-4" tabindex="-1"></a>  <span class="fu">source</span>(<span class="st">&quot;pySetup.R&quot;</span>)</span>
+<span id="cb4-5"><a href="python-integrations-in-rstudio.html#cb4-5" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb4-6"><a href="python-integrations-in-rstudio.html#cb4-6" tabindex="-1"></a>  <span class="fu">use_condaenv</span>(<span class="fu">file.path</span>(<span class="fu">getwd</span>(), <span class="st">&quot;env&quot;</span>))</span>
+<span id="cb4-7"><a href="python-integrations-in-rstudio.html#cb4-7" tabindex="-1"></a>}</span></code></pre></div>
+</div>
+<div id="editing-the-pysetup.r-file" class="section level3 hasAnchor" number="9.1.2">
+<h3><span class="header-section-number">9.1.2</span> Editing the <code>pySetup.R</code> file<a href="python-integrations-in-rstudio.html#editing-the-pysetup.r-file" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The things you may have to edit are the lines for the python modules you want
+to install in your python virtual environment (on line 6), and the version of
+>>>>>>> cabefe5 (add symlink and ssh instructions):docs/python-integrations-in-rstudio.html
 python you want to use.</p>
 <p>The script defaults to python version 3.8 as it seems to be the most stable for
 the <code>earthengine-api</code> module, but any version can be specified.</p>
