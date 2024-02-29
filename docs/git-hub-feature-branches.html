@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Section 6 Git Hub Feature Branches | ROSSyndicate Project and Workflow Best Practices</title>
   <meta name="description" content="The ROSSyndicate workflow best practices guide." />
-  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Section 6 Git Hub Feature Branches | ROSSyndicate Project and Workflow Best Practices" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="ROSSyndicate" />
 
 
-<meta name="date" content="2024-02-14" />
+<meta name="date" content="2024-02-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -164,8 +164,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="3" data-path="workflow-overview.html"><a href="workflow-overview.html"><i class="fa fa-check"></i><b>3</b> Workflow Overview</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="workflow-overview.html"><a href="workflow-overview.html#starting-a-new-repository"><i class="fa fa-check"></i><b>3.1</b> Starting a new repository</a></li>
-<li class="chapter" data-level="3.2" data-path="workflow-overview.html"><a href="workflow-overview.html#forking-and-cloning-rossyndicate-repositories"><i class="fa fa-check"></i><b>3.2</b> Forking and Cloning ROSSyndicate Repositories</a></li>
+<li class="chapter" data-level="3.1" data-path="workflow-overview.html"><a href="workflow-overview.html#starting-a-new-repository"><i class="fa fa-check"></i><b>3.1</b> Starting a new repository</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="workflow-overview.html"><a href="workflow-overview.html#creating-a-symlink-folder"><i class="fa fa-check"></i><b>3.1.1</b> Creating a SymLink Folder</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="workflow-overview.html"><a href="workflow-overview.html#forking-and-cloning-rossyndicate-repositories"><i class="fa fa-check"></i><b>3.2</b> Forking and Cloning ROSSyndicate Repositories</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="workflow-overview.html"><a href="workflow-overview.html#setting-up-ssh-across-github-and-your-machine"><i class="fa fa-check"></i><b>3.2.1</b> Setting up SSH across GitHub and your machine</a></li>
+</ul></li>
 <li class="chapter" data-level="3.3" data-path="workflow-overview.html"><a href="workflow-overview.html#collaborative-coding"><i class="fa fa-check"></i><b>3.3</b> Collaborative Coding</a></li>
 <li class="chapter" data-level="3.4" data-path="workflow-overview.html"><a href="workflow-overview.html#addressing-merge-conflicts"><i class="fa fa-check"></i><b>3.4</b> Addressing merge conflicts</a></li>
 </ul></li>
@@ -275,28 +281,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">Section 6</span> Git Hub Feature Branches<a href="git-hub-feature-branches.html#git-hub-feature-branches" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div id="when-to-work-in-a-feature-branch" class="section level2 hasAnchor" number="6.1">
 <h2><span class="header-section-number">6.1</span> When to work in a feature branch<a href="git-hub-feature-branches.html#when-to-work-in-a-feature-branch" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Working in feature branches is similar to working in a forked repository, except
-you have two parallel workflows with varying commit history in the same [forked]
-repository. It is essential, if you are using branches, that you are working on
-a very specific issue or feature (hence the name) that is independent of others’
-work on the repo – or even your other branches! <strong>IMPORTANT: Try not to leave
-your branches unmerged for long periods of time if other folks are working in
-the same repository to help alleviate merge conflicts.</strong></p>
+<p>Working in feature branches is similar to working in a forked repository,
+except you have two parallel workflows with varying commit history in the same
+[forked] repository. It is essential, if you are using branches, that you are
+working on a very specific issue or feature (hence the name) that is
+independent of others’ work on the repo – or even your other branches!
+<strong>IMPORTANT: Try not to leave your branches unmerged for long periods of time
+if other folks are working in the same repository to help alleviate merge
+conflicts.</strong></p>
 <p>Working in a feature branch is also a way to continue working on a codebase as
 other code is in review.</p>
 </div>
 <div id="how-to-create-a-feature-branch" class="section level2 hasAnchor" number="6.2">
 <h2><span class="header-section-number">6.2</span> How to create a feature branch<a href="git-hub-feature-branches.html#how-to-create-a-feature-branch" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Make sure the forked main (‘origin main’) is updated with upstream changes and
-all of your current work has been committed to the main branch, then start a new
-branch:</p>
+all of your current work has been committed to the main branch, then start a
+new branch:</p>
 <blockquote>
 <p>git checkout -b new-branch-name</p>
 </blockquote>
 <p>Branch starts with a copy of the branch you were on. You can now make edits in
-this branch and add/commit as usual. If you switch back to the main branch using
-<code>git checkout main</code>, all of your commit history will revert to that on the main
-branch (aka, it will look like all of your work disappeared).</p>
+this branch and add/commit as usual. If you switch back to the main branch
+using <code>git checkout main</code>, all of your commit history will revert to that on
+the main branch (aka, it will look like all of your work disappeared).</p>
 <p>You can either push your branch up to your origin remote (your forked repo)
 using:</p>
 <blockquote>

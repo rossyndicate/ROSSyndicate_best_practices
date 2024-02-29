@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Section 4 Collaborative Coding and Workflow Best Practices | ROSSyndicate Project and Workflow Best Practices</title>
   <meta name="description" content="The ROSSyndicate workflow best practices guide." />
-  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Section 4 Collaborative Coding and Workflow Best Practices | ROSSyndicate Project and Workflow Best Practices" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="ROSSyndicate" />
 
 
-<meta name="date" content="2024-02-14" />
+<meta name="date" content="2024-02-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -164,8 +164,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="3" data-path="workflow-overview.html"><a href="workflow-overview.html"><i class="fa fa-check"></i><b>3</b> Workflow Overview</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="workflow-overview.html"><a href="workflow-overview.html#starting-a-new-repository"><i class="fa fa-check"></i><b>3.1</b> Starting a new repository</a></li>
-<li class="chapter" data-level="3.2" data-path="workflow-overview.html"><a href="workflow-overview.html#forking-and-cloning-rossyndicate-repositories"><i class="fa fa-check"></i><b>3.2</b> Forking and Cloning ROSSyndicate Repositories</a></li>
+<li class="chapter" data-level="3.1" data-path="workflow-overview.html"><a href="workflow-overview.html#starting-a-new-repository"><i class="fa fa-check"></i><b>3.1</b> Starting a new repository</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="workflow-overview.html"><a href="workflow-overview.html#creating-a-symlink-folder"><i class="fa fa-check"></i><b>3.1.1</b> Creating a SymLink Folder</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="workflow-overview.html"><a href="workflow-overview.html#forking-and-cloning-rossyndicate-repositories"><i class="fa fa-check"></i><b>3.2</b> Forking and Cloning ROSSyndicate Repositories</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="workflow-overview.html"><a href="workflow-overview.html#setting-up-ssh-across-github-and-your-machine"><i class="fa fa-check"></i><b>3.2.1</b> Setting up SSH across GitHub and your machine</a></li>
+</ul></li>
 <li class="chapter" data-level="3.3" data-path="workflow-overview.html"><a href="workflow-overview.html#collaborative-coding"><i class="fa fa-check"></i><b>3.3</b> Collaborative Coding</a></li>
 <li class="chapter" data-level="3.4" data-path="workflow-overview.html"><a href="workflow-overview.html#addressing-merge-conflicts"><i class="fa fa-check"></i><b>3.4</b> Addressing merge conflicts</a></li>
 </ul></li>
@@ -303,8 +309,8 @@ and then define the style transformer. The default is {tidyverse}, so all you
 have to do is press ‘OK’. As you work on scripts within your repository, select
 ‘Style active file’. This will modify the file to conform to {tidyverse} style.
 Be sure to commit these changes. Styler will not tell you what has changed, all
-you will see is the following message in your console: While using {styler} will
-not correct all style choices, it will fix spacing, assignments, and tabs
+you will see is the following message in your console: While using {styler}
+will not correct all style choices, it will fix spacing, assignments, and tabs
 automatically.</p>
 </div>
 <div id="fonts-colors-and-.css" class="section level3 hasAnchor" number="4.1.2">
@@ -322,8 +328,8 @@ deep work time, we suggest using a few hacks:</p>
 output to be readable in [nearly] any format. This means whether you are using
 the Visual editor in RStudio, you’re reading a rendered .html or if you’re
 viewing an .Rmd on the web or in the Source editor of R Studio. To accomplish
-this, we suggest line character length no greater than 80. If you are in an .Rmd
-file, just add the last code chunk from the
+this, we suggest line character length no greater than 80. If you are in an
+.Rmd file, just add the last code chunk from the
 <code>style_snippets/markdown_helpers.Rmd</code>, save your file, and run the chunk. This
 will reformat all lines of text so that they are on new lines every 80
 characters. If you are in .R or a .md document, use the page-width indicator
@@ -341,7 +347,7 @@ block.</p>
 <ul>
 <li><p>Always check your forked repository against the upstream repository before
 beginning your coding session and certainly before making any changes to the
-code base using the terminal command <code>git fetch upstream</code> .</p>
+code base using the terminal command <code>git fetch upstream</code>.</p>
 <ul>
 <li><p>Think about using your commit history as bullet-point summaries of your
 future pull request. If you need to go back and make some change in your
@@ -518,7 +524,8 @@ daily to weekly basis</strong></p></li>
 <p><a href="https://linearb.io/blog/code-review-on-github/">The Best Way to Do a Code Review on
 GitHub</a>, LinearB</p>
 <p><a href="https://blog.mergify.com/github-code-review-best-practices/">GitHub Code Review Best
-Practices</a>, Mergify</p>
+Practices</a>,
+Mergify</p>
 <p><a href="https://birkhoffg.github.io/blog/posts/how-to-commit-and-code-review-on-github/">[How To] Commit and Code Review on
 GitHub</a>,
 Birkhoff Tech Blog</p>

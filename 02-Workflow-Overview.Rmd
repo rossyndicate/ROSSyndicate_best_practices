@@ -22,8 +22,7 @@ you!
 2.  Add collaborators with write/push access by going to repo Settings -\>
     Manage Access -\> Invite a Collaborator.
 
-3.  After you have forked the repository to your account, clone the repo to
-your
+3.  After you have forked the repository to your account, clone the repo to your
     local machine (see Forking and Cloning ROSSyndicate Repositories).
 
 4.  Once the repo is stored on your local machine create the general
@@ -71,6 +70,19 @@ your
         pull request to your creative partner (see 'Collaboration workflow
         overview').
 
+### Creating a SymLink Folder
+
+As stated above, we tend to use SymLinks to shared OneDrive folders. To set up a
+`data` SymLink folder, from a OneDrive path that ends with `/data/`, you can use
+the following command in the terminal with the .Rproj open:
+
+```         
+ln -s ~/path/to/linked/folder/called/data/ .
+```
+
+The `.` here means that you want that `data` folder to be called `data` as a
+subdirectory at the root of your current .Rproj.
+
 ## Forking and Cloning ROSSyndicate Repositories
 
 1.  Go to the ROSSyndicate repo for the project and click "Fork".
@@ -100,11 +112,28 @@ your
 
         ![](images/Screenshot%202023-07-27%20at%2012.47.26%20PM.png)
 
+### Setting up SSH across GitHub and your machine
+
+While you can use either HTTPS or SSH authentication to connect your machine to
+your GitHub repositories, we now suggest using SSH authentication, which is a
+bit more secure.
+
+In order to use the SSH cloning method above, you will need to set up a SSH
+token and agent on your machine. GitHub has a great overview of SSH protocol
+[here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh).
+
+To quickly get started with SSH follow the directions in the sections "[Checking
+for existing SSH
+keys](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys)",
+"[Generate new SSH
+key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)",
+and "[Add a new SSH
+key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)".
+
 ## Collaborative Coding
 
-(Note, the workflow for this is slightly different if you are working in
-feature branches. Please see that section if you are working in feature
-branches.)
+(Note, the workflow for this is slightly different if you are working in feature
+branches. Please see that section if you are working in feature branches.)
 
 1.  Always start your day by fetching upstream changes from the primary
     repository by typing the following in the terminal. This is part of the way

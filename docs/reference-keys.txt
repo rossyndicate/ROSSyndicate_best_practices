@@ -13,7 +13,9 @@ reconnecting-severed-repositories
 additional-resources
 workflow-overview
 starting-a-new-repository
+creating-a-symlink-folder
 forking-and-cloning-rossyndicate-repositories
+setting-up-ssh-across-github-and-your-machine
 collaborative-coding
 addressing-merge-conflicts
 collaborative-coding-and-workflow-best-practices

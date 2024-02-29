@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Section 7 Using AI Integrations | ROSSyndicate Project and Workflow Best Practices</title>
   <meta name="description" content="The ROSSyndicate workflow best practices guide." />
-  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Section 7 Using AI Integrations | ROSSyndicate Project and Workflow Best Practices" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="ROSSyndicate" />
 
 
-<meta name="date" content="2024-02-14" />
+<meta name="date" content="2024-02-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -164,8 +164,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="3" data-path="workflow-overview.html"><a href="workflow-overview.html"><i class="fa fa-check"></i><b>3</b> Workflow Overview</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="workflow-overview.html"><a href="workflow-overview.html#starting-a-new-repository"><i class="fa fa-check"></i><b>3.1</b> Starting a new repository</a></li>
-<li class="chapter" data-level="3.2" data-path="workflow-overview.html"><a href="workflow-overview.html#forking-and-cloning-rossyndicate-repositories"><i class="fa fa-check"></i><b>3.2</b> Forking and Cloning ROSSyndicate Repositories</a></li>
+<li class="chapter" data-level="3.1" data-path="workflow-overview.html"><a href="workflow-overview.html#starting-a-new-repository"><i class="fa fa-check"></i><b>3.1</b> Starting a new repository</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="workflow-overview.html"><a href="workflow-overview.html#creating-a-symlink-folder"><i class="fa fa-check"></i><b>3.1.1</b> Creating a SymLink Folder</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="workflow-overview.html"><a href="workflow-overview.html#forking-and-cloning-rossyndicate-repositories"><i class="fa fa-check"></i><b>3.2</b> Forking and Cloning ROSSyndicate Repositories</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="workflow-overview.html"><a href="workflow-overview.html#setting-up-ssh-across-github-and-your-machine"><i class="fa fa-check"></i><b>3.2.1</b> Setting up SSH across GitHub and your machine</a></li>
+</ul></li>
 <li class="chapter" data-level="3.3" data-path="workflow-overview.html"><a href="workflow-overview.html#collaborative-coding"><i class="fa fa-check"></i><b>3.3</b> Collaborative Coding</a></li>
 <li class="chapter" data-level="3.4" data-path="workflow-overview.html"><a href="workflow-overview.html#addressing-merge-conflicts"><i class="fa fa-check"></i><b>3.4</b> Addressing merge conflicts</a></li>
 </ul></li>
@@ -281,14 +287,14 @@ in code development if used effectively. These models can understand and
 generate human-like text, offering assistance in writing and suggesting code
 snippets. However, it’s important to note that while they enhance productivity,
 AI models are currently not a replacement for coding; they should act only as
-supportive aids. Never take the response of an AI model at face value. AI models
-are flawed and make mistakes often. Even so, they have the potential of saving
-you substantial time and can give you a massive boost. With that, here is a list
-of ways in which AI models can be effectively used to help you on your coding
-journey.</p>
+supportive aids. Never take the response of an AI model at face value. AI
+models are flawed and make mistakes often. Even so, they have the potential of
+saving you substantial time and can give you a massive boost. With that, here
+is a list of ways in which AI models can be effectively used to help you on
+your coding journey.</p>
 <p><strong>Explaining code.</strong> AI model explanations can be very detailed. Dropping
-convoluted or confusing code into an AI model (plus a request to explain it) can
-be much quicker than trying to figure out code on your own.</p>
+convoluted or confusing code into an AI model (plus a request to explain it)
+can be much quicker than trying to figure out code on your own.</p>
 <p><strong>Improving existing code.</strong> Asking an AI model to improve existing code by
 dropping it into the chat-bot plus describing what you want it to accomplish
 will often result in a response that includes working (or, at least close to
@@ -302,8 +308,8 @@ much more compact version of the original code. The output will also provide an
 explanation for the changes, as well as whether the simpler version is as
 efficient as the original code.</p>
 <p><strong>Debugging.</strong> If you are having a hard time finding the source of an error in
-your code, AI models are a great solution. Just provide it the code, and it will
-often find it and fix it for you.</p>
+your code, AI models are a great solution. Just provide it the code, and it
+will often find it and fix it for you.</p>
 <p><strong>Workflow development.</strong> Use AI models to kick off the structure of anything
 new you want to write.</p>
 <p><strong>Writing test cases.</strong> When writing functions, you can use AI models to
@@ -318,9 +324,9 @@ to another, ask an AI model to help you.</p>
 piece of code, and it usually does a pretty great job. It will often even
 include usage examples as part of the documentation.</p>
 <p><strong>Integrating AI into your workflows:</strong></p>
-<p>Below is one of the most sustainable ways to integrate the CoPilot LLM into your
-workflow. We encourage all members of the lab to sign up for (and use!) any of
-the following sites:</p>
+<p>Below is one of the most sustainable ways to integrate the CoPilot LLM into
+your workflow. We encourage all members of the lab to sign up for (and use!)
+any of the following sites:</p>
 <ul>
 <li><p><a href="https://chat.openai.com/">ChatGPT</a></p></li>
 <li><p>GitHub CoPilot</p></li>
@@ -329,10 +335,10 @@ the following sites:</p>
 <div id="using-github-copilot-in-vscode-rstudio" class="section level2 hasAnchor" number="7.1">
 <h2><span class="header-section-number">7.1</span> Using GitHub CoPilot in VSCode + RStudio<a href="using-ai-integrations.html#using-github-copilot-in-vscode-rstudio" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>VSCode also has an extension for GitHub CoPilot, it will auto complete your
-comments and code in nearly any programming language. By having open both VSCode
-and RStudio and enabling auto-save in both programs, you can hop between the two
-programs and code will update between the two as you switch. Big thanks to Sam
-Struthers for figuring out this integrated workflow.</p>
+comments and code in nearly any programming language. By having open both
+VSCode and RStudio and enabling auto-save in both programs, you can hop between
+the two programs and code will update between the two as you switch. Big thanks
+to Sam Struthers for figuring out this integrated workflow.</p>
 </div>
 <div id="accessing-github-copilot-as-a-studentteacherresearcher" class="section level2 hasAnchor" number="7.2">
 <h2><span class="header-section-number">7.2</span> Accessing GitHub CoPilot as a student/teacher/researcher<a href="using-ai-integrations.html#accessing-github-copilot-as-a-studentteacherresearcher" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -347,11 +353,11 @@ the educational portal within 1 business day.</p>
 <div id="downloading-vscode-and-installing-the-github-copilot-extension" class="section level2 hasAnchor" number="7.3">
 <h2><span class="header-section-number">7.3</span> Downloading VSCode and installing the GitHub CoPilot extension<a href="using-ai-integrations.html#downloading-vscode-and-installing-the-github-copilot-extension" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Download VSCode here: <a href="https://code.visualstudio.com/" class="uri">https://code.visualstudio.com/</a>. Set up the GitHub and
-GitHub CoPilot extensions by adding them via the ‘Marketplace’. You can bring up
-the Extensions from the menu bar under ‘Code’, ‘Settings’, ‘Extensions’.</p>
-<p>You’ll want to install and activate ‘GitHub Pull Requests and Issues’ as well as
-‘GitHub Copilot’. You will be directed to Sign In using your GitHub credentials.
-You may need to elect to ‘enable’ Copilot.</p>
+GitHub CoPilot extensions by adding them via the ‘Marketplace’. You can bring
+up the Extensions from the menu bar under ‘Code’, ‘Settings’, ‘Extensions’.</p>
+<p>You’ll want to install and activate ‘GitHub Pull Requests and Issues’ as well
+as ‘GitHub Copilot’. You will be directed to Sign In using your GitHub
+credentials. You may need to elect to ‘enable’ Copilot.</p>
 </div>
 <div id="setting-up-autosave-in-vscode-rstudio" class="section level2 hasAnchor" number="7.4">
 <h2><span class="header-section-number">7.4</span> Setting up AutoSave in VSCode + RStudio<a href="using-ai-integrations.html#setting-up-autosave-in-vscode-rstudio" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -360,9 +366,9 @@ find the following pane:</p>
 <p><img src="images/r%20autosave.png" /></p>
 <p>Set up Auto-save by checking the ‘Automatically save when editor loses focus’
 and ‘Apply’.</p>
-<p>In VSCode, select ‘Code’, ‘Settings’, then ‘Settings’ again from the menu bar to
-bring up the Settings tab in your console. Then type in ‘auto save’ in the top
-search bar, and select ‘onFocusChange’ for the ‘Files: Auto Save’ Setting.</p>
+<p>In VSCode, select ‘Code’, ‘Settings’, then ‘Settings’ again from the menu bar
+to bring up the Settings tab in your console. Then type in ‘auto save’ in the
+top search bar, and select ‘onFocusChange’ for the ‘Files: Auto Save’ Setting.</p>
 <p><img src="images/vscode%20autosave.png" /></p>
 <p>Now you can switch between programs, using VSCode and CoPilot to draft code and
 comment chunks, then further editing/running in RStudio.</p>
