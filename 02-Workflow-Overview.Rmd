@@ -125,7 +125,7 @@ token and agent on your machine. GitHub has a great overview of SSH protocol
 
 To quickly get started with SSH follow the directions in the sections
 "[Checking for existing SSH
-keys](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys)',
+keys](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys)",
 '[Generate new SSH
 key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)',
 and '[Add a new SSH
