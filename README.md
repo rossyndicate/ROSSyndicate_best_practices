@@ -11,6 +11,6 @@ ROSSyndicate best practices repository. A one-stop shop for the lab's coding bes
 
 - All GitHub contributions are reviewed before being incorporated into the lab organization repository, except upon initial repository set up.
 
-- We follow [the {tidyverse} style guide](https://style.tidyverse.org/). We use the {styler} Addin in RStudio to assist in linting our code. 
+- We follow [the {tidyverse} style guide](https://style.tidyverse.org/). You can use the {styler} Addin in RStudio to assist in linting code to conform to some {tidyverse} style guide norms. 
 
 - We use a set of common styles specific to the look and feel of rendered documents, which include: color palettes, ggthemes, and style.css files. These are meant to reduce the amount of time that researchers in this lab spend on relatively inconsequential decisions. The use of these aesthetics also creates a common look and feel of all deliverables from the ROSSyndicate. 
