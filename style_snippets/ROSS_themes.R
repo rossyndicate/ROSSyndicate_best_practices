@@ -3,7 +3,7 @@
 # using the current folder structure of this repo)
 
 # download roboto and montserrat from Google Fonts: fonts.google.com
-# open your "FontBook" in applications
+# open your "Font Book" in applications
 # unzip and drag the contents (the .ttf files) to the "Font Book" (you'll have to
 # do this one font at a time)
 
