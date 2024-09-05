@@ -5,8 +5,8 @@ editor_options:
 ---
 
 ```{r, echo = F}
-library(tidyverse)
-library(vembedr)
+require(tidyverse)
+require(vembedr)
 ```
 
 # An Introduction to Git And GitHub

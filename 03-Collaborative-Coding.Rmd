@@ -53,7 +53,15 @@ automatically.
 In order to reduce any bandwidth necessary and get the most out of your coding
 deep work time, we suggest using a few hacks:
 
--   Use the style_snippets in this repo
+-   Use the style_snippets in this repo, which includes the ROSS colorway and
+ggplot themes for use in your code.
+
+-   See the ROSS comms folder for pptx templates that include the colorways and
+fonts.
+
+-   We use MONTSERRAT for headings and Roboto for main text in our documents. We
+are currently working on .css files and RMarkdown helps for easier integration
+of these into our workflow.
 
 ### More on literate code...
 
