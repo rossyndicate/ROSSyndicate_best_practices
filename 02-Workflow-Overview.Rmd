@@ -85,10 +85,11 @@ The `.` here means that you want that `data` folder to be called `data` as a
 subdirectory at the root of your current .Rproj.
 
 For Windows machines, you *do* have to state what you want the name of the new
-junction to be with the symlink. This should be done in a cmd terminal.
+junction to be with the symlink. The folder specified as the target should not
+already exist. This should be done in a cmd terminal.
 
 ```
-mklink /j "C:/path/to/folder/you/want/to/link" "new-symlink"
+mklink /j "C:/path/to/put/new/linked/folder/data" "~/path/to/existing/OneDrive/folder/called/data"
 ```
 
 
