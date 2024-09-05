@@ -4,7 +4,7 @@
 
 # download roboto and montserrat from Google Fonts: fonts.google.com
 # open your "FontBook" in applications
-# unzip and drag the contents (the .ttf files) to the "FontBook" (you'll have to
+# unzip and drag the contents (the .ttf files) to the "Font Book" (you'll have to
 # do this one font at a time)
 
 require(tidyverse)
