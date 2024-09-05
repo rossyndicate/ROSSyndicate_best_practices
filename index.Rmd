@@ -12,10 +12,10 @@ editor_options:
 ---
 
 ```{r, echo = F, message = FALSE, warning = FALSE}
-library(formatR)
-library(bookdown)
-library(servr)
-library(tidyverse)
+require(formatR)
+require(bookdown)
+require(servr)
+require(tidyverse)
 ```
 
 # About

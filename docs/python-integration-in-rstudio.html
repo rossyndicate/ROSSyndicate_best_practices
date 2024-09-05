@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Section 9 Python Integration in RStudio | ROSSyndicate Project and Workflow Best Practices</title>
   <meta name="description" content="The ROSSyndicate workflow best practices guide." />
-  <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Section 9 Python Integration in RStudio | ROSSyndicate Project and Workflow Best Practices" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="ROSSyndicate" />
 
 
-<meta name="date" content="2024-02-29" />
+<meta name="date" content="2024-09-05" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -57,7 +57,7 @@
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -296,13 +296,13 @@ is not tracking the folder.</p>
 virtual environment is set up, and if it is not, it runs the <code>pySetup.R</code> file.
 If the ‘env’ folder exists, we use the {reticulate} function <code>use_condaenv()</code>
 to read the virtual environment you already created in the <code>pySetup.R</code> script.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="python-integration-in-rstudio.html#cb5-1" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
-<span id="cb5-2"><a href="python-integration-in-rstudio.html#cb5-2" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="python-integration-in-rstudio.html#cb5-3" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">dir.exists</span>(<span class="st">&quot;env&quot;</span>)) {</span>
-<span id="cb5-4"><a href="python-integration-in-rstudio.html#cb5-4" tabindex="-1"></a>  <span class="fu">source</span>(<span class="st">&quot;pySetup.R&quot;</span>)</span>
-<span id="cb5-5"><a href="python-integration-in-rstudio.html#cb5-5" tabindex="-1"></a>} <span class="cf">else</span> {</span>
-<span id="cb5-6"><a href="python-integration-in-rstudio.html#cb5-6" tabindex="-1"></a>  <span class="fu">use_condaenv</span>(<span class="fu">file.path</span>(<span class="fu">getwd</span>(), <span class="st">&quot;env&quot;</span>))</span>
-<span id="cb5-7"><a href="python-integration-in-rstudio.html#cb5-7" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="python-integration-in-rstudio.html#cb9-1" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
+<span id="cb9-2"><a href="python-integration-in-rstudio.html#cb9-2" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="python-integration-in-rstudio.html#cb9-3" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">dir.exists</span>(<span class="st">&quot;env&quot;</span>)) {</span>
+<span id="cb9-4"><a href="python-integration-in-rstudio.html#cb9-4" tabindex="-1"></a>  <span class="fu">source</span>(<span class="st">&quot;pySetup.R&quot;</span>)</span>
+<span id="cb9-5"><a href="python-integration-in-rstudio.html#cb9-5" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb9-6"><a href="python-integration-in-rstudio.html#cb9-6" tabindex="-1"></a>  <span class="fu">use_condaenv</span>(<span class="fu">file.path</span>(<span class="fu">getwd</span>(), <span class="st">&quot;env&quot;</span>))</span>
+<span id="cb9-7"><a href="python-integration-in-rstudio.html#cb9-7" tabindex="-1"></a>}</span></code></pre></div>
 </div>
 <div id="editing-the-pysetup.r-file" class="section level3 hasAnchor" number="9.1.2">
 <h3><span class="header-section-number">9.1.2</span> Editing the <code>pySetup.R</code> file<a href="python-integration-in-rstudio.html#editing-the-pysetup.r-file" class="anchor-section" aria-label="Anchor link to header"></a></h3>
