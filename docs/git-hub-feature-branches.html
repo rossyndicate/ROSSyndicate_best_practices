@@ -294,9 +294,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">Section 6</span> Git Hub Feature Branches<a href="git-hub-feature-branches.html#git-hub-feature-branches" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div id="when-to-use-a-feature-branch" class="section level2 hasAnchor" number="6.1">
 <h2><span class="header-section-number">6.1</span> When to Use a Feature Branch<a href="git-hub-feature-branches.html#when-to-use-a-feature-branch" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Working in a feature branch is similar to working in a forked repository,
-except you have two parallel workflows with varying commit history in the same
-[forked] repository. Use a feature branch when:</p>
+<p>Working in a feature branch is similar to working in a forked repository, except
+you have two parallel workflows with varying commit history in the same [forked]
+repository. Use a feature branch when:</p>
 <ul>
 <li>You have a lot of changes but want to make a small pull request.</li>
 <li>You’re doing a PR review that requires running code.</li>
@@ -308,8 +308,8 @@ your main branch – maybe you’ll end up discarding it.</li>
 others’ work on the repo – or even your other branches!</li>
 <li>You want to continue working on a codebase while other code is in review.</li>
 </ul>
-<p><strong>IMPORTANT: Try not to leave your branches unmerged for long periods of time
-if other folks are working in the same repository, to help alleviate merge
+<p><strong>IMPORTANT: Try not to leave your branches unmerged for long periods of time if
+other folks are working in the same repository, to help alleviate merge
 conflicts.</strong></p>
 </div>
 <div id="how-to-create-and-work-with-feature-branches" class="section level2 hasAnchor" number="6.2">
@@ -375,8 +375,8 @@ from your forked repo.</p>
 <div id="making-a-smaller-pr-from-an-existing-branch" class="section level2 hasAnchor" number="6.3">
 <h2><span class="header-section-number">6.3</span> Making a Smaller PR from an Existing Branch<a href="git-hub-feature-branches.html#making-a-smaller-pr-from-an-existing-branch" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Sometimes you want to make a PR that starts from where the central repository
-(upstream) is, rather than your full main branch. This is useful when you have
-a lot of local changes but want to submit only specific files.</p>
+(upstream) is, rather than your full main branch. This is useful when you have a
+lot of local changes but want to submit only specific files.</p>
 <div class="sourceCode" id="cb16"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb16-1"><a href="git-hub-feature-branches.html#cb16-1" tabindex="-1"></a><span class="co"># Create new branch &quot;pr&quot; from upstream/main</span></span>
 <span id="cb16-2"><a href="git-hub-feature-branches.html#cb16-2" tabindex="-1"></a><span class="fu">git</span> checkout <span class="at">-b</span> pr upstream/main</span>
 <span id="cb16-3"><a href="git-hub-feature-branches.html#cb16-3" tabindex="-1"></a></span>
@@ -405,8 +405,7 @@ way to exit, type <code>:q</code> and press Enter.</p>
 work into your main branch:</p>
 <ol style="list-style-type: decimal">
 <li>Make sure all changes are committed on your current branch. 2. Create (or
-switch to) the experimental branch:
-<code>bash     git checkout -b experiment</code></li>
+switch to) the experimental branch: <code>bash     git checkout -b experiment</code></li>
 <li>Make changes and commit:
 <code>bash     git add .     git commit -m "some changes to this branch"</code></li>
 <li>Bring changes into main:
@@ -421,11 +420,43 @@ switch to) the experimental branch:
 </div>
 <div id="git-checkout-vs.-git-merge" class="section level2 hasAnchor" number="6.6">
 <h2><span class="header-section-number">6.6</span> <code>git checkout</code> vs. <code>git merge</code><a href="git-hub-feature-branches.html#git-checkout-vs.-git-merge" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="line-block">| <code>git checkout</code> | <code>git merge</code> | |—|—|—| | <strong>Use for</strong> | Bringing in a</div>
-<p>specific file from another branch | Combining two full branches | | <strong>If file
-exists</strong> | Overwrites local changes with the checked-out version | Combines
-with rules for keeping the most recent commit | | <strong>History</strong> | Does not
-combine histories | Joins two histories into one |</p>
+<p>checkout: Use to bring in a file from another branch. If the file already
+exists, it overwrites local changes with the new checked out version. It does
+not combine histories.</p>
+<p>merge: Merge can be used to combine two branches or individual files from two
+branches. It will combine with rules for keeping most recent commit from each
+file, joining the two histories into one.</p>
+<table>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th><code>git checkout</code></th>
+<th><code>git merge</code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Use for</strong></td>
+<td>Bringing in a specific file from another branch</td>
+<td>Combining two full branches</td>
+</tr>
+<tr class="even">
+<td><strong>If file exists</strong></td>
+<td>Overwrites local changes with the checked-out version</td>
+<td>Combines with rules for keeping the most recent commit</td>
+</tr>
+<tr class="odd">
+<td><strong>History</strong></td>
+<td>Does not combine histories</td>
+<td>Joins two histories into one</td>
+</tr>
+</tbody>
+</table>
 <hr />
 </div>
 <div id="deleting-a-branch" class="section level2 hasAnchor" number="6.7">
@@ -438,10 +469,10 @@ combine histories | Joins two histories into one |</p>
 <h2><span class="header-section-number">6.8</span> Feature Branch Best Practices<a href="git-hub-feature-branches.html#feature-branch-best-practices" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li>Keep your fork up to date regularly. <strong>COMMUNICATE</strong> with your team.</li>
-<li>Each team member should work on separate files/features (no overlap;
-feature collaboration can take place in pull requests).</li>
-<li>Don’t leave branches unmerged for long periods when others are active in
-the repository.</li>
+<li>Each team member should work on separate files/features (no overlap; feature
+collaboration can take place in pull requests).</li>
+<li>Don’t leave branches unmerged for long periods when others are active in the
+repository.</li>
 </ul>
 
 </div>

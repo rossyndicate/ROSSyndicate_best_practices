@@ -32,7 +32,7 @@ conflicts.**
 
 Before creating a branch, check what already exists:
 
-```bash
+``` bash
 git branch -v          # list local branches
 git remote -v          # list existing remote connection (i.e., git repos you can pull files in from)
 ```
@@ -45,7 +45,7 @@ review of someone else's fork):
 -   Go to the GitHub page and copy the SSH or HTTPS link.
 -   Add the remote (because you want to branch to it):
 
-```bash
+``` bash
 git remote add new_remote_name ssh_link
 # or
 git remote add new_remote_name https_link
@@ -53,13 +53,13 @@ git remote add new_remote_name https_link
 
 -   Fetch the remote to see its contents (does not download files yet):
 
-```bash
+``` bash
 git fetch new_remote_name
 ```
 
 To remove a remote you no longer need:
 
-```bash
+``` bash
 git remote delete remote_name
 ```
 
@@ -67,13 +67,13 @@ git remote delete remote_name
 
 **Create a new branch from a remote branch:**
 
-```bash
+``` bash
 git checkout -b new_branch_name remote_name/branch_name
 ```
 
 **Switch to an existing branch:**
 
-```bash
+``` bash
 git checkout branch_name
 # or
 git switch branch_name
@@ -81,7 +81,7 @@ git switch branch_name
 
 **Create a new branch starting from the current branch:**
 
-```bash
+``` bash
 git checkout -b new-branch-name
 ```
 
@@ -93,7 +93,7 @@ it's still there on the feature branch.
 
 Add and commit as usual within your branch:
 
-```bash
+``` bash
 git add .
 git commit -m "some changes to this branch"
 ```
@@ -102,13 +102,13 @@ git commit -m "some changes to this branch"
 
 **Push the branch to your remote (forked repo):**
 
-```bash
+``` bash
 git push -u origin new-branch-name
 ```
 
 **Merge branch changes back into main:**
 
-```bash
+``` bash
 git checkout main
 git merge new-branch-name
 ```
@@ -119,7 +119,7 @@ from your forked repo.
 
 ![](images/Screenshot%202023-07-28%20at%209.51.52%20AM.png){width="250"}
 
----
+--------------------------------------------------------------------------------
 
 ## Making a Smaller PR from an Existing Branch
 
@@ -127,7 +127,7 @@ Sometimes you want to make a PR that starts from where the central repository
 (upstream) is, rather than your full main branch. This is useful when you have
 a lot of local changes but want to submit only specific files.
 
-```bash
+``` bash
 # Create new branch "pr" from upstream/main
 git checkout -b pr upstream/main
 
@@ -137,14 +137,14 @@ git checkout main .gitignore _targets
 git restore --source main -- file_name
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Merging Branches
 
 Merge combines two branch histories, keeping the most recent commit from each
 file and joining the two timelines into one.
 
-```bash
+``` bash
 git merge branch_name
 # example:
 git merge experiment
@@ -153,37 +153,35 @@ git merge experiment
 > **Tip:** If you get stuck in a merge review in the terminal with no obvious
 > way to exit, type `:q` and press Enter.
 
----
+--------------------------------------------------------------------------------
 
 ## Moving Work from a Feature Branch to Main
 
 Say you worked on an "experiment" branch and want to bring some or all of that
 work into your main branch:
 
-1.  Make sure all changes are committed on your current branch. 2.  Create (or
-switch to) the experimental branch:
-    ```bash
-    git checkout -b experiment
-    ```
-3.  Make changes and commit:
-    ```bash
-    git add .
-    git commit -m "some changes to this branch"
-    ```
-4.  Bring changes into main:
+1.  Make sure all changes are committed on your current branch. 2. Create (or
+    switch to) the experimental branch: `bash     git checkout -b experiment`
+2.  Make changes and commit:
+    `bash     git add .     git commit -m "some changes to this branch"`
+3.  Bring changes into main:
     -   **Update just one file in main:**
-        ```bash
-        git switch main
-        git checkout experiment file_to_checkout
-        ```
+        `bash     git switch main     git checkout experiment file_to_checkout`
     -   **Merge all changes from "experiment" into current branch:**
-        ```bash
-        git merge experiment
-        ```
+        `bash     git merge experiment`
 
----
+--------------------------------------------------------------------------------
 
 ## `git checkout` vs. `git merge`
+
+checkout: Use to bring in a file from another branch. If the file already
+exists, it overwrites local changes with the new checked out version. It does
+not combine histories.
+
+merge: Merge can be used to combine two branches or individual files from two
+branches. It will combine with rules for keeping most recent commit from each
+file, joining the two histories into one.
+
 
 | | `git checkout` | `git merge` | |---|---|---| | **Use for** | Bringing in a
 specific file from another branch | Combining two full branches | | **If file
@@ -191,25 +189,25 @@ exists** | Overwrites local changes with the checked-out version | Combines
 with rules for keeping the most recent commit | | **History** | Does not
 combine histories | Joins two histories into one |
 
----
+--------------------------------------------------------------------------------
 
 ## Deleting a Branch
 
 Once a branch is no longer needed:
 
-```bash
+``` bash
 git branch -D branch_name
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Feature Branch Best Practices
 
 -   Keep your fork up to date regularly. **COMMUNICATE** with your team.
--   Each team member should work on separate files/features (no overlap;
-    feature collaboration can take place in pull requests).
--   Don't leave branches unmerged for long periods when others are active in
-    the repository.
+-   Each team member should work on separate files/features (no overlap; feature
+    collaboration can take place in pull requests).
+-   Don't leave branches unmerged for long periods when others are active in the
+    repository.
 
 ```{r, echo = F}
 knitr::wrap_rmd('05-Git-Feature-Branches.Rmd', width = 80, backup = NULL)
