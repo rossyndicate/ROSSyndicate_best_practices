@@ -6,58 +6,210 @@ editor_options:
 
 # Git Hub Feature Branches
 
-## When to work in a feature branch
+## When to Use a Feature Branch
 
-Working in feature branches is similar to working in a forked repository,
+Working in a feature branch is similar to working in a forked repository,
 except you have two parallel workflows with varying commit history in the same
-[forked] repository. It is essential, if you are using branches, that you are
-working on a very specific issue or feature (hence the name) that is
-independent of others' work on the repo -- or even your other branches!
+[forked] repository. Use a feature branch when:
+
+-   You have a lot of changes but want to make a small pull request.
+-   You're doing a PR review that requires running code.
+-   You have a separate part of the project you want to store separately.
+-   You're working on an exploratory or separate task and don't want to affect
+    your main branch -- maybe you'll end up discarding it.
+-   You want to check for merge conflicts before pushing.
+-   You are working on a very specific issue or feature that is independent of
+    others' work on the repo -- or even your other branches!
+-   You want to continue working on a codebase while other code is in review.
+
 **IMPORTANT: Try not to leave your branches unmerged for long periods of time
-if other folks are working in the same repository to help alleviate merge
+if other folks are working in the same repository, to help alleviate merge
 conflicts.**
 
-Working in a feature branch is also a way to continue working on a codebase as
-other code is in review.
+## How to Create and Work with Feature Branches
 
-## How to create a feature branch
+### Step 1: List Existing Branches and Remotes
 
-Make sure the forked main ('origin main') is updated with upstream changes and
-all of your current work has been committed to the main branch, then start a
-new branch:
+Before creating a branch, check what already exists:
 
-> git checkout -b new-branch-name
+```bash
+git branch -v          # list local branches
+git remote -v          # list existing remote connection (i.e., git repos you can pull files in from)
+```
 
-Branch starts with a copy of the branch you were on. You can now make edits in
-this branch and add/commit as usual. If you switch back to the main branch
-using `git checkout main`, all of your commit history will revert to that on
-the main branch (aka, it will look like all of your work disappeared).
+### Step 2: Add a Remote (if needed)
 
-You can either push your branch up to your origin remote (your forked repo)
-using:
+If the remote you want to branch from isn't already listed (e.g., for a PR
+review of someone else's fork):
 
-> git push -u origin new-branch-name
+-   Go to the GitHub page and copy the SSH or HTTPS link.
+-   Add the remote (because you want to branch to it):
 
-Or you can go back to your main branch and merge your edits from the feature
-branch:
+```bash
+git remote add new_remote_name ssh_link
+# or
+git remote add new_remote_name https_link
+```
 
-> git checkout main git merge new-branch-name
+-   Fetch the remote to see its contents (does not download files yet):
+
+```bash
+git fetch new_remote_name
+```
+
+To remove a remote you no longer need:
+
+```bash
+git remote delete remote_name
+```
+
+### Step 3: Create or Switch to a Branch
+
+**Create a new branch from a remote branch:**
+
+```bash
+git checkout -b new_branch_name remote_name/branch_name
+```
+
+**Switch to an existing branch:**
+
+```bash
+git checkout branch_name
+# or
+git switch branch_name
+```
+
+**Create a new branch starting from the current branch:**
+
+```bash
+git checkout -b new-branch-name
+```
+
+The branch starts as a copy of whichever branch you were on. If you switch back
+to main using `git checkout main`, your branch work will appear to disappear --
+it's still there on the feature branch.
+
+### Step 4: Make and Commit Changes
+
+Add and commit as usual within your branch:
+
+```bash
+git add .
+git commit -m "some changes to this branch"
+```
+
+### Step 5: Push or Merge Your Branch
+
+**Push the branch to your remote (forked repo):**
+
+```bash
+git push -u origin new-branch-name
+```
+
+**Merge branch changes back into main:**
+
+```bash
+git checkout main
+git merge new-branch-name
+```
 
 You can also submit a pull request from your feature branch the same way you
-would if you were making a pull request from your main branch. Just make sure
-you have selected the proper branch from your forked repo.
+would from your main branch. Just make sure you've selected the correct branch
+from your forked repo.
 
 ![](images/Screenshot%202023-07-28%20at%209.51.52%20AM.png){width="250"}
 
-In general, we only have a single branch ('main') in use at our primary
-ROSSyndicate repository.
+---
 
-## Feature branch best practices
+## Making a Smaller PR from an Existing Branch
 
--   Keep your fork up to date regularly!! COMMUNICATE.
+Sometimes you want to make a PR that starts from where the central repository
+(upstream) is, rather than your full main branch. This is useful when you have
+a lot of local changes but want to submit only specific files.
 
--   Each team member works on separate files/features (no overlap, feature
-    collaboration can take place in the pull requests).
+```bash
+# Create new branch "pr" from upstream/main
+git checkout -b pr upstream/main
+
+# Then selectively add files from your main branch:
+git checkout main .gitignore _targets
+# or
+git restore --source main -- file_name
+```
+
+---
+
+## Merging Branches
+
+Merge combines two branch histories, keeping the most recent commit from each
+file and joining the two timelines into one.
+
+```bash
+git merge branch_name
+# example:
+git merge experiment
+```
+
+> **Tip:** If you get stuck in a merge review in the terminal with no obvious
+> way to exit, type `:q` and press Enter.
+
+---
+
+## Moving Work from a Feature Branch to Main
+
+Say you worked on an "experiment" branch and want to bring some or all of that
+work into your main branch:
+
+1.  Make sure all changes are committed on your current branch. 2.  Create (or
+switch to) the experimental branch:
+    ```bash
+    git checkout -b experiment
+    ```
+3.  Make changes and commit:
+    ```bash
+    git add .
+    git commit -m "some changes to this branch"
+    ```
+4.  Bring changes into main:
+    -   **Update just one file in main:**
+        ```bash
+        git switch main
+        git checkout experiment file_to_checkout
+        ```
+    -   **Merge all changes from "experiment" into current branch:**
+        ```bash
+        git merge experiment
+        ```
+
+---
+
+## `git checkout` vs. `git merge`
+
+| | `git checkout` | `git merge` | |---|---|---| | **Use for** | Bringing in a
+specific file from another branch | Combining two full branches | | **If file
+exists** | Overwrites local changes with the checked-out version | Combines
+with rules for keeping the most recent commit | | **History** | Does not
+combine histories | Joins two histories into one |
+
+---
+
+## Deleting a Branch
+
+Once a branch is no longer needed:
+
+```bash
+git branch -D branch_name
+```
+
+---
+
+## Feature Branch Best Practices
+
+-   Keep your fork up to date regularly. **COMMUNICATE** with your team.
+-   Each team member should work on separate files/features (no overlap;
+    feature collaboration can take place in pull requests).
+-   Don't leave branches unmerged for long periods when others are active in
+    the repository.
 
 ```{r, echo = F}
 knitr::wrap_rmd('05-Git-Feature-Branches.Rmd', width = 80, backup = NULL)

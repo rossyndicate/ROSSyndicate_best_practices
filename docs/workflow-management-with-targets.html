@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Section 10 Workflow Management with {targets} | ROSSyndicate Project and Workflow Best Practices</title>
   <meta name="description" content="The ROSSyndicate workflow best practices guide." />
-  <meta name="generator" content="bookdown 0.42 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Section 10 Workflow Management with {targets} | ROSSyndicate Project and Workflow Best Practices" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="ROSSyndicate" />
 
 
-<meta name="date" content="2025-05-14" />
+<meta name="date" content="2026-03-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -56,8 +56,9 @@
 
 
 <style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -67,7 +68,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -199,9 +200,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="6" data-path="git-hub-feature-branches.html"><a href="git-hub-feature-branches.html"><i class="fa fa-check"></i><b>6</b> Git Hub Feature Branches</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="git-hub-feature-branches.html"><a href="git-hub-feature-branches.html#when-to-work-in-a-feature-branch"><i class="fa fa-check"></i><b>6.1</b> When to work in a feature branch</a></li>
-<li class="chapter" data-level="6.2" data-path="git-hub-feature-branches.html"><a href="git-hub-feature-branches.html#how-to-create-a-feature-branch"><i class="fa fa-check"></i><b>6.2</b> How to create a feature branch</a></li>
-<li class="chapter" data-level="6.3" data-path="git-hub-feature-branches.html"><a href="git-hub-feature-branches.html#feature-branch-best-practices"><i class="fa fa-check"></i><b>6.3</b> Feature branch best practices</a></li>
+<li class="chapter" data-level="6.1" data-path="git-hub-feature-branches.html"><a href="git-hub-feature-branches.html#when-to-use-a-feature-branch"><i class="fa fa-check"></i><b>6.1</b> When to Use a Feature Branch</a></li>
+<li class="chapter" data-level="6.2" data-path="git-hub-feature-branches.html"><a href="git-hub-feature-branches.html#how-to-create-and-work-with-feature-branches"><i class="fa fa-check"></i><b>6.2</b> How to Create and Work with Feature Branches</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="git-hub-feature-branches.html"><a href="git-hub-feature-branches.html#step-1-list-existing-branches-and-remotes"><i class="fa fa-check"></i><b>6.2.1</b> Step 1: List Existing Branches and Remotes</a></li>
+<li class="chapter" data-level="6.2.2" data-path="git-hub-feature-branches.html"><a href="git-hub-feature-branches.html#step-2-add-a-remote-if-needed"><i class="fa fa-check"></i><b>6.2.2</b> Step 2: Add a Remote (if needed)</a></li>
+<li class="chapter" data-level="6.2.3" data-path="git-hub-feature-branches.html"><a href="git-hub-feature-branches.html#step-3-create-or-switch-to-a-branch"><i class="fa fa-check"></i><b>6.2.3</b> Step 3: Create or Switch to a Branch</a></li>
+<li class="chapter" data-level="6.2.4" data-path="git-hub-feature-branches.html"><a href="git-hub-feature-branches.html#step-4-make-and-commit-changes"><i class="fa fa-check"></i><b>6.2.4</b> Step 4: Make and Commit Changes</a></li>
+<li class="chapter" data-level="6.2.5" data-path="git-hub-feature-branches.html"><a href="git-hub-feature-branches.html#step-5-push-or-merge-your-branch"><i class="fa fa-check"></i><b>6.2.5</b> Step 5: Push or Merge Your Branch</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="git-hub-feature-branches.html"><a href="git-hub-feature-branches.html#making-a-smaller-pr-from-an-existing-branch"><i class="fa fa-check"></i><b>6.3</b> Making a Smaller PR from an Existing Branch</a></li>
+<li class="chapter" data-level="6.4" data-path="git-hub-feature-branches.html"><a href="git-hub-feature-branches.html#merging-branches"><i class="fa fa-check"></i><b>6.4</b> Merging Branches</a></li>
+<li class="chapter" data-level="6.5" data-path="git-hub-feature-branches.html"><a href="git-hub-feature-branches.html#moving-work-from-a-feature-branch-to-main"><i class="fa fa-check"></i><b>6.5</b> Moving Work from a Feature Branch to Main</a></li>
+<li class="chapter" data-level="6.6" data-path="git-hub-feature-branches.html"><a href="git-hub-feature-branches.html#git-checkout-vs.-git-merge"><i class="fa fa-check"></i><b>6.6</b> <code>git checkout</code> vs. <code>git merge</code></a></li>
+<li class="chapter" data-level="6.7" data-path="git-hub-feature-branches.html"><a href="git-hub-feature-branches.html#deleting-a-branch"><i class="fa fa-check"></i><b>6.7</b> Deleting a Branch</a></li>
+<li class="chapter" data-level="6.8" data-path="git-hub-feature-branches.html"><a href="git-hub-feature-branches.html#feature-branch-best-practices"><i class="fa fa-check"></i><b>6.8</b> Feature Branch Best Practices</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="using-ai-integrations.html"><a href="using-ai-integrations.html"><i class="fa fa-check"></i><b>7</b> Using AI Integrations</a>
 <ul>
@@ -361,26 +374,26 @@ branches requires two steps: first, you create a list to iterate (or branch) on
 - in this case, a list of path-rows; then you map that list over the function
 that relies on the path-row. Your {targets} list might look something like
 this:</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="workflow-management-with-targets.html#cb10-1" tabindex="-1"></a><span class="fu">list</span>(</span>
-<span id="cb10-2"><a href="workflow-management-with-targets.html#cb10-2" tabindex="-1"></a>  <span class="co"># get WRS tiles - this target returns a list of path-rows</span></span>
-<span id="cb10-3"><a href="workflow-management-with-targets.html#cb10-3" tabindex="-1"></a>  <span class="fu">tar_target</span>(</span>
-<span id="cb10-4"><a href="workflow-management-with-targets.html#cb10-4" tabindex="-1"></a>    <span class="at">name =</span> WRS_tiles,</span>
-<span id="cb10-5"><a href="workflow-management-with-targets.html#cb10-5" tabindex="-1"></a>    <span class="at">command =</span> <span class="fu">get_WRS_tiles</span>(WRS_detection_method, yml_file),</span>
-<span id="cb10-6"><a href="workflow-management-with-targets.html#cb10-6" tabindex="-1"></a>    <span class="at">packages =</span> <span class="fu">c</span>(<span class="st">&quot;readr&quot;</span>, <span class="st">&quot;sf&quot;</span>)</span>
-<span id="cb10-7"><a href="workflow-management-with-targets.html#cb10-7" tabindex="-1"></a>  ),</span>
-<span id="cb10-8"><a href="workflow-management-with-targets.html#cb10-8" tabindex="-1"></a></span>
-<span id="cb10-9"><a href="workflow-management-with-targets.html#cb10-9" tabindex="-1"></a>  <span class="co"># run the landsat pull as function per path-row</span></span>
-<span id="cb10-10"><a href="workflow-management-with-targets.html#cb10-10" tabindex="-1"></a>  <span class="fu">tar_target</span>(</span>
-<span id="cb10-11"><a href="workflow-management-with-targets.html#cb10-11" tabindex="-1"></a>    <span class="at">name =</span> eeRun,</span>
-<span id="cb10-12"><a href="workflow-management-with-targets.html#cb10-12" tabindex="-1"></a>    <span class="at">command =</span> {</span>
-<span id="cb10-13"><a href="workflow-management-with-targets.html#cb10-13" tabindex="-1"></a>      ref_pull_457_DSWE1</span>
-<span id="cb10-14"><a href="workflow-management-with-targets.html#cb10-14" tabindex="-1"></a>      ref_pull_89_DSWE1</span>
-<span id="cb10-15"><a href="workflow-management-with-targets.html#cb10-15" tabindex="-1"></a>      <span class="fu">run_GEE_per_tile</span>(WRS_tiles)</span>
-<span id="cb10-16"><a href="workflow-management-with-targets.html#cb10-16" tabindex="-1"></a>    },</span>
-<span id="cb10-17"><a href="workflow-management-with-targets.html#cb10-17" tabindex="-1"></a>    <span class="at">pattern =</span> <span class="fu">map</span>(WRS_tiles), <span class="co"># this is where the magic happens!</span></span>
-<span id="cb10-18"><a href="workflow-management-with-targets.html#cb10-18" tabindex="-1"></a>    <span class="at">packages =</span> <span class="st">&quot;reticulate&quot;</span></span>
-<span id="cb10-19"><a href="workflow-management-with-targets.html#cb10-19" tabindex="-1"></a>  )</span>
-<span id="cb10-20"><a href="workflow-management-with-targets.html#cb10-20" tabindex="-1"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="workflow-management-with-targets.html#cb20-1" tabindex="-1"></a><span class="fu">list</span>(</span>
+<span id="cb20-2"><a href="workflow-management-with-targets.html#cb20-2" tabindex="-1"></a>  <span class="co"># get WRS tiles - this target returns a list of path-rows</span></span>
+<span id="cb20-3"><a href="workflow-management-with-targets.html#cb20-3" tabindex="-1"></a>  <span class="fu">tar_target</span>(</span>
+<span id="cb20-4"><a href="workflow-management-with-targets.html#cb20-4" tabindex="-1"></a>    <span class="at">name =</span> WRS_tiles,</span>
+<span id="cb20-5"><a href="workflow-management-with-targets.html#cb20-5" tabindex="-1"></a>    <span class="at">command =</span> <span class="fu">get_WRS_tiles</span>(WRS_detection_method, yml_file),</span>
+<span id="cb20-6"><a href="workflow-management-with-targets.html#cb20-6" tabindex="-1"></a>    <span class="at">packages =</span> <span class="fu">c</span>(<span class="st">&quot;readr&quot;</span>, <span class="st">&quot;sf&quot;</span>)</span>
+<span id="cb20-7"><a href="workflow-management-with-targets.html#cb20-7" tabindex="-1"></a>  ),</span>
+<span id="cb20-8"><a href="workflow-management-with-targets.html#cb20-8" tabindex="-1"></a></span>
+<span id="cb20-9"><a href="workflow-management-with-targets.html#cb20-9" tabindex="-1"></a>  <span class="co"># run the landsat pull as function per path-row</span></span>
+<span id="cb20-10"><a href="workflow-management-with-targets.html#cb20-10" tabindex="-1"></a>  <span class="fu">tar_target</span>(</span>
+<span id="cb20-11"><a href="workflow-management-with-targets.html#cb20-11" tabindex="-1"></a>    <span class="at">name =</span> eeRun,</span>
+<span id="cb20-12"><a href="workflow-management-with-targets.html#cb20-12" tabindex="-1"></a>    <span class="at">command =</span> {</span>
+<span id="cb20-13"><a href="workflow-management-with-targets.html#cb20-13" tabindex="-1"></a>      ref_pull_457_DSWE1</span>
+<span id="cb20-14"><a href="workflow-management-with-targets.html#cb20-14" tabindex="-1"></a>      ref_pull_89_DSWE1</span>
+<span id="cb20-15"><a href="workflow-management-with-targets.html#cb20-15" tabindex="-1"></a>      <span class="fu">run_GEE_per_tile</span>(WRS_tiles)</span>
+<span id="cb20-16"><a href="workflow-management-with-targets.html#cb20-16" tabindex="-1"></a>    },</span>
+<span id="cb20-17"><a href="workflow-management-with-targets.html#cb20-17" tabindex="-1"></a>    <span class="at">pattern =</span> <span class="fu">map</span>(WRS_tiles), <span class="co"># this is where the magic happens!</span></span>
+<span id="cb20-18"><a href="workflow-management-with-targets.html#cb20-18" tabindex="-1"></a>    <span class="at">packages =</span> <span class="st">&quot;reticulate&quot;</span></span>
+<span id="cb20-19"><a href="workflow-management-with-targets.html#cb20-19" tabindex="-1"></a>  )</span>
+<span id="cb20-20"><a href="workflow-management-with-targets.html#cb20-20" tabindex="-1"></a>)</span></code></pre></div>
 <p><strong>Using python scripts in {targets}</strong></p>
 <p>The {targets} package was designed to work for R workflows only, which means
 for our mixed-language workflows, we have to get creative. Again, {targets}
@@ -392,11 +405,11 @@ all of the functions you call in your pipeline. {targets} will track all of the
 functions in your .py file as individual targets. To run a python script as a
 target, you have to nest it in an R function. For instance, our
 <code>run_GEE_per_tile()</code> from above is just this wrapper to:</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="workflow-management-with-targets.html#cb11-1" tabindex="-1"></a>run_GEE_per_tile <span class="ot">&lt;-</span> <span class="cf">function</span>(WRS_tile) {</span>
-<span id="cb11-2"><a href="workflow-management-with-targets.html#cb11-2" tabindex="-1"></a>  tile <span class="ot">&lt;-</span> WRS_tile <span class="co"># store the tile from the list</span></span>
-<span id="cb11-3"><a href="workflow-management-with-targets.html#cb11-3" tabindex="-1"></a>  <span class="fu">write_lines</span>(tile, <span class="st">&#39;data_acquisition/out/current_tile.txt&#39;</span>, <span class="at">sep =</span> <span class="st">&#39;&#39;</span>) <span class="co"># save it as a generic file</span></span>
-<span id="cb11-4"><a href="workflow-management-with-targets.html#cb11-4" tabindex="-1"></a>  <span class="fu">source_python</span>(<span class="st">&#39;data_acquisition/src/runGEEperTile.py&#39;</span>) <span class="co"># this script actually *reads* the generic file above as one of the first steps</span></span>
-<span id="cb11-5"><a href="workflow-management-with-targets.html#cb11-5" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="workflow-management-with-targets.html#cb21-1" tabindex="-1"></a>run_GEE_per_tile <span class="ot">&lt;-</span> <span class="cf">function</span>(WRS_tile) {</span>
+<span id="cb21-2"><a href="workflow-management-with-targets.html#cb21-2" tabindex="-1"></a>  tile <span class="ot">&lt;-</span> WRS_tile <span class="co"># store the tile from the list</span></span>
+<span id="cb21-3"><a href="workflow-management-with-targets.html#cb21-3" tabindex="-1"></a>  <span class="fu">write_lines</span>(tile, <span class="st">&#39;data_acquisition/out/current_tile.txt&#39;</span>, <span class="at">sep =</span> <span class="st">&#39;&#39;</span>) <span class="co"># save it as a generic file</span></span>
+<span id="cb21-4"><a href="workflow-management-with-targets.html#cb21-4" tabindex="-1"></a>  <span class="fu">source_python</span>(<span class="st">&#39;data_acquisition/src/runGEEperTile.py&#39;</span>) <span class="co"># this script actually *reads* the generic file above as one of the first steps</span></span>
+<span id="cb21-5"><a href="workflow-management-with-targets.html#cb21-5" tabindex="-1"></a>}</span></code></pre></div>
 <p>Note, {targets} does not track any of the functions called in the
 <code>source_python()</code> line like it does in an .R script - you must list all of the
 functions that are needed in your script in the <code>command</code> list so that

@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Section 6 Git Hub Feature Branches | ROSSyndicate Project and Workflow Best Practices</title>
   <meta name="description" content="The ROSSyndicate workflow best practices guide." />
-  <meta name="generator" content="bookdown 0.42 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Section 6 Git Hub Feature Branches | ROSSyndicate Project and Workflow Best Practices" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="ROSSyndicate" />
 
 
-<meta name="date" content="2025-05-14" />
+<meta name="date" content="2026-03-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -56,8 +56,9 @@
 
 
 <style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -67,7 +68,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -199,9 +200,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="6" data-path="git-hub-feature-branches.html"><a href="git-hub-feature-branches.html"><i class="fa fa-check"></i><b>6</b> Git Hub Feature Branches</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="git-hub-feature-branches.html"><a href="git-hub-feature-branches.html#when-to-work-in-a-feature-branch"><i class="fa fa-check"></i><b>6.1</b> When to work in a feature branch</a></li>
-<li class="chapter" data-level="6.2" data-path="git-hub-feature-branches.html"><a href="git-hub-feature-branches.html#how-to-create-a-feature-branch"><i class="fa fa-check"></i><b>6.2</b> How to create a feature branch</a></li>
-<li class="chapter" data-level="6.3" data-path="git-hub-feature-branches.html"><a href="git-hub-feature-branches.html#feature-branch-best-practices"><i class="fa fa-check"></i><b>6.3</b> Feature branch best practices</a></li>
+<li class="chapter" data-level="6.1" data-path="git-hub-feature-branches.html"><a href="git-hub-feature-branches.html#when-to-use-a-feature-branch"><i class="fa fa-check"></i><b>6.1</b> When to Use a Feature Branch</a></li>
+<li class="chapter" data-level="6.2" data-path="git-hub-feature-branches.html"><a href="git-hub-feature-branches.html#how-to-create-and-work-with-feature-branches"><i class="fa fa-check"></i><b>6.2</b> How to Create and Work with Feature Branches</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="git-hub-feature-branches.html"><a href="git-hub-feature-branches.html#step-1-list-existing-branches-and-remotes"><i class="fa fa-check"></i><b>6.2.1</b> Step 1: List Existing Branches and Remotes</a></li>
+<li class="chapter" data-level="6.2.2" data-path="git-hub-feature-branches.html"><a href="git-hub-feature-branches.html#step-2-add-a-remote-if-needed"><i class="fa fa-check"></i><b>6.2.2</b> Step 2: Add a Remote (if needed)</a></li>
+<li class="chapter" data-level="6.2.3" data-path="git-hub-feature-branches.html"><a href="git-hub-feature-branches.html#step-3-create-or-switch-to-a-branch"><i class="fa fa-check"></i><b>6.2.3</b> Step 3: Create or Switch to a Branch</a></li>
+<li class="chapter" data-level="6.2.4" data-path="git-hub-feature-branches.html"><a href="git-hub-feature-branches.html#step-4-make-and-commit-changes"><i class="fa fa-check"></i><b>6.2.4</b> Step 4: Make and Commit Changes</a></li>
+<li class="chapter" data-level="6.2.5" data-path="git-hub-feature-branches.html"><a href="git-hub-feature-branches.html#step-5-push-or-merge-your-branch"><i class="fa fa-check"></i><b>6.2.5</b> Step 5: Push or Merge Your Branch</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="git-hub-feature-branches.html"><a href="git-hub-feature-branches.html#making-a-smaller-pr-from-an-existing-branch"><i class="fa fa-check"></i><b>6.3</b> Making a Smaller PR from an Existing Branch</a></li>
+<li class="chapter" data-level="6.4" data-path="git-hub-feature-branches.html"><a href="git-hub-feature-branches.html#merging-branches"><i class="fa fa-check"></i><b>6.4</b> Merging Branches</a></li>
+<li class="chapter" data-level="6.5" data-path="git-hub-feature-branches.html"><a href="git-hub-feature-branches.html#moving-work-from-a-feature-branch-to-main"><i class="fa fa-check"></i><b>6.5</b> Moving Work from a Feature Branch to Main</a></li>
+<li class="chapter" data-level="6.6" data-path="git-hub-feature-branches.html"><a href="git-hub-feature-branches.html#git-checkout-vs.-git-merge"><i class="fa fa-check"></i><b>6.6</b> <code>git checkout</code> vs. <code>git merge</code></a></li>
+<li class="chapter" data-level="6.7" data-path="git-hub-feature-branches.html"><a href="git-hub-feature-branches.html#deleting-a-branch"><i class="fa fa-check"></i><b>6.7</b> Deleting a Branch</a></li>
+<li class="chapter" data-level="6.8" data-path="git-hub-feature-branches.html"><a href="git-hub-feature-branches.html#feature-branch-best-practices"><i class="fa fa-check"></i><b>6.8</b> Feature Branch Best Practices</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="using-ai-integrations.html"><a href="using-ai-integrations.html"><i class="fa fa-check"></i><b>7</b> Using AI Integrations</a>
 <ul>
@@ -279,54 +292,156 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="git-hub-feature-branches" class="section level1 hasAnchor" number="6">
 <h1><span class="header-section-number">Section 6</span> Git Hub Feature Branches<a href="git-hub-feature-branches.html#git-hub-feature-branches" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="when-to-work-in-a-feature-branch" class="section level2 hasAnchor" number="6.1">
-<h2><span class="header-section-number">6.1</span> When to work in a feature branch<a href="git-hub-feature-branches.html#when-to-work-in-a-feature-branch" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Working in feature branches is similar to working in a forked repository,
+<div id="when-to-use-a-feature-branch" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> When to Use a Feature Branch<a href="git-hub-feature-branches.html#when-to-use-a-feature-branch" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Working in a feature branch is similar to working in a forked repository,
 except you have two parallel workflows with varying commit history in the same
-[forked] repository. It is essential, if you are using branches, that you are
-working on a very specific issue or feature (hence the name) that is
-independent of others’ work on the repo – or even your other branches!
-<strong>IMPORTANT: Try not to leave your branches unmerged for long periods of time
-if other folks are working in the same repository to help alleviate merge
-conflicts.</strong></p>
-<p>Working in a feature branch is also a way to continue working on a codebase as
-other code is in review.</p>
-</div>
-<div id="how-to-create-a-feature-branch" class="section level2 hasAnchor" number="6.2">
-<h2><span class="header-section-number">6.2</span> How to create a feature branch<a href="git-hub-feature-branches.html#how-to-create-a-feature-branch" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Make sure the forked main (‘origin main’) is updated with upstream changes and
-all of your current work has been committed to the main branch, then start a
-new branch:</p>
-<blockquote>
-<p>git checkout -b new-branch-name</p>
-</blockquote>
-<p>Branch starts with a copy of the branch you were on. You can now make edits in
-this branch and add/commit as usual. If you switch back to the main branch
-using <code>git checkout main</code>, all of your commit history will revert to that on
-the main branch (aka, it will look like all of your work disappeared).</p>
-<p>You can either push your branch up to your origin remote (your forked repo)
-using:</p>
-<blockquote>
-<p>git push -u origin new-branch-name</p>
-</blockquote>
-<p>Or you can go back to your main branch and merge your edits from the feature
-branch:</p>
-<blockquote>
-<p>git checkout main git merge new-branch-name</p>
-</blockquote>
-<p>You can also submit a pull request from your feature branch the same way you
-would if you were making a pull request from your main branch. Just make sure
-you have selected the proper branch from your forked repo.</p>
-<p><img src="images/Screenshot%202023-07-28%20at%209.51.52%20AM.png" width="250" /></p>
-<p>In general, we only have a single branch (‘main’) in use at our primary
-ROSSyndicate repository.</p>
-</div>
-<div id="feature-branch-best-practices" class="section level2 hasAnchor" number="6.3">
-<h2><span class="header-section-number">6.3</span> Feature branch best practices<a href="git-hub-feature-branches.html#feature-branch-best-practices" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+[forked] repository. Use a feature branch when:</p>
 <ul>
-<li><p>Keep your fork up to date regularly!! COMMUNICATE.</p></li>
-<li><p>Each team member works on separate files/features (no overlap, feature
-collaboration can take place in the pull requests).</p></li>
+<li>You have a lot of changes but want to make a small pull request.</li>
+<li>You’re doing a PR review that requires running code.</li>
+<li>You have a separate part of the project you want to store separately.</li>
+<li>You’re working on an exploratory or separate task and don’t want to affect
+your main branch – maybe you’ll end up discarding it.</li>
+<li>You want to check for merge conflicts before pushing.</li>
+<li>You are working on a very specific issue or feature that is independent of
+others’ work on the repo – or even your other branches!</li>
+<li>You want to continue working on a codebase while other code is in review.</li>
+</ul>
+<p><strong>IMPORTANT: Try not to leave your branches unmerged for long periods of time
+if other folks are working in the same repository, to help alleviate merge
+conflicts.</strong></p>
+</div>
+<div id="how-to-create-and-work-with-feature-branches" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> How to Create and Work with Feature Branches<a href="git-hub-feature-branches.html#how-to-create-and-work-with-feature-branches" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="step-1-list-existing-branches-and-remotes" class="section level3 hasAnchor" number="6.2.1">
+<h3><span class="header-section-number">6.2.1</span> Step 1: List Existing Branches and Remotes<a href="git-hub-feature-branches.html#step-1-list-existing-branches-and-remotes" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Before creating a branch, check what already exists:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="git-hub-feature-branches.html#cb6-1" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-v</span>          <span class="co"># list local branches</span></span>
+<span id="cb6-2"><a href="git-hub-feature-branches.html#cb6-2" tabindex="-1"></a><span class="fu">git</span> remote <span class="at">-v</span>          <span class="co"># list existing remote connection (i.e., git repos you can pull files in from)</span></span></code></pre></div>
+</div>
+<div id="step-2-add-a-remote-if-needed" class="section level3 hasAnchor" number="6.2.2">
+<h3><span class="header-section-number">6.2.2</span> Step 2: Add a Remote (if needed)<a href="git-hub-feature-branches.html#step-2-add-a-remote-if-needed" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>If the remote you want to branch from isn’t already listed (e.g., for a PR
+review of someone else’s fork):</p>
+<ul>
+<li>Go to the GitHub page and copy the SSH or HTTPS link.</li>
+<li>Add the remote (because you want to branch to it):</li>
+</ul>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="git-hub-feature-branches.html#cb7-1" tabindex="-1"></a><span class="fu">git</span> remote add new_remote_name ssh_link</span>
+<span id="cb7-2"><a href="git-hub-feature-branches.html#cb7-2" tabindex="-1"></a><span class="co"># or</span></span>
+<span id="cb7-3"><a href="git-hub-feature-branches.html#cb7-3" tabindex="-1"></a><span class="fu">git</span> remote add new_remote_name https_link</span></code></pre></div>
+<ul>
+<li>Fetch the remote to see its contents (does not download files yet):</li>
+</ul>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="git-hub-feature-branches.html#cb8-1" tabindex="-1"></a><span class="fu">git</span> fetch new_remote_name</span></code></pre></div>
+<p>To remove a remote you no longer need:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="git-hub-feature-branches.html#cb9-1" tabindex="-1"></a><span class="fu">git</span> remote delete remote_name</span></code></pre></div>
+</div>
+<div id="step-3-create-or-switch-to-a-branch" class="section level3 hasAnchor" number="6.2.3">
+<h3><span class="header-section-number">6.2.3</span> Step 3: Create or Switch to a Branch<a href="git-hub-feature-branches.html#step-3-create-or-switch-to-a-branch" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Create a new branch from a remote branch:</strong></p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="git-hub-feature-branches.html#cb10-1" tabindex="-1"></a><span class="fu">git</span> checkout <span class="at">-b</span> new_branch_name remote_name/branch_name</span></code></pre></div>
+<p><strong>Switch to an existing branch:</strong></p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="git-hub-feature-branches.html#cb11-1" tabindex="-1"></a><span class="fu">git</span> checkout branch_name</span>
+<span id="cb11-2"><a href="git-hub-feature-branches.html#cb11-2" tabindex="-1"></a><span class="co"># or</span></span>
+<span id="cb11-3"><a href="git-hub-feature-branches.html#cb11-3" tabindex="-1"></a><span class="fu">git</span> switch branch_name</span></code></pre></div>
+<p><strong>Create a new branch starting from the current branch:</strong></p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="git-hub-feature-branches.html#cb12-1" tabindex="-1"></a><span class="fu">git</span> checkout <span class="at">-b</span> new-branch-name</span></code></pre></div>
+<p>The branch starts as a copy of whichever branch you were on. If you switch back
+to main using <code>git checkout main</code>, your branch work will appear to disappear –
+it’s still there on the feature branch.</p>
+</div>
+<div id="step-4-make-and-commit-changes" class="section level3 hasAnchor" number="6.2.4">
+<h3><span class="header-section-number">6.2.4</span> Step 4: Make and Commit Changes<a href="git-hub-feature-branches.html#step-4-make-and-commit-changes" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Add and commit as usual within your branch:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb13-1"><a href="git-hub-feature-branches.html#cb13-1" tabindex="-1"></a><span class="fu">git</span> add .</span>
+<span id="cb13-2"><a href="git-hub-feature-branches.html#cb13-2" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">&quot;some changes to this branch&quot;</span></span></code></pre></div>
+</div>
+<div id="step-5-push-or-merge-your-branch" class="section level3 hasAnchor" number="6.2.5">
+<h3><span class="header-section-number">6.2.5</span> Step 5: Push or Merge Your Branch<a href="git-hub-feature-branches.html#step-5-push-or-merge-your-branch" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Push the branch to your remote (forked repo):</strong></p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb14-1"><a href="git-hub-feature-branches.html#cb14-1" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin new-branch-name</span></code></pre></div>
+<p><strong>Merge branch changes back into main:</strong></p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb15-1"><a href="git-hub-feature-branches.html#cb15-1" tabindex="-1"></a><span class="fu">git</span> checkout main</span>
+<span id="cb15-2"><a href="git-hub-feature-branches.html#cb15-2" tabindex="-1"></a><span class="fu">git</span> merge new-branch-name</span></code></pre></div>
+<p>You can also submit a pull request from your feature branch the same way you
+would from your main branch. Just make sure you’ve selected the correct branch
+from your forked repo.</p>
+<p><img src="images/Screenshot%202023-07-28%20at%209.51.52%20AM.png" width="250" /></p>
+<hr />
+</div>
+</div>
+<div id="making-a-smaller-pr-from-an-existing-branch" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> Making a Smaller PR from an Existing Branch<a href="git-hub-feature-branches.html#making-a-smaller-pr-from-an-existing-branch" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Sometimes you want to make a PR that starts from where the central repository
+(upstream) is, rather than your full main branch. This is useful when you have
+a lot of local changes but want to submit only specific files.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb16-1"><a href="git-hub-feature-branches.html#cb16-1" tabindex="-1"></a><span class="co"># Create new branch &quot;pr&quot; from upstream/main</span></span>
+<span id="cb16-2"><a href="git-hub-feature-branches.html#cb16-2" tabindex="-1"></a><span class="fu">git</span> checkout <span class="at">-b</span> pr upstream/main</span>
+<span id="cb16-3"><a href="git-hub-feature-branches.html#cb16-3" tabindex="-1"></a></span>
+<span id="cb16-4"><a href="git-hub-feature-branches.html#cb16-4" tabindex="-1"></a><span class="co"># Then selectively add files from your main branch:</span></span>
+<span id="cb16-5"><a href="git-hub-feature-branches.html#cb16-5" tabindex="-1"></a><span class="fu">git</span> checkout main .gitignore _targets</span>
+<span id="cb16-6"><a href="git-hub-feature-branches.html#cb16-6" tabindex="-1"></a><span class="co"># or</span></span>
+<span id="cb16-7"><a href="git-hub-feature-branches.html#cb16-7" tabindex="-1"></a><span class="fu">git</span> restore <span class="at">--source</span> main <span class="at">--</span> file_name</span></code></pre></div>
+<hr />
+</div>
+<div id="merging-branches" class="section level2 hasAnchor" number="6.4">
+<h2><span class="header-section-number">6.4</span> Merging Branches<a href="git-hub-feature-branches.html#merging-branches" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Merge combines two branch histories, keeping the most recent commit from each
+file and joining the two timelines into one.</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb17-1"><a href="git-hub-feature-branches.html#cb17-1" tabindex="-1"></a><span class="fu">git</span> merge branch_name</span>
+<span id="cb17-2"><a href="git-hub-feature-branches.html#cb17-2" tabindex="-1"></a><span class="co"># example:</span></span>
+<span id="cb17-3"><a href="git-hub-feature-branches.html#cb17-3" tabindex="-1"></a><span class="fu">git</span> merge experiment</span></code></pre></div>
+<blockquote>
+<p><strong>Tip:</strong> If you get stuck in a merge review in the terminal with no obvious
+way to exit, type <code>:q</code> and press Enter.</p>
+</blockquote>
+<hr />
+</div>
+<div id="moving-work-from-a-feature-branch-to-main" class="section level2 hasAnchor" number="6.5">
+<h2><span class="header-section-number">6.5</span> Moving Work from a Feature Branch to Main<a href="git-hub-feature-branches.html#moving-work-from-a-feature-branch-to-main" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Say you worked on an “experiment” branch and want to bring some or all of that
+work into your main branch:</p>
+<ol style="list-style-type: decimal">
+<li>Make sure all changes are committed on your current branch. 2. Create (or
+switch to) the experimental branch:
+<code>bash     git checkout -b experiment</code></li>
+<li>Make changes and commit:
+<code>bash     git add .     git commit -m "some changes to this branch"</code></li>
+<li>Bring changes into main:
+<ul>
+<li><strong>Update just one file in main:</strong>
+<code>bash     git switch main     git checkout experiment file_to_checkout</code></li>
+<li><strong>Merge all changes from “experiment” into current branch:</strong>
+<code>bash     git merge experiment</code></li>
+</ul></li>
+</ol>
+<hr />
+</div>
+<div id="git-checkout-vs.-git-merge" class="section level2 hasAnchor" number="6.6">
+<h2><span class="header-section-number">6.6</span> <code>git checkout</code> vs. <code>git merge</code><a href="git-hub-feature-branches.html#git-checkout-vs.-git-merge" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="line-block">| <code>git checkout</code> | <code>git merge</code> | |—|—|—| | <strong>Use for</strong> | Bringing in a</div>
+<p>specific file from another branch | Combining two full branches | | <strong>If file
+exists</strong> | Overwrites local changes with the checked-out version | Combines
+with rules for keeping the most recent commit | | <strong>History</strong> | Does not
+combine histories | Joins two histories into one |</p>
+<hr />
+</div>
+<div id="deleting-a-branch" class="section level2 hasAnchor" number="6.7">
+<h2><span class="header-section-number">6.7</span> Deleting a Branch<a href="git-hub-feature-branches.html#deleting-a-branch" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Once a branch is no longer needed:</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb18-1"><a href="git-hub-feature-branches.html#cb18-1" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-D</span> branch_name</span></code></pre></div>
+<hr />
+</div>
+<div id="feature-branch-best-practices" class="section level2 hasAnchor" number="6.8">
+<h2><span class="header-section-number">6.8</span> Feature Branch Best Practices<a href="git-hub-feature-branches.html#feature-branch-best-practices" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>Keep your fork up to date regularly. <strong>COMMUNICATE</strong> with your team.</li>
+<li>Each team member should work on separate files/features (no overlap;
+feature collaboration can take place in pull requests).</li>
+<li>Don’t leave branches unmerged for long periods when others are active in
+the repository.</li>
 </ul>
 
 </div>
