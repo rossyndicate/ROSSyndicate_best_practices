@@ -86,9 +86,9 @@ git checkout -b new_branch_name
 ```
 
 The branch starts as a copy of whichever branch you were on, unless you specify
-a branch to originate from, like shown above. If you switch back
-to main using `git checkout main`, your branch work will appear to disappear --
-fear not, it's still there on the feature branch.
+a branch to originate from, like shown above. If you switch back to main using
+`git checkout main`, your branch work will appear to disappear -- fear not,
+it's still there on the feature branch.
 
 ### Step 4: Make and Commit Changes
 
@@ -162,23 +162,23 @@ Say you worked on an "experiment" branch and want to bring some or all of that
 work into your main branch:
 
 1.  Make sure all changes are committed on your current branch. 2. Create (or
-    switch to) the experimental branch: 
-    ``` bash     
+    switch to) the experimental branch:
+    ``` bash
     git checkout -b experiment
     ```
 2.  Make changes and commit:
     ```bash
-    git add .     
+    git add .
     git commit -m "some changes to this branch"
     ```
 3.  Bring changes into main:
     -   **Update just one file in main:**
-        ``` bash     
-        git switch main     
+        ``` bash
+        git switch main
         git checkout experiment file_to_checkout
         ```
     -   **Merge all changes from "experiment" into current branch:**
-        ``` bash     
+        ``` bash
         git merge experiment
         ```
 
@@ -195,10 +195,10 @@ branches. It will combine with rules for keeping most recent commit from each
 file, joining the two histories into one.
 
 
-| | `git checkout` | `git merge` | 
-|---|---|---| 
-| **Use for** | Bringing in a specific file from another branch | Combining two full branches | 
-| **If file exists** | Overwrites local changes with the checked-out version | Combines with rules for keeping the most recent commit |
+| | `git checkout` | `git merge` | |---|---|---| | **Use for** | Bringing in a
+specific file from another branch | Combining two full branches | | **If file
+exists** | Overwrites local changes with the checked-out version | Combines
+with rules for keeping the most recent commit |
  | **History** | Does not combine histories | Joins two histories into one |
 
 --------------------------------------------------------------------------------
@@ -210,13 +210,15 @@ Once a branch is no longer needed:
 ``` bash
 git branch -D branch_name
 ```
-Note, this permanently deletes the branch. You CANNOT retrieve it from your local device. If and only if you pushed the most recent changes to origin will you be able to restore any changes from this branch.
+Note, this permanently deletes the branch. You CANNOT retrieve it from your
+local device. If and only if you pushed the most recent changes to origin will
+you be able to restore any changes from this branch.
 --------------------------------------------------------------------------------
 
 ## Feature Branch Best Practices
 
 -   **COMMUNICATE** with your team.
--   Keep your fork up to date regularly. 
+-   Keep your fork up to date regularly.
 -   Each team member should work on separate files/features (no overlap; feature
     collaboration can take place in pull requests).
 -   Don't leave branches unmerged for long periods when others are active in the

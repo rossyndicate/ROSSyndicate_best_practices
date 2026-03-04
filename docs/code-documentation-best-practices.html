@@ -23,7 +23,7 @@
 <meta name="author" content="ROSSyndicate" />
 
 
-<meta name="date" content="2026-03-02" />
+<meta name="date" content="2026-03-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -214,7 +214,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.5" data-path="git-hub-feature-branches.html"><a href="git-hub-feature-branches.html#moving-work-from-a-feature-branch-to-main"><i class="fa fa-check"></i><b>6.5</b> Moving Work from a Feature Branch to Main</a></li>
 <li class="chapter" data-level="6.6" data-path="git-hub-feature-branches.html"><a href="git-hub-feature-branches.html#git-checkout-vs.-git-merge"><i class="fa fa-check"></i><b>6.6</b> <code>git checkout</code> vs. <code>git merge</code></a></li>
 <li class="chapter" data-level="6.7" data-path="git-hub-feature-branches.html"><a href="git-hub-feature-branches.html#deleting-a-branch"><i class="fa fa-check"></i><b>6.7</b> Deleting a Branch</a></li>
-<li class="chapter" data-level="6.8" data-path="git-hub-feature-branches.html"><a href="git-hub-feature-branches.html#feature-branch-best-practices"><i class="fa fa-check"></i><b>6.8</b> Feature Branch Best Practices</a></li>
+<li class="chapter" data-level="6.8" data-path="git-hub-feature-branches.html"><a href="git-hub-feature-branches.html#note-this-permanently-deletes-the-branch.-you-cannot-retrieve-it-from-your-local-device.-if-and-only-if-you-pushed-the-most-recent-changes-to-origin-will-you-be-able-to-restore-any-changes-from-this-branch."><i class="fa fa-check"></i><b>6.8</b> Note, this permanently deletes the branch. You CANNOT retrieve it from your local device. If and only if you pushed the most recent changes to origin will you be able to restore any changes from this branch.</a></li>
+<li class="chapter" data-level="6.9" data-path="git-hub-feature-branches.html"><a href="git-hub-feature-branches.html#feature-branch-best-practices"><i class="fa fa-check"></i><b>6.9</b> Feature Branch Best Practices</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="using-ai-integrations.html"><a href="using-ai-integrations.html"><i class="fa fa-check"></i><b>7</b> Using AI Integrations</a>
 <ul>
@@ -359,24 +360,24 @@ linear workflow, like those in a literate script (.Rmd, .Qmd, .ipynb).</p>
 development as a way to populate the <code>--help</code> command for a function. We use the
 style of Roxygen to add documentation to our code. Here is an example of using
 Roxygen style to add documentation:</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="code-documentation-best-practices.html#cb22-1" tabindex="-1"></a><span class="co">#&#39; Function to check for and install (but not load) packages. </span></span>
-<span id="cb22-2"><a href="code-documentation-best-practices.html#cb22-2" tabindex="-1"></a><span class="co">#&#39; This is likely to be used for most {targets} pipelines. </span></span>
-<span id="cb22-3"><a href="code-documentation-best-practices.html#cb22-3" tabindex="-1"></a><span class="co">#&#39; </span></span>
-<span id="cb22-4"><a href="code-documentation-best-practices.html#cb22-4" tabindex="-1"></a><span class="co">#&#39; @param x a package name, in quotations</span></span>
-<span id="cb22-5"><a href="code-documentation-best-practices.html#cb22-5" tabindex="-1"></a><span class="co">#&#39; @returns text string to indicate whether a package was</span></span>
-<span id="cb22-6"><a href="code-documentation-best-practices.html#cb22-6" tabindex="-1"></a><span class="co">#&#39; installed, or if it was already installed.</span></span>
-<span id="cb22-7"><a href="code-documentation-best-practices.html#cb22-7" tabindex="-1"></a><span class="co">#&#39; </span></span>
-<span id="cb22-8"><a href="code-documentation-best-practices.html#cb22-8" tabindex="-1"></a><span class="co">#&#39; @seealso [package_loader()]</span></span>
-<span id="cb22-9"><a href="code-documentation-best-practices.html#cb22-9" tabindex="-1"></a><span class="co">#&#39; </span></span>
-<span id="cb22-10"><a href="code-documentation-best-practices.html#cb22-10" tabindex="-1"></a><span class="co">#&#39; </span></span>
-<span id="cb22-11"><a href="code-documentation-best-practices.html#cb22-11" tabindex="-1"></a>package_installer <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
-<span id="cb22-12"><a href="code-documentation-best-practices.html#cb22-12" tabindex="-1"></a>  <span class="cf">if</span> (x <span class="sc">%in%</span> <span class="fu">installed.packages</span>()) {</span>
-<span id="cb22-13"><a href="code-documentation-best-practices.html#cb22-13" tabindex="-1"></a>    <span class="fu">print</span>(<span class="fu">paste0</span>(<span class="st">&#39;{&#39;</span>, x ,<span class="st">&#39;} package is already installed.&#39;</span>))</span>
-<span id="cb22-14"><a href="code-documentation-best-practices.html#cb22-14" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
-<span id="cb22-15"><a href="code-documentation-best-practices.html#cb22-15" tabindex="-1"></a>    <span class="fu">install.packages</span>(x)</span>
-<span id="cb22-16"><a href="code-documentation-best-practices.html#cb22-16" tabindex="-1"></a>    <span class="fu">print</span>(<span class="fu">paste0</span>(<span class="st">&#39;{&#39;</span>, x ,<span class="st">&#39;} package has been installed.&#39;</span>))</span>
-<span id="cb22-17"><a href="code-documentation-best-practices.html#cb22-17" tabindex="-1"></a>  }</span>
-<span id="cb22-18"><a href="code-documentation-best-practices.html#cb22-18" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="code-documentation-best-practices.html#cb25-1" tabindex="-1"></a><span class="co">#&#39; Function to check for and install (but not load) packages. </span></span>
+<span id="cb25-2"><a href="code-documentation-best-practices.html#cb25-2" tabindex="-1"></a><span class="co">#&#39; This is likely to be used for most {targets} pipelines. </span></span>
+<span id="cb25-3"><a href="code-documentation-best-practices.html#cb25-3" tabindex="-1"></a><span class="co">#&#39; </span></span>
+<span id="cb25-4"><a href="code-documentation-best-practices.html#cb25-4" tabindex="-1"></a><span class="co">#&#39; @param x a package name, in quotations</span></span>
+<span id="cb25-5"><a href="code-documentation-best-practices.html#cb25-5" tabindex="-1"></a><span class="co">#&#39; @returns text string to indicate whether a package was</span></span>
+<span id="cb25-6"><a href="code-documentation-best-practices.html#cb25-6" tabindex="-1"></a><span class="co">#&#39; installed, or if it was already installed.</span></span>
+<span id="cb25-7"><a href="code-documentation-best-practices.html#cb25-7" tabindex="-1"></a><span class="co">#&#39; </span></span>
+<span id="cb25-8"><a href="code-documentation-best-practices.html#cb25-8" tabindex="-1"></a><span class="co">#&#39; @seealso [package_loader()]</span></span>
+<span id="cb25-9"><a href="code-documentation-best-practices.html#cb25-9" tabindex="-1"></a><span class="co">#&#39; </span></span>
+<span id="cb25-10"><a href="code-documentation-best-practices.html#cb25-10" tabindex="-1"></a><span class="co">#&#39; </span></span>
+<span id="cb25-11"><a href="code-documentation-best-practices.html#cb25-11" tabindex="-1"></a>package_installer <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb25-12"><a href="code-documentation-best-practices.html#cb25-12" tabindex="-1"></a>  <span class="cf">if</span> (x <span class="sc">%in%</span> <span class="fu">installed.packages</span>()) {</span>
+<span id="cb25-13"><a href="code-documentation-best-practices.html#cb25-13" tabindex="-1"></a>    <span class="fu">print</span>(<span class="fu">paste0</span>(<span class="st">&#39;{&#39;</span>, x ,<span class="st">&#39;} package is already installed.&#39;</span>))</span>
+<span id="cb25-14"><a href="code-documentation-best-practices.html#cb25-14" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb25-15"><a href="code-documentation-best-practices.html#cb25-15" tabindex="-1"></a>    <span class="fu">install.packages</span>(x)</span>
+<span id="cb25-16"><a href="code-documentation-best-practices.html#cb25-16" tabindex="-1"></a>    <span class="fu">print</span>(<span class="fu">paste0</span>(<span class="st">&#39;{&#39;</span>, x ,<span class="st">&#39;} package has been installed.&#39;</span>))</span>
+<span id="cb25-17"><a href="code-documentation-best-practices.html#cb25-17" tabindex="-1"></a>  }</span>
+<span id="cb25-18"><a href="code-documentation-best-practices.html#cb25-18" tabindex="-1"></a>}</span></code></pre></div>
 <p>Read more about <a href="https://cran.r-project.org/web/packages/roxygen2/vignettes/roxygen2.html">Roxygen documentation
 here</a>.</p>
 </div>
@@ -385,26 +386,26 @@ here</a>.</p>
 <p>Docstring is a simple, no-frills way to add documentation to Python scripts.
 While there are many other documentation methods that are more similar to
 Roxygen, this is the one that is the most straightforward for our purposes.</p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb23-1"><a href="code-documentation-best-practices.html#cb23-1" tabindex="-1"></a><span class="kw">def</span> csv_to_eeFeat(df, proj):</span>
-<span id="cb23-2"><a href="code-documentation-best-practices.html#cb23-2" tabindex="-1"></a>  <span class="co">&quot;&quot;&quot;Function to create an eeFeature from location info</span></span>
-<span id="cb23-3"><a href="code-documentation-best-practices.html#cb23-3" tabindex="-1"></a></span>
-<span id="cb23-4"><a href="code-documentation-best-practices.html#cb23-4" tabindex="-1"></a><span class="co">  Args:</span></span>
-<span id="cb23-5"><a href="code-documentation-best-practices.html#cb23-5" tabindex="-1"></a><span class="co">      df: point locations .csv file with Latitude and Longitude</span></span>
-<span id="cb23-6"><a href="code-documentation-best-practices.html#cb23-6" tabindex="-1"></a><span class="co">      proj: CRS projection of the points</span></span>
-<span id="cb23-7"><a href="code-documentation-best-practices.html#cb23-7" tabindex="-1"></a></span>
-<span id="cb23-8"><a href="code-documentation-best-practices.html#cb23-8" tabindex="-1"></a><span class="co">  Returns:</span></span>
-<span id="cb23-9"><a href="code-documentation-best-practices.html#cb23-9" tabindex="-1"></a><span class="co">      ee.FeatureCollection of the points </span></span>
-<span id="cb23-10"><a href="code-documentation-best-practices.html#cb23-10" tabindex="-1"></a><span class="co">  &quot;&quot;&quot;</span></span>
-<span id="cb23-11"><a href="code-documentation-best-practices.html#cb23-11" tabindex="-1"></a>  features<span class="op">=</span>[]</span>
-<span id="cb23-12"><a href="code-documentation-best-practices.html#cb23-12" tabindex="-1"></a>  <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(df.shape[<span class="dv">0</span>]):</span>
-<span id="cb23-13"><a href="code-documentation-best-practices.html#cb23-13" tabindex="-1"></a>    x,y <span class="op">=</span> df.Longitude[i],df.Latitude[i]</span>
-<span id="cb23-14"><a href="code-documentation-best-practices.html#cb23-14" tabindex="-1"></a>    latlong <span class="op">=</span>[x,y]</span>
-<span id="cb23-15"><a href="code-documentation-best-practices.html#cb23-15" tabindex="-1"></a>    loc_properties <span class="op">=</span> {<span class="st">&#39;system:index&#39;</span>:<span class="bu">str</span>(df.<span class="bu">id</span>[i]), <span class="st">&#39;id&#39;</span>:<span class="bu">str</span>(df.<span class="bu">id</span>[i])}</span>
-<span id="cb23-16"><a href="code-documentation-best-practices.html#cb23-16" tabindex="-1"></a>    g<span class="op">=</span>ee.Geometry.Point(latlong, proj) </span>
-<span id="cb23-17"><a href="code-documentation-best-practices.html#cb23-17" tabindex="-1"></a>    feature <span class="op">=</span> ee.Feature(g, loc_properties)</span>
-<span id="cb23-18"><a href="code-documentation-best-practices.html#cb23-18" tabindex="-1"></a>    features.append(feature)</span>
-<span id="cb23-19"><a href="code-documentation-best-practices.html#cb23-19" tabindex="-1"></a>  ee_object <span class="op">=</span> ee.FeatureCollection(features)</span>
-<span id="cb23-20"><a href="code-documentation-best-practices.html#cb23-20" tabindex="-1"></a>  <span class="cf">return</span> ee_object</span></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb26-1"><a href="code-documentation-best-practices.html#cb26-1" tabindex="-1"></a><span class="kw">def</span> csv_to_eeFeat(df, proj):</span>
+<span id="cb26-2"><a href="code-documentation-best-practices.html#cb26-2" tabindex="-1"></a>  <span class="co">&quot;&quot;&quot;Function to create an eeFeature from location info</span></span>
+<span id="cb26-3"><a href="code-documentation-best-practices.html#cb26-3" tabindex="-1"></a></span>
+<span id="cb26-4"><a href="code-documentation-best-practices.html#cb26-4" tabindex="-1"></a><span class="co">  Args:</span></span>
+<span id="cb26-5"><a href="code-documentation-best-practices.html#cb26-5" tabindex="-1"></a><span class="co">      df: point locations .csv file with Latitude and Longitude</span></span>
+<span id="cb26-6"><a href="code-documentation-best-practices.html#cb26-6" tabindex="-1"></a><span class="co">      proj: CRS projection of the points</span></span>
+<span id="cb26-7"><a href="code-documentation-best-practices.html#cb26-7" tabindex="-1"></a></span>
+<span id="cb26-8"><a href="code-documentation-best-practices.html#cb26-8" tabindex="-1"></a><span class="co">  Returns:</span></span>
+<span id="cb26-9"><a href="code-documentation-best-practices.html#cb26-9" tabindex="-1"></a><span class="co">      ee.FeatureCollection of the points </span></span>
+<span id="cb26-10"><a href="code-documentation-best-practices.html#cb26-10" tabindex="-1"></a><span class="co">  &quot;&quot;&quot;</span></span>
+<span id="cb26-11"><a href="code-documentation-best-practices.html#cb26-11" tabindex="-1"></a>  features<span class="op">=</span>[]</span>
+<span id="cb26-12"><a href="code-documentation-best-practices.html#cb26-12" tabindex="-1"></a>  <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(df.shape[<span class="dv">0</span>]):</span>
+<span id="cb26-13"><a href="code-documentation-best-practices.html#cb26-13" tabindex="-1"></a>    x,y <span class="op">=</span> df.Longitude[i],df.Latitude[i]</span>
+<span id="cb26-14"><a href="code-documentation-best-practices.html#cb26-14" tabindex="-1"></a>    latlong <span class="op">=</span>[x,y]</span>
+<span id="cb26-15"><a href="code-documentation-best-practices.html#cb26-15" tabindex="-1"></a>    loc_properties <span class="op">=</span> {<span class="st">&#39;system:index&#39;</span>:<span class="bu">str</span>(df.<span class="bu">id</span>[i]), <span class="st">&#39;id&#39;</span>:<span class="bu">str</span>(df.<span class="bu">id</span>[i])}</span>
+<span id="cb26-16"><a href="code-documentation-best-practices.html#cb26-16" tabindex="-1"></a>    g<span class="op">=</span>ee.Geometry.Point(latlong, proj) </span>
+<span id="cb26-17"><a href="code-documentation-best-practices.html#cb26-17" tabindex="-1"></a>    feature <span class="op">=</span> ee.Feature(g, loc_properties)</span>
+<span id="cb26-18"><a href="code-documentation-best-practices.html#cb26-18" tabindex="-1"></a>    features.append(feature)</span>
+<span id="cb26-19"><a href="code-documentation-best-practices.html#cb26-19" tabindex="-1"></a>  ee_object <span class="op">=</span> ee.FeatureCollection(features)</span>
+<span id="cb26-20"><a href="code-documentation-best-practices.html#cb26-20" tabindex="-1"></a>  <span class="cf">return</span> ee_object</span></code></pre></div>
 <p>Docstring documentation is particularily easy to create in VS Code editor using
 the extension ‘autoDocstring’. This will automatically populate the ‘Args’ and
 ‘Returns’ fields including the ‘Args’ variable names.</p>

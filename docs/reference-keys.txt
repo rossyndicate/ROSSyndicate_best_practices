@@ -45,6 +45,7 @@ merging-branches
 moving-work-from-a-feature-branch-to-main
 git-checkout-vs.-git-merge
 deleting-a-branch
+note-this-permanently-deletes-the-branch.-you-cannot-retrieve-it-from-your-local-device.-if-and-only-if-you-pushed-the-most-recent-changes-to-origin-will-you-be-able-to-restore-any-changes-from-this-branch.
 feature-branch-best-practices
 using-ai-integrations
 using-github-copilot-in-vscode-rstudio

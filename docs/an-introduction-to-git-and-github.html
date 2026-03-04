@@ -23,7 +23,7 @@
 <meta name="author" content="ROSSyndicate" />
 
 
-<meta name="date" content="2026-03-02" />
+<meta name="date" content="2026-03-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -214,7 +214,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.5" data-path="git-hub-feature-branches.html"><a href="git-hub-feature-branches.html#moving-work-from-a-feature-branch-to-main"><i class="fa fa-check"></i><b>6.5</b> Moving Work from a Feature Branch to Main</a></li>
 <li class="chapter" data-level="6.6" data-path="git-hub-feature-branches.html"><a href="git-hub-feature-branches.html#git-checkout-vs.-git-merge"><i class="fa fa-check"></i><b>6.6</b> <code>git checkout</code> vs. <code>git merge</code></a></li>
 <li class="chapter" data-level="6.7" data-path="git-hub-feature-branches.html"><a href="git-hub-feature-branches.html#deleting-a-branch"><i class="fa fa-check"></i><b>6.7</b> Deleting a Branch</a></li>
-<li class="chapter" data-level="6.8" data-path="git-hub-feature-branches.html"><a href="git-hub-feature-branches.html#feature-branch-best-practices"><i class="fa fa-check"></i><b>6.8</b> Feature Branch Best Practices</a></li>
+<li class="chapter" data-level="6.8" data-path="git-hub-feature-branches.html"><a href="git-hub-feature-branches.html#note-this-permanently-deletes-the-branch.-you-cannot-retrieve-it-from-your-local-device.-if-and-only-if-you-pushed-the-most-recent-changes-to-origin-will-you-be-able-to-restore-any-changes-from-this-branch."><i class="fa fa-check"></i><b>6.8</b> Note, this permanently deletes the branch. You CANNOT retrieve it from your local device. If and only if you pushed the most recent changes to origin will you be able to restore any changes from this branch.</a></li>
+<li class="chapter" data-level="6.9" data-path="git-hub-feature-branches.html"><a href="git-hub-feature-branches.html#feature-branch-best-practices"><i class="fa fa-check"></i><b>6.9</b> Feature Branch Best Practices</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="using-ai-integrations.html"><a href="using-ai-integrations.html"><i class="fa fa-check"></i><b>7</b> Using AI Integrations</a>
 <ul>
@@ -311,8 +312,8 @@ this outline will mostly just direct you to that body of work.</p>
 to set up your own GitHub account, install Git, and allow them to interact with
 your personal R environment. It’s also a great primer for how Git and GitHub
 work in R Studio.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="an-introduction-to-git-and-github.html#cb1-1" tabindex="-1"></a><span class="fu">embed_url</span>(<span class="st">&quot;https://www.youtube.com/watch?v=Y4sOTFV3FAM&amp;t=1s&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb1-2"><a href="an-introduction-to-git-and-github.html#cb1-2" tabindex="-1"></a>  <span class="fu">use_align</span>(<span class="st">&quot;center&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="an-introduction-to-git-and-github.html#cb4-1" tabindex="-1"></a><span class="fu">embed_url</span>(<span class="st">&quot;https://www.youtube.com/watch?v=Y4sOTFV3FAM&amp;t=1s&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb4-2"><a href="an-introduction-to-git-and-github.html#cb4-2" tabindex="-1"></a>  <span class="fu">use_align</span>(<span class="st">&quot;center&quot;</span>)</span></code></pre></div>
 <div class="vembedr" align="center">
 <div>
 <iframe src="https://www.youtube.com/embed/Y4sOTFV3FAM?start=1" width="533" height="300" frameborder="0" allowfullscreen="" data-external="1"></iframe>
@@ -392,8 +393,8 @@ diverged/disrupted others’ workflows, they can approve the pull request, and
 the ‘main’ repository will be updated accordingly.</p>
 <p>Matt and a former grad student, Bryce Pulver, made another excellent video that
 walks through an example collaborative workflow using forking:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="an-introduction-to-git-and-github.html#cb2-1" tabindex="-1"></a><span class="fu">embed_url</span>(<span class="st">&quot;https://www.youtube.com/watch?v=a_YY_PIDeq8&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb2-2"><a href="an-introduction-to-git-and-github.html#cb2-2" tabindex="-1"></a>  <span class="fu">use_align</span>(<span class="st">&quot;center&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="an-introduction-to-git-and-github.html#cb5-1" tabindex="-1"></a><span class="fu">embed_url</span>(<span class="st">&quot;https://www.youtube.com/watch?v=a_YY_PIDeq8&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb5-2"><a href="an-introduction-to-git-and-github.html#cb5-2" tabindex="-1"></a>  <span class="fu">use_align</span>(<span class="st">&quot;center&quot;</span>)</span></code></pre></div>
 <div class="vembedr" align="center">
 <div>
 <iframe src="https://www.youtube.com/embed/a_YY_PIDeq8" width="533" height="300" frameborder="0" allowfullscreen="" data-external="1"></iframe>
